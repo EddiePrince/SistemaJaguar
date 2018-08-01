@@ -1,0 +1,96 @@
+body {
+margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+ background-color:#ECF0F1;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.form_div p{
+    text-align: center;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+input[type=text],
+input[type=text],
+input[type=text],
+input[type=text],
+input[type=password],
+input[type=password],
+input[type=password] {
+    width: 270px;
+    height: 25px;
+    padding-left:5px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#wrapper{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}
+
+#wrapper h1 p{
+font-size:18px;
+}
+
+.form_div{
+width:390px;
+margin-left:320px;
+padding:10px;
+background-color:#134404;
+}
+
+.form_div .form_label{
+margin:15px;
+margin-bottom:30px;
+font-size:25px;
+font-weight:bold;
+color:white;
+text-decoration:underline;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.logo {
+    width: 20%;
+    border-radius: 20%;
+}
+
+/* Alterar estilos para span e cancelar botão em telas extras pequenas */
+@media screen and (max-width: 300px) {
+    span.esqueceu {
+       display: block;
+       float: none;
+    }
+    .cancelar {
+       width: 100%;
+    }
+}
