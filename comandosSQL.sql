@@ -20,13 +20,23 @@ USE `jaguar_sistem`;
 
 DROP TABLE IF EXISTS `animais`;
 CREATE TABLE `animais` (
-  `numero` int(11) NOT NULL AUTO_INCREMENT unique,
+  `numeroFicha` int(11) NOT NULL AUTO_INCREMENT unique,
   `data` date,
   `agente_recebedor` varchar(255),
   `tipo_recolhimento` varchar(30),
-  `municipio_procedencia` varchar(50),
-  `uf` varchar(20),
-  `local_procedencia` varchar(50),
+  `nomeEntregador` varchar(50),
+  `cpf_cnpj` varchar(20),
+  `telefone` varchar(50),
+  `endereco`
+  `municipio`
+  `cep`
+  `tipoDocumento`
+  `numeroDocumento`
+  `arquivoDocumento`
+  `unidadeAcolhedora`
+  `municipioProcedencia`
+  `UF`
+  `ultimaProcedencia`
   `dieta` varchar(30),
   `nome_comum` varchar(255),
   `nome_cientifico` varchar(255),
