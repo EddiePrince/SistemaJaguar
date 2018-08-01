@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS `jaguar_sistem` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `jaguar_sistem` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `jaguar_sistem`;
 
 DROP TABLE IF EXISTS `usuarios`;
@@ -12,7 +12,7 @@ CREATE TABLE `usuarios` (
   `usuario` varchar(30),
   `senha` varchar(64) ,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT character set = utf8;
 
 
 
@@ -41,7 +41,7 @@ CREATE TABLE `animais` (
   `nome_comum` varchar(255),
   `nome_cientifico` varchar(255),
   PRIMARY KEY (`numero`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT character set = utf8;
 
 
 USE `jaguar_sistem`;
@@ -57,4 +57,4 @@ CREATE TABLE `unidades` (
   `numero` varchar(20),
   `complemento` varchar(100),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT character set = utf8;
