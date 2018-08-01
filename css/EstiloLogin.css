@@ -24,7 +24,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #F8A43F;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -48,11 +48,12 @@ img.logo {
 }
 
 .container {
+    text-align: center;
     padding: 16px;
-    width:90%;
+    width:50%;
     margin-left:5%;
     padding-left:0px;
-    padding-right:0px;
+    padding-right:100px;
 }
 
 .cancelar {

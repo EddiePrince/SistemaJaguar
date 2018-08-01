@@ -7,15 +7,18 @@ include_once("conexao.php");
 <html lang="br-pt">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
    <link rel="stylesheet" type="text/css" href="css/EstiloLogin.css">
   <title>Login</title>
 </head>
 <body>
+  
+  <div class="container" >
     <div class="imgcontainer">
       <img src="image/Logo_2.png" alt="Logo" class="logo">
     </div>
   	<h2>Login</h2>
-    <div class="container">
+    
       <form method="post" action="logado.php">
 
         <p>Perfil:</p>
@@ -35,14 +38,14 @@ include_once("conexao.php");
       <label>
         <input type="checkbox" checked="checked" name="remember">Lembre de mim.
       </label>
-    </div>
 
-    <div class="container" style="background-color:#f1f1f1">
+  
       <button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
       <span class="fazer"><a href="solicitar_cadastro.php">Solicitar Cadastro</a></span>
       <span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
-    </div>
+   
     </form>
+    
 	<footer></footer>
 
 <script>
