@@ -8,14 +8,53 @@
 <body>
 	<h1>Animais Cadastrados</h1>
 
+	<table>
+		<tr>
+			<th>Número da Ficha</th>
+			<th>Data de Recebimento</th>
+			<th>Agente</th>
+			<th>Tipo de Recolhimento</th>
+			<th>Nome do Entregador</th>
+			<th>CPF/CNPJ</th>
+			<th>Telefone</th>
+			<th>Endereço</th>
+			<th>Município</th>
+			<th>CEP</th>
+			<th>ID Documento</th>
+			<th>ID Unidade</th>
+			<th>Município de Procedência</th>
+			<th>UF</th>
+			<th>Última Procedência</th>
+			<th>Dieta</th>
+			<th>Nome Comum</th>
+			<th>Nome Científico</th>
+			<th>Família</th>
+			<th></th>
+			<th>Ordem</th>
+			<th>Código da Marcação</th>
+			<th>Tipo de Marcação</th>
+			<th>Local da Marcação</th>
+			<th>Período em Quarentena</th>
+			<th>Tipo da Destinação</th>
+			<th>Subtipo da Destinação</th>
+			<th>Condição 1</th>
+			<th>Condição 2</th>
+			<th>Condição 3</th>
+			<th>ID Área</th>
+
+		</tr>
+	</table>
+
 	<?php
+	 header("Content-Type: text/html; charset=utf-8",true);
 		include 'conexao.php'; 
 		$sql = "SELECT * FROM animais";
 		$result = $conexao->query($sql);
 
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc())
-			{
+			{	
+				echo "<p> : " . $row['nFicha']  "</p>"
 				echo "Número da ficha: " . $row['nFicha'] . " | ";
 				echo "Data de Recebimento: " . $row['dataRecebimento'] . " | ";
 				echo "Agente: " . $row['agente'] . " | ";
