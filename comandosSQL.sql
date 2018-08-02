@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `anexos`
 --
 
+CREATE DATABASE jaguar_sistem; 
+
 CREATE TABLE `anexos` (
   `idDocumento` int(11) NOT NULL,
   `nDocumento` varchar(20) DEFAULT NULL,
