@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
 <body background="img/jaguar.jpg")>
-  <p>Bem vindo <?php echo $usuario; ?> <br> Bem vindo <?php echo $usuario; ?><br> <a href="sair.php">Sair</a>
+  <p>Bem vindo <?php print_r($_SESSION); ?> <br> <a href="sair.php">Sair</a>
   </p>
 <dir class="superior">
 </dir>
