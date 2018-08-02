@@ -20,7 +20,7 @@
     <title>Menu Principal</title>
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
-<body background="image/jaguar.jpg")>
+<body background="img/jaguar.jpg")>
   <p>Bem vindo <?php echo $usuario; ?> <br> Bem vindo <?php echo $usuario; ?><br> <a href="sair.php">Sair</a>
   </p>
 <dir class="superior">

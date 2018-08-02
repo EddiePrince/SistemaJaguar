@@ -21,7 +21,6 @@ echo "Operação foi Realizada com Sucesso!";
 
 mysqli_close($conexao);
 
-
 //echo "Nome: ".$nome."<br>E-mail: ".$email."<br>Telefone: ".$tel."<br>Celular: ".$cel."<br>Usuário: ".$user."<br>Senha: ".$senha;
 
  ?>

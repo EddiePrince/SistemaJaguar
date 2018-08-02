@@ -16,7 +16,7 @@
 
   <div class="container" id="login">
     <div class="imgcontainer">
-      <img src="image/Logo_2.png" alt="Logo" class="logo">
+      <img src="img/Logo_2.png" alt="Logo" class="logo">
     </div>
   	<h2>Login</h2>
 
@@ -49,20 +49,31 @@
       $senha = $_POST['senha'];
 
     if (empty($usuario) || empty($senha)) {
-      echo "Preencha todos os campos!";
+      echo "<br>Preencha todos os campos!";
       }else {
-        $query = "SELECT perfil, usuario, senha FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
+        $query = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
         $result = mysqli_query($conexao, $query);
         $busca = mysqli_num_rows($result);
         $linha = mysqli_fetch_assoc($result);
 
-    if ($busca > 0 ) {
-      $_SESSION['nomeCompleto'] = $linha['nomeCompleto'];
+    if (($busca > 0) && ($perfil = 'Agente')) {
+      //$_SESSION['Agente'] = $linha['perfil'];
+      //$_SESSION['nomeCompleto'] = $linha['nomeCompleto'];
       $_SESSION['usuario'] = $linha['usuario'];
       header('Location: logado.php');
       exit;
+}
+    // esse condicional abaixo nao funcionou verificar se deve ser colocado de volta o perfil na tela de login
+    if (($busca > 0) && ($perfil = 'Administrador')) {
+      //$_SESSION['Administrador'] = $linha['perfil'];
+      //$_SESSION['nomeCompleto'] = $linha['nomeCompleto'];
+      $_SESSION['usuario'] = $linha['usuario'];
+      header('Location: logado_adm.php');
+      exit;
+      // esse condicional abaixo nao funcionou verificar se deve ser colocado de volta o perfil na tela de login
+      
       }else {
-    echo "<h3>Usuario ou Senha Inválido!</h3>";
+    echo "<h4><br>Usuario ou Senha Inválido!</h4>";
       }
     }
   }
