@@ -8,16 +8,17 @@
 <html lang="br-pt">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
-   <link rel="stylesheet" type="text/css" href="css/EstiloLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
   <title>Login</title>
+  
 </head>
 <body>
-
   <div class="container" id="login">
     <div class="imgcontainer">
       <img src="img/Logo_2.png" alt="Logo" class="logo">
     </div>
+    
   	<h2>Login</h2>
 
       <form method="post" action=""><br><br>
