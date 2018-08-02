@@ -28,14 +28,14 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `anexos`
 --
 
-CREATE DATABASE jaguar_sistem; 
+CREATE DATABASE jaguar_sistem DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE `anexos` (
   `idDocumento` int(11) NOT NULL,
   `nDocumento` varchar(20) DEFAULT NULL,
   `tipoDocumento` varchar(60) DEFAULT NULL,
   `arquivo` blob
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT character set = utf8;
 
 --
 -- Extraindo dados da tabela `anexos`
@@ -84,7 +84,7 @@ CREATE TABLE `animais` (
   `condicao2` int(11) DEFAULT NULL,
   `condicao3` int(11) DEFAULT NULL,
   `idArea` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT character set = utf8;
 
 --
 -- Extraindo dados da tabela `animais`
@@ -117,7 +117,7 @@ CREATE TABLE `areas` (
   `bioma` varchar(60) DEFAULT NULL,
   `distancia` varchar(60) DEFAULT NULL,
   `obs` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8;
 
 --
 -- Extraindo dados da tabela `areas`
@@ -142,7 +142,7 @@ CREATE TABLE `unidades` (
   `municipio` varchar(100) DEFAULT NULL,
   `lote` varchar(20) DEFAULT NULL,
   `complemento` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8;
 
 --
 -- Extraindo dados da tabela `unidades`
@@ -167,7 +167,7 @@ CREATE TABLE `usuarios` (
   `celular` varchar(30) DEFAULT NULL,
   `usuario` varchar(30) DEFAULT NULL,
   `senha` varchar(64) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8;
 
 --
 -- Extraindo dados da tabela `usuarios`

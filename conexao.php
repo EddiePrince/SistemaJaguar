@@ -1,4 +1,6 @@
 <?php
+
+
   $hostname = 'localhost';
   $username = 'root';
   $password = '';
@@ -9,5 +11,6 @@
   if($conexao->connect_error){
     die("Conexão falhou: " . $conexao->connect_error);
   }
+
 
 ?>
