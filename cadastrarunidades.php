@@ -1,4 +1,10 @@
-<?php include 'conexao.php'; ?>
+<?php 
+	include 'includes/conexao.php';
+	include 'includes/verificarlogado.inc.php';
+	include 'includes/cadastrarunidades.inc.php';
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="br-pt">

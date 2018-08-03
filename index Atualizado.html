@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+
+<style type="text/css">
+  
+  body {
+    margin: -130px 0 0 -210px;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    padding: 10px;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.name{
+    text-align: center;
+}
+
+button {
+    background-color: #F8A43F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: -130px 0 0 -560px;
+    top: -110%;
+    left: 35%;
+    position: absolute;
+    padding: 10px;
+    width: 50%;
+}
+
+img.logo {
+    width: 300%;
+}
+
+.container {
+    text-align: center;
+    padding: 16px;
+    width:50%;
+    margin-left:5%;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.cancelar {
+
+    width: auto;
+    padding: 5px;
+    background-color: #f44336;
+}
+
+span.esqueceu {
+    float: right;
+    padding: 10px;
+}
+
+span.fazer {
+    float: right;
+    padding: 10px;
+}
+
+span.esqueceu a{
+    color: red;
+}
+
+/* Alterar estilos para span e cancelar botão em telas extras pequenas */
+@media screen and (max-width: 300px) {
+    span.esqueceu {
+       display: block;
+       float: none;
+    }
+    .cancelar {
+       width: 100%;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+  <div class="container" id="login">
+    <div class="imgcontainer">
+      <img src="Logo_2.png" alt="Logo" class="logo">
+    </div>
+  	<h2>Login</h2>
+
+      <form method="post" action=""><br><br>
+
+      <label for="name"><b>Usuário:</b></label>
+      <input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
+
+      <label for="senha"><b>Senha:</b></label>
+      <input type="password"  id="senha"  name="senha" placeholder="Digite sua senha" required>
+      <input type="hidden" name="entrar" value="login">
+      <label>
+        <input type="checkbox" checked="checked" name="remember">Lembre de mim.
+      </label>
+
+
+      <button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
+      <span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
+
+    </form>
+
+	<footer></footer>
+
+
+</body>
+</html>
