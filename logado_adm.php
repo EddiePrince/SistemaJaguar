@@ -44,9 +44,9 @@
             <li><a href="">Unidade Integrada</a>
                   <ul>
                     <li><a href="Cadastro_unidades.php">Cadastrar Usuário</a></li>
-                    <li><a href="">Alterar</a></li>
-                    <li><a href="">Desativar</a></li>
-                    <li><a href="">Excluir</a></li>
+                    <li><a href="Alterar.html">Alterar</a></li>
+                    <li><a href="Desativar.html">Desativar</a></li>
+                    <li><a href="Excluir.html">Excluir</a></li>
                   </ul>
             </li>
             <li><a href="#">Desativar Conta</a></li>
