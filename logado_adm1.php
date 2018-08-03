@@ -20,14 +20,14 @@
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
-<body background="img/jaguar.jpg")>
+<body>
 
     <p>Bem vindo <?php echo $usuario; ?> <br> Bem vindo <?php echo $usuario; ?><br> <a href="sair.php">Sair</a>
 <dir class="superior">
 </dir>
-<dir class="inferior">
-    <nav class="nav">
-        <ul class="menu">
+<dir>
+    <nav>
+        <ul>
             <li><a href="#">Ajuda</a></li>
                 <li><a href="#">Emitir Relatório</a></li>
                     <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>

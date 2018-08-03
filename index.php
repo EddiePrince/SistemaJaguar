@@ -11,14 +11,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <title>Login</title>
-  
+
 </head>
 <body>
   <div class="container" id="login">
     <div class="imgcontainer">
       <img src="img/Logo_2.png" alt="Logo" class="logo">
     </div>
-    
+
   	<h2>Login</h2>
 
       <form method="post" action=""><br><br>
@@ -56,14 +56,14 @@
         $result = mysqli_query($conexao, $query);
         $busca = mysqli_num_rows($result);
         $linha = mysqli_fetch_assoc($result);
-
+/*
     if (($busca > 0) && ($perfil = 'Agente')) {
       //$_SESSION['Agente'] = $linha['perfil'];
       //$_SESSION['nomeCompleto'] = $linha['nomeCompleto'];
       $_SESSION['usuario'] = $linha['usuario'];
       header('Location: logado.php');
       exit;
-}
+}*/
     // esse condicional abaixo nao funcionou verificar se deve ser colocado de volta o perfil na tela de login
     if (($busca > 0) && ($perfil = 'Administrador')) {
       //$_SESSION['Administrador'] = $linha['perfil'];
@@ -72,7 +72,7 @@
       header('Location: logado_adm.php');
       exit;
       // esse condicional abaixo nao funcionou verificar se deve ser colocado de volta o perfil na tela de login
-      
+
       }else {
     echo "<h4><br>Usuario ou Senha Inválido!</h4>";
       }
@@ -81,16 +81,6 @@
   ?>
       <!-- Fim do codigo validação usuario -->
 
-<script>
-// Obtenha o modal
-var modal = document.getElementById('id01');
-
-// Quando o usuário clica em qualquer lugar fora do modal, feche-o
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
 
 </body>

@@ -1,5 +1,3 @@
-<?php include_once("conexao.php"); ?>
-
 <!DOCTYPE html>
 <html lang="br-pt">
 <head>
@@ -11,14 +9,14 @@
 <body>
 	<div id="wrapper">
 		<h2>Recuperação de Senha</h2>
-		<div class="form_div">
-				<form method="post" action="correioAdm.php">
+		<div>
+				<form method="post" action="#">
 					<p>Nome:</p>
 					<p><input type="text" name="nome" placeholder="Nome Completo"></p>
 					<p>E-Mail:</p>
 					<p><input type="email" name="email" placeholder="E-mail fornecido para a empresa"></p>
 					<p>Título:</p>
-					<textarea type="text" name="titulo"  maxlength="100">"Recuperação de Senha"</textarea>
+					<textarea type="text" name="assunto"  maxlength="100">"Recuperação de Senha"</textarea>
 					<p>Mensagem:</p>
 					<textarea type="text" name="mensagem" rows="10" cols="30" maxlength="500">"Favor Atualize Minha Senha".</textarea>
 					<p><input type="submit" value="Enviar ao Administrador"></p>
@@ -28,5 +26,6 @@
 	<div>
 		<a href="index.php">Voltar</a>
 	</div>
+
 </body>
 </html>

@@ -47,14 +47,14 @@
 
 	<?php
 	 header("Content-Type: text/html; charset=utf-8",true);
-		include 'conexao.php'; 
+		include 'conexao.php';
 		$sql = "SELECT * FROM animais";
 		$result = $conexao->query($sql);
 
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc())
-			{	
-				echo "<p> : " . $row['nFicha']  "</p>"
+			{
+				echo "<p> : " . $row['nFicha']  "</p>";
 				echo "Número da ficha: " . $row['nFicha'] . " | ";
 				echo "Data de Recebimento: " . $row['dataRecebimento'] . " | ";
 				echo "Agente: " . $row['agente'] . " | ";
@@ -84,7 +84,7 @@
 				echo "Condição 1: " . $row['condicao1'] . " | ";
 				echo "Condição 2: " . $row['condicao2'] . " | ";
 				echo "Condição 3: " . $row['condicao3'] . " | ";
-				echo "ID da Área de Soltura: " . $row['idArea'] . "<br> <br>"; 
+				echo "ID da Área de Soltura: " . $row['idArea'] . "<br> <br>";
 			}
 		}
 		else{
@@ -96,8 +96,3 @@
 
 </body>
 </html>
-
-
-
-
-
