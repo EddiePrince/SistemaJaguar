@@ -35,51 +35,6 @@ CREATE TABLE `anexos` (
   `arquivo` blob
 ) ENGINE=InnoDB DEFAULT character set = utf8;
 
--- Estrutura da tabela `animais`
-
-DROP TABLE IF EXISTS `animais`;
-CREATE TABLE `animais` (
-  `nFicha` int(11) NOT NULL,
-  `dataRecebimento` date DEFAULT NULL,
-  `agente` varchar(60) DEFAULT NULL,
-  `tipoRecolhimento` varchar(60) DEFAULT NULL,
-  `nomeEntregador` varchar(60) DEFAULT NULL,
-  `cpf_cnpj` varchar(20) DEFAULT NULL,
-  `telefone` varchar(20) DEFAULT NULL,
-  `endereco` varchar(60) DEFAULT NULL,
-  `municipio` varchar(60) DEFAULT NULL,
-  `cep` varchar(60) DEFAULT NULL,
-  `idDocumento` int(11) DEFAULT NULL,
-  `idUnidade` int(11) DEFAULT NULL,
-  `municipioProcedencia` varchar(60) DEFAULT NULL,
-  `uf` varchar(60) DEFAULT NULL,
-  `ultimaProcedencia` varchar(60) DEFAULT NULL,
-  `dieta` varchar(60) DEFAULT NULL,
-  `nomeComum` varchar(60) DEFAULT NULL,
-  `nomeCientifico` varchar(60) DEFAULT NULL,
-  `familia` varchar(60) DEFAULT NULL,
-  `ordem` varchar(60) DEFAULT NULL,
-  `codMarca` varchar(20) DEFAULT NULL,
-  `tipoMarca` varchar(60) DEFAULT NULL,
-  `localMarca` varchar(60) DEFAULT NULL,
-  `situacao` varchar(60) DEFAULT NULL,
-  `periodoQuarentena` int(11) DEFAULT NULL,
-  `tipoDestinacao` varchar(60) DEFAULT NULL,
-  `subtipoDestinacao` varchar(60) DEFAULT NULL,
-  `condicao1` int(11) DEFAULT NULL,
-  `condicao2` int(11) DEFAULT NULL,
-  `condicao3` int(11) DEFAULT NULL,
-  `idArea` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT character set = utf8;
-
---
--- Extraindo dados da tabela `animais`
---
-
-INSERT INTO `animais` (`nFicha`, `dataRecebimento`, `agente`, `tipoRecolhimento`, `nomeEntregador`, `cpf_cnpj`, `telefone`, `endereco`, `municipio`, `cep`, `idDocumento`, `idUnidade`, `municipioProcedencia`, `uf`, `ultimaProcedencia`, `dieta`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `codMarca`, `tipoMarca`, `localMarca`, `situacao`, `periodoQuarentena`, `tipoDestinacao`, `subtipoDestinacao`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
-(1, '2018-08-02', 'Marília Ferreira', 'Entrega Voluntária', 'Anônima', NULL, NULL, NULL, NULL, NULL, 1, 2, 'Palmas', 'Tocantins', 'Área Residencial  104 Sul', 'Sementes', 'Arara', 'Anodorhynchus hyacintinus', 'Psittacidae', 'Psitaciformes', '14', 'Anilha', 'Pé Direito', 'A Destinar', 0, 'Destinação Imediata', 'Soltura', 1, 1, 0, 1),
-(2, '2018-08-02', 'Gabriel Lucas', 'Apreensão', 'Mariana Vasconcelos', '802.444.391-22', '99943-6475', '805 Norte Al 24', 'Araguaína', '77854-909', 2, 2, 'Araguaína', 'Tocantins', 'Residência do Infrator', 'Carnívora', 'Lobo-Guará', 'Chrysocyon brachyurus', 'Canidae', 'Carnívora', '554', 'Brinco', 'Orelha Esquerda', 'Quarentena', 48, NULL, NULL, NULL, NULL, NULL, 2);
-
 
 -- --------------------------------------------------------
 
@@ -157,7 +112,56 @@ CREATE TABLE `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 
 INSERT INTO `usuarios` (`id`, `perfil`, `nomeCompleto`, `email`, `telefone`, `celular`, `usuario`, `senha`) VALUES
-(1, 'Administrador', 'Administrador', 'Administrador@naturanits.com', '--', '--', 'jaguarSistemAdm', 'onça@pintada');
+(1, 'Administrador', 'Administrador', 'Administrador@naturanits.com', '--', '--', 'admin', 'admin'),
+(2, 'Agente', 'Agente', 'Agente@naturanits.com', '--', '--', 'agente', 'agente');
+
+-- Estrutura da tabela `animais`
+
+DROP TABLE IF EXISTS `animais`;
+CREATE TABLE `animais` (
+  `nFicha` int(11) NOT NULL,
+  `dataRecebimento` date DEFAULT NULL,
+  `agente` varchar(60) DEFAULT NULL,
+  `tipoRecolhimento` varchar(60) DEFAULT NULL,
+  `nomeEntregador` varchar(60) DEFAULT NULL,
+  `cpf_cnpj` varchar(20) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `endereco` varchar(60) DEFAULT NULL,
+  `municipio` varchar(60) DEFAULT NULL,
+  `cep` varchar(60) DEFAULT NULL,
+  `idDocumento` int(11) DEFAULT NULL,
+  `idUnidade` int(11) DEFAULT NULL,
+  `municipioProcedencia` varchar(60) DEFAULT NULL,
+  `uf` varchar(60) DEFAULT NULL,
+  `ultimaProcedencia` varchar(60) DEFAULT NULL,
+  `dieta` varchar(60) DEFAULT NULL,
+  `nomeComum` varchar(60) DEFAULT NULL,
+  `nomeCientifico` varchar(60) DEFAULT NULL,
+  `familia` varchar(60) DEFAULT NULL,
+  `ordem` varchar(60) DEFAULT NULL,
+  `codMarca` varchar(20) DEFAULT NULL,
+  `tipoMarca` varchar(60) DEFAULT NULL,
+  `localMarca` varchar(60) DEFAULT NULL,
+  `situacao` varchar(60) DEFAULT NULL,
+  `periodoQuarentena` int(11) DEFAULT NULL,
+  `tipoDestinacao` varchar(60) DEFAULT NULL,
+  `subtipoDestinacao` varchar(60) DEFAULT NULL,
+  `condicao1` int(11) DEFAULT NULL,
+  `condicao2` int(11) DEFAULT NULL,
+  `condicao3` int(11) DEFAULT NULL,
+  `idArea` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT character set = utf8;
+
+--
+-- Extraindo dados da tabela `animais`
+--
+
+INSERT INTO `animais` (`nFicha`, `dataRecebimento`, `agente`, `tipoRecolhimento`, `nomeEntregador`, `cpf_cnpj`, `telefone`, `endereco`, `municipio`, `cep`, `idDocumento`, `idUnidade`, `municipioProcedencia`, `uf`, `ultimaProcedencia`, `dieta`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `codMarca`, `tipoMarca`, `localMarca`, `situacao`, `periodoQuarentena`, `tipoDestinacao`, `subtipoDestinacao`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
+(1, '2018-08-02', 'Marília Ferreira', 'Entrega Voluntária', 'Anônima', NULL, NULL, NULL, NULL, NULL, 1, 2, 'Palmas', 'Tocantins', 'Área Residencial  104 Sul', 'Sementes', 'Arara', 'Anodorhynchus hyacintinus', 'Psittacidae', 'Psitaciformes', '14', 'Anilha', 'Pé Direito', 'A Destinar', 0, 'Destinação Imediata', 'Soltura', 1, 1, 0, 1),
+(2, '2018-08-02', 'Gabriel Lucas', 'Apreensão', 'Mariana Vasconcelos', '802.444.391-22', '99943-6475', '805 Norte Al 24', 'Araguaína', '77854-909', 2, 2, 'Araguaína', 'Tocantins', 'Residência do Infrator', 'Carnívora', 'Lobo-Guará', 'Chrysocyon brachyurus', 'Canidae', 'Carnívora', '554', 'Brinco', 'Orelha Esquerda', 'Quarentena', 48, NULL, NULL, NULL, NULL, NULL, 2);
+
+
+
 
 --
 -- Indexes for dumped tables

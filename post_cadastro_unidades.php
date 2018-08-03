@@ -1,6 +1,6 @@
 <?php
 //Conecção com Banco
-include 'conexao.php';//inclusão do arquivo de conexão com o banco
+include 'includes/conexao.php';//inclusão do arquivo de conexão com o banco
 
 $cnpj = $_POST['cnpj'];
 $cep = $_POST['cep'];
