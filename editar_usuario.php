@@ -1,6 +1,6 @@
 <?php 
-	include 'includes/conexao.php';
-	include 'includes/verificarlogado.inc.php';
+include 'includes/conexao.php';
+
  ?>
 
 <!DOCTYPE html>
