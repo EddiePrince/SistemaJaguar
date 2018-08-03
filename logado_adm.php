@@ -30,7 +30,7 @@
 <dir class="inferior">
     <nav class="nav">
         <ul class="menu">
-            <li><a href="#">Ajuda</a></li>
+            <li><a href="ajuda.php">Ajuda</a></li>
             <li><a href="#">Emitir Relatório</a></li>
             <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
             <li><a href="">Usuário</a>
