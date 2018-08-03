@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Animais Cadastrados</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
 	<h1>Animais Cadastrados</h1>
@@ -29,7 +29,6 @@
 			<th>Nome Comum</th>
 			<th>Nome Científico</th>
 			<th>Família</th>
-			<th></th>
 			<th>Ordem</th>
 			<th>Código da Marcação</th>
 			<th>Tipo de Marcação</th>
@@ -41,6 +40,21 @@
 			<th>Condição 2</th>
 			<th>Condição 3</th>
 			<th>ID Área</th>
+		</tr>
+		<tr>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
+			<td>teste</td>
 
 		</tr>
 	</table>
@@ -54,7 +68,7 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc())
 			{
-				echo "<p> : " . $row['nFicha']  "</p>";
+				echo "<p> : " . $row['nFicha'] . "</p>";
 				echo "Número da ficha: " . $row['nFicha'] . " | ";
 				echo "Data de Recebimento: " . $row['dataRecebimento'] . " | ";
 				echo "Agente: " . $row['agente'] . " | ";
