@@ -41,26 +41,8 @@
 			<th>Condição 3</th>
 			<th>ID Área</th>
 		</tr>
-		<tr>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
-			<td>teste</td>
 
-		</tr>
-	</table>
-
-	<?php
-	 header("Content-Type: text/html; charset=utf-8",true);
+		<?php
 		include 'conexao.php';
 		$sql = "SELECT * FROM animais";
 		$result = $conexao->query($sql);
@@ -68,37 +50,61 @@
 		if($result->num_rows > 0){
 			while($row = $result->fetch_assoc())
 			{
-				echo "<p> : " . $row['nFicha'] . "</p>";
-				echo "Número da ficha: " . $row['nFicha'] . " | ";
-				echo "Data de Recebimento: " . $row['dataRecebimento'] . " | ";
-				echo "Agente: " . $row['agente'] . " | ";
-				echo "Tipo de Recolhimento: " . $row['tipoRecolhimento'] . " | ";
-				echo "Nome do Entregador: " . $row['nomeEntregador'] . " | ";
-				echo "CPF/CNPJ: " . $row['cpf_cnpj'] . " | ";
-				echo "Telefone: " . $row['telefone'] . " | ";
-				echo "Endereço: " . $row['endereco'] . " | ";
-				echo "Município: " . $row['municipio'] . " | ";
-				echo "CEP: " . $row['cep'] . " | " ;
-				echo "Documento: " . $row['idDocumento'] . " | ";
-				echo "Unidade: " . $row['idUnidade'] . " | ";
-				echo "Município de Procedência: " . $row['municipioProcedencia'] . " | ";
-				echo "UF: " . $row['uf'] . " | ";
-				echo "Última Procedência: " . $row['ultimaProcedencia'] . " | ";
-				echo "Dieta: " . $row['dieta'] . " | ";
-				echo "Nome Comum: " . $row['nomeComum'];
-				echo "Nome Científico: " . $row['nomeCientifico'] . " | ";
-				echo "Família: " . $row['familia'] . " | ";
-				echo "Ordem: " . $row['ordem'] . " | ";
-				echo "Código da Marcação: " . $row['codMarca'] . " | ";
-				echo "Tipo de Marcação: " . $row['tipoMarca'] . " | ";
-				echo "Situação: " . $row['situacao'] . " | ";
-				echo "Período de Quarentena: " . $row['periodoQuarentena'] . " | ";
-				echo "Tipo de Destinação: " . $row['tipoDestinacao'] . " | ";
-				echo "Subtipo de Destinação: " . $row['subtipoDestinacao'] . " | ";
-				echo "Condição 1: " . $row['condicao1'] . " | ";
-				echo "Condição 2: " . $row['condicao2'] . " | ";
-				echo "Condição 3: " . $row['condicao3'] . " | ";
-				echo "ID da Área de Soltura: " . $row['idArea'] . "<br> <br>";
+				$con1;
+				if ($row['condicao1'] == 1) {
+					$con1='Atendida';
+				}
+				else{
+					$con1 = "Não Atendida";
+				};
+
+				$con2;
+				if ($row['condicao2'] == 1) {
+					$con2='Atendida';
+				}
+				else{
+					$con2 = "Não Atendida";
+				};
+
+				$con3;
+				if ($row['condicao3'] == 1) {
+					$con3='Atendida';
+				}
+				else{
+					$con3 = "Não Atendida";
+				};
+				echo "<tr>";
+				echo "<td>" . $row['nFicha'] . "</td>";
+				echo "<td>" . $row['dataRecebimento'] . "</td>";
+				echo "<td>" . $row['agente'] . "</td>";
+				echo "<td>" . $row['tipoRecolhimento'] . "</td>";
+				echo "<td>" . $row['nomeEntregador'] . "</td>";
+				echo "<td>" . $row['cpf_cnpj'] . "</td>";
+				echo "<td>" . $row['telefone'] . "</td>";
+				echo "<td>" . $row['endereco'] . "</td>";
+				echo "<td>" . $row['municipio'] . "</td>";
+				echo "<td>" . $row['cep'] . "</td>";
+				echo "<td>" . $row['idDocumento'] . "</td>";
+				echo "<td>" . $row['idUnidade'] . "</td>";
+				echo "<td>" . $row['municipioProcedencia'] . "</td>";
+				echo "<td>" . $row['uf'] . "</td>";
+				echo "<td>" . $row['ultimaProcedencia'] . "</td>";
+				echo "<td>" . $row['dieta'] . "</td>";
+				echo "<td>" . $row['nomeComum'] . "</td>";
+				echo "<td>" . $row['nomeCientifico'] . "</td>";
+				echo "<td>" . $row['familia'] . "</td>";
+				echo "<td>" . $row['ordem'] . "</td>";
+				echo "<td>" . $row['codMarca'] . "</td>";
+				echo "<td>" . $row['tipoMarca'] . "</td>";
+				echo "<td>" . $row['situacao'] . "</td>";
+				echo "<td>" . $row['periodoQuarentena'] . "</td>";
+				echo "<td>" . $row['tipoDestinacao'] . "</td>";
+				echo "<td>" . $row['subtipoDestinacao'] . "</td>";
+				echo "<td>" . $con1 . "</td>";
+				echo "<td>" . $con2 . "</td>";
+				echo "<td>" . $con3 . "</td>";
+				echo "<td>" . $row['idArea'] . "</td>";
+				echo "</tr>";
 			}
 		}
 		else{
@@ -106,6 +112,14 @@
 		}
 
 	?>
+
+
+		
+	
+
+	</table>
+
+	
 
 
 </body>
