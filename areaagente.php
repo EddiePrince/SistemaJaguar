@@ -23,7 +23,7 @@
             <li><a href="ajuda.php">Ajuda</a></li>
                 <li><a href="#">Emitir Relatório</a></li>
                     <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
-                    <li><a href="editar_usuario.php">Editar Usuário</a></li>
+                    <li><a href="editar_usuario.php">Alterar Dados Usuário</a></li>
             <li><a href="Desativar">Desativar Conta</a></li>
         </ul>
     </nav>

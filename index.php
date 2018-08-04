@@ -49,20 +49,22 @@
       $senha = $_POST['senha'];
 
     if (empty($usuario) || empty($senha)) {
-      echo "<br>Preencha todos os campos!";
+      echo "<br><p style='color:blue;'>Preencha todos os campos!<p>";
       }else {
         $query = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
-        $result = mysqli_query($conexao, $query);
-        $busca = mysqli_num_rows($result);
+        $result = mysqli_query($conexao, $query); // trazer o resultado de query
+        $busca = mysqli_num_rows($result); // retornar se achou ounaotrue ou false
         $linha = mysqli_fetch_assoc($result);
 
+        //buscar os dados do servidor e salvar na sessao
     if ($busca > 0)  {
-      $_SESSION['Administrador'] = $linha['perfil'];
+      $_SESSION['Administrador'] = $linha['Administrador'];
       $_SESSION['usuario'] = $linha['usuario'];
+      $_SESSION['senha'] = $linha['senha'];
       header('Location: areaadm.php');
       exit;
         }else {
-    echo "<h4><br>Usuario ou Senha Inválido!</h4>";
+    echo "<h4 style='color:red;'><br>Usuario ou Senha Inválido!</h4>";
       }
     }
   }

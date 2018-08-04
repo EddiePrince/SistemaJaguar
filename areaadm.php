@@ -1,5 +1,4 @@
 <?php
-
   include 'includes/conexao.php';
   include 'includes/verificausuario.php';
 
@@ -26,15 +25,15 @@
             <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
             <li><a href="">Usuário</a>
                   <ul>
-                      <li><a href=""></a>Cadastrar Usuário</li>
-                      <li><a href="editar_usuario.php">Alterar</a></li>
-                      <li><a href="Desativar.php"></a>Desativar</li>
-                      <li><a href="Excluir.php"></a>Excluir</li>
+                      <li><a href="cadastro_usuario.php">Cadastrar</a></li>
+                      <li><a href="editar_usuario.php">Alterar Dados</a></li>
+                      <li><a href="Desativar.php">Desativar</a></li>
+                      <li><a href="Excluir.php">Excluir Usuário do Banco de Dados</a></li>
                   </ul>
             </li>
             <li><a href="">Unidade Integrada</a>
                   <ul>
-                    <li><a href="Cadastro_unidades.php">Cadastrar Usuário</a></li>
+                    <li><a href="Cadastro_unidades.php">Cadastrar</a></li>
                     <li><a href="Alterar.php">Alterar</a></li>
                     <li><a href="Desativar.php">Desativar</a></li>
                     <li><a href="Excluir.php">Excluir</a></li>
