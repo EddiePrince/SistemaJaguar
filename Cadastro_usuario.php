@@ -1,17 +1,9 @@
-<?php 
-include 'includes/conexao.php';
-   //Inicio do codigo validação usuario
-  session_start();
+<?php
 
-//  $senha = $_SESSION['senha'];
-  $usuario = $_SESSION['usuario'];
+  include 'includes/conexao.php';
+  include 'includes/verificausuario.php';
 
-  if (!isset($_SESSION['nomeCompleto']) && !isset($_SESSION['usuario'])) {
-    header('Location: index.php');
-    exit;
-  }
 ?>
-    <!-- Fim do codigo validação usuario -->
 
 <!DOCTYPE html>
 <html lang="br-pt">

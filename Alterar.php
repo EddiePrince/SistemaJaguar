@@ -1,3 +1,10 @@
+<?php
+
+  include 'includes/conexao.php';
+  include 'includes/verificausuario.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -71,7 +78,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -85,38 +92,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Desativar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -133,7 +109,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -147,38 +123,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Desativar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -195,7 +140,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -209,7 +154,69 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Desativar</button>
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -230,7 +237,7 @@ footer{
                 </div>
                 <div class="col-12 col-lg-12 col-xl-6">
                   <div class="content">
-                    <button>Desativar</button>
+                    <button>Alterar</button>
                   </div>
                 </div>
               </div>
@@ -244,7 +251,7 @@ footer{
                 </div>
                 <div class="col-12 col-lg-12 col-xl-6">
                   <div class="content">
-                    <button>Desativar</button>
+                    <button>Alterar</button>
                   </div>
                 </div>
               </div>
@@ -254,9 +261,6 @@ footer{
       </div>
     </div>
     </form>
-
-    
-
     <footer>
 <h1></h1>
     </footer>

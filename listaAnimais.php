@@ -1,3 +1,10 @@
+<?php
+
+  include 'includes/conexao.php';
+  include 'includes/verificausuario.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +53,7 @@
 
 	</table>
 
-	
+
 
 
 </body>

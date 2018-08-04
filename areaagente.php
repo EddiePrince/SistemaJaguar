@@ -1,17 +1,9 @@
 <?php
+
   include 'includes/conexao.php';
-      //Inicio do codigo validação usuario
-  session_start();
+  include 'includes/verificausuario.php';
 
-//  $senha = $_SESSION['senha'];
-  $usuario = $_SESSION['usuario'];
-
-  if (!isset($_SESSION['nomeCompleto']) && !isset($_SESSION['usuario'])) {
-    header('Location: index.php');
-    exit;
-  }
 ?>
-    <!-- Fim do codigo validação usuario -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,11 +20,11 @@
 <dir class="inferior">
     <nav class="nav">
         <ul class="menu">
-            <li><a href="#">Ajuda</a></li>
+            <li><a href="ajuda.php">Ajuda</a></li>
                 <li><a href="#">Emitir Relatório</a></li>
                     <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
-                    <li><a href="Editar_Usuario.php">Editar Usuário</a></li>
-            <li><a href="#">Desativar Conta</a></li>
+                    <li><a href="editar_usuario.php">Editar Usuário</a></li>
+            <li><a href="Desativar">Desativar Conta</a></li>
         </ul>
     </nav>
 </dir>

@@ -1,7 +1,9 @@
-<?php 
-include 'includes/conexao.php';
+<?php
 
- ?>
+  include 'includes/conexao.php';
+  include 'includes/verificausuario.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="br-pt">
