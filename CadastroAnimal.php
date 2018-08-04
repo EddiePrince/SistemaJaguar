@@ -25,6 +25,7 @@
 			<nav>
 					<ul>
 							<li><a href="ajuda.php" target="_blank">Ajuda</a></li>
+              <!-- <br> <a href="areaadm.php">Sair</a> -->
 					</ul>
 			</nav>
 

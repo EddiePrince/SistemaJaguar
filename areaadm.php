@@ -22,21 +22,31 @@
         <ul>
             <li><a href="ajuda.php">Ajuda</a></li>
             <li><a href="#">Emitir Relatório</a></li>
-            <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
-            <li><a href="">Usuário</a>
+            <li><a href="">Cadastrar Animal</a>
+              <ul>
+                  <li><a href="menu/listaAnimais.php">Visualizar</a></li>
+                  <li><a href="CadastroAnimal.php">Cadastrar</a></li>
+                  <li><a href="menu/alterarAnimal.php">Alterar Dados</a></li>
+                  <li><a href="menu/desativarAnimal.php">Desativar</a></li>
+                  <li><a href="menu/excluirAnimal.php">Excluir Animal do Banco de Dados</a></li>
+              </ul>
+            </li>
+            <li><a href="">Usuários</a>
                   <ul>
-                      <li><a href="cadastro_usuario.php">Cadastrar</a></li>
-                      <li><a href="editar_usuario.php">Alterar Dados</a></li>
-                      <li><a href="Desativar.php">Desativar</a></li>
-                      <li><a href="Excluir.php">Excluir Usuário do Banco de Dados</a></li>
+                  <li><a href="menu/listaUsuarios.php">Visualizar</a></li>
+                      <li><a href="cadastroUsuario.php">Cadastrar</a></li>
+                      <li><a href="menu/alterarUsuario.php">Alterar Dados</a></li>
+                      <li><a href="menu/desativarUsuario.php">Desativar</a></li>
+                      <li><a href="menu/excluirUsuario.php">Excluir Usuário do Banco de Dados</a></li>
                   </ul>
             </li>
-            <li><a href="">Unidade Integrada</a>
+            <li><a href="">Unidades Integradas</a>
                   <ul>
-                    <li><a href="Cadastro_unidades.php">Cadastrar</a></li>
-                    <li><a href="Alterar.php">Alterar</a></li>
-                    <li><a href="Desativar.php">Desativar</a></li>
-                    <li><a href="Excluir.php">Excluir</a></li>
+                  <li><a href="menu/listaUnidades.php">Visualizar</a></li>
+                    <li><a href="CadastroUnidade.php">Cadastrar</a></li>
+                    <li><a href="menu/alterarUnidade.php">Alterar</a></li>
+                    <li><a href="menu/desativarUnidade.php">Desativar</a></li>
+                    <li><a href="menu/excluirUnidade.php">Excluir Unidade do Banco de Dados</a></li>
                   </ul>
             </li>
             <li><a href="#">Desativar Conta</a></li>

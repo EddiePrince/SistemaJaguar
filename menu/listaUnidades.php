@@ -1,7 +1,7 @@
 <?php
 
-  include 'includes/conexao.php';
-  include 'includes/verificausuario.php';
+//  include 'includes/conexao.php';
+//  include 'includes/verificausuario.php';
 
 ?>
 
@@ -9,13 +9,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Animais Cadastrados Araguaína</title>
+	<title>Unidades Cadastradas</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-	<h1>Animais Cadastrados Aragauína</h1>
+      <!-- <br> <a href="../areaadm.php">Sair</a> -->
+	<h1>Unidades Cadastradas</h1>
 
-	<table>
+	<!-- <table>
 		<tr>
 			<th>Número da Ficha</th>
 			<th>Data de Recebimento</th>
@@ -51,7 +52,7 @@
 
 		<?php include 'includes/listaAnimais.inc.php'; ?>
 
-	</table>
+	</table> -->
 
 
 

@@ -1,7 +1,7 @@
 <?php
 
-  include 'includes/conexao.php';
-  include 'includes/verificausuario.php';
+  //include 'includes/conexao.php';
+  //include 'includes/verificausuario.php';
 
 ?>
 
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Unidades Intedradas</title>
+    <title>Unidades Integradas</title>
 
     <style type="text/css">
 
@@ -55,6 +55,15 @@ footer{
   </head>
 
   <body>
+    		<dir>
+    		    <nav>
+    		        <ul>
+    		            <li><a href="../ajuda.php">Ajuda</a></li>
+    		        </ul>
+    		    </nav>
+            <!-- <br> <a href="../areaadm.php">Sair</a> -->
+    		</dir>
+
     <form action="" method="post">
 
       <div id="page">
@@ -62,7 +71,7 @@ footer{
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1>Unidades Intedradas</h1>
+              <h1>Alterar Unidade</h1>
             </div>
             <div class="col-12 col-lg-12 col-xl-6">
               <button>Criar</button>
@@ -78,7 +87,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -92,38 +101,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Excluir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -140,7 +118,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -154,38 +132,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Excluir</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="news">
-                <div class="row">
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
-                  </div>
-                  <div class="col-12 col-lg-12 col-xl-6">
-                    <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -202,7 +149,7 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -216,7 +163,69 @@ footer{
                   </div>
                   <div class="col-12 col-lg-12 col-xl-6">
                     <div class="content">
-                     <button>Excluir</button>
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="news">
+                <div class="row">
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="picture"><img src="http://placehold.it/100x100" alt="Placeholder"></div>
+                  </div>
+                  <div class="col-12 col-lg-12 col-xl-6">
+                    <div class="content">
+                     <button>Alterar</button>
                     </div>
                   </div>
                 </div>
@@ -237,7 +246,7 @@ footer{
                 </div>
                 <div class="col-12 col-lg-12 col-xl-6">
                   <div class="content">
-                    <button>Excluir</button>
+                    <button>Alterar</button>
                   </div>
                 </div>
               </div>
@@ -251,7 +260,7 @@ footer{
                 </div>
                 <div class="col-12 col-lg-12 col-xl-6">
                   <div class="content">
-                    <button>Excluir</button>
+                    <button>Alterar</button>
                   </div>
                 </div>
               </div>
@@ -262,6 +271,7 @@ footer{
     </div>
     </form>
     <footer>
+<h1></h1>
     </footer>
   </body>
 </html>

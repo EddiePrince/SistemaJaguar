@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
 <body background="img/jaguar.jpg")>
-  <p>Bem vindo <?php print_r($_SESSION); ?> <br> <a href="sair.php">Sair</a>
+  <br> <a href="sair.php">Sair</a>
   </p>
 <dir class="superior">
 </dir>
@@ -21,10 +21,10 @@
     <nav class="nav">
         <ul class="menu">
             <li><a href="ajuda.php">Ajuda</a></li>
-                <li><a href="#">Emitir Relatório</a></li>
-                    <li><a href="Cadastro_Animais.php">Cadastrar Animal</a></li>
-                    <li><a href="editar_usuario.php">Alterar Dados Usuário</a></li>
-            <li><a href="Desativar">Desativar Conta</a></li>
+                <li><a href="menu/emitirRelatorio.php">Emitir Relatório</a></li>
+                    <li><a href="CadastroAnimal.php">Cadastrar Animal</a></li>
+                    <li><a href="menu/alterarUsuario.php">Alterar Dados Usuário</a></li>
+            <li><a href="menu/desativarUsuario.php">Desativar Conta</a></li>
         </ul>
     </nav>
 </dir>

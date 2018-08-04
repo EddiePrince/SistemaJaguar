@@ -10,7 +10,7 @@
 <body>
 
 	<h2>Central de Ajuda</h2>
-	<button class="button">Voltar</button>
+	  <!-- <br> <a href="areaadm.php">Sair</a> -->
 <br>
 <div class="c27-section-nav-plank">
 	<div class="section-nav-plank__container">

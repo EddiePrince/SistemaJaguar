@@ -102,7 +102,7 @@ INSERT INTO `unidades` (`idUnidade`, `nomeUnidade`, `tipoUnidade`, `cnpj`, `cep`
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
-  `(id)matricula` int(11) NOT NULL UNIQUE,
+  `id` int(11) NOT NULL,
   `perfil` varchar(20) DEFAULT NULL,
   `nomeCompleto` varchar(255) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,

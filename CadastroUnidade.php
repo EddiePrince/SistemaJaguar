@@ -19,16 +19,19 @@
 		<dir class="#">
 		    <nav class="#">
 		        <ul class="#">
-		            <li><a href="#">Ajuda</a></li>
+		            <li><a href="ajuda.php">Ajuda</a></li>
 		        </ul>
 		    </nav>
+        <div>
+         <a href="areaadm.php"> <input type="button" name="btn" value="Voltar">  </a>
+        </div>
 		</dir>
 
-		<h2>Cadastro de Unidades</h2>
 		<div class="form_div">
 		<div class="imgcontainer">
 	   <a href="index.php"> <img src="image/Logo_4.png" alt="Logo" class="logo"></a>
 	  </div>
+    <h2>Cadastro de Unidades</h2>
 
 		<form method="post" action="post_cadastro_unidades.php">
 	    <label for="cnpj"><p>CNPJ:</p></label>
@@ -105,9 +108,7 @@
 	    </div>
 	    </div>
 	  </div>
-	<div>
-	 <a href="index.php"> <input type="button" name="btn" value="Voltar">  </a>
-	</div>
+
 	<footer>
 
 	</footer>

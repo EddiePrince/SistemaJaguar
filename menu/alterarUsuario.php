@@ -1,7 +1,7 @@
 <?php
 
-  include 'includes/conexao.php';
-  include 'includes/verificausuario.php';
+//  include 'includes/conexao.php';
+//  include 'includes/verificausuario.php';
 
 ?>
 
@@ -9,16 +9,17 @@
 <html lang="br-pt">
 <head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/editar_usuario.css">
+		<link rel="stylesheet" type="text/css" href="">
 	<title>Editar Usuário</title>
 </head>
 <body>
-		<div class="imgcontainer">
+      <!-- <br> <a href="../areaadm.php">Sair</a><br><br> -->
+		<div>
 	   <a href="editar_usuario.php"> <img src="image/logo_5.png" alt="logo" class="logo"></a>
 	  </div>
 		<h2>Editar Usuário</h2>
-	<div id="wrapper">
-	<div class="form_div">
+	<div>
+	<div>
 	<form action="">
 
 	    <label for="name"><p>Nome Completo:</label>
@@ -36,6 +37,7 @@
 	    </div>
 	    </div>
 	  </div>
+
 	</form>
 	<footer></footer>
 </body>
