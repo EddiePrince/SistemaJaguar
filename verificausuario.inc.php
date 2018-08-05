@@ -1,5 +1,5 @@
 <?php
-  include 'includes/conexao.php';
+  include 'conexao.inc.php';
 
 //Inicio do codigo verificação de usuario
   session_start();
