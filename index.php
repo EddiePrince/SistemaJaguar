@@ -8,21 +8,18 @@
 <html lang="br-pt">
 <head>
   <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  <title>Login</title>
-
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Login Sistema Jaguar</title>
 </head>
 <body>
-  <div class="container" id="login">
-    <div class="imgcontainer">
-      <img src="img/logo.png" alt="Logo" class="logo">
-    </div>
 
-  	<h2>Login</h2>
+ 	<img src="img/logo.png" alt="Logo" class="logo">
+   
+
+  	
 
       <form method="post" action=""><br><br>
-
+      	<h2>Login</h2>
       <label for="name"><b>Usuário:</b></label>
       <input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
 
