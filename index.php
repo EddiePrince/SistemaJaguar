@@ -13,27 +13,27 @@
 </head>
 <body>
 
- 	<img src="img/logo.png" alt="Logo" class="logo">
-   
+    <form method="post" action="">
 
-  	
+    	<div class="formtop">
+ 			<img src="img/logo.png" alt="Logo" id="logo">
+    		<h2>Login</h2>   		
+    	</div>
+ 
+      	<label for="name"><b>Usuário:</b></label>
+      	<input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
 
-      <form method="post" action=""><br><br>
-      	<h2>Login</h2>
-      <label for="name"><b>Usuário:</b></label>
-      <input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
-
-      <label for="senha"><b>Senha:</b></label>
-      <input type="password"  id="senha"  name="senha" placeholder="Digite sua senha" required>
-      <button type="submit">Entrar</button>
-      <input type="hidden" name="entrar" value="login">
-      <label>
+      	<label for="senha"><b>Senha:</b></label>
+      	<input type="password"  id="senha"  name="senha" placeholder="Digite sua senha" required>
+      	<button type="submit">Entrar</button>
+      	<input type="hidden" name="entrar" value="login">
+      	<label>
         <input type="checkbox" checked="checked" name="remember">Lembre de mim.
-      </label>
+      	</label>
 
 
-      <button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
-      <span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
+      	<button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
+      	<span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
 
     </form>
 
