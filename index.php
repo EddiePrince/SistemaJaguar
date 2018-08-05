@@ -16,7 +16,7 @@
 <body>
   <div class="container" id="login">
     <div class="imgcontainer">
-      <img src="images/logo.png" alt="Logo" class="logo">
+      <img src="img/logo.png" alt="Logo" class="logo">
     </div>
 
   	<h2>Login</h2>
