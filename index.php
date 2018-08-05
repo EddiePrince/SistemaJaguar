@@ -71,7 +71,6 @@
   ?>
       <!-- Fim do codigo validação usuario -->
 
-</script>
 
 </body>
 </html>
