@@ -15,7 +15,7 @@
 <body>
 
       <br>
-       Bem vindo <?php echo $usuario; ?> <br> Bem vindo <?php echo $usuario; ?>
+      Bem vindo <?php echo $usuario; ?>
       <br> <a href="sair.php">Sair</a>
 <dir>
     <nav>
