@@ -25,7 +25,7 @@
 			<nav>
 					<ul>
 							<li><a href="ajuda.php" target="_blank">Ajuda</a></li>
-              <!-- <br> <a href="areaadm.php">Sair</a> -->
+               <!-- <br> <a href="areaadm.php">Sair</a>  -->
 					</ul>
 			</nav>
 
@@ -33,18 +33,20 @@
 	<div class="form_div">
 			<form method="post" action="post_cadastro_animais.php">
         <h4>Dados  da Ficha e do Animal</h4>
+
 				<p>Agente Recebedor:</p>
-				<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo"></p>
+				<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
+
 				<p>Tipo de Recolhimento:</p>
-				<select type="menu" name="tipoRecolhimento" size=1>
+				<select  value="municipio Nao Selecionado" name="tipoRecolhimento" size=1>
 					<option>Apreensão</option>
 					<option>Resgate/Recolhimento</option>
 					<option>Entrega Voluntária</option>
 				</select><br><br>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
-				<!-- Dados do Entregador/Autuado -->
+				 <!-- Dados do Entregador/Autuado  -->
 				<h4> Dados do Entregador/Autuado</h4>
 				<p>Nome:</p>
 				<p><input type="text" name="nomeEntregador" placeholder="Nome Completo"></p>
@@ -106,16 +108,16 @@
 					<option value="Xambioá">Xambioá</option>
 				</select><br>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
 				<h4>Nº Auto infração/Nº Termo Apreensão/Depósito ou Nº Bol. de ocorrência:</h4s>
 				<p><input type="text" name="autoTermoBoletim" placeholder="Nº Auto/Termo/Dep./Boletim"></p>
         Upload Documento Respectivo ao Nº Auto infração/Nº Termo Apreensão/Depósito ou Nº Bol. de ocorrência:
         <br><input type="file" name="uploadDoc" ><br>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
-        <!-- Dados da Unidade Acolhedora -->
+         <!-- Dados da Unidade Acolhedora -->
          <h4> Dados da Unidade Acolhedora</h4>
          <p>Selecione a Unidade:</p>
          <select type="menu" name="nomeUnidade" size=1>
@@ -125,9 +127,9 @@
            <option>Inserir Cod.PHP</option>
          </select><br><br>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
-         <!-- Dados do Animal -->
+          <!-- Dados do Animal  -->
           <h4> Dados do Animal</h4>
          <p>Municipio de Procedência:</p>
          <select name="municipioProcedencia">
@@ -179,35 +181,35 @@
            <option value="Xambioá">Xambioá</option>
          </select>
          <p>UF:</p>
-         <select name="ufProcedencia">
-           <option value="TO">Selecione o Estado</option>
-           <option value="ac">Acre</option>
-           <option value="al">Alagoas</option>
-           <option value="am">Amazonas</option>
-           <option value="ap">Amapá</option>
-           <option value="ba">Bahia</option>
-           <option value="ce">Ceará</option>
-           <option value="df">Distrito Federal</option>
-           <option value="es">Espírito Santo</option>
-           <option value="go">Goiás</option>
-           <option value="ma">Maranhão</option>
-           <option value="mt">Mato Grosso</option>
-           <option value="ms">Mato Grosso do Sul</option>
-           <option value="mg">Minas Gerais</option>
-           <option value="pa">Pará</option>
-           <option value="pb">Paraíba</option>
-           <option value="pr">Paraná</option>
-           <option value="pe">Pernambuco</option>
-           <option value="pi">Piauí</option>
-           <option value="rj">Rio de Janeiro</option>
-           <option value="rn">Rio Grande do Norte</option>
-           <option value="ro">Rondônia</option>
-           <option value="rs">Rio Grande do Sul</option>
-           <option value="rr">Roraima</option>
-           <option value="sc">Santa Catarina</option>
-           <option value="se">Sergipe</option>
-           <option value="sp">São Paulo</option>
-           <option value="to">Tocantins</option>
+         <select name="ufProcedencia" >
+           <option value="Estado Nao Selecionado">Selecione o Estado</option>
+           <option value="AC">Acre</option>
+           <option value="AL">Alagoas</option>
+           <option value="AM">Amazonas</option>
+           <option value="AP">Amapá</option>
+           <option value="BA">Bahia</option>
+           <option value="CE">Ceará</option>
+           <option value="DF">Distrito Federal</option>
+           <option value="ES">Espírito Santo</option>
+           <option value="GO">Goiás</option>
+           <option value="MA">Maranhão</option>
+           <option value="MT">Mato Grosso</option>
+           <option value="MS">Mato Grosso do Sul</option>
+           <option value="MG">Minas Gerais</option>
+           <option value="PA">Pará</option>
+           <option value="PB">Paraíba</option>
+           <option value="PR">Paraná</option>
+           <option value="PE">Pernambuco</option>
+           <option value="PI">Piauí</option>
+           <option value="RJ">Rio de Janeiro</option>
+           <option value="RN">Rio Grande do Norte</option>
+           <option value="RO">Rondônia</option>
+           <option value="RS">Rio Grande do Sul</option>
+           <option value="RR">Roraima</option>
+           <option value="SC">Santa Catarina</option>
+           <option value="SE">Sergipe</option>
+           <option value="SP">São Paulo</option>
+           <option value="TO">Tocantins</option>
          </select>
          <p>Local de Ultima Procedência do Espécime:</p>
          <p><input type="text" name="locUltimaProcedencia"  placeholder="Local de Procedência do Espécime"></p>
@@ -222,9 +224,9 @@
         <p>Ordem:</p>
         <p><input type="text" name="ordemAnimal" placeholder="Nome Completo"></p>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
-         <!-- Triagem de Animal -->
+          <!-- Triagem de Animal  -->
           <h4> Triagem de Animal </h4>
            <h5>Identificação Taxonômica:</h5>
              <p>Código de Marcação:</p>
@@ -234,16 +236,28 @@
              <p>Local de Marcação:</p>
               <input type="text"  name="localMarca" placeholder="Local"><br>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<!-- <br><hr><br>  Linha Horizontal  -->
 
-         <!-- Destinação de Animais -->
+          <!-- Destinação de Animais  -->
         <h4> Destinação de Animais </h4>
-        <!-- Quarentena -->
-        <INPUT TYPE="checkbox" NAME="tipoDestinacao" VALUE="Quarentena"><strong>Quarentena:</strong>
+
+        <p>Tipo de Destinação:</p>
+        <select type="menu" name="tipoDestinacao" size=1>
+          <option value="Tipo Nao Selecionado">Selecione o Tipo</option>
+          <option>Quarentena</option>
+          <option>Destinação Imediata</option>
+          <option>Destinação Mediata</option>
+        </select><br><br>
+
+
+
+        <!--
+          Quarentena
+        <INPUT TYPE="checkbox" NAME="" VALUE="Quarentena"><strong>Quarentena:</strong>
           <p>Período de Isolamento:</p>
             <input type="text"  name="periodoQuarentena" placeholder="Período"><br><br>
 
-            <!-- Destinação Imediata -->
+              Destinação Imediata
             <INPUT TYPE="checkbox" NAME="tipoDestinacao" VALUE="Destinação Imediata"><strong>Destinação Imediata:</strong>
               <p>Soltura:</p>
               <h6>Em caso de soltura o Agente deve marcar a checklist.</h6>
@@ -251,7 +265,7 @@
              <br><INPUT TYPE="checkbox" NAME="condicao2" VALUE="O animal não apresenta problemas que indiquem impedir sua sobrevivência ou a adaptação em vida livre"> O animal não apresenta problemas que indiquem impedir sua sobrevivência ou a adaptação em vida livre;
              <br><INPUT TYPE="checkbox" NAME="condicao3" VALUE="O animal é de espécie de ocorrência natural no local"> O animal é de espécie de ocorrência natural no local.
                <p>Area de Soltura:</p>
-               <select type="menu" name="areaSoltImediata" size=1>
+               <select type="menu" name="subtipoDestinacao" size=1>
                <option value="Area Nao Selecionada">Selecione a Área</option>
                <option>Inserir Cod.PHP</option>
                <option>Inserir Cod.PHP</option>
@@ -267,7 +281,7 @@
            <option>Inserir Cod.PHP</option>
          </select><br><br>
 
-         <!-- Destinação Mediata -->
+          Destinação Mediata -------------------------------------
          <INPUT TYPE="checkbox" NAME="tipoDestinacao" VALUE="Destinação Mediata"><strong>Destinação Mediata:</strong>
           <br><INPUT TYPE="checkbox" NAME="subtipoDestinacao" VALUE="Soltura Experimental<br>">Soltura Experimental:
          <select type="menu" name="subtipoDestinacao" size=1>
@@ -311,9 +325,8 @@
             <option>Inserir Cod.PHP</option>
           </select></p><br><br>
 
-          <br><br><br><p><input type="submit" value="Salvar"></p>
 
-<br><hr><br> <!-- Linha Horizontal -->
+<br><hr><br>  Linha Horizontal ------------------------------------
 
 
 				<!--
@@ -331,6 +344,7 @@
 				<input type="radio" name="entendeu" value="teste">
 				<input type="radio" name="entendeu" value="teste"><br><br> -->
 
+        <br><br><br><input type="submit" value="Salvar"></p>
 
 			</form>
   </div>

@@ -23,19 +23,30 @@ $familiaAnimal = $_POST['familiaAnimal'];
 $ordemAnimal = $_POST['ordemAnimal'];
 $codMarca = $_POST['codMarca'];
 $tipoMarca = $_POST['tipoMarca'];
-$periodoQuarentena = $_POST['periodoQuarentena'];
+$localMarca = $_POST['localMarca'];
 $tipoDestinacao = $_POST['tipoDestinacao'];
-$subtipoDestinacao = $_POST['subtipoDestinacao'];
+// $periodoQuarentena = $_POST['periodoQuarentena'];
 // $condicao1 = $_POST['condicao1'];
 // $condicao2 = $_POST['condicao2'];
 // $condicao3 = $_POST['condicao3'];
+// $subtipoDestinacao = $_POST['subtipoDestinacao'];
 
 
-// "INSERT INTO `animais` (`nFicha`, `dataRecebimento`, `modificadoem`, `agenteRecebedor`, `tipoRecolhimento`, `nomeEntregador`, `cpf_cnpj`, `telefone`, `cep`, `enderecoEntregador`, `municipioEntregador`, `idDocumento`, `autoTermoBoletim`, `uploadDoc`, `idUnidade`, `nomeUnidade`, `municipioProcedencia`, `ufProcedencia`, `locUltimaProcedencia`, `dieta`, `nomeComum`, `nomeCientifico`, `familiaAnimal`, `ordemAnimal`, `codMarca`, `tipoMarca`, `localMarca`, `situacao`, `periodoQuarentena`, `tipoDestinacao`, `subtipoDestinacao`, `idArea`) VALUES (NULL, '2018-08-15', '2018-08-08 00:00:00', 'misael', 'tipo1', 'marculino', '0987654321', '6578490324', '77555000', 'rua bairro numero', 'babaçulandia', NULL, '675', 'feff', '1', 'aasasde', 'wewe', 'wewew', 'weeer', '7u7u5', '656yrt', 'ry5y', 'y656', 'tytyu', 'ewter', 'ewtt', 'rtyty', '5u65ert', '30', '665y', '4yrytr', '2')";
+$sql = "insert into animais (dataRecebimento, agenteRecebedor, tipoRecolhimento, nomeEntregador, cpf_cnpj, telefone,
+ cep, enderecoEntregador, municipioEntregador, autoTermoBoletim, uploadDoc, nomeUnidade, municipioProcedencia,
+ ufProcedencia, locUltimaProcedencia, dieta, nomeComum, nomeCientifico, familiaAnimal, ordemAnimal,
+ codMarca, tipoMarca, localMarca, tipoDestinacao)
+
+values ( NOW(), '$agenteRecebedor', '$tipoRecolhimento', '$nomeEntregador', '$cpf_cnpj', '$telefone',
+ '$cep', '$enderecoEntregador', '$municipioEntregador', '$autoTermoBoletim', '$uploadDoc', '$nomeUnidade',
+ '$municipioProcedencia', '$ufProcedencia', '$locUltimaProcedencia', '$dieta', '$nomeComum',
+ '$nomeCientifico', '$familiaAnimal', '$ordemAnimal', '$codMarca', '$tipoMarca', '$localMarca', '$tipoDestinacao')"; //iserindo dados digitados do formulario para a tabela usuarios
 
 
 
-$sql = "insert into animais (agenteRecebedor, nomeEntregador, cpf_cnpj, telefone, cep, enderecoEntregador, municipioEntregador, autoTermoBoletim, uploadDoc, nomeUnidade, municipioProcedencia, ufProcedencia, locUltimaProcedencia, dieta, nomeComum, nomeCientifico, familiaAnimal, ordemAnimal, codMarca, tipoMarca, periodoQuarentena, tipoDestinacao, subtipoDestinacao ) values ('$agenteRecebedor', '$tipoRecolhimento', '$nomeEntregador', '$cpf_cnpj', '$telefone', '$cep', '$enderecoEntregador', '$municipioEntregador','$autoTermoBoletim', '$uploadDoc', '$nomeUnidade', '$municipioProcedencia', '$ufProcedencia', '$locUltimaProcedencia', '$dieta', '$nomeComum', '$nomeCientifico', '$familiaAnimal', '$ordemAnimal', '$codMarca', '$tipoMarca', '$periodoQuarentena', '$tipoDestinacao', '$subtipoDestinacao')"; //iserindo dados digitados do formulario para a tabela usuarios
+//, periodoQuarentena, condicao1, condicao2, condicao3, subtipoDestinacao
+//, '$periodoQuarentena''$condicao1', '$condicao2', '$condicao3' , '$subtipoDestinacao'
+
 //executa e armazena o $sql
 $salvar = mysqli_query($conexao, $sql);
 
@@ -46,7 +57,5 @@ echo "Operação foi Realizada com Sucesso!";
 mysqli_close($conexao);
 
 
-//echo "Nome: ".$nome."<br>E-mail: ".$email."<br>Telefone: ".$tel."<br>Celular: ".$cel."<br>Usuário: ".$user."<br>Senha: ".$senha;
-
  ?>
-<br> <a href="Cadastro_animais.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a>
+<br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a>

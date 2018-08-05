@@ -33,7 +33,7 @@
 
 			<p>Perfil:</p>
 			<select name="perfil" required>
-				<option>Selecione o Perfil do Usuário</option>
+				<option value="Agente">Selecione o Perfil do Usuário</option>
 				<option value="Administrador">Administrador</option>
 				<option value="Agente">Agente</option>
 			</select><br><br><br>
