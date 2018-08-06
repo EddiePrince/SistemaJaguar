@@ -1,5 +1,10 @@
+
 <?php
-  include 'conexao.inc.php';
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+?>
+
+<?php
 
 //Inicio do codigo verificação de usuario
   session_start();

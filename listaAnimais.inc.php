@@ -1,5 +1,10 @@
 <?php
-		include 'conexao.inc.php';
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'verificausuario.inc.php';
+?>
+
+<?php
 		$sql = "SELECT * FROM animais";
 		$result = $conexao->query($sql);
 

@@ -1,8 +1,7 @@
 <?php
-
-  include 'includes/conexao.php';
-  include 'includes/verificausuario.php';
-
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'verificausuario.inc.php';
 ?>
 
 

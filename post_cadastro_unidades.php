@@ -1,6 +1,10 @@
 <?php
 //Conecção com Banco
-include 'includes/conexao.php';//inclusão do arquivo de conexão com o banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+?>
+
+
+<?php
 
 $nomeUnidade = $_POST['nomeUnidade'];
 

@@ -1,8 +1,8 @@
 <?php
-include 'includes/conexao.php';
+include 'conexao.inc.php';
 session_start();   // Sessão
-
 ?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>

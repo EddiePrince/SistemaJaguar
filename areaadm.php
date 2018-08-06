@@ -1,7 +1,7 @@
 <?php
-  include 'conexao.inc.php';
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
   include 'verificausuario.inc.php';
-
 ?>
 
 
@@ -13,11 +13,11 @@
     <link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 <body>
-  <div id="maincontainer"> 
+  <div id="maincontainer">
     <h1>Bem Vindo Administrador</h1>
         <br>
         Bem vindo <?php echo $usuario; ?>
-        <br> <a href="sair.php">Sair</a>
+        <br> <a href="logout.php">Logout</a>
   <dir>
       <nav>
           <ul>
@@ -55,7 +55,7 @@
       </nav>
   </dir>
   </div>
-    
+
 
 </body>
 </html>

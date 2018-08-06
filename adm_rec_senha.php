@@ -1,3 +1,10 @@
+<?php
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'verificausuario.inc.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="br-pt">
 <head>
@@ -7,7 +14,7 @@
 		<title>Recuperação de Senha</title>
 </head>
 <body>
-	<?php include_once("conexao.inc.php");
+	<?php
 	$result_recSenha = "SELECT * FROM recuperacaoSenha";
 	$resultado_recSenha = mysqli_query($conexao, $result_recSenha);
 	$row_recSenha = mysqli_fetch_assoc($resultado_recSenha);

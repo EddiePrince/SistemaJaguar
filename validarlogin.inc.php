@@ -1,9 +1,12 @@
+<?php
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+?>
 
       <!-- Inicio do codigo validação usuario -->
   <?php
-    include 'conexao.inc.php';
-    
-    if (isset($_POST['entrar']) && $_POST['entrar'] == 'login') 
+
+    if (isset($_POST['entrar']) && $_POST['entrar'] == 'login')
     {
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
@@ -21,16 +24,16 @@
         $_SESSION['Administrador'] = $linha['Administrador'];
         $_SESSION['usuario'] = $linha['usuario'];
         $_SESSION['senha'] = $linha['senha'];
-        
+
         if($linha['perfil'] == 'Administrador'){
           header('Location: areaadm.php');
-        } 
-        else 
+        }
+        else
         {
           header('Location: areaagente.php');
         }
-        
-        
+
+
       } else {
       echo "<h4 style='color:red;'><br>Usuario ou Senha Inválido!</h4>";
         }

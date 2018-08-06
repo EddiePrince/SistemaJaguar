@@ -1,9 +1,9 @@
 <?php
-
-  include 'conexao.inc.php';
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
   include 'verificausuario.inc.php';
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,7 +14,7 @@
 </head>
 <body background="img/jaguar.jpg")>
   <h1>Bem Vindo Agente</h1>
-  <br> <a href="sair.php">Sair</a>
+  <br> <a href="logout.php">Logout</a>
   </p>
 <dir class="superior">
 </dir>

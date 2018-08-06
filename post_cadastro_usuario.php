@@ -1,6 +1,11 @@
 <?php
 //Conecção com Banco
-include 'includes/conexao.php';//inclusão do arquio de conexão com o banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+?>
+
+
+<?php
+
 
 $perfil = $_POST['perfil'];
 $nomeCompleto = $_POST['nomeCompleto'];
