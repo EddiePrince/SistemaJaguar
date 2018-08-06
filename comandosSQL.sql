@@ -167,6 +167,52 @@ INSERT INTO `areas` (`idArea`, `nomePropriedade`, `proprietario`, `telefone`, `e
 (1, 'Fazenda Arara Azul', 'Francisco Teixeira', '(63) 3217-8456', 'franciscoteixeira@gmail.com', 'Tocantins', 'Palmas', 'Arse 894', '77586-344', '28', 'Próximo ao supermercado Opção', '-43.626', '34.602', 'Cerrado', '24km', NULL),
 (2, 'Riacho Lince Negro', 'Área Pública', NULL, NULL, 'Tocantins', 'Palmas', '805 Norte Al 24', '77839-053', NULL, 'Riacho atrás da Fábrica Schkling', '21.400', '-41.204', 'Cerrado', '45 Km', NULL);
 
+-- Tabela Ajuda
+
+DROP TABLE if EXISTS ajuda;
+CREATE TABLE IF NOT EXISTS `ajuda` (
+  `idAjuda` int(11) NOT NULL AUTO_INCREMENT,
+  `sobreSist` text NOT NULL,
+  `conhecendoSist` text NOT NULL,
+  `filtroBusca` text NOT NULL,
+  `permissaoUser` text NOT NULL,
+  `tiposUser` text NOT NULL,
+  `infGerais` text NOT NULL,
+  `tutorial` text NOT NULL,
+  PRIMARY KEY (`idAjuda`)
+)  ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
+
+
+INSERT INTO `ajuda` (`idAjuda`, `sobreSist`, `conhecendoSist`, `filtroBusca`, `infGerais`, `permissaoUser`, `tiposUser`, `tutorial`) VALUES
+(1, '<strong>Sobre o Sistema:</strong> É um software de gestão de animais silvestre.</p> Tem a finalidade de auxiliar o gerenciamento integrado e centralizado das informações. Utiliza algumas tecnologias livres e conhecidas.</p> Pode ser utilizado em ambiente Windows ou Linux, pois necessita apenas de um navegador Web e um usuário e senha de acesso.',
+  '<p><strong>Conhecendo o Sistema:</strong> Nessa seção, iremos apresentar como acessar o sistema e como funcionam os botões, listas, filtros de busca e seleção das páginas do sistema. </p>Para acessar o sistema basta abrir o navegador, acessar o endereço na internet onde o sistema foi disponibilizado e então informar seu login e senha, fornecida pelo administrador do sistema.
+   </p>Existe também uma opção para recuperar senha, que enviará um e-mail com instruções para recuperá-la. Depois de efetuar o login serão exibidos o módulo do sistema. </p>Quando um cadastro é aberto uma listagem de registro é exibida, e ao clicar em um destes registros é aberta uma nova página com opções específicas para esse registro.</p>',
+
+  '<p><strong>Filtro de Busca: </strong> Quando os cadastros são abertos, serão exibidos campos que podem ser usados para filtrar os registros da listagem.</p> Com os filtros de busca é possível, por exemplo, buscar todos os animais silvestres com uma data de entrada no sistema. Um componente que os filtros de busca podem exibir é a busca rápida. </p> Nessa etapa o usuário pode digitar o nome, ou outra referência que esteja descrita no campo e o mesmo irá mostrar uma listagem que contém as informações que foram digitas.</p>',
+
+  '<p><strong>Usuários e Permissões:</strong> Nessa seção iremos apresentar como são configurados os usuários que podem acessar o sistema e como ser atribuídas suas permissões, bloqueios e demais configurações de segurança.</p>',
+
+  '<p><strong>Tipos de Usuários:</strong> O cadastro de tipo de usuário define as categorias de usuários existentes atualmente, as quais garantem um nível hierárquico de acesso a determinadas funcionalidade do sistema.</p> O cadastro de usuários, propriamente dito, permite o cadastro dos usuários que irão acessar o sistema, respeitando o seu tipo e as demais atribuições de acesso para a instituição, NATURATINS.</p>',
+
+   '<p><strong>Cadastro do Sistema:</strong>  Nesta seção iremos apresentar o módulo de endereçamento pessoas físicas e jurídicas.
+    </p><strong>Módulo Endereçamento:</strong> Neste módulo devem ser inseridos os atributos das U.R (unidade Regionais, NATURATINS).
+    </p><strong>Módulo Pessoa Física/Jurídica:</strong> Neste módulo você pode inserir as informações das pessoas físicas e jurídicas que serão trabalhadas dentro do sistema.
+    </p><strong>Unidade Regionais:</strong> Neste cadastro você poderá inserir as regionais responsáveis pela entrega do animal silvestre. ',
+
+   '<p>Tutorial: As informações desta aba serão inseridas depois</p>');
+
+-- Recuperação de senha
+
+   DROP TABLE if EXISTS recuperacaosenha;
+   CREATE TABLE IF NOT EXISTS `recuperacaosenha` (
+     `idSenha` int(11) NOT NULL AUTO_INCREMENT,
+     `criacao` datetime NOT NULL,
+     `nome` varchar(100) NOT NULL,
+     `email` varchar(50) NOT NULL,
+     `titulo` varchar(100) NOT NULL,
+     `mensagem` varchar(100) NOT NULL,
+     PRIMARY KEY (`idSenha`)
+   )  ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
 
 -- Indexes for table `animais`
 --

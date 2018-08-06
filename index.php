@@ -17,9 +17,9 @@
 
     	<div class="formtop">
  			<img src="img/logo.png" alt="Logo" id="logo">
-    		<h2>Login</h2>   		
+    		<h2>Login</h2>
     	</div>
- 
+
       	<label for="name"><b>Usuário:</b></label>
       	<input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
 
@@ -35,8 +35,8 @@
       	<button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
       	<span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
 
+        <a href="ajuda.php" target="_blank">Ajuda</a>
     </form>
-
 	<footer></footer>
 
 
