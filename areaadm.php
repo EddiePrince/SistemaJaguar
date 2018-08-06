@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
 <body>
-
+    <h1>Bem Vindo Administrador</h1>
       <br>
       Bem vindo <?php echo $usuario; ?>
       <br> <a href="sair.php">Sair</a>

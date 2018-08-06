@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/Estilo_Usuario.css" />
 </head>
 <body background="img/jaguar.jpg")>
+  <h1>Bem Vindo Agente</h1>
   <br> <a href="sair.php">Sair</a>
   </p>
 <dir class="superior">
