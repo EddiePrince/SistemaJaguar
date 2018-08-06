@@ -1,0 +1,6 @@
+Tabelas: Usuário, Entregador, Animais, Unidade Acolhedora, Dados do Animal, Anexos, 
+
+Entregador: Nome, CPF/CNPJ, Telefone, CEP, Município, Tipo de Entrega, nº do Documento, Upload de documento
+Unidade: Tipo da unidade, nome, CNPJ, Municipio, CEP, Bairro, Lote, Complemento
+Animais: nº Ficha, Nome comum, Nome científico, Família, Ordem, Local de última procedência, Cod Marcação, tipo marcação, local marcação, 
+Status da Triagem, Destinação(Quarentena ou A Destinar), Período em Quarentena, Modalidade de Destinação, 
