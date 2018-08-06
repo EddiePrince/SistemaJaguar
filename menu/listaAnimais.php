@@ -1,6 +1,6 @@
 <?php
 
-include '../includes/conexao.php';
+include 'conexao.inc.php';
 //include '../includes/verificausuario.php';
 
 ?>

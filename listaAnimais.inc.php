@@ -1,5 +1,5 @@
 <?php
-		include 'conexao.php';
+		include 'conexao.inc.php';
 		$sql = "SELECT * FROM animais";
 		$result = $conexao->query($sql);
 
