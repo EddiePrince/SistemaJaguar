@@ -31,7 +31,7 @@ if ($registros > 0) {
   echo "<br>Email: " .$email;
   echo "<br>Titulo: " .$titulo;
   echo "<br>Mensagem: " .$mensagem;
-  header('Location: index.php');
+  //header('Location: index.php');
 }else {
     echo "<h6 style='color:red;'>Erro na solicitação de Recuperação de Senha!</h6>";
 }

@@ -1,6 +1,6 @@
 Tabelas: Usuário, Entregador, Animais, Unidade Acolhedora, Anexos, Área de Soltura
 
-Usuário: id, perfil, nomeCompleto, email, telefone, celular, matricula, senha
+Usuário:
 Anexos: idAnexo, tipo de documento, nº do Documento, arquivo
 Entregador: idEntregador, Nome, CPF/CNPJ, Telefone, CEP, Município, Tipo de Entrega
 Unidade: idUnidade, Tipo da unidade, nome, CNPJ, Municipio, CEP, Bairro, Lote, Complemento
