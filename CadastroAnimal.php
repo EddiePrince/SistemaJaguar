@@ -5,9 +5,6 @@
 ?>
 
 
-    <!-- Fim do codigo validação usuario -->
-
-
 <!DOCTYPE html>
 <html lang="br-pt">
 <head>
