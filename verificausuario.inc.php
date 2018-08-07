@@ -9,9 +9,9 @@
 //Inicio do codigo verificação de usuario
   session_start();
 
-  $usuario = $_SESSION['usuario'];
+  $usuario = $_SESSION['matricula'];
 
-  if (!isset($_SESSION['usuario'])) {
+  if (!isset($_SESSION['matricula'])) {
     header('Location: index.php');
     exit;
   }

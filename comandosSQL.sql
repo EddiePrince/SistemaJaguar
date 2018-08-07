@@ -41,13 +41,13 @@ CREATE TABLE `usuarios` (
   `email` varchar(50) DEFAULT NULL,
   `telefone` varchar(30) DEFAULT NULL,
   `celular` varchar(30) DEFAULT NULL,
-  `usuario` varchar(30) DEFAULT NULL,
+  `matricula` varchar(30) DEFAULT NULL,
   `senha` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
 
 -- Extraindo dados da tabela `usuarios`
 
-INSERT INTO `usuarios` (`id`, `perfil`, `nomeCompleto`, `email`, `telefone`, `celular`, `usuario`, `senha`) VALUES
+INSERT INTO `usuarios` (`id`, `perfil`, `nomeCompleto`, `email`, `telefone`, `celular`, `matricula`, `senha`) VALUES
 (1, 'Administrador', 'Administrador', 'Administrador@naturanits.com', '--', '--', 'admin', 'admin'),
 (2, 'Agente', 'Agente', 'Agente@naturanits.com', '--', '--', 'agente', 'agente');
 

@@ -8,13 +8,13 @@
 
     if (isset($_POST['entrar']) && $_POST['entrar'] == 'login')
     {
-        $usuario = $_POST['usuario'];
+        $matricula = $_POST['matricula'];
         $senha = $_POST['senha'];
 
-      if (empty($usuario) || empty($senha)) {
+      if (empty($matricula) || empty($senha)) {
         echo "<br><p style='color:blue;'>Preencha todos os campos!<p>";
         }else {
-          $query = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
+          $query = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
           $result = mysqli_query($conexao, $query); // trazer o resultado de query
           $busca = mysqli_num_rows($result); // retornar se achou ounaotrue ou false
           $linha = mysqli_fetch_assoc($result);
@@ -22,7 +22,7 @@
           //buscar os dados do servidor e salvar na sessao
       if ($busca > 0)  {
         $_SESSION['Administrador'] = $linha['Administrador'];
-        $_SESSION['usuario'] = $linha['usuario'];
+        $_SESSION['matricula'] = $linha['matricula'];
         $_SESSION['senha'] = $linha['senha'];
 
         if($linha['perfil'] == 'Administrador'){

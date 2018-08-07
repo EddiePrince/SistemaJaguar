@@ -12,11 +12,11 @@ $nomeCompleto = $_POST['nomeCompleto'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
-$usuario = $_POST['usuario'];
+$matricula = $_POST['matricula'];
 $senha = $_POST['senha'];
 
 
-$sql = "insert into usuarios (perfil, nomeCompleto, email, telefone, celular, usuario, senha) values ('$perfil', '$nomeCompleto', '$email', '$telefone', '$celular', '$usuario', '$senha')"; //iserindo dados digitados do formulario para a tabela usuarios
+$sql = "insert into usuarios (perfil, nomeCompleto, email, telefone, celular, matricula, senha) values ('$perfil', '$nomeCompleto', '$email', '$telefone', '$celular', '$matricula', '$senha')"; //iserindo dados digitados do formulario para a tabela usuarios
 //executa e armazena o $sql
 $salvar = mysqli_query($conexao, $sql);
 

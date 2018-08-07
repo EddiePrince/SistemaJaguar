@@ -21,8 +21,8 @@
     		<h2>Login</h2>
     	</div>
 
-      	<label for="name"><b>Usuário:</b></label>
-      	<input type="text" placeholder="Insira sua Matricula da Empresa" name="usuario" id="usuario" required autofocus>
+      	<label for="name"><b>Matricula:</b></label>
+      	<input type="text" placeholder="Insira sua Matricula da Empresa" name="matricula" id="usuario" required autofocus>
 
       	<label for="senha"><b>Senha:</b></label>
       	<input type="password"  id="senha"  name="senha" placeholder="Digite sua senha" required>

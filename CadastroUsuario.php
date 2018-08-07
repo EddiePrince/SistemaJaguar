@@ -18,7 +18,7 @@
 		<dir class="#">
 		    <nav class="#">
 		        <ul class="#">
-		            <li><a href="#">Ajuda</a></li>
+		            <li><a href="ajuda.php">Ajuda</a></li>
 		        </ul>
 		    </nav>
 		</dir>
@@ -50,8 +50,8 @@
 	    <label for="telCel"><p>Celular:</p></label>
 	    <input type="text" placeholder="Digite o N° Celular" name="celular" required><br><br>
 
-			<label for="usuario"><p>Usuário:</p></label>
-			<input type="text" placeholder="N° da Matrícula" name="usuario" required><br><br>
+			<label for="usuario"><p>Matricula:</p></label>
+			<input type="text" placeholder="inserir a Matrícula" name="matricula" required><br><br>
 
 			<label for="senha"><p>Senha:</p></label>
 	    <input type="text" placeholder="Digite uma senha" name="senha" required><br><br>
