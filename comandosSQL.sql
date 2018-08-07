@@ -175,7 +175,8 @@ INSERT INTO `areas` (`idArea`, `nomePropriedade`, `proprietario`, `telefone`, `e
    CREATE TABLE IF NOT EXISTS `recuperacaosenha` (
      `idSenha` int(11) NOT NULL AUTO_INCREMENT,
      `criacao` datetime NOT NULL,
-     `nome` varchar(100) NOT NULL,
+     `matricula` varchar(100) NOT NULL,
+     `nomeCompleto` varchar(100) NOT NULL,
      `email` varchar(50) NOT NULL,
      `titulo` varchar(100) NOT NULL,
      `mensagem` varchar(100) NOT NULL,
