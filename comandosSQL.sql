@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Ago-2018 às 15:35
+-- Generation Time: 07-Ago-2018 às 16:09
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
@@ -45,16 +45,32 @@ CREATE TABLE `animais` (
   `idAnimal` int(11) NOT NULL,
   `idEntregador` int(11) DEFAULT NULL,
   `idUsuario` int(11) DEFAULT NULL,
+  `idUnidade` int(11) DEFAULT NULL,
   `ultimaProcedencia` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `codMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tipoMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `localMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nomeComum` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nomeCientifico` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `familia` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ordem` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `statusTriagem` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `destinacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `periodoQuarentena` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `modalidadeDestinacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtipoModalidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `condicao1` int(11) NOT NULL,
+  `condicao2` int(11) NOT NULL,
+  `condicao3` int(11) NOT NULL,
   `idArea` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `animais`
+--
+
+INSERT INTO `animais` (`idAnimal`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
+(1, 1, 1, 1, 'Feira do Bosque', '001', 'Tornozeleira', 'Pé Esquerdo', 'Macaco Preto', 'Chiropotes satanas', 'Pitheciidae', 'Primates', 'Completa', 'Destinado', '', 'Destinação Imediata', 'Soltura', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -74,6 +90,13 @@ CREATE TABLE `areas` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `areas`
+--
+
+INSERT INTO `areas` (`idArea`, `idProprietario`, `nome`, `latitude`, `longitude`, `bioma`, `distancia`, `observacoes`, `idEndereco`) VALUES
+(1, 1, 'Parque Cesamar', '89.433', '-29.695', 'Cerrado', '8Km', '', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -89,6 +112,15 @@ CREATE TABLE `enderecos` (
   `lote` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `complemento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `enderecos`
+--
+
+INSERT INTO `enderecos` (`idEndereco`, `uf`, `municipio`, `cep`, `bairro`, `lote`, `complemento`) VALUES
+(1, 'Tocantins', 'Palmas', '770019-000', 'Centro', '14', ''),
+(2, 'Tocantins', 'Araguaína', '09844-590', 'Vila Boa', '87', ''),
+(3, 'Tocantins', 'Palmas', '77654-901', 'Norte', '45', '');
 
 -- --------------------------------------------------------
 
@@ -106,6 +138,13 @@ CREATE TABLE `entregadores` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `entregadores`
+--
+
+INSERT INTO `entregadores` (`idEntregador`, `nome`, `cpfcnpj`, `telefone`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
+(1, 'Ibamar', '754939032', '0988123', 'Resgate', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -120,6 +159,13 @@ CREATE TABLE `proprietarios` (
   `cpfcnpj` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `proprietarios`
+--
+
+INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefone`, `email`, `cpfcnpj`) VALUES
+(1, 'Governo', '98203', 'governo@tocantins.com', '0918230');
+
 -- --------------------------------------------------------
 
 --
@@ -133,6 +179,14 @@ CREATE TABLE `unidades` (
   `tipoUnidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `unidades`
+--
+
+INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`) VALUES
+(1, 'Central Palmas', '485963093', 'Central', 1),
+(2, 'Regional Araguaína', '9985401', 'Regional', 2);
 
 -- --------------------------------------------------------
 
@@ -152,6 +206,14 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `email`, `telefone`, `celular`, `perfil`, `senha`) VALUES
+(1, '123456', 'Agente', 'agente@naturatins.com', '123456', '123456', 'Agente', '123456'),
+(2, '654321', 'Administrador', 'admin@naturatins.com', '123456', '123456', 'Administrador', 'admin');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -168,7 +230,8 @@ ALTER TABLE `animais`
   ADD PRIMARY KEY (`idAnimal`),
   ADD KEY `idUsuario` (`idUsuario`),
   ADD KEY `idEntregador` (`idEntregador`),
-  ADD KEY `idArea` (`idArea`);
+  ADD KEY `idArea` (`idArea`),
+  ADD KEY `idUnidade` (`idUnidade`);
 
 --
 -- Indexes for table `areas`
@@ -225,43 +288,43 @@ ALTER TABLE `anexos`
 -- AUTO_INCREMENT for table `animais`
 --
 ALTER TABLE `animais`
-  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `entregadores`
 --
 ALTER TABLE `entregadores`
-  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `proprietarios`
 --
 ALTER TABLE `proprietarios`
-  MODIFY `idProprietario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProprietario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `unidades`
 --
 ALTER TABLE `unidades`
-  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -273,7 +336,8 @@ ALTER TABLE `usuarios`
 ALTER TABLE `animais`
   ADD CONSTRAINT `animais_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`),
   ADD CONSTRAINT `animais_ibfk_2` FOREIGN KEY (`idEntregador`) REFERENCES `entregadores` (`idEntregador`),
-  ADD CONSTRAINT `animais_ibfk_3` FOREIGN KEY (`idArea`) REFERENCES `areas` (`idArea`);
+  ADD CONSTRAINT `animais_ibfk_3` FOREIGN KEY (`idArea`) REFERENCES `areas` (`idArea`),
+  ADD CONSTRAINT `animais_ibfk_4` FOREIGN KEY (`idUnidade`) REFERENCES `unidades` (`idUnidade`);
 
 --
 -- Limitadores para a tabela `areas`
