@@ -3,26 +3,17 @@
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
 ?>
 
-
 <?php
 
-$nomeUnidade = $_POST['nomeUnidade'];
-
-  $tipoUnidade = $_POST['tipoUnidade'];
+  $nome = $_POST['nome'];
   $cnpj = $_POST['cnpj'];
-  $cep = $_POST['cep'];
-  $municipio = $_POST['municipio'];
-  $bairro = $_POST['bairro'];
-  $rua = $_POST['rua'];
-  $lote = $_POST['lote'];
-  $complemento = $_POST['complemento'];
+  $tipoUnidade = $_POST['tipoUnidade'];
 
 
-$sql = "insert into unidades (nomeUnidade , tipoUnidade, cnpj, cep, municipio, bairro, rua, lote, complemento) values ('$nomeUnidade' , '$tipoUnidade', '$cnpj', '$cep', '$municipio', '$bairro', '$rua', '$lote', '$complemento')";
-//
-//)
-//)"; //iserindo dados digitados do formulario para a tabela usuarios
-// //executa e armazena o $sql
+  //iserindo dados digitados do formulario para a tabela usuarios
+$sql = "insert into unidades (nome, cnpj, tipoUnidade) values ('$nome' , '$cnpj', '$tipoUnidade')";
+
+//executa e armazena o $sql
 $salvar = mysqli_query($conexao, $sql);
 
 //$linhas = mysqli_affected_rows($conexao); //contagem da quantidade de linhas inseridas na tabela
