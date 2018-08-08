@@ -3,17 +3,16 @@
 <head>
 <link rel="stylesheet" href="style/bootstrap.min.css">
 <meta charset="utf-8">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro de Animais</title>
+<link href="style/bootstrapv3.min.css" rel="stylesheet">
 <link href="style/bootstrap.min.css" rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
 </head>
 <body>
-
-	<div class="imgcontainer">
+	<!-- <div class="imgcontainer">
 		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
-	</div>
+	</div> -->
 
 	<div class="container theme-showcase" role="main">
 		<nav>
@@ -42,7 +41,7 @@
 						<h4>Dados  da Ficha e do Animal</h4>
 							<p>Número da Ficha:</p>
 							<input type="text" name="idAnimal" value="" placeholder="Mostrar numero da ficha">
-							
+
 							<p>Data:</p>
 							<input type="text" name="idAnimal" value="" placeholder="Mostrar data atual">
 
@@ -228,7 +227,7 @@
 			    <p>Local da marcação:</p>
 			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-			    
+
 			</div><br><br>
 
 				 </form>
@@ -236,7 +235,7 @@
 			</div>
 		</div>
 		</div>
-					
+
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
