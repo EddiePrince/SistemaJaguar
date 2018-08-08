@@ -9,7 +9,8 @@
 <html lang="br-pt">
   <head>
   	<meta charset="UTF-8">
-  	<link rel="stylesheet" type="text/css" href="css/Estilo_Cadastro.css">
+  	<link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
   	<title>Cadastro</title>
   </head>
   <body>

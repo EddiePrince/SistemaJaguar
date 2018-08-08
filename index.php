@@ -9,12 +9,13 @@
 <html lang="br-pt">
 <head>
   <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
   <title>Login Sistema Jaguar</title>
 </head>
 <body>
 
-    <form method="post" action="">
+    <form id="loginform" method="post" action="">
 
     	<div class="logo">
  			<img src="img/logo.png" alt="Logo" id="logo">

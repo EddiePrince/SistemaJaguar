@@ -124,8 +124,8 @@ label[for="bt_menu"]{
 }
 
 
-
-form {
+/*Formulário do Login (index.php)*/
+#loginform {
     border: 1px solid black;
     width: 50%;
     position: absolute;

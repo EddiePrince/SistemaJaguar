@@ -10,7 +10,8 @@
 <head>
   <meta charset="UTF-8">
     <title>Menu Principal</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 </head>
 <body>
 
