@@ -32,7 +32,8 @@
         </li>
         <li><a>Animais</a>
           <ul>
-            <li><a href="menu/listaAnimais.php">Visualizar</a></li>
+          <li><a href="CadastroAnimal.php">Cadastrar</a></li>
+          <li><a href="menu/listaAnimais.php">Visualizar</a></li>
           </ul>
         </li>
         <li><a href="">Unidades</a>

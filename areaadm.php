@@ -22,24 +22,26 @@
     <label for="bt_menu">&#9776;</label>
 
     <nav class="menu">
-    <img src="img/logo.png" alt="Logo" id="logo">
       <ul>
         <li> <a href="areaadm.php">Home</a></li>
         <li><a href="">Usuários</a>
           <ul>
             <li><a href="menu/listaUsuarios.php">Visualizar</a></li>
+            <li><a href="cadastroUsuario.php">Cadastrar</a></li>
             <li><a href="menu/excluirUsuario.php">Excluir Usuário do Banco de Dados</a></li>
           </ul>
         </li>
-        <li><a>Animais</a>
+        <li><a href="">Animais</a>
           <ul>
             <li><a href="menu/listaAnimais.php">Visualizar</a></li>
+            <li><a href="CadastroAnimal.php">Cadastrar</a></li>
             <li><a href="menu/excluirAnimal.php">Excluir Animal do Banco de Dados</a></li>
           </ul>
         </li>
         <li><a href="">Unidades</a>
           <ul>
             <li><a href="menu/listaUnidades.php">Visualizar</a></li>
+            <li><a href="CadastroUnidade.php">Cadastrar</a></li>
             <li><a href="menu/excluirUnidade.php">Excluir Unidade do Banco de Dados</a></li>
           </ul>
         </li>
