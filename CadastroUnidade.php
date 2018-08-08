@@ -5,43 +5,45 @@
 ?>
 <!DOCTYPE html>
 <html lang="br-pt">
+
 <head>
-  	<meta charset="UTF-8">
-  	<link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-  	<title>Cadastro</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+	<title>Cadastro</title>
 </head>
+
 <body>
-  <div id="page">
-    <div>
-      <div>
-        <a href="ajuda.php">Ajuda</a>
-        <a href="index.php">Voltar</a><br>
-        <a href="areaadm.php"> <img src="image/Logo.png" alt="Logo" class="logo"></a><br>
-      </div>
+	<div id="page">
+		<div>
+			<div>
+				<a href="ajuda.php">Ajuda</a>
+				<a href="index.php">Voltar</a><br>
+				<a href="areaadm.php"> <img src="image/Logo.png" alt="Logo" class="logo"></a><br>
+			</div>
 
-      <h2>Cadastro de Unidades</h2>
-	    <form method="post" action="post_cadastro_unidades.php">
+			<h2>Cadastro de Unidades</h2>
+			<form method="post" action="post_cadastro_unidades.php">
 
-        <label>Nome Da Unidade:</label>
-  	    <input type="text" name="nomeUnidade" required autofocus>
-        <label>Tipo da Unidade:</label>
+				<label>Nome Da Unidade:</label>
+				<input type="text" name="nomeUnidade" required autofocus>
+				<label>Tipo da Unidade:</label>
 
-        <p>Selecione a Unidade:</p>
-        <select name="tipoUnidade">
+				<p>Selecione a Unidade:</p>
+				<select name="tipoUnidade">
           <option>Selecione o Tipo da Unidade</option>
           <option>Central</option>
           <option>Regional</option>
         </select><br>
 
-  	    <label>CNPJ:</label>
-  	    <input type="text" name="cnpj" required>
+				<label>CNPJ:</label>
+				<input type="text" name="cnpj" required>
 
-  			<label>CEP:</label>
-  			<input type="text" name="cep">
+				<label>CEP:</label>
+				<input type="text" name="cep">
 
-        <label>Municipio:</label>
-        <select name="municipio">
+				<label>Municipio:</label>
+				<select name="municipio">
           <option value="Não Selecionado">Selecione o Municipio</option>
           <option value="Aguiarnópolis">Aguiarnópolis</option>
           <option value="Almas">Almas</option>
@@ -90,23 +92,24 @@
           <option value="Xambioá">Xambioá</option>
         </select>
 
-        <br>
-        <label><p>Bairro:</p></label>
-  	    <input type="text" name="bairro" required>
+				<br>
+				<label>Bairro:</label>
+				<input type="text" name="bairro" required>
 
-  	    <label><p>Rua:</p></label>
-  	    <input type="text" name="rua" required>
+				<label>Rua:</label>
+				<input type="text" name="rua" required>
 
-  			<label><p>Lote:</p></label>
-  			<input type="text" name="lote" required>
+				<label>Lote:</label>
+				<input type="text" name="lote" required>
 
-  			<label><p>Complemento:</p></label>
-  			<textarea name="complemento" rows="5" cols="40" required>
+				<label>Complemento:</label>
+				<textarea name="complemento" rows="5" cols="40" required>
   	  	</textarea><br>
 
-  	    <button type="submit">Cadastrar</button>
-  		</form>
-    </div>
-  </div>
+				<button type="submit">Cadastrar</button>
+			</form>
+		</div>
+	</div>
 </body>
+
 </html>
