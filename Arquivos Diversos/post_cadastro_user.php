@@ -30,5 +30,5 @@ mysqli_close($conexao);
 //echo "Nome: ".$nome."<br>E-mail: ".$email."<br>Telefone: ".$tel."<br>Celular: ".$cel."<br>Usuário: ".$user."<br>Senha: ".$senha;
 
  ?>
-<br> <a href="CadastroUsuario.php"> <input type="button" name="btn" value="Cadastrar Outro Usuário">  </a><br>
+<br> <a href="CadastroUser.php"> <input type="button" name="btn" value="Cadastrar Outro Usuário">  </a><br>
 <br> <a href="areaadm.php"> <input type="button" name="btn" value="Página Principal">  </a>

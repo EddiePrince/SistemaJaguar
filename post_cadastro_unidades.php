@@ -1,5 +1,5 @@
 <?php
-//Conecção com Banco
+//ConeXão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
 ?>
 

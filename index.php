@@ -9,38 +9,42 @@
 <html lang="br-pt">
 <head>
   <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
   <title>Login Sistema Jaguar</title>
 </head>
 <body>
+ 
+ <div id="maincontainer">
+  
+  <img src="img/logo.png" alt="Logo" id="logo">
+  
+  <div id="formcontainer">
 
-    <form method="post" action="">
+    <form id="loginform" method="post" action="">
 
-    	<div class="formtop">
- 			<img src="img/logo.png" alt="Logo" id="logo">
-    		<h2>Login</h2>
-    	</div>
+        <div id="logintitle">
+         <h2>Login</h2>  
+        </div> 
+      
+        <label>Usuário:</label><br>
+        <input type="text"  name="matricula" id="usuario" required autofocus><br>
+        
+        <label>Senha:</label><br>
+        <input type="password" name="senha" required>
+        
+        <hr>
 
-      	<label for="name"><b>Matricula:</b></label>
-      	<input type="text" placeholder="Insira sua Matricula da Empresa" name="matricula" id="usuario" required autofocus>
+        <button type="submit">Login</button>
+        <input type="hidden" name="entrar" value="login">
 
-      	<label for="senha"><b>Senha:</b></label>
-      	<input type="password"  id="senha"  name="senha" placeholder="Digite sua senha" required>
-      	<button type="submit">Entrar</button>
-      	<input type="hidden" name="entrar" value="login">
-      	<label>
-        <input type="checkbox" checked="checked" name="remember">Lembre de mim.
-      	</label>
+        <span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
 
-
-      	<button type="reset" value="Limpar" class="cancelar">Inserir Novo</button>
-      	<span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
-
-        <a href="ajuda.php" target="_blank">Ajuda</a>
+        <a href="ajuda.php" target="_blank">Ajuda</a>  
+      
     </form>
-	<footer></footer>
 
-
+  </div>
 
 </body>
 </html>

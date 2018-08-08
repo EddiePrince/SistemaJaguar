@@ -1,6 +1,16 @@
-Tabelas: Usuário, Entregador, Animais, Unidade Acolhedora, Dados do Animal, Anexos, 
+Tabelas: Usuário, Entregador, Animais, Unidade Acolhedora, Anexos, Área de Soltura
 
-Entregador: Nome, CPF/CNPJ, Telefone, CEP, Município, Tipo de Entrega, nº do Documento, Upload de documento
-Unidade: Tipo da unidade, nome, CNPJ, Municipio, CEP, Bairro, Lote, Complemento
-Animais: nº Ficha, Nome comum, Nome científico, Família, Ordem, Local de última procedência, Cod Marcação, tipo marcação, local marcação, 
-Status da Triagem, Destinação(Quarentena ou A Destinar), Período em Quarentena, Modalidade de Destinação, 
+Usuário: id, perfil, nomeCompleto, email, telefone, celular, matricula, senha
+Anexos: idAnexo, tipo de documento, nº do Documento, arquivo 
+Entregador: idEntregador, Nome, CPF/CNPJ, Telefone, CEP, Município, Tipo de Entrega , anexo
+Unidade: idUnidade, Tipo da unidade, nome, CNPJ, Municipio, CEP, Bairro, Lote, Complemento
+Animais: idAnimal, Nome comum, Nome científico, Família, Ordem, Local de última procedência, Cod Marcação, tipo marcação, local marcação, 
+Status da Triagem, Destinação(Quarentena, Óbito ou A Destinar), Período em Quarentena, Modalidade de Destinação, Área de Soltura, entregador
+Proprietário: idProprietário, Nome, Telefone, Email, CPF/CNPJ 
+Área: idArea, nome, UF, Município, CEP, Bairro, Lote, Complemento, Latitude, Longitude, Bioma, distância, observações, proprietario
+Endereço: UF, Municpio, CEP,  Bairro, Lote, Complemento
+
+
+Obs: Remover campos repetidos e criar tabela de endereços
+Código para chave estrangeira de endereço
+ALTER TABLE `nometabela` ADD `idEndereco` INT AFTER `ultimocampo`, ADD FOREIGN KEY (`idEndereco`) REFERENCES enderecos(`idEndereco`);

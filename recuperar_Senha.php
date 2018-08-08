@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 		<title>Recuperação de Senha</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
 					<p>Matrícula:</p>
 					<p><input type="text" name="matricula" placeholder="Inserir a Matrícula" required></p>
 					<p>Nome Completo:</p>
-					<p><input type="text" name="nomeCompleto" placeholder="Digite seu Nome" required></p>
+					<p><input type="text" name="nome" placeholder="Digite seu Nome" required></p>
 					<p>E-Mail:</p>
 					<p><input type="email" name="email" placeholder="E-mail fornecido para a empresa" required></p>
 					<p>Título:</p>

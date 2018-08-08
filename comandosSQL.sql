@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Ago-2018 às 15:34
+-- Generation Time: 08-Ago-2018 às 14:55
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
@@ -12,214 +12,335 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-
--- --------------------------------------------------------
-
+--
 -- Database: `jaguar_sistem`
-
-DROP DATABASE if EXISTS `jaguar_sistem`;
-
-CREATE DATABASE IF NOT EXISTS `jaguar_sistem` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-USE `jaguar_sistem`;
+--
 
 -- --------------------------------------------------------
 
+--
+-- Estrutura da tabela `anexos`
+--
 
--- Estrutura da tabela `usuarios`
-
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `perfil` varchar(20) DEFAULT NULL,
-  `nomeCompleto` varchar(255) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `telefone` varchar(30) DEFAULT NULL,
-  `celular` varchar(30) DEFAULT NULL,
-  `matricula` varchar(30) DEFAULT NULL,
-  `senha` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
-
--- Extraindo dados da tabela `usuarios`
-
-INSERT INTO `usuarios` (`id`, `perfil`, `nomeCompleto`, `email`, `telefone`, `celular`, `matricula`, `senha`) VALUES
-(1, 'Administrador', 'Administrador', 'Administrador@naturanits.com', '--', '--', 'admin', 'admin'),
-(2, 'Agente', 'Agente', 'Agente@naturanits.com', '--', '--', 'agente', 'agente');
+CREATE TABLE `anexos` (
+  `idAnexo` int(11) NOT NULL,
+  `tipoDocumento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nDocumento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `arquivo` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `animais`
+--
+
+CREATE TABLE `animais` (
+  `idAnimal` int(11) NOT NULL,
+  `idEntregador` int(11) DEFAULT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `idUnidade` int(11) DEFAULT NULL,
+  `ultimaProcedencia` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `codMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipoMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `localMarcacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nomeComum` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nomeCientifico` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `familia` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ordem` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `statusTriagem` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `destinacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `periodoQuarentena` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `modalidadeDestinacao` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subtipoModalidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `condicao1` int(11) NOT NULL,
+  `condicao2` int(11) NOT NULL,
+  `condicao3` int(11) NOT NULL,
+  `idArea` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `animais`
+--
+
+INSERT INTO `animais` (`idAnimal`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
+(1, 1, 1, 1, 'Feira do Bosque', '001', 'Tornozeleira', 'Pé Esquerdo', 'Macaco Preto', 'Chiropotes satanas', 'Pitheciidae', 'Primates', 'Completa', 'Destinado', '', 'Destinação Imediata', 'Soltura', 1, 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `areas`
+--
+
+CREATE TABLE `areas` (
+  `idArea` int(11) NOT NULL,
+  `idProprietario` int(11) DEFAULT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `latitude` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `longitude` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bioma` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `distancia` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `observacoes` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idEndereco` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `areas`
+--
+
+INSERT INTO `areas` (`idArea`, `idProprietario`, `nome`, `latitude`, `longitude`, `bioma`, `distancia`, `observacoes`, `idEndereco`) VALUES
+(1, 1, 'Parque Cesamar', '89.433', '-29.695', 'Cerrado', '8Km', '', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `enderecos`
+--
+
+CREATE TABLE `enderecos` (
+  `idEndereco` int(11) NOT NULL,
+  `uf` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `municipio` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cep` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bairro` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lote` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `complemento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `enderecos`
+--
+
+INSERT INTO `enderecos` (`idEndereco`, `uf`, `municipio`, `cep`, `bairro`, `lote`, `complemento`) VALUES
+(1, 'Tocantins', 'Palmas', '770019-000', 'Centro', '14', ''),
+(2, 'Tocantins', 'Araguaína', '09844-590', 'Vila Boa', '87', ''),
+(3, 'Tocantins', 'Palmas', '77654-901', 'Norte', '45', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `entregadores`
+--
+
+CREATE TABLE `entregadores` (
+  `idEntregador` int(11) NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cpfcnpj` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tipoEntrega` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `idAnexo` int(11) DEFAULT NULL,
+  `idEndereco` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `entregadores`
+--
+
+INSERT INTO `entregadores` (`idEntregador`, `nome`, `cpfcnpj`, `telefone`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
+(1, 'Ibamar', '754939032', '0988123', 'Resgate', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `proprietarios`
+--
+
+CREATE TABLE `proprietarios` (
+  `idProprietario` int(11) NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cpfcnpj` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `proprietarios`
+--
+
+INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefone`, `email`, `cpfcnpj`) VALUES
+(1, 'Governo', '98203', 'governo@tocantins.com', '0918230');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `recuperacaosenha`
+--
+
+CREATE TABLE `recuperacaosenha` (
+  `idSenha` int(11) NOT NULL,
+  `criacao` datetime NOT NULL,
+  `matricula` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titulo` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mensagem` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
 --
 -- Estrutura da tabela `unidades`
 --
-DROP TABLE IF EXISTS `unidades`;
+
 CREATE TABLE `unidades` (
-`idUnidade` int(11) NOT NULL UNIQUE,
-`nomeUnidade` varchar(60) NOT NULL,
-`tipoUnidade` varchar(20) NOT NULL,
-`cnpj` varchar(20) DEFAULT NULL,
-`cep` varchar(30) DEFAULT NULL,
-`municipio` varchar(100) DEFAULT NULL,
-`bairro` varchar(100) DEFAULT NULL,
-`rua`varchar(100) DEFAULT NULL,
-`lote` varchar(20) DEFAULT NULL,
-`complemento` varchar(100) DEFAULT NULL,
-PRIMARY KEY (`idUnidade`)) ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
+  `idUnidade` int(11) NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cnpj` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipoUnidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idEndereco` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-
+--
 -- Extraindo dados da tabela `unidades`
+--
 
-INSERT INTO `unidades` (`idUnidade`, `nomeUnidade`, `tipoUnidade`, `cnpj`, `cep`, `municipio`, `bairro`, `rua`, `lote`, `complemento`) VALUES
-(1, 'Central Palmas', 'Central', '86.4312.555-20', '77229-041', 'Palmas', 'Aureni 1', 'Rua medeiros', '15', NULL),
-(2, 'CETAS Araguaína', 'Regional', '094.2223-455', '34440-553', 'Araguaína', 'Taquaralto', '1 de Novembro', '11', NULL);
-
--- --------------------------------------------------------
-
--- Estrutura da tabela `animais`
-
-DROP TABLE IF EXISTS `animais`;
-CREATE TABLE `animais` (
-  `nFicha` int(11) NULL,
-  `dataRecebimento` DATE ,
-  `modificadoem` datetime DEFAULT NULL ,
-  `agenteRecebedor` varchar(60) DEFAULT NULL,
-  `tipoRecolhimento` varchar(60) DEFAULT NULL,
-  `nomeEntregador` varchar(60) DEFAULT NULL,
-  `cpf_cnpj` varchar(20) DEFAULT NULL,
-  `telefone` varchar(20) DEFAULT NULL,
-  `cep` varchar(60) DEFAULT NULL,
-  `enderecoEntregador` varchar(60) DEFAULT NULL,
-  `municipioEntregador` varchar(100) DEFAULT NULL,
-  `idDocumento` int(11) DEFAULT NULL,
-  `autoTermoBoletim` varchar(60) NULL,
-  `uploadDoc` varchar(60) NULL,
-  `idUnidade` int(11) DEFAULT NULL,
-  `nomeUnidade` varchar(60) NOT NULL,
-  `municipioProcedencia` varchar(60) DEFAULT NULL,
-  `ufProcedencia` varchar(60) DEFAULT NULL,
-  `locUltimaProcedencia` varchar(60) DEFAULT NULL,
-  `dieta` varchar(60) DEFAULT NULL,
-  `nomeComum` varchar(60) DEFAULT NULL,
-  `nomeCientifico` varchar(60) DEFAULT NULL,
-  `familiaAnimal` varchar(60) DEFAULT NULL,
-  `ordemAnimal` varchar(60) DEFAULT NULL,
-  `codMarca` varchar(20) DEFAULT NULL,
-  `tipoMarca` varchar(60) DEFAULT NULL,
-  `localMarca` varchar(60) DEFAULT NULL,
-  `tipoDestinacao` varchar(60) DEFAULT NULL,
-  `periodoQuarentena` varchar(11) DEFAULT NULL,
-  `subtipoDestinacao` varchar(60) DEFAULT NULL,
-  `condicao1` varchar(255) DEFAULT NULL,
-  `condicao2` varchar(255) DEFAULT NULL,
-  `condicao3` varchar(255) DEFAULT NULL,
-  `situacao` varchar(60) DEFAULT NULL,
-  `idArea` int(11) DEFAULT NULL,
-  PRIMARY KEY  (`nFicha`)) ENGINE=InnoDB DEFAULT character set = UTF8 COLLATE = utf8_general_ci;
-
-INSERT INTO `animais` (`nFicha`, `dataRecebimento`, `modificadoem`, `agenteRecebedor`, `tipoRecolhimento`, `nomeEntregador`, `cpf_cnpj`, `telefone`, `cep`, `enderecoEntregador`, `municipioEntregador`, `idDocumento`, `autoTermoBoletim`, `uploadDoc`, `idUnidade`, `nomeUnidade`, `municipioProcedencia`, `ufProcedencia`, `locUltimaProcedencia`, `dieta`, `nomeComum`, `nomeCientifico`, `familiaAnimal`, `ordemAnimal`, `codMarca`, `tipoMarca`, `localMarca`, `situacao`, `periodoQuarentena`, `tipoDestinacao`, `subtipoDestinacao`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES (01, '2018-08-15', '2018-08-16 09:30:18', 'Alfredo Mendonça', 'Tipo 1', 'Marcos Silva', '098765432123', '65478932', '130245600', 'Rua x, Bairro y, Numero 0011', 'Almas', '01', '2341', '0', '2', 'CETAS', 'Araguaina', 'TO', 'Brejo', 'Animal', 'Tamanduá', 'Tamanduá Bandeira', 'Bandeira', 'Terráquio', 'COD03', 'Tipo02', 'Natividade', 'Adotado', '30', 'Mediata', 'Soltura', 'Cond1', 'Cond2', 'Cond3', '1');
+INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`) VALUES
+(1, 'Central Palmas', '485963093', 'Central', 1),
+(2, 'Regional Araguaína', '9985401', 'Regional', 2);
 
 -- --------------------------------------------------------
 
--- Estrutura da tabela `anexos`
+--
+-- Estrutura da tabela `usuarios`
+--
 
-DROP TABLE IF EXISTS `anexos`;
-CREATE TABLE `anexos` (
-  `idDocumento` int(11) NOT NULL,
-  `nDocumento` varchar(20) DEFAULT NULL,
-  `tipoDocumento` varchar(60) DEFAULT NULL,
-  `arquivo` varchar(60) DEFAULT NULL,
-  PRIMARY KEY (`idDocumento`)
-) ENGINE=InnoDB DEFAULT character set = UTF8 COLLATE = utf8_general_ci;
+CREATE TABLE `usuarios` (
+  `idUsuario` int(11) NOT NULL,
+  `matricula` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `celular` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `perfil` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `anexos` (`idDocumento`, `nDocumento`, `tipoDocumento`, `arquivo`) VALUES ('01', '01', 'indefinido', 'morto');
+--
+-- Extraindo dados da tabela `usuarios`
+--
 
--- --------------------------------------------------------
+INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `email`, `telefone`, `celular`, `perfil`, `senha`) VALUES
+(1, '123456', 'Agente', 'agente@naturatins.com', '123456', '123456', 'Agente', '123456'),
+(2, '654321', 'Administrador', 'admin@naturatins.com', '123456', '123456', 'Administrador', 'admin');
 
--- Estrutura da tabela `areas`
+--
+-- Indexes for dumped tables
+--
 
-DROP TABLE IF EXISTS `areas`;
-CREATE TABLE `areas` (
-  `idArea` int(11) NOT NULL UNIQUE,
-  `nomePropriedade` varchar(60) DEFAULT NULL,
-  `proprietario` varchar(60) DEFAULT NULL,
-  `telefone` varchar(60) DEFAULT NULL,
-  `email` varchar(60) DEFAULT NULL,
-  `uf` varchar(60) DEFAULT NULL,
-  `municipio` varchar(60) DEFAULT NULL,
-  `endereco` varchar(60) DEFAULT NULL,
-  `cep` varchar(60) DEFAULT NULL,
-  `lote` varchar(60) DEFAULT NULL,
-  `complemento` varchar(60) DEFAULT NULL,
-  `latitude` varchar(60) DEFAULT NULL,
-  `longitude` varchar(60) DEFAULT NULL,
-  `bioma` varchar(60) DEFAULT NULL,
-  `distancia` varchar(60) DEFAULT NULL,
-  `obs` text,
-  PRIMARY KEY (`idArea`)) ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
+--
+-- Indexes for table `anexos`
+--
+ALTER TABLE `anexos`
+  ADD PRIMARY KEY (`idAnexo`);
 
-
--- Extraindo dados da tabela `areas`
-
-INSERT INTO `areas` (`idArea`, `nomePropriedade`, `proprietario`, `telefone`, `email`, `uf`, `municipio`, `endereco`, `cep`, `lote`, `complemento`, `latitude`, `longitude`, `bioma`, `distancia`, `obs`) VALUES
-(1, 'Fazenda Arara Azul', 'Francisco Teixeira', '(63) 3217-8456', 'franciscoteixeira@gmail.com', 'Tocantins', 'Palmas', 'Arse 894', '77586-344', '28', 'Próximo ao supermercado Opção', '-43.626', '34.602', 'Cerrado', '24km', NULL),
-(2, 'Riacho Lince Negro', 'Área Pública', NULL, NULL, 'Tocantins', 'Palmas', '805 Norte Al 24', '77839-053', NULL, 'Riacho atrás da Fábrica Schkling', '21.400', '-41.204', 'Cerrado', '45 Km', NULL);
-
-
--- -----------------------------------------------
--- Recuperação de senha
-
-   DROP TABLE if EXISTS recuperacaosenha;
-   CREATE TABLE IF NOT EXISTS `recuperacaosenha` (
-     `idSenha` int(11) NOT NULL AUTO_INCREMENT,
-     `criacao` datetime NOT NULL,
-     `matricula` varchar(100) NOT NULL,
-     `nomeCompleto` varchar(100) NOT NULL,
-     `email` varchar(50) NOT NULL,
-     `titulo` varchar(100) NOT NULL,
-     `mensagem` varchar(100) NOT NULL,
-     PRIMARY KEY (`idSenha`)
-   )  ENGINE=InnoDB DEFAULT CHARSET= UTF8 COLLATE = utf8_general_ci;
-
+--
 -- Indexes for table `animais`
 --
 ALTER TABLE `animais`
-  ADD KEY `idDocumento` (`idDocumento`),
-  ADD KEY `idUnidade` (`idUnidade`),
-  ADD KEY `idArea` (`idArea`);
+  ADD PRIMARY KEY (`idAnimal`),
+  ADD KEY `idUsuario` (`idUsuario`),
+  ADD KEY `idEntregador` (`idEntregador`),
+  ADD KEY `idArea` (`idArea`),
+  ADD KEY `idUnidade` (`idUnidade`);
 
-  ALTER TABLE `animais`
-  CHANGE `dataRecebimento` `dataRecebimento` DATETIME NULL DEFAULT NULL;
+--
+-- Indexes for table `areas`
+--
+ALTER TABLE `areas`
+  ADD PRIMARY KEY (`idArea`),
+  ADD KEY `idEndereco` (`idEndereco`),
+  ADD KEY `idProprietario` (`idProprietario`);
+
+--
+-- Indexes for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  ADD PRIMARY KEY (`idEndereco`);
+
+--
+-- Indexes for table `entregadores`
+--
+ALTER TABLE `entregadores`
+  ADD PRIMARY KEY (`idEntregador`),
+  ADD KEY `idAnexo` (`idAnexo`),
+  ADD KEY `idEndereco` (`idEndereco`);
+
+--
+-- Indexes for table `proprietarios`
+--
+ALTER TABLE `proprietarios`
+  ADD PRIMARY KEY (`idProprietario`);
+
+--
+-- Indexes for table `recuperacaosenha`
+--
+ALTER TABLE `recuperacaosenha`
+  ADD PRIMARY KEY (`idSenha`);
+
 --
 -- Indexes for table `unidades`
 --
 ALTER TABLE `unidades`
-  ADD UNIQUE KEY `id` (`idUnidade`);
+  ADD PRIMARY KEY (`idUnidade`),
+  ADD KEY `idEndereco` (`idEndereco`);
 
 --
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`idUsuario`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
 -- AUTO_INCREMENT for table `anexos`
 --
 ALTER TABLE `anexos`
-  MODIFY `idDocumento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idAnexo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `animais`
 --
 ALTER TABLE `animais`
-  MODIFY `nFicha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `entregadores`
+--
+ALTER TABLE `entregadores`
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `proprietarios`
+--
+ALTER TABLE `proprietarios`
+  MODIFY `idProprietario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `recuperacaosenha`
+--
+ALTER TABLE `recuperacaosenha`
+  MODIFY `idSenha` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `unidades`
@@ -231,7 +352,7 @@ ALTER TABLE `unidades`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -241,6 +362,32 @@ ALTER TABLE `usuarios`
 -- Limitadores para a tabela `animais`
 --
 ALTER TABLE `animais`
-  ADD CONSTRAINT `animais_ibfk_1` FOREIGN KEY (`idDocumento`) REFERENCES `anexos` (`idDocumento`),
-  ADD CONSTRAINT `animais_ibfk_2` FOREIGN KEY (`idUnidade`) REFERENCES `unidades` (`idUnidade`),
-  ADD CONSTRAINT `animais_ibfk_3` FOREIGN KEY (`idArea`) REFERENCES `areas` (`idArea`);
+  ADD CONSTRAINT `animais_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`),
+  ADD CONSTRAINT `animais_ibfk_2` FOREIGN KEY (`idEntregador`) REFERENCES `entregadores` (`idEntregador`),
+  ADD CONSTRAINT `animais_ibfk_3` FOREIGN KEY (`idArea`) REFERENCES `areas` (`idArea`),
+  ADD CONSTRAINT `animais_ibfk_4` FOREIGN KEY (`idUnidade`) REFERENCES `unidades` (`idUnidade`);
+
+--
+-- Limitadores para a tabela `areas`
+--
+ALTER TABLE `areas`
+  ADD CONSTRAINT `areas_ibfk_1` FOREIGN KEY (`idEndereco`) REFERENCES `enderecos` (`idEndereco`),
+  ADD CONSTRAINT `areas_ibfk_2` FOREIGN KEY (`idProprietario`) REFERENCES `proprietarios` (`idProprietario`);
+
+--
+-- Limitadores para a tabela `entregadores`
+--
+ALTER TABLE `entregadores`
+  ADD CONSTRAINT `entregadores_ibfk_1` FOREIGN KEY (`idAnexo`) REFERENCES `anexos` (`idAnexo`),
+  ADD CONSTRAINT `entregadores_ibfk_2` FOREIGN KEY (`idEndereco`) REFERENCES `enderecos` (`idEndereco`);
+
+--
+-- Limitadores para a tabela `unidades`
+--
+ALTER TABLE `unidades`
+  ADD CONSTRAINT `unidades_ibfk_1` FOREIGN KEY (`idEndereco`) REFERENCES `enderecos` (`idEndereco`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
