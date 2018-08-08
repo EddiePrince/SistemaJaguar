@@ -19,7 +19,7 @@
 				<h1>Cadastro Usuario</h1>
 			</div>
 
-		<form method="post" action="post_cadastro_usuario.php">
+		<form method="post" action="post_cadastro_user.php">
 
 						<br>
 							<label>Perfil: </label><br>
@@ -55,10 +55,45 @@
 						</div><br><br>
 					</div>
 
+				<!-- <div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<p>
+							<br><h2>Nada Inserido</h2>
+						</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<p>
+							<br><h2>Nada Inserido</h2>
+						</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="settings">
+						<p>
+							<br><h2>Nada Inserido</h2>
+						</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="tipo">
+						<p>
+							<br><h2>Nada Inserido</h2>
+						</p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="detalhes">
+						<br><h2>Nada Inserido</h2>s
+					</div>
+					<div role="tabpanel" class="tab-pane" id="tutores">
+						<br><h2>Nada Inserido</h2>
+					</div><br>
+				</div> -->
+
+
+
+
+
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

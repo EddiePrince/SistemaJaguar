@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_br">
 <head>
+	<meta charset="UTF-8">
+	<title>Ajuda</title>
 <link rel="stylesheet" href="style/bootstrap.min.css">
 <meta charset="utf-8">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro de Animais</title>
 <link href="style/bootstrap2.min.css" rel="stylesheet">
@@ -12,18 +14,16 @@
 	<div class="imgcontainer">
 		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
 	</div>
+		<div class="container theme-showcase" role="main">
+				<nav>
+						<ul>
+								<li><a href="ajuda.php" target="_blank">Ajuda</a></li>
+								 <!-- <br> <a href="areaadm.php">Sair</a>  -->
+						</ul>
+				</nav>
 
-	<div class="container theme-showcase" role="main">
-		<nav>
-			<ul>
-				<li><a href="ajuda.php" target="_blank">Ajuda</a></li>
-				 <!-- <br> <a href="areaadm.php">Sair</a>  -->
-			</ul>
-		</nav>
-
-	<h3>Cadastro de Animais</h3>
-
-	<div>
+		<h3>Cadastro de Animais</h3>
+			<div>
 
 			  <!-- Abas de Navegação -->
 			  <ul class="nav nav-tabs" role="tablist">
@@ -31,15 +31,16 @@
 				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Dados do Entregador/Autuado</a></li>
 				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Seleção da Unidade</a></li>
 				<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Dados do Animal</a></li>
-				<li role="presentation"><a href="#tipo" aria-controls="tipo" role="tab" data-toggle="tab">Destinação de Animais</a></li>
+				<li role="presentation"><a href="#tipo" aria-controls="settings" role="tab" data-toggle="tab">Destinação de Animais</a></li>
 				<li role="presentation"><a href="#detalhes" aria-controls="detalhes" role="tab" data-toggle="tab">Triagem de Animal</a></li>
-				<li role="presentation"><a href="#destinacao" aria-controls="destinacao" role="tab" data-toggle="tab">Tipo de Destinação</a></li>
+				<li role="presentation"><a href="#tutores" aria-controls="tutores" role="tab" data-toggle="tab">Tipo de Destinação</a></li>
 			  </ul>
 
 				<!-- Conteúdo refente a cada aba de Navegação -->
-			  <div class="tab-content" role="tablist">
+			  <div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="home">
-						<form method="post" action="post_cadastro_animais.php">
+						<p>
+							<form method="post" action="post_cadastro_animais.php">
 							<div class="form_div">
 										<h4>Dados  da Ficha e do Animal</h4>
 
@@ -54,34 +55,38 @@
 
 										<hr>
 
-							<a href="#profile"  aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
-						</div><br>
+
+								</div><br>
+							<button type="button"  role="presentation">	<a href="#profile"  aria-controls="profile" role="tab" data-toggle="tab">Próximo</a></button>
+										</p>
 					</div>
 
 
+
 					<div role="tabpanel" class="tab-pane" id="profile">
+						<p>
 
 											 <!-- Dados do Entregador/Autuado  -->
 											<h4>Dados do Entregador</h4>
 
 										<p>Tipo de Recolhimento:</p>
-										<select name="tipoRecolhimento" size=1>
+										<select  value="municipio Nao Selecionado" name="tipoRecolhimento" size=1>
 											<option>Apreensão</option>
 											<option>Resgate/Recolhimento</option>
 											<option>Entrega Voluntária</option>
 										</select><br><br>
 
 										<p>Nome Entregador:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>CPF/CNPJ:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo"></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Telefone:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Unidade Federal:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Municipio:</p>
 											<select name="municipioEntregador">
@@ -134,46 +139,48 @@
 											</select><br>
 
 										<p>CEP:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo"></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Bairro:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo"></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Lote:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Complemento:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Tipo de Documento:</p>
-										<select name="tipoRecolhimento" size=1>
-											<option  value="Numero do Documento Nao Selecionado">Selecione</option>
+										<select  value="municipio Nao Selecionado" name="tipoRecolhimento" size=1>
 											<option>Auto de Infração</option>
 											<option>Termo de Apreensão/Depósito</option>
 											<option>Boletim de Ocorrência</option>
 										</select><br><br>
 
 										<p>Número do Documento:</p>
-										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" ></p>
+										<p><input type="text" name="agenteRecebedor" placeholder="Nome Completo" autofocus></p>
 
 										<p>Upload do Documento:</p>
 							    		<input type="file" name="uploadDoc" ><br>
-							<a href="#messages"  aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
-					</div><br><br>
 
+						</p>
+					</div><br><br>
 					<div role="tabpanel" class="tab-pane" id="messages">
+						<p>
 							<!-- Dados da Unidade Acolhedora -->
 		          <h4> Dados da Unidade Acolhedora</h4>
 		          <p>Selecione a Unidade:</p>
-		          <select name="nomeUnidade" size=1>
+		          <select type="menu" name="nomeUnidade" size=1>
 		            <option value="Unidade Nao Selecionada">Selecione a Unidade</option>
 		            <option>Inserir Cod.PHP</option>
 		            <option>Inserir Cod.PHP</option>
 		            <option>Inserir Cod.PHP</option>
 		          </select><br><br>
-					</div><br><br>
 
+						</p>
+					</div><br><br>
 					<div role="tabpanel" class="tab-pane" id="settings">
+						<p>
 
 							          <!-- Dados do Animal  -->
 							          <h4> Dados do Animal</h4>
@@ -264,14 +271,15 @@
 							 				<p>Nome Comum:</p>
 							 				<p><input type="text"  name="nomeComum" placeholder="Nome Comum"><br><br>
 							 				<p>Nome Científico:</p>
-											<input type="text"  name="nomeCientifico" placeholder="Nome Científico"><br><br>
+							 				<p><input type="text"  name="nomeCientifico" placeholder="Nome Científico"><br><br>
 							        <p>Familia:</p>
 							        <p><input type="text" name="familiaAnimal" placeholder="Familia"></p>
 							        <p>Ordem:</p>
 							        <p><input type="text" name="ordemAnimal" placeholder="Nome Completo"></p>
+																</p>
 					</div><br><br>
-
 					<div role="tabpanel" class="tab-pane" id="tipo">
+						<p>
 
 							          <!-- Triagem de Animal  -->
 							          <h4> Triagem de Animal </h4>
@@ -282,27 +290,24 @@
 							              <input type="text"  name="tipoMarca" placeholder="Tipo"><br>
 							             <p>Local de Marcação:</p>
 							              <input type="text"  name="localMarca" placeholder="Local"><br>
+						</p>
 					</div><br><br>
 
-					<div role="tabpanel" class="tab-pane" id="detalhes">
-
-							          <!-- Triagem de Animal  -->
-												nada inserido ainda
-					</div><br><br>
-
-					<div role="tabpanel" class="tab-pane" id="destinacao">
+					<div role="tabpanel" class="tab-pane" id="tutores">
 					          <!-- Destinação de Animais  -->
 					        <h4> Destinação de Animais </h4>
 
 					        <p>Tipo de Destinação:</p>
-					        <select name="tipoDestinacao" size=1>
+					        <select type="menu" name="tipoDestinacao" size=1>
 					          <option value="Tipo Nao Selecionado">Selecione o Tipo</option>
 					          <option>Quarentena</option>
 					          <option>Destinação Imediata</option>
 					          <option>Destinação Mediata</option>
 					        </select><br><br>
+
+
 						Quarentena<br><br><br><br>
-	        <INPUT TYPE="checkbox" VALUE="Quarentena"><strong>Quarentena:</strong>
+	        <INPUT TYPE="checkbox" NAME="" VALUE="Quarentena"><strong>Quarentena:</strong>
 	          <p>Período de Isolamento:</p>
 	            <input type="text"  name="periodoQuarentena" placeholder="Período"><br><br>
 
@@ -314,7 +319,7 @@
 	             <br><INPUT TYPE="checkbox" NAME="condicao2" VALUE="O animal não apresenta problemas que indiquem impedir sua sobrevivência ou a adaptação em vida livre"> O animal não apresenta problemas que indiquem impedir sua sobrevivência ou a adaptação em vida livre;
 	             <br><INPUT TYPE="checkbox" NAME="condicao3" VALUE="O animal é de espécie de ocorrência natural no local"> O animal é de espécie de ocorrência natural no local.
 	               <p>Area de Soltura:</p>
-	               <select name="subtipoDestinacao" size=1>
+	               <select type="menu" name="subtipoDestinacao" size=1>
 	               <option value="Area Nao Selecionada">Selecione a Área</option>
 	               <option>Inserir Cod.PHP</option>
 	               <option>Inserir Cod.PHP</option>
@@ -323,17 +328,16 @@
 	          <p>Cativeiro:</p>
 	           <h6> Em caso de cativeiro o Agente deve diretamente definir a área de soltura.</h6>
 	            <p>Area de Soltura:</p>
-	            <select name="SolturaCativeiro" size=1>
+	            <select type="menu" name="SolturaCativeiro" size=1>
 	           <option value="Area Nao Selecionada">Selecione a Área</option>
 	           <option>Inserir Cod.PHP</option>
 	           <option>Inserir Cod.PHP</option>
 	           <option>Inserir Cod.PHP</option>
 	         </select><br><br><br><br>
-					 	</div>
-				 </form>
 
+			  </div>
+					</div>
 			</div>
-		</div>
 		</div>
 
 

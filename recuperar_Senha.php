@@ -14,7 +14,7 @@
 					<p>Matrícula:</p>
 					<p><input type="text" name="matricula" placeholder="Inserir a Matrícula" required></p>
 					<p>Nome Completo:</p>
-					<p><input type="text" name="nomeCompleto" placeholder="Digite seu Nome" required></p>
+					<p><input type="text" name="nome" placeholder="Digite seu Nome" required></p>
 					<p>E-Mail:</p>
 					<p><input type="email" name="email" placeholder="E-mail fornecido para a empresa" required></p>
 					<p>Título:</p>

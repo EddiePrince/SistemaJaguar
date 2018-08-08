@@ -16,7 +16,7 @@
         }else {
           $query = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
           $result = mysqli_query($conexao, $query); // trazer o resultado de query
-          $busca = mysqli_num_rows($result); // retornar se achou ounaotrue ou false
+          $busca = mysqli_num_rows($result); // retornar se achou ou  nao true ou false
           $linha = mysqli_fetch_assoc($result);
 
           //buscar os dados do servidor e salvar na sessao

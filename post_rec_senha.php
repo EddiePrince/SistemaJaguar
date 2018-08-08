@@ -6,12 +6,12 @@
 <?php
 
   $matricula = $_POST['matricula'];
-  $nomeCompleto = $_POST['nomeCompleto'];
+  $nome = $_POST['nome'];
   $email = $_POST['email'];
   $titulo = $_POST['titulo'];
   $mensagem = $_POST['mensagem'];
 
-$sql = "insert into recuperacaosenha (criacao, matricula, nomeCompleto, email, titulo, mensagem) VALUES ( NOW(), '$matricula' , '$nomeCompleto' , '$email', '$titulo', '$mensagem')";
+$sql = "insert into recuperacaosenha (criacao, matricula, nome, email, titulo, mensagem) VALUES ( NOW(), '$matricula' , '$nome' , '$email', '$titulo', '$mensagem')";
 //executa e armazena o $sql
 $salvar = mysqli_query($conexao, $sql);
 
@@ -27,7 +27,7 @@ if ($registros > 0) {
   echo "<h6 style='color:green;'>Operação foi Realizada com Sucesso!<br></h6>";
   echo "<Br><strong>Dados da Mensagem: </strong>";
   echo "<br>Matricula: " .$matricula;
-  echo "<br>Nome: " .$nomeCompleto;
+  echo "<br>Nome: " .$nome;
   echo "<br>Email: " .$email;
   echo "<br>Titulo: " .$titulo;
   echo "<br>Mensagem: " .$mensagem;

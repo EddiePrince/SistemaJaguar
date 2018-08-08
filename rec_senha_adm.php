@@ -32,7 +32,7 @@
 				echo "<br>Mensagem de solicitação para recuperar senha<br>";
         echo "<Br><strong>Dados da Mensagem: </strong>";
         echo "<br>Matricula: " .$row_recSenha['matricula'];
-        echo "<br>Nome: " .$row_recSenha['nomeCompleto'];
+        echo "<br>Nome: " .$row_recSenha['nome'];
         echo "<br>Email: " .$row_recSenha['email'];
         echo "<br>Titulo: " .$row_recSenha['titulo'];
         echo "<br>Mensagem: " .$row_recSenha['mensagem'];
