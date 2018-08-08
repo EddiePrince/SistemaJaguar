@@ -9,7 +9,7 @@
 <head>
   	<meta charset="UTF-8">
   	<link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
   	<title>Cadastro</title>
 </head>
 <body>

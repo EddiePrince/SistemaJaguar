@@ -11,7 +11,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 		<title>Recuperação de Senha</title>
 </head>
 <body>
