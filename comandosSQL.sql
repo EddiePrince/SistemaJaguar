@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Ago-2018 às 16:09
+-- Generation Time: 08-Ago-2018 às 14:55
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
@@ -23,10 +23,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-DROP Database if EXISTS jaguar_sistem;
 
-CREATE Database `jaguar_sistem`;
-USE jaguar_sistem
 --
 -- Estrutura da tabela `anexos`
 --
@@ -172,6 +169,22 @@ INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefone`, `email`, `cpf
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `recuperacaosenha`
+--
+
+CREATE TABLE `recuperacaosenha` (
+  `idSenha` int(11) NOT NULL,
+  `criacao` datetime NOT NULL,
+  `matricula` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `titulo` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mensagem` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `unidades`
 --
 
@@ -199,12 +212,12 @@ INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`
 
 CREATE TABLE `usuarios` (
   `idUsuario` int(11) NOT NULL,
-  `perfil` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `matricula` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `telefone` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `celular` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `perfil` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -215,20 +228,6 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `email`, `telefone`, `celular`, `perfil`, `senha`) VALUES
 (1, '123456', 'Agente', 'agente@naturatins.com', '123456', '123456', 'Agente', '123456'),
 (2, '654321', 'Administrador', 'admin@naturatins.com', '123456', '123456', 'Administrador', 'admin');
-
-
--- ---------------------
-
-  CREATE TABLE IF NOT EXISTS `recuperacaosenha` (
-    `idSenha` int(11) NOT NULL AUTO_INCREMENT,
-    `criacao` datetime NOT NULL,
-    `matricula` varchar(100) NOT NULL,
-    `nome` varchar(100) NOT NULL,
-    `email` varchar(50) NOT NULL,
-    `titulo` varchar(100) NOT NULL,
-    `mensagem` varchar(100) NOT NULL,
-    PRIMARY KEY(`idSenha`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -277,6 +276,12 @@ ALTER TABLE `entregadores`
 --
 ALTER TABLE `proprietarios`
   ADD PRIMARY KEY (`idProprietario`);
+
+--
+-- Indexes for table `recuperacaosenha`
+--
+ALTER TABLE `recuperacaosenha`
+  ADD PRIMARY KEY (`idSenha`);
 
 --
 -- Indexes for table `unidades`
@@ -330,6 +335,12 @@ ALTER TABLE `entregadores`
 --
 ALTER TABLE `proprietarios`
   MODIFY `idProprietario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `recuperacaosenha`
+--
+ALTER TABLE `recuperacaosenha`
+  MODIFY `idSenha` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `unidades`
