@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `jaguar_sistem`
 --
-
+create database if not exists jaguar_sistem;
+use jaguar_sistem;
 -- --------------------------------------------------------
 
 --
