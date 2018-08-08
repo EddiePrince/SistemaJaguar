@@ -43,10 +43,10 @@
 							<input type="text" name="idAnimal" value="" placeholder="Mostrar numero da ficha">
 
 							<p>Data:</p>
-							<input type="text" name="idAnimal" value="" placeholder="Mostrar data atual">
+							<input type="text" name="dataRecebimento" value="" placeholder="Mostrar data atual">
 
-							<p>Agente Recebedor:</p>
-							<p><input type="text" name="agenteRecebedor" placeholder="Mostrar nome do usuário logado" autofocus></p>
+							<p>Agente Recebedor:</p> 
+							<p><input type="text" name="nomeUsuario" placeholder="Mostrar nome do usuário logado" autofocus></p>
 							<hr>
 							<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 						</div>
@@ -58,14 +58,14 @@
 						<div class="form_div">
 							<h4>Dados do Entregador</h4>
 							<p>Tipo de Recolhimento:</p>
-							<select name="tipoRecolhimento" size=1>
-						<option>Apreensão</option>
-						<option>Resgate/Recolhimento</option>
-						<option>Entrega Voluntária</option>
-					</select><br><br>
+							<select name="tipoEntrega" size=1>
+								<option>Apreensão</option>
+								<option>Resgate/Recolhimento</option>
+								<option>Entrega Voluntária</option>
+							</select><br><br>
 
 							<p>Nome Entregador:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="nomeEntregador"></p>
 
 							<p>CPF/CNPJ:</p>
 							<p><input type="text" name="agenteRecebedor"></p>
