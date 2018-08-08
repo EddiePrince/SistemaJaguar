@@ -6,7 +6,8 @@
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro de Animais</title>
-<link href="style/bootstrap2.min.css" rel="stylesheet">
+<link href="style/bootstrap.min.css" rel="stylesheet">
+<link href="style/style.css" rel="stylesheet">
 </head>
 <body>
 
