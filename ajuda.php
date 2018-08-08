@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt_br">
-
 <head>
-	<meta charset="UTF-8">
 	<title>Ajuda</title>
-	<link rel="stylesheet" href="style/bootstrap.min.css">
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Guia de Instrução</title>
-	<link href="style/bootstrap2.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 </head>
-
 <body>
+
 	<div class="imgcontainer">
 		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
 	</div>
@@ -22,8 +18,8 @@
 		<div class="page-header">
 			<h1>Instruções Básicas do Sistema</h1>
 		</div>
+		
 		<div>
-
 			<!-- Abas de Navegação -->
 			<ul class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Sobre o Sistema</a></li>

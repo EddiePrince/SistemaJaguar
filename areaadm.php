@@ -4,16 +4,14 @@
   include 'verificausuario.inc.php';
 ?>
 
-
-	<!DOCTYPE html>
-	<html lang="pt-br">
-
-	<head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
 		<meta charset="UTF-8">
 		<title>Área Principal</title>
 		<link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
-	</head>
+</head>
 
 	<body>
     <div id="page">
