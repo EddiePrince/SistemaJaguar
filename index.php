@@ -29,7 +29,7 @@
 
 				<span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
 				<br><br>
-				<a href="ajuda.php" target="_blank">Ajuda</a>
+        <a href="ajuda.php" target="_blank"><img class="icon-img" src="img/icon1.png"></a>
 		</form>
 </div>
 
