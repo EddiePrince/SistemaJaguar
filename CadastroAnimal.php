@@ -48,7 +48,7 @@
 							<input type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
 
 							<p>Data:</p>
-							<input type="date" name="dataRecebimento" required="true">
+							<input type="date" name="dataRecebimento">
 
 							<p>Agente Recebedor:</p> 
 							<p><input type="text" name="nomeAgente" autofocus></p>
@@ -236,7 +236,7 @@
 							<p>Local da marcação:</p>
 							<p><input type="text" name="localMarcacao"></p>
 						</div>
-						<input type="submit" value="Salvar">
+						<input name="submit" type="submit" value="Salvar">
 					</div>
 				</div>
 			</div>
