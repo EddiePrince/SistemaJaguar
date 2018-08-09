@@ -1,58 +1,57 @@
 <?php
-//Conecção com Banco
+//Conexão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
 
-	$agenteRecebedor = $_POST['agenteRecebedor'];
-	$tipoRecolhimento = $_POST['tipoRecolhimento'];
+//Pegar id do animal
+  	$getId = "SELECT MAX(idAnimal) from animais";
+  	$getId = "SELECT MAX(idAnimal) from animais";
+  	$getIdresult =  mysqli_query($conexao, $getId);
+
+ 	while($row =mysqli_fetch_row($getIdresult))
+	{
+		$idAutomatico = $row[0]+1;
+	}
+  
+	$dataRecebimento = $_POST['dataRecebimento'];
+	$agenteRecebedor = $_POST['nomeAgente'];
+	$tipoRecolhimento = $_POST['tipoEntrega'];
 	$nomeEntregador = $_POST['nomeEntregador'];
-	$cpf_cnpj = $_POST['cpf_cnpj'];
-	$telefone = $_POST['telefone'];
+	$cpfcnpj = $_POST['cpfEntregador'];
+	$telefone = $_POST['telefoneEntregador'];
+	$uf = $_POST['uf'];
+	$municipio = $_POST['municipio'];
 	$cep = $_POST['cep'];
-	$enderecoEntregador = $_POST['enderecoEntregador'];
-	$municipioEntregador = $_POST['municipioEntregador'];
-	$autoTermoBoletim = $_POST['autoTermoBoletim'];
-	$uploadDoc = $_POST['uploadDoc'];
-	$nomeUnidade = $_POST['nomeUnidade'];
-	$municipioProcedencia = $_POST['municipioProcedencia'];
-	$ufProcedencia = $_POST['ufProcedencia'];
-	$locUltimaProcedencia = $_POST['locUltimaProcedencia'];
+	$bairro = $_POST['bairro'];
+	$lote = $_POST['lote'];
+	$complemento = $_POST['complemento'];
+	$tipoDocumento = $_POST['tipoDocumento'];
+	$nDocumento = $_POST['nDocumento'];
+	$arquivo = $_POST['uploadDocumento'];
+	$unidade = $_POST['nomeUnidade'];
+	$procedencia = $_POST['procedencia'];
 	$dieta = $_POST['dieta'];
 	$nomeComum = $_POST['nomeComum'];
 	$nomeCientifico = $_POST['nomeCientifico'];
-	$familiaAnimal = $_POST['familiaAnimal'];
-	$ordemAnimal = $_POST['ordemAnimal'];
-	$codMarca = $_POST['codMarca'];
-	$tipoMarca = $_POST['tipoMarca'];
-	$localMarca = $_POST['localMarca'];
-	$tipoDestinacao = $_POST['tipoDestinacao'];
-	// $periodoQuarentena = $_POST['periodoQuarentena'];
-	// $condicao1 = $_POST['condicao1'];
-	// $condicao2 = $_POST['condicao2'];
-	// $condicao3 = $_POST['condicao3'];
-	// $subtipoDestinacao = $_POST['subtipoDestinacao'];
+	$familia = $_POST['familia'];
+	$ordem = $_POST['ordem'];
+	$codMarca = $_POST['codMarcacao'];
+	$tipoMarca = $_POST['tipoMarcacao'];
+	$localMarca = $_POST['localMarcacao'];
 
-	$sql = "insert into animais (dataRecebimento, agenteRecebedor, tipoRecolhimento, nomeEntregador, cpf_cnpj, telefone,
- 	cep, enderecoEntregador, municipioEntregador, autoTermoBoletim, uploadDoc, nomeUnidade, municipioProcedencia,
- 	ufProcedencia, locUltimaProcedencia, dieta, nomeComum, nomeCientifico, familiaAnimal, ordemAnimal,
- 	codMarca, tipoMarca, localMarca, tipoDestinacao)
-
-	values ( NOW(), '$agenteRecebedor', '$tipoRecolhimento', '$nomeEntregador', '$cpf_cnpj', '$telefone',
- 	'$cep', '$enderecoEntregador', '$municipioEntregador', '$autoTermoBoletim', '$uploadDoc', '$nomeUnidade',
- 	'$municipioProcedencia', '$ufProcedencia', '$locUltimaProcedencia', '$dieta', '$nomeComum',
- 	'$nomeCientifico', '$familiaAnimal', '$ordemAnimal', '$codMarca', '$tipoMarca', '$localMarca', '$tipoDestinacao')"; //iserindo dados digitados do formulario para a tabela usuarios
-
-	//, periodoQuarentena, condicao1, condicao2, condicao3, subtipoDestinacao
-	//, '$periodoQuarentena''$condicao1', '$condicao2', '$condicao3' , '$subtipoDestinacao'
+	if (isset($_POST['nomeEntregador'])){
+	$sql1 = "INSERT INTO animais (idAnimal, data, ultimaProcedencia, codMarcacao, tipoMarcacao, LocalMarcacao, nomeComum, nomeCientifico, familia, ordem) VALUES ('$idAutomatico','$dataRecebimento' , '$procedencia', '$codMarca' , '$tipoMarca' , '$localMarca', '$nomeComum', '$nomeCientifico', '$familia', '$ordem')"; 
 
 	//executa e armazena o $sql
-	$salvar = mysqli_query($conexao, $sql);
-
-	//$linhas = mysqli_affected_rows($conexao); //contagem da quantidade de linhas inseridas na tabela
+	$salvar = mysqli_query($conexao, $sql1);
 
 	echo "Operação foi Realizada com Sucesso!";
+} else{
+	echo 'Preencha tudo';
+}
 
 	mysqli_close($conexao);
 
 
 ?>
-<br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a>
+<!-- <br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a> -->
+
