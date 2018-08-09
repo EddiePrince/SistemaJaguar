@@ -3,10 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Ago-2018 às 14:55
+-- Generation Time: 09-Ago-2018 às 16:51
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
-
 
 DROP DATABASE if EXISTS jaguar_sistem;
 CREATE DATABASE jaguar_sistem;
@@ -40,6 +39,20 @@ CREATE TABLE `anexos` (
   `arquivo` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `anexos`
+--
+
+INSERT INTO `anexos` (`idAnexo`, `tipoDocumento`, `nDocumento`, `arquivo`) VALUES
+(4, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(5, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(6, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(7, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(8, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(9, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(10, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
+(11, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466);
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +61,8 @@ CREATE TABLE `anexos` (
 
 CREATE TABLE `animais` (
   `idAnimal` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `nomeAgente` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `idEntregador` int(11) DEFAULT NULL,
   `idUsuario` int(11) DEFAULT NULL,
   `idUnidade` int(11) DEFAULT NULL,
@@ -74,8 +89,16 @@ CREATE TABLE `animais` (
 -- Extraindo dados da tabela `animais`
 --
 
-INSERT INTO `animais` (`idAnimal`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
-(1, 1, 1, 1, 'Feira do Bosque', '001', 'Tornozeleira', 'Pé Esquerdo', 'Macaco Preto', 'Chiropotes satanas', 'Pitheciidae', 'Primates', 'Completa', 'Destinado', '', 'Destinação Imediata', 'Soltura', 1, 1, 1, 1);
+INSERT INTO `animais` (`idAnimal`, `data`, `nomeAgente`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
+(0, '0000-00-00', '', 16, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(1, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(2, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(3, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(4, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(5, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(6, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(7, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
+(8, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -125,7 +148,13 @@ CREATE TABLE `enderecos` (
 INSERT INTO `enderecos` (`idEndereco`, `uf`, `municipio`, `cep`, `bairro`, `lote`, `complemento`) VALUES
 (1, 'Tocantins', 'Palmas', '770019-000', 'Centro', '14', ''),
 (2, 'Tocantins', 'Araguaína', '09844-590', 'Vila Boa', '87', ''),
-(3, 'Tocantins', 'Palmas', '77654-901', 'Norte', '45', '');
+(3, 'Tocantins', 'Palmas', '77654-901', 'Norte', '45', ''),
+(10, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
+(11, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
+(12, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
+(13, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
+(14, '', '', '', '', '', ''),
+(15, 'AM', 'Gurupi', '64556465', '564', '654', '654');
 
 -- --------------------------------------------------------
 
@@ -148,7 +177,15 @@ CREATE TABLE `entregadores` (
 --
 
 INSERT INTO `entregadores` (`idEntregador`, `nome`, `cpfcnpj`, `telefone`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
-(1, 'Ibamar', '754939032', '0988123', 'Resgate', NULL, NULL);
+(12, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
+(13, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
+(14, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
+(16, NULL, NULL, NULL, NULL, 9, NULL),
+(17, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
+(18, NULL, NULL, NULL, NULL, 10, NULL),
+(19, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
+(20, NULL, NULL, NULL, NULL, NULL, 15),
+(21, NULL, NULL, NULL, NULL, 11, NULL);
 
 -- --------------------------------------------------------
 
@@ -206,8 +243,7 @@ CREATE TABLE `unidades` (
 --
 
 INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`) VALUES
-(1, 'Central Palmas', '485963093', 'Central', 1),
-(2, 'Regional Araguaína', '9985401', 'Regional', 2);
+(1, 'Central Palmas', '485963093', 'Central', 1);
 
 -- --------------------------------------------------------
 
@@ -309,13 +345,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `anexos`
 --
 ALTER TABLE `anexos`
-  MODIFY `idAnexo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `animais`
---
-ALTER TABLE `animais`
-  MODIFY `idAnimal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idAnexo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `areas`
@@ -327,13 +357,13 @@ ALTER TABLE `areas`
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `entregadores`
 --
 ALTER TABLE `entregadores`
-  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `proprietarios`

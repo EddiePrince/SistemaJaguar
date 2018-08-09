@@ -47,25 +47,54 @@
 
 		$sql2 = "INSERT INTO entregadores(nome, cpfcnpj, telefone, tipoEntrega) VALUES ('$nomeEntregador', '$cpfcnpj', '$telefone', '$tipoRecolhimento')";
 
+		$sql3 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('$uf', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
+
+		$sql4 = "INSERT INTO anexos(tipoDocumento, nDocumento, arquivo) VALUES ('$tipoDocumento', '$nDocumento', '$arquivo')";
 
 		// ,'$procedencia', '$codMarca' , '$tipoMarca' , '$localMarca', '$nomeComum', '$nomeCientifico', '$familia', '$ordem'
 
 		//executa e armazena o $sql
 		$salvar1 = mysqli_query($conexao, $sql1);
 		$salvar2 = mysqli_query($conexao, $sql2);
+		$salvar3 = mysqli_query($conexao, $sql3);
+		$salvar4 = mysqli_query($conexao, $sql4);
 
+		//Pegar id Endereço
+		$getAdressId = "SELECT MAX(idEndereco) from enderecos";
+  		$getAdressIdresult =  mysqli_query($conexao, $getAdressId);
 
-//Pegar id Entregador
+ 		while($row =mysqli_fetch_row($getAdressIdresult))
+		{
+			$idEndereco = $row[0];
+		}	
+
+		$sql5 = "INSERT INTO entregadores(idEndereco) VALUES ('$idEndereco')";
+		$salvar5 = mysqli_query($conexao, $sql5);
+
+		//Pegar id Anexo
+		$getFileId = "SELECT MAX(idAnexo) from anexos";
+  		$getFileIdresult =  mysqli_query($conexao, $getFileId);
+
+ 		while($row =mysqli_fetch_row($getFileIdresult))
+		{
+			$idAnexo = $row[0];
+		}	
+
+		$sql6 = "INSERT INTO entregadores(idAnexo) VALUES ('$idAnexo')";
+		$salvar6 = mysqli_query($conexao, $sql6);
+
+		//Pegar id Entregador
 		$getDeliverId = "SELECT MAX(idEntregador) from entregadores";
   		$getDeliverIdresult =  mysqli_query($conexao, $getDeliverId);
 
- 		while($row =mysqli_fetch_row($getAnimalIdresult))
+ 		while($row =mysqli_fetch_row($getDeliverIdresult))
 		{
 			$idEntregador = $row[0];
 		}	
 
-		$sql3 = "INSERT INTO animais ()";
-//Pegar id Endereço
+		$sql7 = "INSERT INTO animais(idEntregador) VALUES ('$idEntregador')";
+		$salvar7 = mysqli_query($conexao, $sql7);
+
 
 		echo "Operação foi Realizada com Sucesso!";
 }

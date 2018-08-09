@@ -8,7 +8,7 @@
 
 <head>
 	<link rel="stylesheet" href="style/bootstrap.min.css">
-	<meta charset="utf-8">
+	<meta charset="utf8mb4_unicode_ci">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de Animais</title>
 	<link href="style/bootstrapv3.min.css" rel="stylesheet">
