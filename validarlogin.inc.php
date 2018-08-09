@@ -6,7 +6,7 @@
       <!-- Inicio do codigo validação usuario -->
   <?php
 
-    if (isset($_POST['entrar']) && $_POST['entrar'] == 'login')
+    if (isset($_POST['entrar']) && $_POST['entrar'] == 'Login')
     {
         $matricula = $_POST['matricula'];
         $senha = $_POST['senha'];

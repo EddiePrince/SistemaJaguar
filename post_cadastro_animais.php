@@ -1,58 +1,77 @@
 <?php
-//Conecção com Banco
+//Conexão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
 
-	$agenteRecebedor = $_POST['agenteRecebedor'];
-	$tipoRecolhimento = $_POST['tipoRecolhimento'];
-	$nomeEntregador = $_POST['nomeEntregador'];
-	$cpf_cnpj = $_POST['cpf_cnpj'];
-	$telefone = $_POST['telefone'];
-	$cep = $_POST['cep'];
-	$enderecoEntregador = $_POST['enderecoEntregador'];
-	$municipioEntregador = $_POST['municipioEntregador'];
-	$autoTermoBoletim = $_POST['autoTermoBoletim'];
-	$uploadDoc = $_POST['uploadDoc'];
-	$nomeUnidade = $_POST['nomeUnidade'];
-	$municipioProcedencia = $_POST['municipioProcedencia'];
-	$ufProcedencia = $_POST['ufProcedencia'];
-	$locUltimaProcedencia = $_POST['locUltimaProcedencia'];
-	$dieta = $_POST['dieta'];
-	$nomeComum = $_POST['nomeComum'];
-	$nomeCientifico = $_POST['nomeCientifico'];
-	$familiaAnimal = $_POST['familiaAnimal'];
-	$ordemAnimal = $_POST['ordemAnimal'];
-	$codMarca = $_POST['codMarca'];
-	$tipoMarca = $_POST['tipoMarca'];
-	$localMarca = $_POST['localMarca'];
-	$tipoDestinacao = $_POST['tipoDestinacao'];
-	// $periodoQuarentena = $_POST['periodoQuarentena'];
-	// $condicao1 = $_POST['condicao1'];
-	// $condicao2 = $_POST['condicao2'];
-	// $condicao3 = $_POST['condicao3'];
-	// $subtipoDestinacao = $_POST['subtipoDestinacao'];
+//Pegar id do animal
+ 
+  	$getAnimalId = "SELECT MAX(idAnimal) from animais";
+  	$getAnimalIdresult = mysqli_query($conexao, $getAnimalId);
 
-	$sql = "insert into animais (dataRecebimento, agenteRecebedor, tipoRecolhimento, nomeEntregador, cpf_cnpj, telefone,
- 	cep, enderecoEntregador, municipioEntregador, autoTermoBoletim, uploadDoc, nomeUnidade, municipioProcedencia,
- 	ufProcedencia, locUltimaProcedencia, dieta, nomeComum, nomeCientifico, familiaAnimal, ordemAnimal,
- 	codMarca, tipoMarca, localMarca, tipoDestinacao)
+ 	while($row =mysqli_fetch_row($getAnimalIdresult))
+	{
+		$idAutomatico = $row[0]+1;
+	}
 
-	values ( NOW(), '$agenteRecebedor', '$tipoRecolhimento', '$nomeEntregador', '$cpf_cnpj', '$telefone',
- 	'$cep', '$enderecoEntregador', '$municipioEntregador', '$autoTermoBoletim', '$uploadDoc', '$nomeUnidade',
- 	'$municipioProcedencia', '$ufProcedencia', '$locUltimaProcedencia', '$dieta', '$nomeComum',
- 	'$nomeCientifico', '$familiaAnimal', '$ordemAnimal', '$codMarca', '$tipoMarca', '$localMarca', '$tipoDestinacao')"; //iserindo dados digitados do formulario para a tabela usuarios
+	
+	if (isset($_POST['submit'])) {
+		
+ 	
+		$dataRecebimento = $_POST['dataRecebimento'];
+		$agenteRecebedor = $_POST['nomeAgente'];
+		$tipoRecolhimento = $_POST['tipoEntrega'];
+		$nomeEntregador = $_POST['nomeEntregador'];
+		$cpfcnpj = $_POST['cpfEntregador'];
+		$telefone = $_POST['telefoneEntregador'];
+		$uf = $_POST['uf'];
+		$municipio = $_POST['municipio'];
+		$cep = $_POST['cep'];
+		$bairro = $_POST['bairro'];
+		$lote = $_POST['lote'];
+		$complemento = $_POST['complemento'];
+		$tipoDocumento = $_POST['tipoDocumento'];
+		$nDocumento = $_POST['nDocumento'];
+		$arquivo = $_POST['uploadDocumento'];
+		$unidade = $_POST['nomeUnidade'];
+		$procedencia = $_POST['procedencia'];
+		$dieta = $_POST['dieta'];
+		$nomeComum = $_POST['nomeComum'];
+		$nomeCientifico = $_POST['nomeCientifico'];
+		$familia = $_POST['familia'];
+		$ordem = $_POST['ordem'];
+		$codMarca = $_POST['codMarcacao'];
+		$tipoMarca = $_POST['tipoMarcacao'];
+		$localMarca = $_POST['localMarcacao'];
 
-	//, periodoQuarentena, condicao1, condicao2, condicao3, subtipoDestinacao
-	//, '$periodoQuarentena''$condicao1', '$condicao2', '$condicao3' , '$subtipoDestinacao'
+		
+		$sql1 = "INSERT INTO animais (idAnimal, data, nomeAgente) VALUES ('$idAutomatico','$dataRecebimento' , '$agenteRecebedor')";
 
-	//executa e armazena o $sql
-	$salvar = mysqli_query($conexao, $sql);
+		$sql2 = "INSERT INTO entregadores(nome, cpfcnpj, telefone, tipoEntrega) VALUES ('$nomeEntregador', '$cpfcnpj', '$telefone', '$tipoRecolhimento')";
 
-	//$linhas = mysqli_affected_rows($conexao); //contagem da quantidade de linhas inseridas na tabela
 
-	echo "Operação foi Realizada com Sucesso!";
+		// ,'$procedencia', '$codMarca' , '$tipoMarca' , '$localMarca', '$nomeComum', '$nomeCientifico', '$familia', '$ordem'
 
-	mysqli_close($conexao);
+		//executa e armazena o $sql
+		$salvar1 = mysqli_query($conexao, $sql1);
+		$salvar2 = mysqli_query($conexao, $sql2);
 
+
+//Pegar id Entregador
+		$getDeliverId = "SELECT MAX(idEntregador) from entregadores";
+  		$getDeliverIdresult =  mysqli_query($conexao, $getDeliverId);
+
+ 		while($row =mysqli_fetch_row($getAnimalIdresult))
+		{
+			$idEntregador = $row[0];
+		}	
+
+		$sql3 = "INSERT INTO animais ()";
+//Pegar id Endereço
+
+		echo "Operação foi Realizada com Sucesso!";
+}
+	
+ 
 
 ?>
-<br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a>
+<!-- <br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a> -->
+

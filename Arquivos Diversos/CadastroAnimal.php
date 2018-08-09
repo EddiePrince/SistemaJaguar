@@ -3,15 +3,17 @@
 <head>
 <link rel="stylesheet" href="style/bootstrap.min.css">
 <meta charset="utf-8">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro de Animais</title>
 <link href="style/bootstrapv3.min.css" rel="stylesheet">
 <link href="style/style.css" rel="stylesheet">
 </head>
 <body>
-	<!-- <div class="imgcontainer">
+
+	<div class="imgcontainer">
 		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
-	</div> -->
+	</div>
 
 	<div class="container theme-showcase" role="main">
 		<nav>
@@ -37,11 +39,10 @@
 			<div role="tabpanel" class="tab-pane active" id="home">
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="form_div">
-						<!-- Dados da Ficha -->
 						<h4>Dados  da Ficha e do Animal</h4>
 							<p>Número da Ficha:</p>
 							<input type="text" name="idAnimal" value="" placeholder="Mostrar numero da ficha">
-
+							
 							<p>Data:</p>
 							<input type="text" name="idAnimal" value="" placeholder="Mostrar data atual">
 
@@ -58,6 +59,7 @@
 
 				<!-- Dados do Entregador/Autuado  -->
 				<h4>Dados do Entregador</h4>
+
 				<p>Tipo de Recolhimento:</p>
 				<select name="tipoRecolhimento" size=1>
 					<option>Apreensão</option>
@@ -182,64 +184,66 @@
 				<p>Upload do Documento:</p>
 	    		<input type="file" name="uploadDoc" ><br>
 				<a href="#messages"  aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
-			</div><br><br>
+				</div><br><br>
 
 			<div role="tabpanel" class="tab-pane" id="messages">
-			<!-- Dados da Unidade Acolhedora -->
-        <h4> Dados da Unidade Acolhedora</h4>
-        <p>Selecione a Unidade:</p>
-        <select name="nomeUnidade" size=1>
-				        <option value="Unidade Nao Selecionada">Selecione a Unidade</option>
-			            <option>Inserir Cod.PHP</option>
-			            <option>Inserir Cod.PHP</option>
-			            <option>Inserir Cod.PHP</option>
-			        </select><br><br>
+				<!-- Dados da Unidade Acolhedora -->
+		        <h4> Dados da Unidade Acolhedora</h4>
+		        <p>Selecione a Unidade:</p>
+		        <select name="nomeUnidade" size=1>
+			        <option value="Unidade Nao Selecionada">Selecione a Unidade</option>
+		            <option>Inserir Cod.PHP</option>
+		            <option>Inserir Cod.PHP</option>
+		            <option>Inserir Cod.PHP</option>
+		        </select><br><br>
 			</div><br><br>
 
 			<div role="tabpanel" class="tab-pane" id="settings">
 				<!-- Dados do Animal  -->
-		    <h4> Dados do Animal</h4>
-		    <p>Local de última procedência:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <h4> Dados do Animal</h4>
+			    <p>Local de última procedência:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Dieta:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira a Dieta"></p>
+			    <p>Dieta:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira a Dieta"></p>
 
-		    <p>Nome comum:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Nome comum:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Nome científico:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Nome científico:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Família:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Família:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Ordem:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Ordem:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Código de marcação:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Código de marcação:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Tipo de marcação:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
+			    <p>Tipo de marcação:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-		    <p>Local da marcação:</p>
-		    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
-			</div>
+			    <p>Local da marcação:</p>
+			    <p><input type="text" name="agenteRecebedor" placeholder="Insira o local"></p>
 
-				 </form>
+			    
+			</div><br><br>
 
-			</div>
+		</form>
+
 			</div>
 		</div>
+		</div>
+					
 
 
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
 
-
-	</body>
+</body>
 </html>

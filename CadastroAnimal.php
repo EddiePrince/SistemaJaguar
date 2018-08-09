@@ -1,3 +1,8 @@
+<?php
+	include 'post_cadastro_animais.php';
+	include 'verificausuario.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,13 +45,13 @@
 						<div class="form_div">
 							<h4>Dados  da Ficha e do Animal</h4>
 							<p>Número da Ficha:</p>
-							<input type="text" name="idAnimal" value="" placeholder="Mostrar numero da ficha">
+							<input type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
 
 							<p>Data:</p>
-							<input type="text" name="idAnimal" value="" placeholder="Mostrar data atual">
+							<input type="date" name="dataRecebimento">
 
-							<p>Agente Recebedor:</p>
-							<p><input type="text" name="agenteRecebedor" placeholder="Mostrar nome do usuário logado" autofocus></p>
+							<p>Agente Recebedor:</p> 
+							<p><input type="text" name="nomeAgente" autofocus></p>
 							<hr>
 							<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 						</div>
@@ -58,23 +63,23 @@
 						<div class="form_div">
 							<h4>Dados do Entregador</h4>
 							<p>Tipo de Recolhimento:</p>
-							<select name="tipoRecolhimento" size=1>
-						<option>Apreensão</option>
-						<option>Resgate/Recolhimento</option>
-						<option>Entrega Voluntária</option>
-					</select><br><br>
+							<select name="tipoEntrega" size=1>
+								<option>Apreensão</option>
+								<option>Resgate/Recolhimento</option>
+								<option>Entrega Voluntária</option>
+							</select><br><br>
 
 							<p>Nome Entregador:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="nomeEntregador"></p>
 
 							<p>CPF/CNPJ:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="cpfEntregador"></p>
 
 							<p>Telefone:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="telefoneEntregador"></p>
 
 							<p>Unidade Federal:</p>
-							<select name="ufProcedencia">
+							<select name="uf">
 							<option value="Estado Nao Selecionado">Selecione o Estado</option>
 									<option value="AC">Acre</option>
 									<option value="AL">Alagoas</option>
@@ -106,7 +111,7 @@
 							</select>
 
 							<p>Municipio:</p>
-							<select name="municipioEntregador">
+							<select name="municipio">
 						<option value="municipio Nao Selecionado">Selecione o Municipio</option>
 						<option value="Aguiarnópolis">Aguiarnópolis</option>
 						<option value="Almas">Almas</option>
@@ -156,19 +161,19 @@
 					</select><br>
 
 							<p>CEP:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="cep"></p>
 
 							<p>Bairro:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="bairro"></p>
 
 							<p>Lote:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="lote"></p>
 
 							<p>Complemento:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="complemento"></p>
 
 							<p>Tipo de Documento:</p>
-							<select name="tipoRecolhimento" size=1>
+							<select name="tipoDocumento" size=1>
 						<option  value="Numero do Documento Nao Selecionado">Selecione</option>
 						<option>Auto de Infração</option>
 						<option>Termo de Apreensão/Depósito</option>
@@ -176,10 +181,10 @@
 					</select><br><br>
 
 							<p>Número do Documento:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="nDocumento"></p>
 
 							<p>Upload do Documento:</p>
-							<input type="file" name="uploadDoc"><br>
+							<input type="file" name="uploadDocumento"><br>
 							<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
 						</div>
 					</div>
@@ -205,33 +210,33 @@
 						<div class="form_div">
 							<h4> Dados do Animal</h4>
 							<p>Local de última procedência:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="procedencia"></p>
 
 							<p>Dieta:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="dieta"></p>
 
 							<p>Nome comum:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="nomeComum"></p>
 
 							<p>Nome científico:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="nomeCientifico"></p>
 
 							<p>Família:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="familia"></p>
 
 							<p>Ordem:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="ordem"></p>
 
 							<p>Código de marcação:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="codMarcacao"></p>
 
 							<p>Tipo de marcação:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="tipoMarcacao"></p>
 
 							<p>Local da marcação:</p>
-							<p><input type="text" name="agenteRecebedor"></p>
+							<p><input type="text" name="localMarcacao"></p>
 						</div>
-						<input type="submit" value="Salvar">
+						<input name="submit" type="submit" value="Salvar">
 					</div>
 				</div>
 			</div>

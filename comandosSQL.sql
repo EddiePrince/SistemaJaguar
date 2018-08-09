@@ -7,6 +7,11 @@
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
+
+DROP DATABASE if EXISTS jaguar_sistem;
+CREATE DATABASE jaguar_sistem;
+USE jaguar_sistem;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
