@@ -50,9 +50,19 @@
         color: #fff;
     }
 
+    /*Imagem de ajudar do Login*/
     .icon-img{
       width: 35px;
-    }  
+    }
+
+    /*Imagem da logo do Admin*/
+    .logo-admin img{
+      width: 250px;
+      float: left;
+      position: relative;
+      background: #fff;
+      margin: 3 px solid black;
+    }
     
     .contact-form input
     {
@@ -95,13 +105,14 @@
     .menu{
       width: 100%;
       height: 50px;
-      background-color: #222;
-      font-family: 'arial';
+      font-family: 'arial';  
     }
 
     .menu ul{
+      padding: 0px;
+      margin: 0px;
+      float: left;
       list-style: none;
-      position: relative;
     }
 
     .menu ul li{

@@ -16,6 +16,9 @@
 	<body>
     <div id="page">
       <!-- Menu -->
+        <dir class="logo-admin">
+          <img src="img/logo.png">
+        </dir>
     <div>
 
     <input type="checkbox" id="bt_menu">
@@ -46,12 +49,13 @@
           </ul>
         </li>
         <li><a href="#">Emitir Relatório</a></li>
-				<li><a href="rec_senha_adm.php" class="recsenha">Recuperação de Senha</a></li>
+        <li><a href="rec_senha_adm.php" class="recsenha">Recuperação de Senha</a></li>
         <li><a href="ajuda.php">Ajuda</a></li>
       </ul>
     </nav>
     </div>
         <!-- Fim Menu -->
+
 
 		<div id="maincontainer">
 			<br> Bem vindo	<?php echo $usuario; ?>
