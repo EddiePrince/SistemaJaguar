@@ -3,9 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Ago-2018 às 16:45
+-- Generation Time: 08-Ago-2018 às 14:55
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
+
+
+DROP DATABASE if EXISTS jaguar_sistem;
+CREATE DATABASE jaguar_sistem;
+USE jaguar_sistem;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,7 +48,6 @@ CREATE TABLE `anexos` (
 
 CREATE TABLE `animais` (
   `idAnimal` int(11) NOT NULL,
-  `dataRecebimento` date DEFAULT NULL,
   `idEntregador` int(11) DEFAULT NULL,
   `idUsuario` int(11) DEFAULT NULL,
   `idUnidade` int(11) DEFAULT NULL,
@@ -70,8 +74,8 @@ CREATE TABLE `animais` (
 -- Extraindo dados da tabela `animais`
 --
 
-INSERT INTO `animais` (`idAnimal`, `dataRecebimento`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
-(1, '2018-08-07', 1, 1, 1, 'Feira do Bosque', '001', 'Tornozeleira', 'Pé Esquerdo', 'Macaco Preto', 'Chiropotes satanas', 'Pitheciidae', 'Primates', 'Completa', 'Destinado', '', 'Destinação Imediata', 'Soltura', 1, 1, 1, 1);
+INSERT INTO `animais` (`idAnimal`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
+(1, 1, 1, 1, 'Feira do Bosque', '001', 'Tornozeleira', 'Pé Esquerdo', 'Macaco Preto', 'Chiropotes satanas', 'Pitheciidae', 'Primates', 'Completa', 'Destinado', '', 'Destinação Imediata', 'Soltura', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -82,7 +86,7 @@ INSERT INTO `animais` (`idAnimal`, `dataRecebimento`, `idEntregador`, `idUsuario
 CREATE TABLE `areas` (
   `idArea` int(11) NOT NULL,
   `idProprietario` int(11) DEFAULT NULL,
-  `nomeArea` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `latitude` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `longitude` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bioma` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -95,7 +99,7 @@ CREATE TABLE `areas` (
 -- Extraindo dados da tabela `areas`
 --
 
-INSERT INTO `areas` (`idArea`, `idProprietario`, `nomeArea`, `latitude`, `longitude`, `bioma`, `distancia`, `observacoes`, `idEndereco`) VALUES
+INSERT INTO `areas` (`idArea`, `idProprietario`, `nome`, `latitude`, `longitude`, `bioma`, `distancia`, `observacoes`, `idEndereco`) VALUES
 (1, 1, 'Parque Cesamar', '89.433', '-29.695', 'Cerrado', '8Km', '', 3);
 
 -- --------------------------------------------------------
@@ -131,9 +135,9 @@ INSERT INTO `enderecos` (`idEndereco`, `uf`, `municipio`, `cep`, `bairro`, `lote
 
 CREATE TABLE `entregadores` (
   `idEntregador` int(11) NOT NULL,
-  `nomeEntregador` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cpfcnpjEntregador` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `telefoneEntregador` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cpfcnpj` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tipoEntrega` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `idAnexo` int(11) DEFAULT NULL,
   `idEndereco` int(11) DEFAULT NULL
@@ -143,7 +147,7 @@ CREATE TABLE `entregadores` (
 -- Extraindo dados da tabela `entregadores`
 --
 
-INSERT INTO `entregadores` (`idEntregador`, `nomeEntregador`, `cpfcnpjEntregador`, `telefoneEntregador`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
+INSERT INTO `entregadores` (`idEntregador`, `nome`, `cpfcnpj`, `telefone`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
 (1, 'Ibamar', '754939032', '0988123', 'Resgate', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -155,16 +159,16 @@ INSERT INTO `entregadores` (`idEntregador`, `nomeEntregador`, `cpfcnpjEntregador
 CREATE TABLE `proprietarios` (
   `idProprietario` int(11) NOT NULL,
   `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telefoneProprietario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `emailProprietario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cpfcnpjProprietario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cpfcnpj` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `proprietarios`
 --
 
-INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefoneProprietario`, `emailProprietario`, `cpfcnpjProprietario`) VALUES
+INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefone`, `email`, `cpfcnpj`) VALUES
 (1, 'Governo', '98203', 'governo@tocantins.com', '0918230');
 
 -- --------------------------------------------------------
@@ -191,8 +195,8 @@ CREATE TABLE `recuperacaosenha` (
 
 CREATE TABLE `unidades` (
   `idUnidade` int(11) NOT NULL,
-  `nomeUnidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cnpjUnidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cnpj` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tipoUnidade` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -201,7 +205,7 @@ CREATE TABLE `unidades` (
 -- Extraindo dados da tabela `unidades`
 --
 
-INSERT INTO `unidades` (`idUnidade`, `nomeUnidade`, `cnpjUnidade`, `tipoUnidade`, `idEndereco`) VALUES
+INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`) VALUES
 (1, 'Central Palmas', '485963093', 'Central', 1),
 (2, 'Regional Araguaína', '9985401', 'Regional', 2);
 
@@ -214,10 +218,10 @@ INSERT INTO `unidades` (`idUnidade`, `nomeUnidade`, `cnpjUnidade`, `tipoUnidade`
 CREATE TABLE `usuarios` (
   `idUsuario` int(11) NOT NULL,
   `matricula` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nomeUsuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `emailUsuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telefoneUsuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `celularUsuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telefone` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `celular` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `perfil` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -226,7 +230,7 @@ CREATE TABLE `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nomeUsuario`, `emailUsuario`, `telefoneUsuario`, `celularUsuario`, `perfil`, `senha`) VALUES
+INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `email`, `telefone`, `celular`, `perfil`, `senha`) VALUES
 (1, '123456', 'Agente', 'agente@naturatins.com', '123456', '123456', 'Agente', '123456'),
 (2, '654321', 'Administrador', 'admin@naturatins.com', '123456', '123456', 'Administrador', 'admin');
 
