@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
     <title>Área Principal Principal</title>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 </head>
 <body>
