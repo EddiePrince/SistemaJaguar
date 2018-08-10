@@ -7,24 +7,36 @@
 <html lang="pt-br">
 
 <head>
-	<link rel="stylesheet" href="style/bootstrap.min.css">
 	<meta charset="utf8mb4_unicode_ci">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 	<title>Cadastro de Animais</title>
-	<link href="style/bootstrapv3.min.css" rel="stylesheet">
-	<link href="style/style.css" rel="stylesheet">
 </head>
 
 <body>
+	<div id="pageAnimal">
+	    <div class="container-fluid">
+
+	      <dir class="logo_admin">
+          <a href="areaadm.php"> <img src="img/logo.png"></a>
+	      </dir>
+				<dir class="logout">
+					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
+					<a  class="btn btn-default" href="logout.php">Logout</a>
+				</dir>
+	      <div >
+					<div class="">
+	        <!-- Menu -->
+	        <?php include 'menu/menuAdm.php'; ?>
+	        <!-- Fim Menu -->
+	      </div><br><br>
 
 
-	<div class="imgcontainer">
-		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
-	</div>
 	<form method="post" action="post_cadastro_animais.php">
 		<div class="container theme-showcase" role="main">
 
-			<h3>Cadastro de Animais</h3>
+			<h3>Cadastro de Animais</h3><br><br>
 
 			<div>
 				<!-- Abas de Navegação -->
@@ -45,13 +57,13 @@
 						<div class="form_div">
 							<h4>Dados  da Ficha e do Animal</h4>
 							<p>Número da Ficha:</p>
-							<input type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
+							<input  class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
 
 							<p>Data:</p>
-							<input type="date" name="dataRecebimento">
+							<input class="form-control" type="date" name="dataRecebimento">
 
-							<p>Agente Recebedor:</p> 
-							<p><input type="text" name="nomeAgente" autofocus></p>
+							<p>Agente Recebedor:</p>
+							<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
 							<hr>
 							<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 						</div>
@@ -63,23 +75,23 @@
 						<div class="form_div">
 							<h4>Dados do Entregador</h4>
 							<p>Tipo de Recolhimento:</p>
-							<select name="tipoEntrega" size=1>
+							<select class="form-control" name="tipoEntrega" size=1>
 								<option>Apreensão</option>
 								<option>Resgate/Recolhimento</option>
 								<option>Entrega Voluntária</option>
 							</select><br><br>
 
 							<p>Nome Entregador:</p>
-							<p><input type="text" name="nomeEntregador"></p>
+							<p><input class="form-control" type="text" name="nomeEntregador"></p>
 
 							<p>CPF/CNPJ:</p>
-							<p><input type="text" name="cpfEntregador"></p>
+							<p><input class="form-control" type="text" name="cpfEntregador"></p>
 
 							<p>Telefone:</p>
-							<p><input type="text" name="telefoneEntregador"></p>
+							<p><input class="form-control" type="text" name="telefoneEntregador"></p>
 
 							<p>Unidade Federal:</p>
-							<select name="uf">
+							<select class="form-control" name="uf">
 							<option value="Estado Nao Selecionado">Selecione o Estado</option>
 									<option value="AC">Acre</option>
 									<option value="AL">Alagoas</option>
@@ -111,7 +123,7 @@
 							</select>
 
 							<p>Municipio:</p>
-							<select name="municipio">
+							<select class="form-control" name="municipio">
 						<option value="municipio Nao Selecionado">Selecione o Municipio</option>
 						<option value="Aguiarnópolis">Aguiarnópolis</option>
 						<option value="Almas">Almas</option>
@@ -161,19 +173,19 @@
 					</select><br>
 
 							<p>CEP:</p>
-							<p><input type="text" name="cep"></p>
+							<p><input class="form-control" type="text" name="cep"></p>
 
 							<p>Bairro:</p>
-							<p><input type="text" name="bairro"></p>
+							<p><input class="form-control" type="text" name="bairro"></p>
 
 							<p>Lote:</p>
-							<p><input type="text" name="lote"></p>
+							<p><input class="form-control" type="text" name="lote"></p>
 
 							<p>Complemento:</p>
-							<p><input type="text" name="complemento"></p>
+							<p><input class="form-control" type="text" name="complemento"></p>
 
 							<p>Tipo de Documento:</p>
-							<select name="tipoDocumento" size=1>
+							<select class="form-control" name="tipoDocumento" size=1>
 						<option  value="Numero do Documento Nao Selecionado">Selecione</option>
 						<option>Auto de Infração</option>
 						<option>Termo de Apreensão/Depósito</option>
@@ -181,12 +193,12 @@
 					</select><br><br>
 
 							<p>Número do Documento:</p>
-							<p><input type="text" name="nDocumento"></p>
+							<p><input class="form-control" type="text" name="nDocumento"></p>
 
 							<p>Upload do Documento:</p>
-							<input type="file" name="uploadDocumento"><br>
+							<input class="form-control" type="file" name="uploadDocumento"><br>
 							<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
-						</div>
+						</div><hr>
 					</div>
 
 					<!-- Dados da Unidade Acolhedora -->
@@ -195,7 +207,7 @@
 						<div class="form_div">
 							<h4> Dados da Unidade Acolhedora</h4>
 							<p>Selecione a Unidade:</p>
-							<select name="nomeUnidade" size=1>
+							<select class="form-control" name="nomeUnidade" size=1>
 										<option value="Unidade Nao Selecionada">Selecione a Unidade</option>
 											<option>Inserir Cod.PHP</option>
 											<option>Inserir Cod.PHP</option>
@@ -210,39 +222,41 @@
 						<div class="form_div">
 							<h4> Dados do Animal</h4>
 							<p>Local de última procedência:</p>
-							<p><input type="text" name="procedencia"></p>
+							<p><input class="form-control" type="text" name="procedencia"></p>
 
 							<p>Dieta:</p>
-							<p><input type="text" name="dieta"></p>
+							<p><input class="form-control" type="text" name="dieta"></p>
 
 							<p>Nome comum:</p>
-							<p><input type="text" name="nomeComum"></p>
+							<p><input class="form-control" type="text" name="nomeComum"></p>
 
 							<p>Nome científico:</p>
-							<p><input type="text" name="nomeCientifico"></p>
+							<p><input class="form-control" type="text" name="nomeCientifico"></p>
 
 							<p>Família:</p>
-							<p><input type="text" name="familia"></p>
+							<p><input class="form-control" type="text" name="familia"></p>
 
 							<p>Ordem:</p>
-							<p><input type="text" name="ordem"></p>
+							<p><input class="form-control" type="text" name="ordem"></p>
 
 							<p>Código de marcação:</p>
-							<p><input type="text" name="codMarcacao"></p>
+							<p><input class="form-control" type="text" name="codMarcacao"></p>
 
 							<p>Tipo de marcação:</p>
-							<p><input type="text" name="tipoMarcacao"></p>
+							<p><input  class="form-control" type="text" name="tipoMarcacao"></p>
 
 							<p>Local da marcação:</p>
-							<p><input type="text" name="localMarcacao"></p>
+							<p><input  class="form-control"type="text" name="localMarcacao"></p>
 						</div>
-						<input name="submit" type="submit" value="Salvar">
+						<input class="btn btn-default" name="submit" type="submit" value="Salvar">
 					</div>
 				</div>
 			</div>
 		</div>
 	</form>
-
+</div>
+</div>
+</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

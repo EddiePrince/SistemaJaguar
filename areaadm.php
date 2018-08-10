@@ -7,7 +7,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-		<meta charset="UTF-8">
+		<meta charset="utf8mb4_unicode_ci">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Área Principal</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
@@ -19,7 +20,10 @@
     <div class="container-fluid">
 
       <dir class="logo_admin">
-        <img src="img/logo.png">
+        <a href="areaadm.php"> <img src="img/logo.png"></a>
+      </dir>
+      <dir class="logout">
+        <a  class="btn btn-default" href="logout.php">Logout</a>
       </dir>
       <div >
         <!-- Menu -->
@@ -31,7 +35,6 @@
 
 			<br> Bem vindo Administrador!
 
-	    <br><a class="logout" href="logout.php">Logout</a>
 
       <div class="password">
         <?php

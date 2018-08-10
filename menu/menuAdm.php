@@ -6,7 +6,7 @@
 
 <nav class="menu">
 	<ul>
-		<li> <a href="areaadm.php">Home</a></li>
+		<!-- <li> <a href="areaadm.php">Home</a></li> -->
 		<li><a href="">Usuários</a>
 			<ul>
 				<li><a href="menu/listaUsuarios.php">Visualizar</a></li>
@@ -31,6 +31,7 @@
 		<li><a href="#">Emitir Relatório</a></li>
 		<li><a href="rec_senha_adm.php" class="recsenha">Recuperação de Senha</a></li>
 		<li><a href="ajuda.php">Ajuda</a></li>
+		<li><a  class="btn btn-default" href="#">pesquisar</a> </li> 
 	</ul>
 </nav>
 </div>

@@ -1,52 +1,78 @@
+<?php
+//Conecção com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'verificausuario.inc.php';
+?>
+
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 <head>
-	<title>Cadastro Ususuaro</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+		<meta charset="utf8mb4_unicode_ci">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cadastro de Usuário</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	<div class="container theme-showcase" role="main">
-		<!-- <img src="img/Logo.png" alt="Logo" class="logo"> -->
+
+	<div id="page">
+	    <div class="container-fluid">
+
+	      <dir class="logo_admin">
+          <a href="areaadm.php"> <img src="img/logo.png"></a>
+	      </dir>
+				<dir class="logout">
+					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
+					<a  class="btn btn-default" href="logout.php">Logout</a>
+				</dir>
+	      <div >
+	        <!-- Menu -->
+	        <?php include 'menu/menuAdm.php'; ?>
+	        <!-- Fim Menu -->
+	      </div>
+
+			<div class="corpoAdm">
+
+
+	<div class="container theme-showcase" role="main"><br>
+
 		<form method="post" action="post_cadastro_usuario.php">
-		
 			<h1>Cadastro Usuario</h1>
 			<label>Perfil: </label><br>
-			<select name="perfil" required autofocus>
+			<select class="form-control" name="perfil" required autofocus>
 				<option>Selecione o Perfil do Usuário</option>
 				<option value="Administrador">Administrador</option>
 				<option value="Agente">Agente</option>
-			</select>
-	      
+			</select><br><br>
+
 	      	<label>Matricula:</label><br>
-	      	<input type="text" placeholder="inserir a Matrícula" name="matricula" required><br><br>
+	      	<input class="form-control" type="text" name="matricula" required><br><br>
 
 		    <label>Nome:</label><br>
-		    <input type="text" placeholder="Insira o Nome Completo" name="nome" required><br><br>
+		    <input class="form-control" type="text" name="nome" required><br><br>
 
 			<label>E-mail:</label><br>
-			<input class="usuario" type="text" name="email" placeholder="E-mail do Usuario" size="35" maxlength="100"  required><br><br>
+			<input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
 
 		    <label>Telefone Residencial:</label><br>
-		    <input type="text" placeholder="Digite o N° Telefone" name="telefone" required><br><br>
+		    <input class="form-control" type="text" name="telefone" required><br><br>
 
 		    <label>Celular:</label><br>
-		    <input type="text" placeholder="Digite o N° Celular" name="celular" required><br><br>
+		    <input class="form-control" type="text" name="celular" required><br><br>
 
 			<label>Senha:</label><br>
-		    <input type="text" placeholder="Digite uma senha" name="senha" required><br><br>
+		    <input class="form-control" type="text" name="senha" required><br><br>
 
-		    <button type="submit">Cadastrar</button><br><br><br><br>
+		    <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
 
 		</form>
 
-		<div>
-			<a href="areaadm.php"> <input type="button" name="btn" value="Voltar">  </a>
-		</div><br><br>
+
 	</div>
+</div>
+</div>
+</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

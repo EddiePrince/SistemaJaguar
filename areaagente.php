@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf8mb4_unicode_ci">
     <title>Área Principal Principal</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
