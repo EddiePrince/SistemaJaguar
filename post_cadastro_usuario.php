@@ -1,10 +1,6 @@
 <?php
 //Conecção com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
-?>
-
-
-<?php
 
 
 $perfil = $_POST['perfil'];
@@ -16,7 +12,7 @@ $celular = $_POST['celular'];
 $senha = $_POST['senha'];
 
 
-$sql = "insert into usuarios (perfil, matricula, nome, email, telefone, celular, senha) values ('$perfil', '$matricula', '$nome', '$email', '$telefone', '$celular', '$senha')"; //iserindo dados digitados do formulario para a tabela usuarios
+$sql = "INSERT INTO usuarios (perfil, matricula, nome, email, telefone, celular, senha) VALUES ('$perfil', '$matricula', '$nome', '$email', '$telefone', '$celular', '$senha')"; //iserindo dados digitados do formulario para a tabela usuarios
 //executa e armazena o $sql
 $salvar = mysqli_query($conexao, $sql);
 
