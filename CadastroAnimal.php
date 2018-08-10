@@ -25,7 +25,7 @@
 				</dir>
 				<div class="">
 					<!-- Menu -->
-					<?php include '../menu/menuAdm.php'; ?>
+					<?php include 'menu/menuAdm.php'; ?>
 				</div><br><br>
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container theme-showcase" role="main">
