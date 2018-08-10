@@ -4,7 +4,7 @@
   	<div>
   		<input type="checkbox" id="bt_menu">
   		<label for="bt_menu">&#9776;</label>
-
+      
   		<nav class="menu">
   			<ul>
   				<li> <a href="areaagente.php">Home</a></li>
