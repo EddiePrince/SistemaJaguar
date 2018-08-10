@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div id="pageAnimais">
+	<div id="pageListaAnimais">
 		<div class="container-fluid">
 
 			<dir class="logo_admin">
@@ -33,46 +33,19 @@
 				<!-- Fim Menu -->
 			</div><br><br>
 
+		<div class="container">
 
-		<h2>Lista de Unidades</h2><br>
+		<h2>Lista de Animais</h2><br>
+  	<table border="1px">
+  		<tr>
+  			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Animal X</th>
+  			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Animal Y</th>
+  			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Animal Z</th>
+        </tr>
 
-
-	<table border="1px">
-		<tr>
-			<th>Número da Ficha</th>
-			<th>Data de Recebimento</th>
-			<th>Agente</th>
-			<th>Tipo de Recolhimento</th>
-			<th>Nome do Entregador</th>
-			<th>CPF/CNPJ</th>
-			<th>Telefone</th>
-			<th>Endereço</th>
-			<th>Município</th>
-			<th>CEP</th>
-			<th>ID Documento</th>
-			<th>ID Unidade</th>
-			<th>Município de Procedência</th>
-			<th>UF</th>
-			<th>Última Procedência</th>
-			<th>Dieta</th>
-			<th>Nome Comum</th>
-			<th>Nome Científico</th>
-			<th>Família</th>
-			<th>Ordem</th>
-			<th>Código da Marcação</th>
-			<th>Tipo de Marcação</th>
-			<th>Local da Marcação</th>
-			<th>Período em Quarentena</th>
-			<th>Tipo da Destinação</th>
-			<th>Subtipo da Destinação</th>
-			<th>Condição 1</th>
-			<th>Condição 2</th>
-			<th>Condição 3</th>
-			<th>ID Área</th>
-		</tr>
-
-	</table>
-</div>
+  	</table>
+  </div>
+  </div>
 </div>
 </div>
 
