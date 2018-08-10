@@ -4,7 +4,7 @@
 
 //Pegar id do animal
  
-  	$getAnimalId = "SELECT MAX(idAnimal) from animais";
+  	$getAnimalId = "SELECT MAX(idAnimal) FROM animais";
   	$getAnimalIdresult = mysqli_query($conexao, $getAnimalId);
 
  	while($row =mysqli_fetch_row($getAnimalIdresult))
@@ -60,19 +60,30 @@
 		$salvar4 = mysqli_query($conexao, $sql4);
 
 		//Pegar id Endereço
-		$getAdressId = "SELECT MAX(idEndereco) from enderecos";
-  		$getAdressIdresult =  mysqli_query($conexao, $getAdressId);
+		$pegarEndereco = "SELECT MAX(idEndereco) FROM enderecos";
+  		$resultEndereco =  mysqli_query($conexao, $pegarEndereco);
 
- 		while($row =mysqli_fetch_row($getAdressIdresult))
+  		while($row = mysqli_fetch_row($resultEndereco))
 		{
 			$idEndereco = $row[0];
-		}	
+		}
 
-		$sql5 = "INSERT INTO entregadores(idEndereco) VALUES ('$idEndereco')";
+  		//Pegar idEntregador
+		$pegarEntregador = "SELECT MAX(idEntregador) FROM entregadores";
+		$resultEntregador = mysqli_query($conexao, $pegarEntregador);
+
+		while($row = mysqli_fetch_row($resultEntregador))
+		{
+			$idEntregador = $row[0];
+		}
+ 			
+
+		$sql5 = "UPDATE entregadores SET idEndereco='$idEndereco' WHERE idEntregador='$idEntregador'";
 		$salvar5 = mysqli_query($conexao, $sql5);
 
+
 		//Pegar id Anexo
-		$getFileId = "SELECT MAX(idAnexo) from anexos";
+		$getFileId = "SELECT MAX(idAnexo) FROM anexos";
   		$getFileIdresult =  mysqli_query($conexao, $getFileId);
 
  		while($row =mysqli_fetch_row($getFileIdresult))
@@ -80,19 +91,21 @@
 			$idAnexo = $row[0];
 		}	
 
-		$sql6 = "INSERT INTO entregadores(idAnexo) VALUES ('$idAnexo')";
-		$salvar6 = mysqli_query($conexao, $sql6);
+		$sql6 = "UPDATE entregadores SET idAnexo='$idAnexo' WHERE idEntregador='$idEntregador'";
+		$salvar6 = mysqli_query($conexao, $sql6);	
 
-		//Pegar id Entregador
-		$getDeliverId = "SELECT MAX(idEntregador) from entregadores";
-  		$getDeliverIdresult =  mysqli_query($conexao, $getDeliverId);
+		//Pegar idAnimal
 
- 		while($row =mysqli_fetch_row($getDeliverIdresult))
+		$pegarAnimal = "SELECT MAX(idAnimal) FROM animais";
+  		$resultAnimal =  mysqli_query($conexao, $pegarAnimal);
+
+ 		while($row =mysqli_fetch_row($resultAnimal))
 		{
-			$idEntregador = $row[0];
-		}	
+			$idAnimal = $row[0];
+		}
 
-		$sql7 = "INSERT INTO animais(idEntregador) VALUES ('$idEntregador')";
+
+		$sql7 = "UPDATE animais SET idEntregador='$idEntregador' WHERE idAnimal='$idAnimal'";
 		$salvar7 = mysqli_query($conexao, $sql7);
 
 

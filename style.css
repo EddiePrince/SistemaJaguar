@@ -335,6 +335,40 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+#pageListaAnimais {
+  background-image: url("img/8.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pagePerfilAnimal {
+  background-image: url("img/10.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
 
 #pageUnidade {
   background-image: url("img/7.jpg");

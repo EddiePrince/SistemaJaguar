@@ -1,28 +1,62 @@
 <?php
-//ConeXão com Banco
+//Conexão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+
+
+	
+	if (isset($_POST['submit'])) {
+		
+ 	
+		$nome = $_POST['nomeUnidade'];
+		$cnpj = $_POST['cnpj'];
+		$tipo = $_POST['tipoUnidade'];
+		$uf = $_POST['uf'];
+		$municipio = $_POST['municipio'];
+		$cep = $_POST['cep'];
+		$bairro = $_POST['bairro'];
+		$lote = $_POST['lote'];
+		$complemento = $_POST['complemento'];
+		
+
+		
+		$sql1 = "INSERT INTO unidades (nome, cnpj, tipoUnidade) VALUES ('$nome','$cnpj' , '$tipo')";
+
+
+		$sql2 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('$uf', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
+
+	
+		//executa e armazena o $sql
+		$salvar1 = mysqli_query($conexao, $sql1);
+		$salvar2 = mysqli_query($conexao, $sql2);
+		
+
+		//Pegar id Endereço
+		$pegarEndereco = "SELECT MAX(idEndereco) FROM enderecos";
+  		$resultEndereco =  mysqli_query($conexao, $pegarEndereco);
+
+  		while($row = mysqli_fetch_row($resultEndereco))
+		{
+			$idEndereco = $row[0];
+		}
+
+  		//Pegar idUnidade
+		$pegarUnidade = "SELECT MAX(idUnidade) FROM unidades";
+		$resultUnidade = mysqli_query($conexao, $pegarUnidade);
+
+		while($row = mysqli_fetch_row($resultUnidade))
+		{
+			$idUnidade = $row[0];
+		}
+ 			
+
+		$sql3 = "UPDATE unidades SET idEndereco='$idEndereco' WHERE idUnidade='$idUnidade'";
+		$salvar3 = mysqli_query($conexao, $sql3);
+
+		echo "Operação foi Realizada com Sucesso!";
+}
+	
+ 
+
 ?>
+<!-- <br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a> -->
 
-<?php
-
-  $nome = $_POST['nome'];
-  $cnpj = $_POST['cnpj'];
-  $tipoUnidade = $_POST['tipoUnidade'];
-
-
-  //iserindo dados digitados do formulario para a tabela usuarios
-$sql = "insert into unidades (nome, cnpj, tipoUnidade) values ('$nome' , '$cnpj', '$tipoUnidade')";
-
-//executa e armazena o $sql
-$salvar = mysqli_query($conexao, $sql);
-
-//$linhas = mysqli_affected_rows($conexao); //contagem da quantidade de linhas inseridas na tabela
-
-echo "Operação foi Realizada com Sucesso!";
-
-mysqli_close($conexao);
-
-//echo "Nome: ".$nome."<br>E-mail: ".$email."<br>Telefone: ".$tel."<br>Celular: ".$cel."<br>Usuário: ".$user."<br>Senha: ".$senha;
-
- ?>
-<br> <a href="CadastroUnidade.php"> <input type="button" name="btn" value="Cadastrar Outra Unidade">  </a>
