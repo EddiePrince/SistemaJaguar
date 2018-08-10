@@ -39,19 +39,6 @@ CREATE TABLE `anexos` (
   `arquivo` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Extraindo dados da tabela `anexos`
---
-
-INSERT INTO `anexos` (`idAnexo`, `tipoDocumento`, `nDocumento`, `arquivo`) VALUES
-(4, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(5, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(6, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(7, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(8, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(9, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(10, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466),
-(11, 'Auto de InfraÃ§Ã£o', '21312123', 0x6a61677561725f73697374656d2e706466);
 
 -- --------------------------------------------------------
 
@@ -85,22 +72,7 @@ CREATE TABLE `animais` (
   `idArea` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Extraindo dados da tabela `animais`
---
 
-INSERT INTO `animais` (`idAnimal`, `data`, `nomeAgente`, `idEntregador`, `idUsuario`, `idUnidade`, `ultimaProcedencia`, `codMarcacao`, `tipoMarcacao`, `localMarcacao`, `nomeComum`, `nomeCientifico`, `familia`, `ordem`, `statusTriagem`, `destinacao`, `periodoQuarentena`, `modalidadeDestinacao`, `subtipoModalidade`, `condicao1`, `condicao2`, `condicao3`, `idArea`) VALUES
-(0, '0000-00-00', '', 16, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(1, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(2, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(3, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(4, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(5, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(6, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(7, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL),
-(8, '2018-08-21', 'Maria', NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, NULL);
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `areas`
@@ -122,9 +94,6 @@ CREATE TABLE `areas` (
 -- Extraindo dados da tabela `areas`
 --
 
-INSERT INTO `areas` (`idArea`, `idProprietario`, `nome`, `latitude`, `longitude`, `bioma`, `distancia`, `observacoes`, `idEndereco`) VALUES
-(1, 1, 'Parque Cesamar', '89.433', '-29.695', 'Cerrado', '8Km', '', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -141,22 +110,7 @@ CREATE TABLE `enderecos` (
   `complemento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Extraindo dados da tabela `enderecos`
---
 
-INSERT INTO `enderecos` (`idEndereco`, `uf`, `municipio`, `cep`, `bairro`, `lote`, `complemento`) VALUES
-(1, 'Tocantins', 'Palmas', '770019-000', 'Centro', '14', ''),
-(2, 'Tocantins', 'Araguaína', '09844-590', 'Vila Boa', '87', ''),
-(3, 'Tocantins', 'Palmas', '77654-901', 'Norte', '45', ''),
-(10, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
-(11, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
-(12, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
-(13, 'AM', 'Gurupi', '64556465', '564', '654', '654'),
-(14, '', '', '', '', '', ''),
-(15, 'AM', 'Gurupi', '64556465', '564', '654', '654');
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `entregadores`
@@ -172,22 +126,7 @@ CREATE TABLE `entregadores` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Extraindo dados da tabela `entregadores`
---
 
-INSERT INTO `entregadores` (`idEntregador`, `nome`, `cpfcnpj`, `telefone`, `tipoEntrega`, `idAnexo`, `idEndereco`) VALUES
-(12, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
-(13, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
-(14, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
-(16, NULL, NULL, NULL, NULL, 9, NULL),
-(17, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
-(18, NULL, NULL, NULL, NULL, 10, NULL),
-(19, 'Karolynne', '4091221', '890891', 'Resgate/Recolhimento', NULL, NULL),
-(20, NULL, NULL, NULL, NULL, NULL, 15),
-(21, NULL, NULL, NULL, NULL, 11, NULL);
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `proprietarios`
@@ -202,13 +141,6 @@ CREATE TABLE `proprietarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Extraindo dados da tabela `proprietarios`
---
-
-INSERT INTO `proprietarios` (`idProprietario`, `nome`, `telefone`, `email`, `cpfcnpj`) VALUES
-(1, 'Governo', '98203', 'governo@tocantins.com', '0918230');
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `recuperacaosenha`
@@ -238,16 +170,7 @@ CREATE TABLE `unidades` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Extraindo dados da tabela `unidades`
---
-
-INSERT INTO `unidades` (`idUnidade`, `nome`, `cnpj`, `tipoUnidade`, `idEndereco`) VALUES
-(1, 'Central Palmas', '485963093', 'Central', 1);
-
--- --------------------------------------------------------
-
---
+----
 -- Estrutura da tabela `usuarios`
 --
 
