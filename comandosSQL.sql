@@ -39,6 +39,10 @@ CREATE TABLE `anexos` (
   `arquivo` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `anexos`
+--
+
 
 -- --------------------------------------------------------
 
@@ -72,7 +76,11 @@ CREATE TABLE `animais` (
   `idArea` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `animais`
+--
 
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `areas`
@@ -94,6 +102,8 @@ CREATE TABLE `areas` (
 -- Extraindo dados da tabela `areas`
 --
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -110,7 +120,13 @@ CREATE TABLE `enderecos` (
   `complemento` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `enderecos`
+--
 
+
+
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `entregadores`
@@ -126,7 +142,13 @@ CREATE TABLE `entregadores` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `entregadores`
+--
 
+
+
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `proprietarios`
@@ -141,6 +163,11 @@ CREATE TABLE `proprietarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Extraindo dados da tabela `proprietarios`
+--
+
+
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `recuperacaosenha`
@@ -170,7 +197,15 @@ CREATE TABLE `unidades` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-----
+--
+-- Extraindo dados da tabela `unidades`
+--
+
+
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuarios`
 --
 
