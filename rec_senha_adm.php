@@ -6,17 +6,31 @@
 
 
 <!DOCTYPE html>
-<html lang="br-pt">
+<html lang="pt-br">
 <head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<meta charset="utf8mb4_unicode_ci">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 		<title>Recuperação de Senha</title>
 </head>
 <body>
-  <div class="maincontainer">
+  <div id="page">
+    <div class="container-fluid">
 
+      <dir class="logo_admin">
+       <img src="img/logo.png">
+      </dir>
+      <dir class="logout">
+        <a  class="btn btn-default" href="logout.php">Logout</a>
+      </dir>
+      <div >
+        <!-- Menu -->
+        <?php include 'menu/menuAdm.php'; ?>
+        <!-- Fim Menu -->
+      </div>
+
+		<div class="corpoSenha">
 
 	<?php
 	$result_recSenha = "SELECT * FROM recuperacaosenha";
@@ -24,7 +38,7 @@
 	$row_recSenha = mysqli_fetch_assoc($resultado_recSenha);
 	//$linhas = mysqli_num_rows($row_recSenha);
 	?>
-	<div id="maincontainer">
+
 		<!-- <h4>Solicitações de recuperação de senha</h4> -->
 		<div>
 			<?php
@@ -47,7 +61,9 @@
 	<div>
 		<a href="areaadm.php">Voltar</a>
 	</div>
-</div>
+
+  </div>
+  </div>
   </div>
 </body>
 </html>

@@ -216,8 +216,43 @@ label[for="bt_menu"] {
 /* fim menu */
 
 /* Background Page Adm */
-#page {
-  background-image: url("img/2.jpg");
+#page{
+  background-image: url("img/1.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#corpoSenha{
+  background-image: url("img/9.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+
+#pageUsuario {
+  background-image: url("img/8.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;
@@ -235,6 +270,24 @@ label[for="bt_menu"] {
 }
 #pageAnimal {
   background-image: url("img/5.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+
+#pageUnidade {
+  background-image: url("img/7.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;

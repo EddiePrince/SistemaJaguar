@@ -16,11 +16,11 @@
 
 <body>
 
-	<div id="page">
+	<div id="pageUsuario">
 	    <div class="container-fluid">
 
 	      <dir class="logo_admin">
-          <a href="areaadm.php"> <img src="img/logo.png"></a>
+        <img src="img/logo.png">
 	      </dir>
 				<dir class="logout">
 					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>

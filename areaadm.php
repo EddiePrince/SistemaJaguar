@@ -9,9 +9,9 @@
 <head>
 		<meta charset="utf8mb4_unicode_ci">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Área Principal</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+    <title>Área Principal</title>
 </head>
 
 	<body>

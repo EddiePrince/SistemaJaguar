@@ -8,46 +8,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf8mb4_unicode_ci">
-    <title>Área Principal Principal</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf8mb4_unicode_ci">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+    <title>Área Principal</title>
 </head>
 <body>
 
-  <!-- Menu -->
-  <div>
-  <input type="checkbox" id="bt_menu">
-  <label for="bt_menu">&#9776;</label>
+  <div id="page">
+      <div class="container-fluid">
 
-    <nav class="menu">
-      <ul>
-        <li> <a href="areaagente.php">Home</a></li>
-        <li><a href="">Usuários</a>
-          <ul>
-            <li><a href="menu/listaUsuarios.php">Visualizar</a></li>
-            <li><a href="menu/alterarUsuario.php">Alterar Dados Pessoais</a></li>
-            <li><a href="menu/desativarUsuario.php">Desativar Conta</a></li>
-          </ul>
-        </li>
-        <li><a>Animais</a>
-          <ul>
-          <li><a href="CadastroAnimal.php">Cadastrar</a></li>
-          <li><a href="menu/listaAnimais.php">Visualizar</a></li>
-          </ul>
-        </li>
-        <li><a href="">Unidades</a>
-          <ul>
-            <li><a href="menu/listaUnidades.php">Visualizar</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Emitir Relatório</a></li>
-        <li><a href="ajuda.php">Ajuda</a></li>
-        <li><a href="ajuda.php">inserir pesquisa aqui</a></li>
-      </ul>
-    </nav>
-  </div>
-    <!-- Fim Menu -->
+        <dir class="logo_admin">
+          <a href="areaagente.php"> <img src="img/logo.png"></a>
+        </dir>
+        <dir class="logout">
+          <a  class="btn btn-default" href="logout.php">Logout</a>
+        </dir>
+        <div >
+          <!-- Menu -->
+          <?php include 'menu/menuAgente.php'; ?>
+          <!-- Fim Menu -->
+        </div>
+
+  		<div class="corpoAdm">
+
 
   <br><h1>Bem Vindo Agente</h1>
 

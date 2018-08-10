@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-	<title>Ajuda</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<head>
+		<meta charset="utf8mb4_unicode_ci">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+		<title>Ajuda</title>
 </head>
 <body>
+	<div id="page">
+      <div class="container-fluid">
 
-	<div class="imgcontainer">
-		<img src="img/Logo.png" alt="Logo" class="logo" height="150" width="200">
-	</div>
+        <dir class="logo_admin">
+           <img src="img/logo.png">
+        </dir>
+        <dir class="logout">
+          <a  class="btn btn-default" href="logout.php">Logout</a>
+        </dir>
+        <div >
+          <!-- Menu -->
+          <?php include 'menu/menuAdm.php'; ?>
+          <!-- Fim Menu -->
+        </div>
+
+  		<div class="corpoSenha">
 
 	<div class="container theme-showcase" role="main">
 
 		<div class="page-header">
 			<h1>Instruções Básicas do Sistema</h1>
 		</div>
-		
+
 		<div>
 			<!-- Abas de Navegação -->
 			<ul class="nav nav-tabs" role="tablist">
@@ -105,6 +118,9 @@
 			</div>
 
 		</div>
+	</div>
+	</div>
+	</div>
 	</div>
 
 
