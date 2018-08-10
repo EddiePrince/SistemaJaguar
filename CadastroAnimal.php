@@ -2,96 +2,88 @@
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-	<meta charset="utf8mb4_unicode_ci">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-	<title>Cadastro de Animais</title>
-</head>
+	<head>
+		<meta charset="utf8mb4_unicode_ci">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+		<title>Cadastro de Animais</title>
+	</head>
 
-<body>
-	<div id="pageAnimal">
-	    <div class="container-fluid">
-
-	      <dir class="logo_admin">
-           <img src="img/logo.png">
-	      </dir>
+	<body>
+		<div id="pageAnimal">
+			<div class="container-fluid">
+				<dir class="logo_admin">
+					<img src="img/logo.png">
+				</dir>
 				<dir class="logout">
 					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
-					<a  class="btn btn-default" href="logout.php">Logout</a>
+					<a class="btn btn-default" href="logout.php">Logout</a>
 				</dir>
-	      <div >
-					<div class="">
-	        <!-- Menu -->
-	        <?php include 'menu/menuAdm.php'; ?>
-	        <!-- Fim Menu -->
-	      </div><br><br>
+				<div class="">
+					<!-- Menu -->
+					<?php include '../menu/menuAdm.php'; ?>
+				</div><br><br>
+				<form method="post" action="post_cadastro_animais.php">
+					<div class="container theme-showcase" role="main">
 
+					<h3>Cadastro de Animais</h3><br><br>
 
-	<form method="post" action="post_cadastro_animais.php">
-		<div class="container theme-showcase" role="main">
+					<div>
+						<!-- Abas de Navegação -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Dados da Ficha</a></li>
+							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Dados do Entregador/Autuado</a></li>
+							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Seleção da Unidade</a></li>
+							<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Dados do Animal</a></li>
+						</ul>
 
-			<h3>Cadastro de Animais</h3><br><br>
+							<!-- Conteúdo refente a cada aba de Navegação -->
+						<div class="tab-content" role="tablist">
 
-			<div>
-				<!-- Abas de Navegação -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Dados da Ficha</a></li>
-					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Dados do Entregador/Autuado</a></li>
-					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Seleção da Unidade</a></li>
-					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Dados do Animal</a></li>
-				</ul>
+							<!-- Dados da Ficha -->
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<div class="form_div">
+								<h4>Dados  da Ficha e do Animal</h4>
+								<p>Número da Ficha:</p>
+								<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
 
-				<!-- Conteúdo refente a cada aba de Navegação -->
+								<p>Data:</p>
+								<input class="form-control" type="date" name="dataRecebimento">
 
-				<div class="tab-content"  role="tablist">
-
-					<!-- Dados da Ficha -->
-
-					<div role="tabpanel" class="tab-pane active" id="home">
-						<div class="form_div">
-							<h4>Dados  da Ficha e do Animal</h4>
-							<p>Número da Ficha:</p>
-							<input  class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
-
-							<p>Data:</p>
-							<input class="form-control" type="date" name="dataRecebimento">
-
-							<p>Agente Recebedor:</p>
-							<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
-							<hr>
-							<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
+								<p>Agente Recebedor:</p>
+								<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
+								<hr>
+								<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
+							</div>
 						</div>
-					</div>
 
-					<!-- Dados do Entregador/Autuado  -->
+						<!-- Dados do Entregador/Autuado  -->
 
-					<div role="tabpanel" class="tab-pane" id="profile">
+						<div role="tabpanel" class="tab-pane" id="profile">
 						<div class="form_div">
 							<h4>Dados do Entregador</h4>
 							<p>Tipo de Recolhimento:</p>
 							<select class="form-control" name="tipoEntrega" size=1>
-								<option>Apreensão</option>
-								<option>Resgate/Recolhimento</option>
-								<option>Entrega Voluntária</option>
-							</select><br><br>
+							<option>Apreensão</option>
+							<option>Resgate/Recolhimento</option>
+							<option>Entrega Voluntária</option>
+						</select><br><br>
 
-							<p>Nome Entregador:</p>
-							<p><input class="form-control" type="text" name="nomeEntregador"></p>
+						<p>Nome Entregador:</p>
+						<p><input class="form-control" type="text" name="nomeEntregador"></p>
 
-							<p>CPF/CNPJ:</p>
-							<p><input class="form-control" type="text" name="cpfEntregador"></p>
+						<p>CPF/CNPJ:</p>
+						<p><input class="form-control" type="text" name="cpfEntregador"></p>
 
-							<p>Telefone:</p>
-							<p><input class="form-control" type="text" name="telefoneEntregador"></p>
+						<p>Telefone:</p>
+						<p><input class="form-control" type="text" name="telefoneEntregador"></p>
 
-							<p>Unidade Federal:</p>
-							<select class="form-control" name="uf">
+						<p>Unidade Federal:</p>
+						<select class="form-control" name="uf">
 							<option value="Estado Nao Selecionado">Selecione o Estado</option>
 									<option value="AC">Acre</option>
 									<option value="AL">Alagoas</option>
@@ -122,8 +114,8 @@
 									<option value="TO">Tocantins</option>
 							</select>
 
-							<p>Municipio:</p>
-							<select class="form-control" name="municipio">
+						<p>Municipio:</p>
+						<select class="form-control" name="municipio">
 						<option value="municipio Nao Selecionado">Selecione o Municipio</option>
 						<option value="Aguiarnópolis">Aguiarnópolis</option>
 						<option value="Almas">Almas</option>
@@ -172,98 +164,98 @@
 						<option value="Xambioá">Xambioá</option>
 					</select><br>
 
-							<p>CEP:</p>
-							<p><input class="form-control" type="text" name="cep"></p>
+						<p>CEP:</p>
+						<p><input class="form-control" type="text" name="cep"></p>
 
-							<p>Bairro:</p>
-							<p><input class="form-control" type="text" name="bairro"></p>
+						<p>Bairro:</p>
+						<p><input class="form-control" type="text" name="bairro"></p>
 
-							<p>Lote:</p>
-							<p><input class="form-control" type="text" name="lote"></p>
+						<p>Lote:</p>
+						<p><input class="form-control" type="text" name="lote"></p>
 
-							<p>Complemento:</p>
-							<p><input class="form-control" type="text" name="complemento"></p>
+						<p>Complemento:</p>
+						<p><input class="form-control" type="text" name="complemento"></p>
 
-							<p>Tipo de Documento:</p>
-							<select class="form-control" name="tipoDocumento" size=1>
+						<p>Tipo de Documento:</p>
+						<select class="form-control" name="tipoDocumento" size=1>
 						<option  value="Numero do Documento Nao Selecionado">Selecione</option>
 						<option>Auto de Infração</option>
 						<option>Termo de Apreensão/Depósito</option>
 						<option>Boletim de Ocorrência</option>
-					</select><br><br>
+						</select><br><br>
 
-							<p>Número do Documento:</p>
-							<p><input class="form-control" type="text" name="nDocumento"></p>
+						<p>Número do Documento:</p>
+						<p><input class="form-control" type="text" name="nDocumento"></p>
 
-							<p>Upload do Documento:</p>
-							<input class="form-control" type="file" name="uploadDocumento"><br>
-							<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
-						</div><hr>
-					</div>
+						<p>Upload do Documento:</p>
+						<input class="form-control" type="file" name="uploadDocumento"><br>
+						<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
+						</div>
+						<hr>
+						</div>
 
-					<!-- Dados da Unidade Acolhedora -->
+						<!-- Dados da Unidade Acolhedora -->
 
-					<div role="tabpanel" class="tab-pane" id="messages">
-						<div class="form_div">
-							<h4> Dados da Unidade Acolhedora</h4>
-							<p>Selecione a Unidade:</p>
-							<select class="form-control" name="nomeUnidade" size=1>
-										<option value="Unidade Nao Selecionada">Selecione a Unidade</option>
-											<option>Inserir Cod.PHP</option>
-											<option>Inserir Cod.PHP</option>
-											<option>Inserir Cod.PHP</option>
-									</select><br><br>
+						<div role="tabpanel" class="tab-pane" id="messages">
+							<div class="form_div">
+								<h4> Dados da Unidade Acolhedora</h4>
+								<p>Selecione a Unidade:</p>
+								<select class="form-control" name="nomeUnidade" size=1>
+								<option value="Unidade Nao Selecionada">Selecione a Unidade</option>
+									<option>Inserir Cod.PHP</option>
+									<option>Inserir Cod.PHP</option>
+									<option>Inserir Cod.PHP</option>
+								</select><br><br>
+							</div>
+						</div>
+
+								<!-- Dados do Animal  -->
+
+								<div role="tabpanel" class="tab-pane" id="settings">
+									<div class="form_div">
+										<h4> Dados do Animal</h4>
+										<p>Local de última procedência:</p>
+										<p><input class="form-control" type="text" name="procedencia"></p>
+
+										<p>Dieta:</p>
+										<p><input class="form-control" type="text" name="dieta"></p>
+
+										<p>Nome comum:</p>
+										<p><input class="form-control" type="text" name="nomeComum"></p>
+
+										<p>Nome científico:</p>
+										<p><input class="form-control" type="text" name="nomeCientifico"></p>
+
+										<p>Família:</p>
+										<p><input class="form-control" type="text" name="familia"></p>
+
+										<p>Ordem:</p>
+										<p><input class="form-control" type="text" name="ordem"></p>
+
+										<p>Código de marcação:</p>
+										<p><input class="form-control" type="text" name="codMarcacao"></p>
+
+										<p>Tipo de marcação:</p>
+										<p><input class="form-control" type="text" name="tipoMarcacao"></p>
+
+										<p>Local da marcação:</p>
+										<p><input class="form-control" type="text" name="localMarcacao"></p>
+									</div>
+									<input class="btn btn-default" name="submit" type="submit" value="Salvar">
+								</div>
+							</div>
 						</div>
 					</div>
-
-					<!-- Dados do Animal  -->
-
-					<div role="tabpanel" class="tab-pane" id="settings">
-						<div class="form_div">
-							<h4> Dados do Animal</h4>
-							<p>Local de última procedência:</p>
-							<p><input class="form-control" type="text" name="procedencia"></p>
-
-							<p>Dieta:</p>
-							<p><input class="form-control" type="text" name="dieta"></p>
-
-							<p>Nome comum:</p>
-							<p><input class="form-control" type="text" name="nomeComum"></p>
-
-							<p>Nome científico:</p>
-							<p><input class="form-control" type="text" name="nomeCientifico"></p>
-
-							<p>Família:</p>
-							<p><input class="form-control" type="text" name="familia"></p>
-
-							<p>Ordem:</p>
-							<p><input class="form-control" type="text" name="ordem"></p>
-
-							<p>Código de marcação:</p>
-							<p><input class="form-control" type="text" name="codMarcacao"></p>
-
-							<p>Tipo de marcação:</p>
-							<p><input  class="form-control" type="text" name="tipoMarcacao"></p>
-
-							<p>Local da marcação:</p>
-							<p><input  class="form-control"type="text" name="localMarcacao"></p>
-						</div>
-						<input class="btn btn-default" name="submit" type="submit" value="Salvar">
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
-	</form>
-</div>
-</div>
-</div>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
 
 
-</body>
+	</body>
 
 </html>

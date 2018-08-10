@@ -1,20 +1,41 @@
 <?php
-
-include 'conexao.inc.php';
-//include '../includes/verificausuario.php';
-
+  //Conexão com Banco
+  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  //include '../verificausuario.inc.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-	<meta charset="utf-8">
-	<title>Animais Cadastrados Araguaína</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+  <meta charset="utf8mb4_unicode_ci">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../style/bootstrapv3.min.css">
+	<title>Cadastro de Unidades</title>
 </head>
+
 <body>
-	    <!-- <br> <a href="../areaadm.php">Sair</a> -->
-	<h1>Animais Cadastrados Aragauína</h1>
+	<div id="pageAnimais">
+		<div class="container-fluid">
+
+			<dir class="logo_admin">
+				 <img src="../img/logo.png">
+			</dir>
+			<dir class="logout">
+				<a href="../areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
+				<a  class="btn btn-default" href="../logout.php">Logout</a>
+			</dir>
+			<div >
+				<div class="">
+				<!-- Menu -->
+				<?php include '../menu/menuAdm.php'; ?>
+				<!-- Fim Menu -->
+			</div><br><br>
+
+
+		<h2>Lista de Unidades</h2><br>
+
 
 	<table border="1px">
 		<tr>
@@ -50,11 +71,10 @@ include 'conexao.inc.php';
 			<th>ID Área</th>
 		</tr>
 
-
 	</table>
-
-
-
+</div>
+</div>
+</div>
 
 </body>
 </html>
