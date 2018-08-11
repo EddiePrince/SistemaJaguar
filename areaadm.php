@@ -6,32 +6,32 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-		<meta charset="utf8mb4_unicode_ci">
+  <head>
+		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
     <title>Área Principal</title>
-</head>
+  </head>
 
 	<body>
 
-<div id="page">
-    <div class="container-fluid">
+    <div id="page">
+      <div class="container-fluid">
 
-      <dir class="logo_admin">
-        <a href="areaadm.php"> <img src="img/logo.png"></a>
-      </dir>
-      <dir class="logout">
+      <div class="logo_admin">
+        <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <div class="logout">
         <a  class="btn btn-default" href="logout.php">Logout</a>
-      </dir>
+      </div>
       <div >
         <!-- Menu -->
         <?php include 'menu/menuAdm.php'; ?>
         <!-- Fim Menu -->
       </div>
 
-		<div class="corpoAdm">
+  		<div class="corpoAdm">
 
 			<br> Bem vindo Administrador!
 
@@ -51,14 +51,14 @@
           <a href="rec_senha_adm.php"> <?php echo "<h6 style='color:green;'><br>Você tem mensagem de recuperação de Senha aqui<h6>"; ?></a>
           </div>
           <?php
-        }else {
-          echo "<h5 style='color:orange;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";
-        }
-        ?>
-      </div>      <br>
-		</div>
-	</div>
-</div>
+          }else {
+            echo "<h5 style='color:orange;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";
+          }
+          ?>
+          </div>      <br>
+    		</div>
+    	</div>
+    </div>
 	</body>
 
-	</html>
+</html>

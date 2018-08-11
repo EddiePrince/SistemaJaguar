@@ -12,7 +12,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" type="text/css" href="style.css">
   	<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-  	<title>Cadastro de Unidades</title>
+  	<title>Unidades Cadastradas</title>
   </head>
 
   <body>
@@ -35,12 +35,12 @@
 
   	    <div class="container">
 
-    		<h2>Lista de Animais</h2><br>
+    		<h2>Lista de Unidades</h2><br>
       	<table class="table">
       		<tr>
-      			<th>Número da Ficha</th>
-      			<th>Nome Comum</th>
-      			<th>Data de Recebimento</th>
+      			<th> Nome</th>
+      			<th>Local</th>
+      			<th>Data </th>
       			<th>Agente</th>
       			<th>Perfil</th>
           </tr>
