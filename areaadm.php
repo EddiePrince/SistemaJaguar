@@ -25,11 +25,11 @@
       <div class="logout">
         <a  class="btn btn-default" href="logout.php">Logout</a>
       </div>
-      <div >
+
         <!-- Menu -->
-        <?php include 'menu/menuAdm.php'; ?>
+        <?php include 'menuAdm.php'; ?>
         <!-- Fim Menu -->
-      </div>
+
 
   		<div class="corpoAdm">
 

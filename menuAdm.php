@@ -4,13 +4,11 @@
 <input type="checkbox" id="bt_menu">
 <label for="bt_menu">&#9776;</label>
 
-<form action=" " method="post">
-	<div id="divBusca">
-	    <img src="img/icon pesquisa.png" alt="Buscar..."/>
-	        <input type="text" id="txtBusca" placeholder="Pesquisar..."/>
-	    <button id="btnBusca">Buscar</button>
-	</div>
-</form>
+<div id="divBusca">
+	<img src="img/icon pesquisa.png" alt="Buscar..."/>
+	<input type="text" id="txtBusca" placeholder="Pesquisar..."/>
+	<button id="btnBusca">Buscar</button>
+</div>
 
 <nav class="menu">
 	<ul>
