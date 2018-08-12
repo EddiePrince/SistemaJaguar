@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-		<title>Recuperação de Senha</title>
+		<title>Desenvolvedor</title>
 	</head>
 	<body>
 
@@ -18,7 +18,7 @@
 
 				<div class="container">
 					<div class="corpoAdm" id="corpoAdm">
-							<h2>Recuperação de Senha</h2>
+							<h2>Suporte</h2>
 
 							<table class="table">
 

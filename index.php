@@ -27,9 +27,9 @@
 			 	<input type="submit" name="entrar" value="Login">
 				<!-- <input type="hidden" name="entrar" value="login"><br> -->
 
-				<span class="esqueceu"><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
+				<span><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
 				<br><br>
-        <a href="ajuda.php" target="_blank"><img class="icon-img" src="img/icon1.png"></a>
+        <a href="ajudaLogin.php" target="_blank"><img class="icon-img" src="img/icon1.png"></a>
 		</form>
 </div>
 

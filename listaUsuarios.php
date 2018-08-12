@@ -18,18 +18,18 @@
   <body>
   	<div id="pageListaAnimais">
   		<div class="container-fluid">
-
   			<div class="logo_admin">
   			 <img src="img/logo.png" alt="Logo">
   			</div>
 
+        <div>
   			<div class="corpoAdm" id="corpoAdm" >
   				<div>
   				<!-- Menu -->
   				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
 
-    		<h2>Lista de Usuarios</h2><br>
+    		<h2>Lista de Usuarios</h2>
       	<table class="table">
       		<tr>
       			<th> Nome</th>
@@ -39,13 +39,13 @@
       			<th>Perfil</th>
           </tr>
           <?php include 'listaAnimais.inc.php' ?>
-
     	  </table>
       </div>
     </div>
     <div class="footer">
       <?php include 'footer.php'; ?>
     </div>
+  </div>
   </div>
   </div>
 
