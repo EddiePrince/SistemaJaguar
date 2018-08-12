@@ -176,6 +176,7 @@ body {
 	font-family: sans-serif;
 	width: 180px;
 	float: left;
+	border-radius: 5px;
 }
 
 .menu a {
@@ -184,7 +185,9 @@ body {
 	text-decoration: none;
 	text-align: center;
 	background-color: #222;
+	opacity: .9;
 	color: #fff;
+	border-radius: 5px;
 }
 
 .menu ul ul {
@@ -387,14 +390,9 @@ label[for="bt_menu"] {
 
 .corpoAdm{
   	background: rgba(0,0,0,0.5);
-    max-width: 97.5%;
+    max-width: 96.8%;
+		min-height: 700px;
     border-radius: 5px;
-}
-.corpoSenhas{
-  	background: rgba(0,0,0,0.5);
-    max-width: 97.5%;
-    border-radius: 5px;
-}
 
 @media only screen and (max-width:1200px){
   .corpoAdm {
@@ -410,4 +408,8 @@ label[for="bt_menu"] {
 /* Tabela lista de animais */
 .table{
 	border:1px;
+}
+
+.footer{
+text-decoration: none;
 }

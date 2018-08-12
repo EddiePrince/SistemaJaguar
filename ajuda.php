@@ -16,18 +16,19 @@
 		    <div class="logout">
 		      <a  class="btn btn-default" href="logout.php">Logout</a>
 		    </div>
-        <div >
-          <!-- Menu -->
-          <?php include 'menu/menuAdm.php'; ?>
-          <!-- Fim Menu -->
-        </div>
 
-	  		<div class="corpoSenha">
+					<div  class="corpoAdm" id="corpoAdm">
+						<div>
+
+
+          <!-- Menu -->
+          <?php include 'menuAdm.php'; ?>
+          <!-- Fim Menu -->
 
 				<div class="container theme-showcase" role="main">
 
 				<div class="page-header">
-					<h1>Instruções Básicas do Sistema</h1>
+					<h3>Instruções Básicas do Sistema</h3><br><br>
 				</div>
 
 				<div>
@@ -115,6 +116,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 			</div>
 		</div>

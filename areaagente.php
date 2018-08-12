@@ -26,7 +26,7 @@
         </div>
         <div >
           <!-- Menu -->
-          <?php include 'menu/menuAgente.php'; ?>
+          <?php include 'menuAgente.php'; ?>
           <!-- Fim Menu -->
         </div>
 

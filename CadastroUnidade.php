@@ -25,16 +25,15 @@
 				<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
 				<a class="btn btn-default" href="logout.php">Logout</a>
 			</dir>
-			<div>
-				<div class="">
+			<div id="corpoAdm" class="corpoAdm" >
+        <div>
+
 					<!-- Menu -->
-					<?php include 'menu/menuAdm.php'; ?>
+					<?php include 'menuAdm.php'; ?>
 					<!-- Fim Menu -->
-				</div><br><br>
 
-
-				<h2>Cadastro de Unidades</h2><br>
 				<form method="post" action="post_cadastro_unidades.php"><br>
+          <h2>Cadastro de Unidades</h2><br>
 
 					<label>Nome Da Unidade:</label><br>
 					<input class="form-control" type="text" name="nomeUnidade"  autofocus><br>
@@ -83,7 +82,7 @@
 							</select>
 
 						<p>Municipio:</p>
-						<select class="form-control" name="municipio">
+					<select class="form-control" name="municipio">
 						<option value="municipio Nao Selecionado">Selecione o Municipio</option>
 						<option value="Aguiarnópolis">Aguiarnópolis</option>
 						<option value="Almas">Almas</option>
@@ -147,6 +146,7 @@
 					<input class="btn btn-default" name="submit" type="submit" value="Salvar">
 				</form>
 			</div>
+      </div>
 		</div>
 	</div>
 

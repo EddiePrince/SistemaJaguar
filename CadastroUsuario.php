@@ -26,19 +26,19 @@
 					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
 					<a  class="btn btn-default" href="logout.php">Logout</a>
 				</dir>
-	      <div >
-	        <!-- Menu -->
-	        <?php include 'menu/menuAdm.php'; ?>
-	        <!-- Fim Menu -->
-	      </div>
 
-			<div class="corpoAdm">
+			<div id="cadusuario">
+        <div>
+          <!-- Menu -->
+          <?php include 'menuAdm.php'; ?>
+          <!-- Fim Menu -->
+        </div>
 
 
-	<div class="container theme-showcase" role="main"><br>
+	<!-- <div class="container theme-showcase" role="main"><br> -->
 
-		<form method="post" action="post_cadastro_usuario.php">
-			<h1>Cadastro Usuario</h1>
+		<form class="corpoAdm" method="post" action="post_cadastro_usuario.php">
+			<h3>Cadastro Usuario</h3>
 			<label>Perfil: </label><br>
 			<select class="form-control" name="perfil" required autofocus>
 				<option>Selecione o Perfil do Usuário</option>
@@ -69,7 +69,7 @@
 		</form>
 
 
-	</div>
+	<!-- </div> -->
 </div>
 </div>
 </div>

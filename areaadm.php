@@ -26,17 +26,17 @@
         <a  class="btn btn-default" href="logout.php">Logout</a>
       </div>
 
+      <div class="corpoAdm">
+      <div>
+
         <!-- Menu -->
         <?php include 'menuAdm.php'; ?>
         <!-- Fim Menu -->
 
 
-  		<div class="corpoAdm">
-
-			<br> Bem vindo Administrador!
+			<br> <h3>Bem vindo Administrador!</h3>
 
 
-      <div class="password">
         <?php
         $result_recSenha = "SELECT * FROM recuperacaosenha";
         $resultado_recSenha = mysqli_query($conexao, $result_recSenha);
@@ -55,10 +55,12 @@
             echo "<h5 style='color:orange;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";
           }
           ?>
-          </div>      <br>
-    		</div>
+          </div>
+          <?php include 'footer.php'; ?>
+    	   </div>
     	</div>
     </div>
+
 	</body>
 
 </html>

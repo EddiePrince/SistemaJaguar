@@ -26,14 +26,11 @@
   				<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
   				<a  class="btn btn-default" href="logout.php">Logout</a>
   			</div>
-  			<div >
+  			<div class="corpoAdm" id="corpoAdm" >
   				<div>
   				<!-- Menu -->
-  				<?php include 'menu/menuAdm.php'; ?>
+  				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
-  			</div><br><br>
-
-  	    <div class="container">
 
     		<h2>Lista de Usuarios</h2><br>
       	<table class="table">

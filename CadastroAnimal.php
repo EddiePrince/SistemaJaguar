@@ -23,15 +23,17 @@
 					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
 					<a class="btn btn-default" href="logout.php">Logout</a>
 				</div>
-				<div>
+
+				<div class="corpoAdm" id="corpoAdm">
+					<div>
+
 					<!-- Menu -->
-					<?php include 'menu/menuAdm.php'; ?>
-				</div><br><br>
+					<?php include 'menuAdm.php'; ?>
+
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container theme-showcase" role="main">
 
-						<h3>Cadastro de Animais</h3><br><br>
-
+						<br><br><h3>Cadastro de Animais</h3><br><br>
 						<div>
 							<!-- Abas de Navegação -->
 							<ul class="nav nav-tabs" role="tablist">
@@ -189,9 +191,9 @@
 
 								<p>Upload do Documento:</p>
 								<input class="form-control" type="file" name="uploadDocumento"><br>
-								<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a>
 								</div>
 								<hr>
+								<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a><br>
 							</div>
 
 								<!-- Dados da Unidade Acolhedora -->
@@ -207,6 +209,8 @@
 									<option>Inserir Cod.PHP</option>
 								</select><br><br>
 									</div>
+									<hr>
+									<a href="#settings" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 								</div>
 
 								<!-- Dados do Animal  -->
@@ -241,12 +245,15 @@
 										<p>Local da marcação:</p>
 										<p><input class="form-control" type="text" name="localMarcacao"></p>
 									</div>
-									<input class="btn btn-default" name="submit" type="submit" value="Salvar">
+									<hr>
+									<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
 								</div>
 							</div>
 						</div>
 					</div>
 				</form>
+				</div>
+			 </div>
 			</div>
 		</div>
 

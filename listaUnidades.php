@@ -27,11 +27,11 @@
   				<a  class="btn btn-default" href="logout.php">Logout</a>
   			</div>
   			<div >
-  				<div>
+          <div class="corpoAdm" id="corpoAdm" >
+            <div>
   				<!-- Menu -->
-  				<?php include 'menu/menuAdm.php'; ?>
+  				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
-  			</div><br><br>
 
   	    <div class="container">
 
@@ -49,6 +49,8 @@
     	  </table>
       </div>
     </div>
+  </div>
+  </div>
   </div>
   </div>
 
