@@ -15,16 +15,14 @@
   </head>
 
 	<body>
-
-    <div id="page">
-      <div class="container-fluid">
+    <div class="container-fluid">
 
       <div class="logo_admin">
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
       </div>
-      <div class="logout">
+      <!-- <div class="logout">
         <a  class="btn btn-default" href="logout.php">Logout</a>
-      </div>
+      </div> -->
 
       <div class="corpoAdm">
       <div>
@@ -32,9 +30,6 @@
         <!-- Menu -->
         <?php include 'menuAdm.php'; ?>
         <!-- Fim Menu -->
-
-
-			<br> <h3>Bem vindo Administrador!</h3>
 
 
         <?php
@@ -47,19 +42,29 @@
         <?php
         if ($row_recSenha > 0) {
           ?>
-        <div>
-          <a href="rec_senha_adm.php"> <?php echo "<h6 style='color:green;'><br>Você tem mensagem de recuperação de Senha aqui<h6>"; ?></a>
+
+          <div class="msgRecSenha">
+          <a href="rec_senha_adm.php"> <?php echo "<h6 style='color:blue;'><br>Você tem mensagem de recuperação de Senha aqui<h6>"; ?></a>
           </div>
+
           <?php
           }else {
-            echo "<h5 style='color:orange;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";
-          }
-          ?>
+            ?>
+
+            <div class="msgRecSenha">
+            <?php echo "<h5 style='color:red;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";?>
+            </div>
+
+            <?php
+            }
+            ?>
+
+           <h3>Bem vindo Administrador!</h3>
           </div>
           <?php include 'footer.php'; ?>
     	   </div>
     	</div>
-    </div>
+
 
 	</body>
 
