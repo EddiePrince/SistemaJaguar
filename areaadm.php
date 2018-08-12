@@ -15,15 +15,12 @@
   </head>
 
 	<body>
+      <div id="page">
     <div class="container-fluid">
 
       <div class="logo_admin">
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
       </div>
-      <!-- <div class="logout">
-        <a  class="btn btn-default" href="logout.php">Logout</a>
-      </div> -->
-
       <div class="corpoAdm">
       <div>
 
@@ -59,10 +56,13 @@
             }
             ?>
 
-           <h3>Bem vindo Administrador!</h3>
+           <h4>Bem vindo Administrador!</h4>
           </div>
-          <?php include 'footer.php'; ?>
     	   </div>
+         <div class="footer">
+           <?php include 'footer.php'; ?>
+         </div>
+    	</div>
     	</div>
 
 

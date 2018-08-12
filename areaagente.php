@@ -21,9 +21,7 @@
         <div class="logo_admin">
             <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a>
         </div>
-        <div class="logout">
-            <a  class="btn btn-default" href="logout.php">Logout</a>
-        </div>
+
         <div >
           <!-- Menu -->
           <?php include 'menuAgente.php'; ?>

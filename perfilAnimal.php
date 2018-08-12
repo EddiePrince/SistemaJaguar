@@ -19,10 +19,8 @@
 				<dir class="logo_admin">
 					<img src="img/logo.png">
 				</dir>
-				<dir class="logout">
-					<a class="btn btn-default" href="logout.php">Logout</a>
-				</dir>
-				<div class="">
+
+				<div>
 					<!-- Menu -->
 					<?php include 'menu/menuAdm.php'; ?>
 				</div><br><br>
@@ -87,8 +85,9 @@
 
       	</table>
       </div>
-
-
+			<div class="footer">
+				<?php include 'footer.php'; ?>
+			</div>
 			</div>
 		</div>
 

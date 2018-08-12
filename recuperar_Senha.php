@@ -32,12 +32,15 @@
 									<p>Título:</p>
 									<textarea class="form-control" type="text" name="titulo" value="Recuperação de Senha" required>"Recuperação de Senha"</textarea>
 									<p>Mensagem:</p>
-									<textarea class="form-control" type="text" name="mensagem" value="Favor Atualize Minha Senha" rows="5" required>"Favor Atualize Minha Senha"</textarea>
-									<p><input class="form-control" type="submit" value="Enviar ao Administrador"></p>
-									<a href="index.php">Voltar</a>
+									<textarea class="form-control" type="text" name="mensagem" value="Favor Atualize Minha Senha" rows="5" required>"Favor Atualize Minha Senha"</textarea><br>
+									<p><input class="btn btn-default"  type="submit" value="Enviar ao Administrador"></p><br>
+									<a href="index.php">Voltar</a><br><br><br>
 								</form>
 							</div>
 						</div>
+					</div>
+					<div class="footer">
+						<?php include 'footer.php'; ?>
 					</div>
 				</div>
 			</div>

@@ -21,9 +21,7 @@
       <div class="logo_admin">
        <img src="img/logo.png">
      </div>
-      <div class="logout">
-        <a  class="btn btn-default" href="logout.php">Logout</a>
-      </div>
+
       <div id="corpoAdm" >
 
         <!-- Menu -->
@@ -59,7 +57,7 @@
             echo "<br>Mensagem: " .$row_recSenha['mensagem'];
             echo "<br><br> ";
             // echo '<br><a href="'."CadastroUsuario.php#cadusuario".'" target=_blank>Atualizar Dados</a><br>' ;
-            echo '<br><a href="'."http://localhost/phpmyadmin/sql.php?server=1&db=jaguar_sistem&table=usuarios&pos=0".'" target=_blank>Atualizar Dados</a><br>' ;
+            echo '<br><a class="btn btn-default"  href="'."http://localhost/phpmyadmin/sql.php?server=1&db=jaguar_sistem&table=usuarios&pos=0".'" target=_blank>Atualizar Dados</a><br>' ;
       		}
       	}
       	else{
@@ -88,10 +86,13 @@
     			?>
 		</div>
 	<div>
-		<a href="areaadm.php">Voltar</a>
+		<br><a class="btn btn-default" href="areaadm.php">Voltar</a><br><br>
 	</div>
 
   </div>
+  </div>
+  <div class="footer">
+    <?php include 'footer.php'; ?>
   </div>
   </div>
   </div>

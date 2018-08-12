@@ -18,13 +18,10 @@
 	<div id="pageUnidade">
 		<div class="container-fluid">
 
-			<dir class="logo_admin">
+			<div class="logo_admin">
 				<img src="img/logo.png">
-			</dir>
-			<dir class="logout">
-				<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
-				<a class="btn btn-default" href="logout.php">Logout</a>
-			</dir>
+			</div>
+
 			<div id="corpoAdm" class="corpoAdm" >
         <div>
 
@@ -33,7 +30,7 @@
 					<!-- Fim Menu -->
 
 				<form method="post" action="post_cadastro_unidades.php"><br>
-          <h2>Cadastro de Unidades</h2><br>
+          <h3>Cadastro de Unidades</h3><br>
 
 					<label>Nome Da Unidade:</label><br>
 					<input class="form-control" type="text" name="nomeUnidade"  autofocus><br>
@@ -146,6 +143,9 @@
 					<input class="btn btn-default" name="submit" type="submit" value="Salvar">
 				</form>
 			</div>
+      </div>
+      <div class="footer">
+        <?php include 'footer.php'; ?>
       </div>
 		</div>
 	</div>

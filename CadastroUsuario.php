@@ -19,13 +19,10 @@
 	<div id="pageUsuario">
 	    <div class="container-fluid">
 
-	      <dir class="logo_admin">
+	      <div class="logo_admin">
         <img src="img/logo.png">
-	      </dir>
-				<dir class="logout">
-					<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
-					<a  class="btn btn-default" href="logout.php">Logout</a>
-				</dir>
+      </div>
+
 
 			<div id="cadusuario">
         <div>
@@ -70,6 +67,9 @@
 
 
 	<!-- </div> -->
+</div>
+<div class="footer">
+  <?php include 'footer.php'; ?>
 </div>
 </div>
 </div>

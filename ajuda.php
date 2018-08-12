@@ -13,17 +13,15 @@
 		    <div class="logo_admin">
 		       <img src="img/logo.png" alt="Logo">
 		    </div>
-		    <div class="logout">
-		      <a  class="btn btn-default" href="logout.php">Logout</a>
-		    </div>
+				<!-- Menu -->
+				<?php include 'menuAdm.php'; ?>
+				<!-- Fim Menu -->
 
 					<div  class="corpoAdm" id="corpoAdm">
 						<div>
 
 
-          <!-- Menu -->
-          <?php include 'menuAdm.php'; ?>
-          <!-- Fim Menu -->
+					<div class="container">
 
 				<div class="container theme-showcase" role="main">
 
@@ -38,7 +36,6 @@
 						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Conhecendo o Sistema</a></li>
 						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Filtro de Busca</a></li>
 						<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Permissões</a></li>
-						<li role="presentation"><a href="#tipo" aria-controls="settings" role="tab" data-toggle="tab">Tipos de Usuários</a></li>
 						<li role="presentation"><a href="#detalhes" aria-controls="detalhes" role="tab" data-toggle="tab">Informações Gerais</a></li>
 						<li role="presentation"><a href="#tutores" aria-controls="tutores" role="tab" data-toggle="tab">Tutorial</a></li>
 					</ul>
@@ -69,13 +66,11 @@
 								Permissões: Nessa seção iremos apresentar como são configurados os usuários que podem acessar o sistema e como ser atribuídas suas permissões, bloqueios e demais configurações de segurança.
 							</p>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="tipo">
+						<div role="tabpanel" class="tab-pane" id="detalhes">
 							<p>
 								Usuários e Tipos de Usuários: O cadastro de tipo de usuário define as categorias de usuários existentes atualmente, as quais garantem um nível hierárquico de acesso a determinadas funcionalidade do sistema. O cadastro de usuários, propriamente dito, permite
 								o cadastro dos usuários que irão acessar o sistema, respeitando o seu tipo e as demais atribuições de acesso para a instituição, NATURATINS.
 							</p>
-						</div>
-						<div role="tabpanel" class="tab-pane" id="detalhes">
 							Cadastro do Sistema: Nesta seção iremos apresentar o módulo de endereçamento pessoas físicas e jurídicas. Módulo Endereçamento: Neste módulo devem ser inseridos os atributos das U.R (unidade Regionais, NATURATINS). Módulo Pessoa Física/Jurídica: Neste
 							módulo você pode inserir as informações das pessoas físicas e jurídicas que serão trabalhadas dentro do sistema. Unidade Regionais: Neste cadastro você poderá inserir as regionais responsáveis pela entrega do animal silvestre.
 
@@ -119,6 +114,10 @@
 			</div>
 			</div>
 			</div>
+			<div class="footer">
+				<?php include 'footer.php'; ?>
+			</div>
+		</div>
 		</div>
 
 

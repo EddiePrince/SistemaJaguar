@@ -18,7 +18,7 @@
 			<ul>
 				<li><a href="ajuda.php#corpoAdm">Ajuda</a></li>
 				<li><a href="rec_senha_adm.php#corpoAdm">Recuperação de Senha</a></li>
-				<li><a href="logout.php">Logout</a></li>
+				<li><a href="logout.php">Logout </a></li>
 			</ul>
 		</li>
 		<li><a href="#">Usuários</a>

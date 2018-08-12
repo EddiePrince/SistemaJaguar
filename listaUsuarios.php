@@ -22,10 +22,7 @@
   			<div class="logo_admin">
   			 <img src="img/logo.png" alt="Logo">
   			</div>
-  			<div class="logout">
-  				<a href="areaadm.php"> <input class="btn btn-default" type="button" name="btn" value="Voltar"></a>
-  				<a  class="btn btn-default" href="logout.php">Logout</a>
-  			</div>
+
   			<div class="corpoAdm" id="corpoAdm" >
   				<div>
   				<!-- Menu -->
@@ -45,6 +42,9 @@
 
     	  </table>
       </div>
+    </div>
+    <div class="footer">
+      <?php include 'footer.php'; ?>
     </div>
   </div>
   </div>
