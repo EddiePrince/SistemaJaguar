@@ -4,15 +4,8 @@
 <input type="checkbox" id="bt_menu">
 <label for="bt_menu">&#9776;</label>
 
-<!-- <div id="divBusca">
-	<img src="img/icon pesquisa.png" alt="Buscar..."/>
-	<input type="text" id="txtBusca" placeholder="Pesquisar..."/>
-	<button id="btnBusca">Buscar</button>
-</div> -->
-
 <nav class="menu">
 	<ul>
-		<!-- <li> <a href="areaadm.php">Home</a></li> -->
 		<li>
 			<li><a href="areaAdm.php">Home</a>
 			<ul>

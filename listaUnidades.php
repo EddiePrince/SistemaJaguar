@@ -1,4 +1,5 @@
 <?php
+// Erro de Validação W3C Identificado
   //Conexão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
   //include 'verificausuario.inc.php';
@@ -27,6 +28,7 @@
           <div class="corpoAdm" id="corpoAdm" >
             <div>
   				<!-- Menu -->
+          <!-- Erro de Validação W3C Identificado -->
   				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
 
@@ -38,6 +40,7 @@
       			<th>Nome</th>
       			<th>Tipo de Unidade</th>
           </tr>
+          <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaUnidades.inc.php' ?>
 
     	  </table>
@@ -45,6 +48,7 @@
     </div>
   </div>
   </div>
+  <!-- Erro de Validação W3C Identificado -->
   <div class="footer">
     <?php include 'footer.php'; ?>
   </div>

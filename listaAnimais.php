@@ -1,4 +1,5 @@
 <?php
+// Erro de Validação W3C Identificado
   //Conexão com Banco
   include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
   //include 'verificausuario.inc.php';
@@ -28,6 +29,7 @@
             <div>
 
   				<!-- Menu -->
+          <!-- Erro de Validação W3C Identificado -->
   				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
 
@@ -41,8 +43,9 @@
       			<th>Nome Comum</th>
       			<th>Data de Recebimento</th>
       			<th>Agente</th>
-      			
+
           </tr>
+          <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaAnimais.inc.php' ?>
 
     	  </table>
@@ -50,6 +53,7 @@
     </div>
   </div>
   </div>
+  <!-- Erro de Validação W3C Identificado -->
   <div class="footer">
     <?php include 'footer.php'; ?>
   </div>

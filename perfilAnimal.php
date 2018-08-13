@@ -1,4 +1,5 @@
 <?php
+// Erro de Validação W3C Identificado
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
@@ -6,7 +7,7 @@
 <html lang="pt-br">
 
 	<head>
-		<meta charset="utf8mb4_unicode_ci">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
@@ -16,21 +17,22 @@
 	<body>
     <div id="pagePerfilAnimal">
 			<div class="container-fluid">
-				<dir class="logo_admin">
-					<img src="img/logo.png">
-				</dir>
+				<div class="logo_admin">
+					<img src="img/logo.png" alt="Logo">
+				</div>
 
 				<div class="corpoAdm">
 					<!-- Menu -->
+					<!-- Erro de Validação W3C Identificado -->
 					<?php include 'menuAdm.php'; ?>
-				
+
 
         <h1>Perfil Do Animal</h1>
 
     		<div class="container">
 
-    	
-      	<table border="1px">
+
+      	<table>
       		<tr>
       			<th>Número da Ficha</th>
       			<th>Data de Recebimento</th>
@@ -67,14 +69,16 @@
       			<th>Condição 3</th>
       			<th>ID Área</th>
       		</tr>
+					<!-- Erro de Validação W3C Identificado -->
           <?php include 'perfilAnimal.inc.php'; ?>
       	</table>
       </div>
       </div>
+			<!-- Erro de Validação W3C Identificado -->
 			<div class="footer">
 				<?php include 'footer.php'; ?>
 			</div>
-			
+
 		</div>
   </div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
