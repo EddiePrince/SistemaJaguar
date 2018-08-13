@@ -1,4 +1,5 @@
 <?php
+//Erro de Validação W3C Identificado
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
@@ -24,6 +25,7 @@
 					<div>
 
 					<!-- Menu -->
+					<!-- Erro de Validação W3C Identificado -->
 					<?php include 'menuAdm.php'; ?>
 
 				<form method="post" action="post_cadastro_animais.php">
@@ -47,15 +49,16 @@
 								<div class="form_div">
 									<h4>Dados  da Ficha e do Animal</h4>
 									<p>Número da Ficha:</p>
+									<!-- Erro de Validação W3C Identificado -->
 									<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
 
 									<p>Data:</p>
+									<!-- Erro de Validação W3C Identificado -->
 									<input class="form-control" type="date" name="dataRecebimento">
 
 									<p>Agente Recebedor:</p>
 									<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
 									<hr>
-									<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 								</div>
 							</div>
 
@@ -189,7 +192,6 @@
 								<input class="form-control" type="file" name="uploadDocumento"><br>
 								</div>
 								<hr>
-								<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Próximo</a><br>
 							</div>
 
 								<!-- Dados da Unidade Acolhedora -->
@@ -206,7 +208,6 @@
 								</select><br><br>
 									</div>
 									<hr>
-									<a href="#settings" aria-controls="profile" role="tab" data-toggle="tab">Próximo</a>
 								</div>
 
 								<!-- Dados do Animal  -->
@@ -250,6 +251,7 @@
 				</form>
 				</div>
 			 </div>
+			 <!-- Erro de Validação W3C Identificado -->
 			 <div class="footer">
 				 <?php include 'footer.php'; ?>
 			 </div>

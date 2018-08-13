@@ -14,6 +14,7 @@
 		       <img src="img/logo.png" alt="Logo">
 		    </div>
 				<!-- Menu -->
+				<!-- Erro de Validação W3C Identificado -->
 				<?php include 'menuAdm.php'; ?>
 				<!-- Fim Menu -->
 
@@ -112,6 +113,7 @@
 				</div>
 			</div>
 			</div>
+			<!-- Erro de Validação W3C Identificado -->
 			<div class="footer">
 				<?php include 'footer.php'; ?>
 			</div>

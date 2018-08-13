@@ -110,6 +110,7 @@
 			</div>
 			</div>
 			</div>
+			 <!-- Erro de Validação W3C Identificado -->
 			<div class="footer">
 				<?php include 'footer.php'; ?>
 			</div>
