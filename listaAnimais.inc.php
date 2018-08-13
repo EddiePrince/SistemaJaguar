@@ -11,7 +11,7 @@
 			echo "<td>" . $row['nomeComum'] . "</td>";
 			echo "<td>" . $row['data'] . "</td>";
 			echo "<td>" . $row['nomeAgente'] . "</td>";
-			echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "/'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
+			//echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "/'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 			echo "</tr>";
 		}
 	}

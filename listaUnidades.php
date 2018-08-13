@@ -35,13 +35,10 @@
     		<h2>Lista de Unidades</h2><br>
       	<table class="table">
       		<tr>
-      			<th> Nome</th>
-      			<th>Local</th>
-      			<th>Data </th>
-      			<th>Agente</th>
-      			<th>Perfil</th>
+      			<th>Nome</th>
+      			<th>Tipo de Unidade</th>
           </tr>
-          <?php include 'listaAnimais.inc.php' ?>
+          <?php include 'listaUnidades.inc.php' ?>
 
     	  </table>
       </div>

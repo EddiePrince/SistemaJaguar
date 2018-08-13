@@ -20,77 +20,63 @@
 					<img src="img/logo.png">
 				</dir>
 
-				<div>
+				<div class="corpoAdm">
 					<!-- Menu -->
-					<?php include 'menu/menuAdm.php'; ?>
-				</div><br><br>
+					<?php include 'menuAdm.php'; ?>
+				
 
         <h1>Perfil Do Animal</h1>
 
     		<div class="container">
 
-    		<h2>Lista de Animais</h2><br>
+    	
       	<table border="1px">
       		<tr>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Número da Ficha</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Data de Recebimento</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Agente</th>
-            </tr>
-        </table>
-        <table border="1px">
-          <tr>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Tipo de Recolhimento</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Nome do Entregador</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>CPF/CNPJ</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Telefone</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>UF</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Município</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>CEP</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Bairro</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Lote</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Complemento</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Tipo Documento</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Numero Documento</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Upload</th>
-          </tr>
-        </table>
-        <table border="1px">
-          <tr>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Tipo Unidade</th>
-          </tr>
-        </table>
-        <table border="1px">
-          <tr>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Última Procedência</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Dieta</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Nome Comum</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Nome Científico</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Família</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Ordem</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Código da Marcação</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Tipo de Marcação</th>
-            <th><a href="perfilAnimal.php">Ver Perfil</a><br>Local da Marcação</th>
-          </tr>
-        </table>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Município de Procedência</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>UF</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Período em Quarentena</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Tipo da Destinação</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Subtipo da Destinação</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Condição 1</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Condição 2</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>Condição 3</th>
-      			<th><a href="perfilAnimal.php">Ver Perfil</a><br>ID Área</th>
+      			<th>Número da Ficha</th>
+      			<th>Data de Recebimento</th>
+      			<th>Agente</th>
+      			<th>Tipo de Recolhimento</th>
+      			<th>Nome do Entregador</th>
+      			<th>CPF/CNPJ</th>
+      			<th>Telefone</th>
+      			<th>UF</th>
+      			<th>Município</th>
+      			<th>CEP</th>
+            <th>Bairro</th>
+            <th>Lote</th>
+      			<th>Complemento</th>
+      			<th>Tipo Documento</th>
+      			<th>Numero Documento</th>
+      			<th>Upload</th>
+            <th>Última Procedência</th>
+            <th>Dieta</th>
+            <th>Nome Comum</th>
+            <th>Nome Científico</th>
+            <th>Família</th>
+            <th>Ordem</th>
+            <th>Código da Marcação</th>
+            <th>Tipo de Marcação</th>
+            <th>Local da Marcação</th>
+      			<th>Município de Procedência</th>
+      			<th>UF</th>
+      			<th>Período em Quarentena</th>
+      			<th>Tipo da Destinação</th>
+      			<th>Subtipo da Destinação</th>
+      			<th>Condição 1</th>
+      			<th>Condição 2</th>
+      			<th>Condição 3</th>
+      			<th>ID Área</th>
       		</tr>
-
+          <?php include 'perfilAnimal.inc.php'; ?>
       	</table>
+      </div>
       </div>
 			<div class="footer">
 				<?php include 'footer.php'; ?>
 			</div>
-			</div>
+			
 		</div>
-
+  </div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
