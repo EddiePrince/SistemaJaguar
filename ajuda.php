@@ -18,7 +18,6 @@
 				<!-- Fim Menu -->
 
 					<div  class="corpoAdm" id="corpoAdm">
-						<div>
 
 
 					<div class="container">
@@ -41,7 +40,7 @@
 					</ul>
 
 					<!-- Conteúdo refente a cada aba de Navegação -->
-					<div class="tab-content">
+				<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="home">
 							<p>
 								Sobre o Sistema: É um software de gestão de animais silvestre. Tem a finalidade de auxiliar o gerenciamento integrado e centralizado das informações. Utiliza algumas tecnologias livres e conhecidas. Pode ser utilizado em ambiente Windows ou Linux, pois
@@ -111,7 +110,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 			</div>
 			<div class="footer">

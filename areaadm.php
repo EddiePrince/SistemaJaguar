@@ -22,15 +22,15 @@
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
       </div>
       <div class="corpoAdm">
-      <div>
-
         <!-- Menu -->
         <?php include 'menuAdm.php'; ?>
         <!-- Fim Menu -->
+        <div class="container">
 
 
            <h4>Bem vindo Administrador!</h4>
          </div>
+
           </div>
          <div class="footer">
            <?php include 'footer.php'; ?>

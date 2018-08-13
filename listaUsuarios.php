@@ -24,10 +24,10 @@
 
         <div>
   			<div class="corpoAdm" id="corpoAdm" >
-  				<div>
   				<!-- Menu -->
   				<?php include 'menuAdm.php'; ?>
   				<!-- Fim Menu -->
+          <div class="container">
 
     		<h2>Lista de Usuarios</h2>
       	<table class="table">
@@ -40,6 +40,7 @@
           </tr>
           <?php include 'listaAnimais.inc.php' ?>
     	  </table>
+        
       </div>
     </div>
     <div class="footer">

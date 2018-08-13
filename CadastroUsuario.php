@@ -25,16 +25,13 @@
 
 
 			<div id="cadusuario">
+        <form class="corpoAdm" method="post" action="post_cadastro_usuario.php">
         <div>
           <!-- Menu -->
           <?php include 'menuAdm.php'; ?>
           <!-- Fim Menu -->
         </div>
 
-
-	<!-- <div class="container theme-showcase" role="main"><br> -->
-
-		<form class="corpoAdm" method="post" action="post_cadastro_usuario.php">
 			<h3>Cadastro Usuario</h3>
 			<label>Perfil: </label><br>
 			<select class="form-control" name="perfil" required autofocus>

@@ -22,22 +22,20 @@
             <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a>
         </div>
         <div class="corpoAdm">
-
-        <div >
           <!-- Menu -->
           <?php include 'menuAgente.php'; ?>
           <!-- Fim Menu -->
-        </div>
+        <div class="container">
 
 
 
           <br><h1>Bem Vindo Agente</h1>
 
         </div>
+        </div>
         <div class="footer">
           <?php include 'footer.php'; ?>
         </div>
-      </div>
     </div>
 
   </body>
