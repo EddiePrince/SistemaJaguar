@@ -605,7 +605,7 @@ label[for="bt_menu"] {
   	background: rgba(0,0,0,0.5);
     max-width: 100%;
 		min-height: 550px;
-
+}
 @media only screen and (max-width:1200px){
   .corpoAdm {
   position:relative;
@@ -616,7 +616,7 @@ label[for="bt_menu"] {
   width:45%;
   }
 }
-}
+
 
 /* Tabela lista de animais */
 .table{
