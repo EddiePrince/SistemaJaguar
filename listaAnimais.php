@@ -41,7 +41,7 @@
       			<th>Nome Comum</th>
       			<th>Data de Recebimento</th>
       			<th>Agente</th>
-      			<th>Perfil</th>
+      			
           </tr>
           <?php include 'listaAnimais.inc.php' ?>
 

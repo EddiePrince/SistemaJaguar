@@ -32,13 +32,14 @@
     		<h2>Lista de Usuarios</h2>
       	<table class="table">
       		<tr>
-      			<th> Nome</th>
-      			<th>Local</th>
-      			<th>Data </th>
-      			<th>Agente</th>
+      			<th>Nome</th>
       			<th>Perfil</th>
+            <th>E-mail</th>
+            <th>Celular</th>
+      			
+      			
           </tr>
-          <?php include 'listaAnimais.inc.php' ?>
+          <?php include 'listaUsuarios.inc.php' ?>
     	  </table>
         
       </div>
