@@ -6,6 +6,11 @@ body {
 	text-decoration: none;
 }
 
+.linkicon{
+	width: 20px;
+	height: 20px;
+}
+
 .body:before {
 	content: '';
 	position: fixed;
