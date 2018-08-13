@@ -29,36 +29,9 @@
         <!-- Fim Menu -->
 
 
-        <?php
-        $result_recSenha = "SELECT * FROM recuperacaosenha";
-        $resultado_recSenha = mysqli_query($conexao, $result_recSenha);
-        $row_recSenha = mysqli_fetch_assoc($resultado_recSenha);
-        //$linhas = mysqli_num_rows($row_recSenha);
-        ?>
-        <!-- <h4>Solicitações de recuperação de senha</h4> -->
-        <?php
-        if ($row_recSenha > 0) {
-          ?>
-
-          <div class="msgRecSenha">
-          <a href="rec_senha_adm.php"> <?php echo "<h6 style='color:blue;'><br>Você tem mensagem de recuperação de Senha aqui<h6>"; ?></a>
-          </div>
-
-          <?php
-          }else {
-            ?>
-
-            <div class="msgRecSenha">
-            <?php echo "<h5 style='color:red;'>Nenhuma mensagem de solicitação para recuperação de Senha!<h5>";?>
-            </div>
-
-            <?php
-            }
-            ?>
-
            <h4>Bem vindo Administrador!</h4>
+         </div>
           </div>
-    	   </div>
          <div class="footer">
            <?php include 'footer.php'; ?>
          </div>

@@ -23,12 +23,9 @@
 				<input type="text" name="matricula"  id="usuario"  placeholder="Matricula" required autofocus>
 				<p>Senha</p>
 				<input type="password" name="senha" placeholder="Senha" required >
-        <!-- <button type="submit">Login</button> -->
 			 	<input type="submit" name="entrar" value="Login">
-				<!-- <input type="hidden" name="entrar" value="login"><br> -->
 
-				<span><a href="recuperar_Senha.php">Solicitar Recuperação de Senha?</a></span>
-				<br><br>
+
         <a href="ajudaLogin.php" target="_blank"><img class="icon-img" src="img/icon1.png"></a>
 		</form>
 </div>
