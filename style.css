@@ -264,6 +264,22 @@ label[for="bt_menu"] {
 /* fim menu */
 
 /* Background Page Adm */
+ #pageDesenvolvedor{
+  background-image: url("img/2.jpg");
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
  #pageRecSenhaLogin{
   background-image: url("img/29.jpg");
 	background-repeat: no-repeat;

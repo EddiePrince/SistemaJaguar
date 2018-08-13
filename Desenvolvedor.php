@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="page">
+		<div id="pageDesenvolvedor">
 			<div class="container-fluid">
 
 				<div class="logo_admin">
