@@ -14,7 +14,7 @@
 	</head>
 
 	<body>
-		<div id="pageAnimal">
+		<div id="pageAnimalAgente">
 			<div class="container-fluid">
 				<div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">

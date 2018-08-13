@@ -15,7 +15,7 @@
 <body class="body">
 
 <div class="contact-form">
-		<img src="img/2.png" class="avatar">
+		<img src="img/logo.png" class="avatar">
 		<!-- <h2>login</h2> --><br><br>
 		<form method="post" action="">
 

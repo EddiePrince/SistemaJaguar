@@ -16,11 +16,12 @@
   </head>
   <body>
 
-    <div id="page">
+    <div id="pageAgente">
       <div class="container-fluid">
         <div class="logo_admin">
             <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a>
         </div>
+        <div class="corpoAdm">
 
         <div >
           <!-- Menu -->
@@ -28,7 +29,6 @@
           <!-- Fim Menu -->
         </div>
 
-    		<div class="corpoAdm">
 
 
           <br><h1>Bem Vindo Agente</h1>

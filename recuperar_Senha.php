@@ -9,7 +9,7 @@
 	</head>
 	<body>
 
-		<div id="page">
+		<div id="pageRecSenhaLogin">
 			<div class="container-fluid">
 
 				<div class="logo_admin">
@@ -34,7 +34,7 @@
 									<p>Mensagem:</p>
 									<textarea class="form-control" type="text" name="mensagem" value="Favor Atualize Minha Senha" rows="5" required>"Favor Atualize Minha Senha"</textarea><br>
 									<p><input class="btn btn-default"  type="submit" value="Enviar ao Administrador"></p><br>
-									<a href="index.php">Voltar</a><br><br><br>
+									<a class="btn btn-default" href="index.php">Voltar</a><br><br><br>
 								</form>
 							</div>
 						</div>

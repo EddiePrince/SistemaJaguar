@@ -264,8 +264,8 @@ label[for="bt_menu"] {
 /* fim menu */
 
 /* Background Page Adm */
-.container-fluid{
-  background-image: url("img/1.jpg");
+ #pageRecSenhaLogin{
+  background-image: url("img/29.jpg");
 	background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -280,8 +280,109 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #page{
-  background-image: url("img/9.jpg");
+ #pageRecSenha{
+  background-image: url("img/10.jpg");
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #ajudaLogin{
+  background-image: url("img/34.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #pageAjuda{
+  background-image: url("img/15.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #pageAjudaAgente{
+  background-image: url("img/31.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #pageAdm{
+  background-image: url("img/14.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #pageAgente{
+  background-image: url("img/11.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+ #pageListaAgente{
+  background-image: url("img/32.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;
@@ -308,7 +409,24 @@ label[for="bt_menu"] {
 	max-width: 500px;
 }
 #pageUsuario {
-  background-image: url("img/8.jpg");
+  background-image: url("img/10.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pageListaUsuario {
+  background-image: url("img/18.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;
@@ -325,7 +443,24 @@ label[for="bt_menu"] {
 	top: 0;
 }
 #pageAnimal {
-  background-image: url("img/5.jpg");
+  background-image: url("img/27.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pageAnimalAgente {
+  background-image: url("img/16.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;
@@ -342,7 +477,24 @@ label[for="bt_menu"] {
 	top: 0;
 }
 #pageListaAnimais {
-  background-image: url("img/8.jpg");
+  background-image: url("img/28.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pageListaAnimalAgente {
+  background-image: url("img/20.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;
@@ -377,7 +529,41 @@ label[for="bt_menu"] {
 }
 
 #pageUnidade {
-  background-image: url("img/7.jpg");
+  background-image: url("img/30.png");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pageListaUnidade {
+  background-image: url("img/21.jpg");
+  background-color: #fff;
+	background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+	bottom: 0;
+  font-size: 15px;
+	color: white;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+}
+#pageListaUnidadeAgente {
+  background-image: url("img/26.jpg");
   background-color: #fff;
 	background-repeat: no-repeat;
   background-position: top;

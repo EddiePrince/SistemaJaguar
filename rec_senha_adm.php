@@ -15,7 +15,7 @@
 		<title>Recuperação de Senha</title>
 </head>
 <body>
-  <div id="page">
+  <div id="pageRecSenha">
     <div class="container-fluid">
 
       <div class="logo_admin">

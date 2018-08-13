@@ -8,7 +8,7 @@
 			<title>Ajuda</title>
 	</head>
 	<body>
-		<div id="page">
+		<div id="pageAjuda">
       <div class="container-fluid">
 		    <div class="logo_admin">
 		       <img src="img/logo.png" alt="Logo">

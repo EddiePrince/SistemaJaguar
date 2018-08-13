@@ -15,8 +15,8 @@
   </head>
 
 	<body>
-      <div id="page">
-    <div class="container-fluid">
+      <div id="pageAdm">
+        <div class="container-fluid">
 
       <div class="logo_admin">
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
