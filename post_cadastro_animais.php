@@ -42,6 +42,7 @@
 		$tipoMarca = $_POST['tipoMarcacao'];
 		$localMarca = $_POST['localMarcacao'];
 
+
 		
 		$sql1 = "INSERT INTO animais (idAnimal, data, nomeAgente) VALUES ('$idAutomatico','$dataRecebimento' , '$agenteRecebedor')";
 
@@ -107,6 +108,19 @@
 
 		$sql7 = "UPDATE animais SET idEntregador='$idEntregador' WHERE idAnimal='$idAnimal'";
 		$salvar7 = mysqli_query($conexao, $sql7);
+
+		//Pegar id unidade
+		$pegarUnidade="SELECT idUnidade FROM unidades WHERE nome='$unidade'";
+		$resultUnidade= mysqli_query($conexao, $pegarUnidade);
+
+		while ($row=mysqli_fetch_row($resultUnidade)) {
+			$idUnidade = $row[0];
+		}
+
+		$sql8 = "UPDATE animais SET idUnidade='$idUnidade' WHERE idAnimal='$idAnimal'";
+		$salvar8 = mysqli_query($conexao, $sql8);
+
+
 
 
 		echo "Operação foi Realizada com Sucesso!";

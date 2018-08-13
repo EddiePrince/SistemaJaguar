@@ -201,10 +201,7 @@
 								<h4> Dados da Unidade Acolhedora</h4>
 								<p>Selecione a Unidade:</p>
 								<select class="form-control" name="nomeUnidade" size=1>
-									<option value="Unidade Nao Selecionada">Selecione a Unidade</option>
-									<option>Inserir Cod.PHP</option>
-									<option>Inserir Cod.PHP</option>
-									<option>Inserir Cod.PHP</option>
+									<?php include 'selectUnidades.inc.php'; ?>
 								</select><br><br>
 									</div>
 									<hr>
