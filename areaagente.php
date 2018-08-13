@@ -34,6 +34,9 @@
           <br><h1>Bem Vindo Agente</h1>
 
         </div>
+        <div class="footer">
+          <?php include 'footer.php'; ?>
+        </div>
       </div>
     </div>
 
