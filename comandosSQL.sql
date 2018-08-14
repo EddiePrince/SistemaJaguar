@@ -225,8 +225,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idUsuario`, `matricula`, `nome`, `email`, `telefone`, `celular`, `perfil`, `senha`) VALUES
-(1, '123456', 'Agente', 'agente@naturatins.com', '123456', '123456', 'Agente', '123456'),
-(2, '654321', 'Administrador', 'admin@naturatins.com', '123456', '123456', 'Administrador', 'admin');
+(1, '654321', 'Administrador', 'admin@naturatins.com', '63981134523', '9132125643', 'Administrador', 'admin');
+(2, '123456', 'Agente', 'agente@naturatins.com', '9845654321', '9844326754', 'Agente', '123456'),
 
 --
 -- Indexes for dumped tables
