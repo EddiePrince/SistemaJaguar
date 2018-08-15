@@ -402,6 +402,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
  #pageListaAgente{
   background-image: url("img/36.jpg");
   background-color: white;
@@ -419,6 +420,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
  .msgRecSenha{
 	background-color: yellow;
 	opacity: .3;
@@ -429,6 +431,7 @@ label[for="bt_menu"] {
 	min-height: 42px;
 	max-width: 500px;
 }
+
 #pageUsuario {
   background-image: url("img/12.jpg");
   background-color: white;
@@ -446,6 +449,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageListaUsuario {
   background-image: url("img/18.jpg");
   background-color: white;
@@ -463,6 +467,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageAnimal {
   background-image: url("img/27.jpg");
   background-color: white;
@@ -480,6 +485,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageAnimalAgente {
   background-image: url("img/16.jpg");
   background-color: white;
@@ -497,6 +503,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageListaAnimais {
   background-image: url("img/28.jpg");
   background-color: white;
@@ -514,6 +521,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageListaAnimalAgente {
   background-image: url("img/33.jpg");
   background-color: white;
@@ -531,6 +539,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pagePerfilAnimal {
   background-image: url("img/10.jpg");
   background-color: white;
@@ -563,9 +572,59 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
+
+#pageUnidade h3{
+	text-align: center;
+}
+
+#pageUnidade input{
+width: 40%;
+margin: 20px;
+}
+
+#pageUnidade select{
+width: 18%;
+margin: 20px;
+}
+
+#pageUnidade label{
+width: 18%;
+margin: 20px;
+}
+
+#pageUnidade p{
+width: 18%;
+margin: 20px;
+}
+
+#salva{
+	width: 10px;
+	color: #000000;
+	background: #018b02;
+	text-align: center;
+}
+
+.endereco{
+	width: 400px;
+}
+
+.endereco p{
+background-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+input[type="text1"]{
+  line-height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 343px;
+  border: none;
+}
+
 #pageListaUnidade {
   background-image: url("img/21.jpg");
   background-color: white;
@@ -583,6 +642,7 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+
 #pageListaUnidadeAgente {
   background-image: url("img/17.jpg");
   background-color: white;
@@ -616,7 +676,6 @@ label[for="bt_menu"] {
   width:45%;
   }
 }
-
 
 /* Tabela lista de animais */
 .table{
