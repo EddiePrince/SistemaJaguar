@@ -1,0 +1,39 @@
+Usuário
+Adicionar idUnidade
+
+Animal 
+idAnimal fica
+dataEntrada fica
+nomeAgente sai
+idEntregador fica
+idUsuario fica
+idUnidade saí e entra no Usuário
+destinacao
+
+Criar nova tabela -> DadosTriagem
+codMarcacao
+tipoMarcacao
+localMarcacao
+ultimaProcedencia
+nomeComum
+nomeCientifico
+familia
+ordem
+statusTriagem
+
+Tabela Quarentena 
+idAnimal
+periodoQuarentena
+statusQuarentena
+
+Tabela Destinação
+modalidadeDestinacao 
+subtipoModalidade
+idArea
+condicao1
+condicao2
+condicao3
+
+#1832 - Cannot change column 
+
+
