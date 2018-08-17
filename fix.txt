@@ -19,21 +19,45 @@ nomeComum
 nomeCientifico
 familia
 ordem
-statusTriagem
+
 
 Tabela Quarentena 
 idAnimal
 periodoQuarentena
-statusQuarentena
 
 Tabela Destinação
 modalidadeDestinacao 
 subtipoModalidade
 idArea
-condicao1
+
+condicao1 transformar em javascript
 condicao2
 condicao3
 
-#1832 - Cannot change column 
+dataCriacao
+dataModificacao
 
 
+Relatório
+
+
+
+Chaves estrangeiras
+Animal(idEntregador, usuario, triagem, quarentena, destincao)
+Area(idProprietario, idEndereco)
+entregadores(idAnexo, idEndereco)
+unidades(idEndereco)
+usuarios(idUnidade)
+quarentena(idAnimal)
+destinacao(idArea)
+dadosTriagem(idAnimal)
+
+
+ALTER TABLE `animais` ADD `idTriagem` INT AFTER `idAnimal`, ADD FOREIGN KEY (`idTriagem`) REFERENCES dadostriagem(`idTriagem`);
+
+ALTER TABLE `animais` ADD `idUsuario` INT AFTER `idAnimal`, ADD FOREIGN KEY (`idUsuario`) REFERENCES usuarios(`idUsuario`);
+
+
+ALTER TABLE `animais` ADD `idQuarentena` INT AFTER `idAnimal`, ADD FOREIGN KEY (`idQuarentena`) REFERENCES dadosquarentena(`idQuarentena`);
+
+ALTER TABLE `animais` ADD `idDestinacao` INT AFTER `idAnimal`, ADD FOREIGN KEY (`idDestinacao`) REFERENCES dadosdestinacao(`idDestinacao`);
