@@ -1,0 +1,74 @@
+Remodelagem: 
+
+- Adicionar idUnidade no Usuário
+
+- Remover do Animal: Nome agente, idUnidade
+
+- Criar nova tabela -> DadosTriagem
+codMarcacao
+tipoMarcacao
+localMarcacao
+ultimaProcedencia
+nomeComum
+nomeCientifico
+familia
+ordem
+
+- Criar nova tabela -> DadosQuarentena 
+idAnimal
+periodoQuarentena
+
+- Criar nova tabela > DadosDestinação
+modalidadeDestinacao 
+subtipoModalidade
+idArea
+
+- Transformar as condições de soltura em Javascript
+
+- Criar tabela Registros
+idRegistro
+dataRegistro
+tipoAlteração
+idUsuario (chave estrangeira)
+
+/*Usuários tal, fez coisa tal no dia tal*/
+
+Chaves estrangeiras
+Animal(idEntregador - ok, usuario- ok, triagem - ok, quarentena - ok, destinacao - ok)
+Area(idProprietario, idEndereco) - ok
+entregadores(idAnexo, idEndereco) - ok
+unidades(idEndereco) - ok 
+usuarios(idUnidade) - ok 
+destinação(idArea) - ok
+
+
+Revisar telefones - Criar nova tabela e linkar com chave-estrangeira
+Possuem telefone: entregadores, proprietarios, usuarios, unidades
+Revisar e-mails: proprietarios, recuperacaosenha, usuarios
+Revisar atributos repetidos
+Possuem cpf:
+entregadores, proprietarios, 
+Possuem cnpj:entregadores, proprietarios, unidades
+
+Remover telefones:
+entregadores ok
+proprietarios ok
+usuarios ok
+unidades ok
+- Criar tabela telefones
+- Adicionar chave estrangeira nos entregadores, proprietarios, usuarios, unidades
+ok
+
+Para entregadores e proprietarios, criar atributo - Tipo pessoa- Física ou jurídica
+ok
+Remover campos cpfcnpj
+
+Criar tabela cpfs
+Criar trabela cnpjs
+
+Para entregadores e proprietarios: linkar cpf e cnpj - ok
+Para unidades lnkar somente cnpj
+
+ALTER TABLE `entregadores` ADD `idCpf` INT AFTER `idEntregador`, ADD FOREIGN KEY (`idCpf`) REFERENCES cpfs(`idCpf`);
+ALTER TABLE `entregadores` ADD `idCnpj` INT AFTER `idEntregador`, ADD FOREIGN KEY (`idCnpj`) REFERENCES cnpjs(`idCnpj`);
+
