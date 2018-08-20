@@ -25,7 +25,7 @@
         $_SESSION['matricula'] = $linha['matricula'];
         $_SESSION['senha'] = $linha['senha'];
 
-        if($linha['perfil'] == 'Administrador'){
+        if($linha['perfil'] == 'administrador'){
           header('Location: areaadm.php');
         }
         else

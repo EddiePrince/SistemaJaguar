@@ -72,3 +72,9 @@ Para unidades lnkar somente cnpj
 ALTER TABLE `entregadores` ADD `idCpf` INT AFTER `idEntregador`, ADD FOREIGN KEY (`idCpf`) REFERENCES cpfs(`idCpf`);
 ALTER TABLE `entregadores` ADD `idCnpj` INT AFTER `idEntregador`, ADD FOREIGN KEY (`idCnpj`) REFERENCES cnpjs(`idCnpj`);
 
+
+nome, tipoUnidade
+
+Telefone: idTelefone, numero
+Cnpj: idCnpj, cnpj
+Endereço: idEndereco, uf, municipio, cep, bairro, lote, complemento
