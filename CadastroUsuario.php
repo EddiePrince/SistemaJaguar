@@ -31,35 +31,55 @@
           <?php include 'menuAdm.php'; ?>
           <!-- Fim Menu -->
         </div>
+					<h3>Cadastro Usuario</h3><br>
+        	<div class="container">
+	          	<div class="row">
+		          	<div class="col-md-3 mb-3">
+						<label>Perfil: </label><br>
+						<select class="form-control" name="perfil" required autofocus>
+							<option>Selecione o Perfil do Usuário</option>
+							<option value="Administrador">Administrador</option>
+							<option value="Agente">Agente</option>
+						</select><br><br>
+					</div>
 
-			<h3>Cadastro Usuario</h3>
-			<label>Perfil: </label><br>
-			<select class="form-control" name="perfil" required autofocus>
-				<option>Selecione o Perfil do Usuário</option>
-				<option value="Administrador">Administrador</option>
-				<option value="Agente">Agente</option>
-			</select><br><br>
+					<div class="col-md-3 mb-3">
+				      	<label>Matricula:</label><br>
+				      	<input class="form-control" type="text" name="matricula" required><br><br>
+				    </div>
+			    </div>
+			    <div class="row">
+		          	<div class="col-md-5 mb-3">
+					    <label>Nome:</label><br>
+					    <input class="form-control" type="text" name="nome" required><br><br>
+					</div>
 
-	      	<label>Matricula:</label><br>
-	      	<input class="form-control" type="text" name="matricula" required><br><br>
+					<div class="col-md-5 mb-3">
+						<label>E-mail:</label><br>
+						<input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
+					</div>
+				</div>
 
-		    <label>Nome:</label><br>
-		    <input class="form-control" type="text" name="nome" required><br><br>
+				<div class="row">
+		          	<div class="col-md-3 mb-3">
+					    <label>Telefone Residencial:</label><br>
+					    <input class="form-control" type="text" name="telefone" required><br><br>
+					</div>
 
-			<label>E-mail:</label><br>
-			<input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
+					<div class="col-md-3 mb-3">
+					    <label>Celular:</label><br>
+					    <input class="form-control" type="text" name="celular" required><br><br>
+					</div>
+				</div>
 
-		    <label>Telefone Residencial:</label><br>
-		    <input class="form-control" type="text" name="telefone" required><br><br>
-
-		    <label>Celular:</label><br>
-		    <input class="form-control" type="text" name="celular" required><br><br>
-
-			<label>Senha:</label><br>
-		    <input class="form-control" type="text" name="senha" required><br><br>
-
+				<div class="row">
+		          	<div class="col-md-3 mb-3">
+						<label>Senha:</label><br>
+					    <input class="form-control" type="text" name="senha" required><br><br>
+					</div>
+				</div>
 		    <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
-
+		</div>
 		</form>
 
 
