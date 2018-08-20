@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
 </head>
 
-<body>
+<body class="bg-light">
 
 	<div id="pageUsuario">
 	    <div class="container-fluid">

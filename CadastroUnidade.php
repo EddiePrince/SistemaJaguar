@@ -14,7 +14,7 @@
 	<title>Cadastro de Unidades</title>
 </head>
 
-<body>
+<body class="bg-light">
 	<div id="pageUnidade">
 		<div class="container-fluid">
 
@@ -29,67 +29,41 @@
 					<?php include 'menuAdm.php'; ?>
 					<!-- Fim Menu -->
 
-				<form class="needs-validation" method="post" action="post_cadastro_unidades.php"><br>
+				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
           			<h3>Cadastro de Unidades</h3><br>
 
-	          		<div class="">
+	          		<div class="container">
 	          			<div class="row">
 		          			<div class="col-md-6 mb-3">
 				                <label for="firstName">Nome Da Unidade:</label>
 				                <input type="text" class="form-control" id="firstName" placeholder="Nome da unidade" value="" required="">
 		              		</div>
-		              		<div class="col-md-6 mb-3">
+		              		<div class="col-md-3 mb-3">
 				                <label for="lastName">CNPJ:</label>
 				                <input type="text" class="form-control" id="lastName" placeholder="Cnpj" value="" required="">
 		              		</div>
 		              	</div>
 
-							<label>Tipo da Unidade:</label><br>
+							<label>Tipo da Unidade:</label>
 							<select class="form-control" name="tipoUnidade">
 		          				<option >Selecione o Tipo da Unidade</option>
 		          					<option>Central</option>
 		         		 		<option>Regional</option>
 		        			</select>
 
-	              	<div class="row">
-	              		<div class="col-md-5 mb-3">
-		        			<p>Unidade Federal:</p>
-								<select class="form-control" name="uf">
-									<option value="Estado Nao Selecionado">Selecione o Estado</option>
-											<option value="AC">Acre</option>
-											<option value="AL">Alagoas</option>
-											<option value="AM">Amazonas</option>
-											<option value="AP">Amapá</option>
-											<option value="BA">Bahia</option>
-											<option value="CE">Ceará</option>
-											<option value="DF">Distrito Federal</option>
-											<option value="ES">Espírito Santo</option>
-											<option value="GO">Goiás</option>
-											<option value="MA">Maranhão</option>
-											<option value="MT">Mato Grosso</option>
-											<option value="MS">Mato Grosso do Sul</option>
-											<option value="MG">Minas Gerais</option>
-											<option value="PA">Pará</option>
-											<option value="PB">Paraíba</option>
-											<option value="PR">Paraná</option>
-											<option value="PE">Pernambuco</option>
-											<option value="PI">Piauí</option>
-											<option value="RJ">Rio de Janeiro</option>
-											<option value="RN">Rio Grande do Norte</option>
-											<option value="RO">Rondônia</option>
-											<option value="RS">Rio Grande do Sul</option>
-											<option value="RR">Roraima</option>
-											<option value="SC">Santa Catarina</option>
-											<option value="SE">Sergipe</option>
-											<option value="SP">São Paulo</option>
-											<option value="TO">Tocantins</option>
-								</select>
-        				</div>
-
-        				<div class="col-md-4 mb-3">
-							<p>Municipio:</p>
+		              	<div class="row">
+		              		<div class="col-md-6 mb-3">
+			        			<label>UF:</label>
+									<select class="form-control" name="uf">
+										<option value="Estado Nao Selecionado">Estado:</option>
+												<option value="TO">Tocantins</option>
+									</select>
+	        				</div>
+	        			
+        				<div class="col-md-6 mb-3">
+							<label>Municipio:</label>
 								<select class="form-control" name="municipio">
-									<option value="municipio Nao Selecionado">Selecione o Municipio</option>
+									<option value="municipio Nao Selecionado"></option>
 									<option value="Aguiarnópolis">Aguiarnópolis</option>
 									<option value="Almas">Almas</option>
 									<option value="Ananás">Ananás</option>
@@ -135,8 +109,9 @@
 									<option value="Tocantinópolis">Tocantinópolis</option>
 									<option value="Wanderlândia">Wanderlândia</option>
 									<option value="Xambioá">Xambioá</option>
-								</select><br>
+								</select>
 						</div>
+
 					</div>
 
 							<div class="row">
@@ -144,13 +119,12 @@
 				                <label for="cc-expiration">CEP:</label>
 				               	<input type="text" class="form-control" id="cc-expiration" placeholder="Cep" required="">
 				              </div>
+
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-cvv">BAIRRO:</label>
 				                <input type="text" class="form-control" id="cc-cvv" placeholder="Bairro" required="">
 				              </div>
-				            </div>
-
-				            <div class="row">
+				            
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">LOTE:</label>
 				               	<input type="text" class="form-control" id="cc-expiration" placeholder="Lote" required="">

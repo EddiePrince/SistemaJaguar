@@ -504,6 +504,10 @@ label[for="bt_menu"] {
 	top: 0;
 }
 
+{
+
+}
+
 #pageListaAnimais {
   background-image: url("img/28.jpg");
   background-color: white;
@@ -559,13 +563,13 @@ label[for="bt_menu"] {
 }
 
 #pageUnidade {
-  background-image: url("img/30.png");
-  background-color: white;
+  	background-image: url("img/30.png");
+  	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  	background-position: top;
+  	background-size: cover;
 	bottom: 0;
-  font-size: 15px;
+  	font-size: 15px;
 	color: white;
 	left: 0;
 	overflow: auto;
@@ -580,7 +584,7 @@ label[for="bt_menu"] {
 }
 
 #pageUnidade input{
-width: 40%;
+width: 80%;
 margin: 20px;
 }
 
