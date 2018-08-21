@@ -269,7 +269,7 @@ label[for="bt_menu"] {
 /* fim menu */
 
 /* Background Page Adm */
- #pageDesenvolvedor{
+#pageDesenvolvedor{
   background-image: url("img/2.jpg");
 	background-repeat: no-repeat;
   background-position: top;
@@ -285,7 +285,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageRecSenhaLogin{
+
+#pageRecSenhaLogin{
   background-image: url("img/29.jpg");
 	background-repeat: no-repeat;
   background-position: top;
@@ -301,7 +302,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageRecSenha{
+
+#pageRecSenha{
   background-image: url("img/10.jpg");
 	background-repeat: no-repeat;
   background-position: top;
@@ -317,7 +319,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #ajudaLogin{
+
+#ajudaLogin{
   background-image: url("img/34.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -334,7 +337,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageAjuda{
+
+#pageAjuda{
   background-image: url("img/15.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -351,7 +355,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageAjudaAgente{
+
+#pageAjudaAgente{
   background-image: url("img/31.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -368,7 +373,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageAdm{
+
+#pageAdm{
   background-image: url("img/14.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -385,7 +391,8 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
- #pageAgente{
+
+#pageAgente{
   background-image: url("img/11.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -403,7 +410,7 @@ label[for="bt_menu"] {
 	top: 0;
 }
 
- #pageListaAgente{
+#pageListaAgente{
   background-image: url("img/36.jpg");
   background-color: white;
 	background-repeat: no-repeat;
@@ -421,7 +428,7 @@ label[for="bt_menu"] {
 	top: 0;
 }
 
- .msgRecSenha{
+.msgRecSenha{
 	background-color: yellow;
 	opacity: .3;
 	border-radius: 5px;
@@ -502,10 +509,6 @@ label[for="bt_menu"] {
 	right: 0;
 	text-align: center;
 	top: 0;
-}
-
-{
-
 }
 
 #pageListaAnimais {
@@ -670,6 +673,7 @@ input[type="text1"]{
     max-width: 100%;
 		min-height: 550px;
 }
+
 @media only screen and (max-width:1200px){
   .corpoAdm {
   position:relative;
