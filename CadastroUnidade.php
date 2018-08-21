@@ -35,24 +35,25 @@
 	          		<div class="container">
 	          			<div class="row">
 		          			<div class="col-md-6 mb-3">
-				                <label>Nome Da Unidade:</label>
+		          				<span>*Campos obrigatórios</span>
+				                <label>*Nome Da Unidade:</label>
 				                <input type="text" name="nomeUnidade" class="form-control" required>
 		              		</div>
 
-							<label>Tipo da Unidade:</label>
-							<select class="form-control" name="tipoUnidade">
-		          				<option >Selecione o Tipo da Unidade</option>
-		          					<option>Central</option>
-		         		 		<option>Regional</option>
+							<label>*Tipo da Unidade:</label>
+							<select required class="form-control" name="tipoUnidade" >
+		          					<option value="">Selecione o Tipo da Unidade</option>
+		          					<option value="Central">Central</option>
+		         		 			<option value="Regional">Regional</option>
 		        			</select>
 
 		              		<div class="col-md-3 mb-3">
 				                <label>CNPJ:</label>
-				                <input type="text" name="cnpj" class="form-control" required="">
+				                <input type="text" name="cnpj" class="form-control">
 		              		</div>
 		              		<div class="col-md-3 mb-3">
 				                <label >Telefone:</label>
-				                <input type="text" name="telefone" class="form-control"  value="" required="">
+				                <input type="text" name="telefone" class="form-control" >
 		              		</div>
 		              	</div>
 
@@ -60,16 +61,13 @@
 		              	<div class="row">
 		              		<div class="col-md-6 mb-3">
 			        			<label>UF:</label>
-									<select class="form-control" name="uf">
-										<option value="Estado Nao Selecionado">Estado:</option>
-												<option value="TO">Tocantins</option>
-									</select>
-	        				</div>
+			        			<input class="form-control" type="text" name="uf" value="Tocantins" disabled>			
+			        		</div>
 	        			
         				<div class="col-md-6 mb-3">
-							<label>Municipio:</label>
-								<select class="form-control" name="municipio">
-									<option value="municipio Nao Selecionado"></option>
+							<label>*Municipio:</label>
+								<select required class="form-control" name="municipio" >
+									<option value="">Selecione o município</option>
 									<option value="Aguiarnópolis">Aguiarnópolis</option>
 									<option value="Almas">Almas</option>
 									<option value="Ananás">Ananás</option>
@@ -123,23 +121,24 @@
 							<div class="row">
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">CEP:</label>
-				               	<input type="text" name="cep" class="form-control" id="cc-expiration" placeholder="Cep" required="">
+				               	<input type="text" name="cep" class="form-control" id="cc-expiration" >
 				              </div>
 
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-cvv">BAIRRO:</label>
-				                <input type="text" name="bairro" class="form-control" id="cc-cvv" placeholder="Bairro" required="">
+				                <input type="text" name="bairro" class="form-control" id="cc-cvv"  >
 				              </div>
 				            
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">LOTE:</label>
-				               	<input type="text" name="lote" class="form-control" id="cc-expiration" placeholder="Lote" required="">
+				               	<input type="text" name="lote" class="form-control" id="cc-expiration">
 				              </div>
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-cvv">COMPLEMENTO:</label>
-				                <input type="text"  name="complemento"class="form-control" id="cc-cvv" placeholder="Complemento" required="">
+				                <input type="text"  name="complemento"class="form-control" id="cc-cvv" >
 				              </div>
 				            </div>
+
 					<input class="btn btn-default" id="salva" name="submit" type="submit" value="Salvar">
 				</div>
 				</form>

@@ -112,12 +112,9 @@
 
 									<div class="container">
 										<div class="row">
-											<div class="col-md-2 mb-3">														
-												<p>Unidade Federal:</p>
-												<select class="form-control" name="uf">
-													<option value="Estado Nao Selecionado">Selecione o Estado</option>
-													<option value="TO">Tocantins</option>
-												</select>
+											<div class="col-md-2 mb-3">			
+												<label>UF:</label>
+			        							<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">	
 											</div>
 
 											<div class="col-md-2 mb-3">

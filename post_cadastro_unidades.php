@@ -6,15 +6,10 @@
 	
 	if (isset($_POST['submit'])) {
 		
- 		
-
- 		
- 		
 		$nomeUnidade = $_POST['nomeUnidade'];
  		$tipoUnidade = $_POST['tipoUnidade'];
 		$telefone = $_POST['telefone'];
 		$cnpj = $_POST['cnpj'];
-		$uf = $_POST['uf'];
 		$municipio = $_POST['municipio'];
 		$cep = $_POST['cep'];
 		$bairro = $_POST['bairro'];
@@ -29,7 +24,7 @@
 
 		$sql3 = "INSERT INTO cnpjs(cnpj) VALUES ('$cnpj')";
 
-		$sql4 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('$uf', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
+		$sql4 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('Tocantins', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
 
 	
 		//executa e armazena o $sql
@@ -85,7 +80,7 @@
 		$sql7 = "UPDATE unidades SET idEndereco='$idEndereco' WHERE idUnidade='$idUnidade'";
 		$salvar7 = mysqli_query($conexao, $sql7);
 
-		echo "Operação foi Realizada com Sucesso!";
+		header('location: listaUnidades.php');
 }
 	
  
