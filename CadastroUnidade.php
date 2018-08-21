@@ -35,14 +35,9 @@
 	          		<div class="container">
 	          			<div class="row">
 		          			<div class="col-md-6 mb-3">
-				                <label for="firstName">Nome Da Unidade:</label>
-				                <input type="text" class="form-control" id="firstName" placeholder="Nome da unidade" value="" required="">
+				                <label>Nome Da Unidade:</label>
+				                <input type="text" name="nomeUnidade" class="form-control" required>
 		              		</div>
-		              		<div class="col-md-3 mb-3">
-				                <label for="lastName">CNPJ:</label>
-				                <input type="text" class="form-control" id="lastName" placeholder="Cnpj" value="" required="">
-		              		</div>
-		              	</div>
 
 							<label>Tipo da Unidade:</label>
 							<select class="form-control" name="tipoUnidade">
@@ -50,6 +45,17 @@
 		          					<option>Central</option>
 		         		 		<option>Regional</option>
 		        			</select>
+
+		              		<div class="col-md-3 mb-3">
+				                <label>CNPJ:</label>
+				                <input type="text" name="cnpj" class="form-control" required="">
+		              		</div>
+		              		<div class="col-md-3 mb-3">
+				                <label >Telefone:</label>
+				                <input type="text" name="telefone" class="form-control"  value="" required="">
+		              		</div>
+		              	</div>
+
 
 		              	<div class="row">
 		              		<div class="col-md-6 mb-3">
@@ -117,21 +123,21 @@
 							<div class="row">
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">CEP:</label>
-				               	<input type="text" class="form-control" id="cc-expiration" placeholder="Cep" required="">
+				               	<input type="text" name="cep" class="form-control" id="cc-expiration" placeholder="Cep" required="">
 				              </div>
 
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-cvv">BAIRRO:</label>
-				                <input type="text" class="form-control" id="cc-cvv" placeholder="Bairro" required="">
+				                <input type="text" name="bairro" class="form-control" id="cc-cvv" placeholder="Bairro" required="">
 				              </div>
 				            
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">LOTE:</label>
-				               	<input type="text" class="form-control" id="cc-expiration" placeholder="Lote" required="">
+				               	<input type="text" name="lote" class="form-control" id="cc-expiration" placeholder="Lote" required="">
 				              </div>
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-cvv">COMPLEMENTO:</label>
-				                <input type="text" class="form-control" id="cc-cvv" placeholder="Complemento" required="">
+				                <input type="text"  name="complemento"class="form-control" id="cc-cvv" placeholder="Complemento" required="">
 				              </div>
 				            </div>
 					<input class="btn btn-default" id="salva" name="submit" type="submit" value="Salvar">
