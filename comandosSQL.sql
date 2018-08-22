@@ -246,7 +246,7 @@ CREATE TABLE `usuarios` (
   `senha` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES (NULL, NULL, NULL, '123', '', '', '', 'adm');
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES (NULL, NULL, NULL, '123', 'adm', 'adm', 'adm', 'adm');
 
 --
 -- Indexes for dumped tables
