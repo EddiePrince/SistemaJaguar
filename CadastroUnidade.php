@@ -59,10 +59,10 @@
 
 
 		              	<div class="row">
-		              		<div class="col-md-6 mb-3">
-			        			<label>UF:</label>
-			        			<input class="form-control" type="text" name="uf" value="Tocantins" disabled>			
-			        		</div>
+                      <div class="col-md-2 mb-3">
+												<label>UF:</label>
+			        					<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
+											</div>
 	        			
         				<div class="col-md-6 mb-3">
 							<label>*Municipio:</label>
@@ -128,7 +128,7 @@
 				                <label for="cc-cvv">BAIRRO:</label>
 				                <input type="text" name="bairro" class="form-control" id="cc-cvv"  >
 				              </div>
-				            
+
 				              <div class="col-md-3 mb-3">
 				                <label for="cc-expiration">LOTE:</label>
 				               	<input type="text" name="lote" class="form-control" id="cc-expiration">

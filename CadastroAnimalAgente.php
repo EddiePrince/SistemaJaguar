@@ -118,11 +118,8 @@
 									<div class="container">
 										<div class="row">
 											<div class="col-md-2 mb-3">
-												<p>Unidade Federal:</p>
-												<select class="form-control" name="uf">
-												<option value="Estado Nao Selecionado">Selecione o Estado</option>
-													<option value="TO">Tocantins</option>
-												</select>
+												<label>UF:</label>
+			        							<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
 											</div>
 
 											<div class="col-md-2 mb-3">
@@ -199,7 +196,7 @@
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-md-3 mb-3">	
+											<div class="col-md-3 mb-3">
 												<p>Tipo de Documento:</p>
 												<select class="form-control" name="tipoDocumento" size=1>
 													<option  value="Numero do Documento Nao Selecionado">Selecione</option>
