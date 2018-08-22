@@ -30,6 +30,7 @@
 				<li><a href="listaUnidades.php#corpoAdm">Visualizar</a></li>
 				<li><a href="CadastroUnidade.php#corpoAdm">Cadastrar</a></li>
 			</ul>
+			<li><a href="consultas.php">Consultas </a></li>
 		</li>
 	</ul>
 </nav>

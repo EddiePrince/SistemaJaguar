@@ -103,6 +103,7 @@ body {
 /* Fim Tela de Login */
 
 /*PESQUISA 1*/
+
 #divBusca{
   position: absolute;
   background-color:#fff;
@@ -148,6 +149,26 @@ body {
   left: 1%;
   right: 10px;
 }
+
+/* seção da exibição de pesquisas */
+section{
+	margin-left: 3%;
+	margin-right:3%;
+	background-color: #d6d5d5;
+}
+.form{
+	background-color: silver;
+  padding: 10px;
+}
+article{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #d6f3f4;
+  margin-bottom: 5px;
+}
+/* FIm seção da exibição de pesquisas */
+
 
 /* Inicio Menu */
 

@@ -23,6 +23,7 @@
   					<ul>
   						<li><a href="listaUnidadesAgente.php#corpoAdm">Visualizar</a></li>
   					</ul>
+        			<li><a href="consultas.php">Consultas </a></li>
   				</li>
   			</ul>
   		</nav>
