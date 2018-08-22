@@ -246,8 +246,8 @@ CREATE TABLE `usuarios` (
   `senha` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('1', '123456789', '', '2444', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin');
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('2', '987654321', '', '66666', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('1', NULL, NULL, '2444', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin');
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('2', NULL, NULL, '333311', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
 
 --
 -- Indexes for dumped tables
