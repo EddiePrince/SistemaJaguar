@@ -355,6 +355,27 @@ label[for="bt_menu"] {
 	text-align: center;
 	top: 0;
 }
+.tab-pane{
+	text-align: justify;
+	font-size: 18px;
+}
+
+.titulo{
+	text-shadow: 1px 2px 1px #0000ff;
+}
+
+
+
+/* Exemplo do código CSS para criar um borda num texto */
+.subtitulo {
+    text-shadow: 1px 0px 0px red,
+                 -1px 0px 0px red,
+                 0px 1px 0px red,
+                 0px -1px 0px red;
+    font-size: 100%;
+    font-weight: bold;
+    color: #FFF;
+}
 
 #pageAjudaAgente{
   background-image: url("img/20.jpg");
