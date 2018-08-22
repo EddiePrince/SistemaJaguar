@@ -357,7 +357,7 @@ label[for="bt_menu"] {
 }
 
 #pageAjudaAgente{
-  background-image: url("img/31.jpg");
+  background-image: url("img/20.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -458,7 +458,7 @@ label[for="bt_menu"] {
 }
 
 #pageListaUsuario {
-  background-image: url("img/18.jpg");
+  background-image: url("img/14.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -530,7 +530,7 @@ label[for="bt_menu"] {
 }
 
 #pageListaAnimalAgente {
-  background-image: url("img/33.jpg");
+  background-image: url("img/12.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -566,13 +566,13 @@ label[for="bt_menu"] {
 }
 
 #pageUnidade {
-  	background-image: url("img/30.png");
-  	background-color: white;
+	background-image: url("img/4.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  	background-position: top;
-  	background-size: cover;
+	background-position: top;
+	background-size: cover;
 	bottom: 0;
-  	font-size: 15px;
+	font-size: 15px;
 	color: white;
 	left: 0;
 	overflow: auto;
@@ -651,7 +651,7 @@ input[type="text1"]{
 }
 
 #pageListaUnidadeAgente {
-  background-image: url("img/17.jpg");
+  background-image: url("img/6.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
