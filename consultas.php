@@ -22,15 +22,24 @@ $registros = mysqli_num_rows($consulta); //mostrar quantos registros existem no 
      <div class="container">
 
        <section>
-         <h1>Consultas</h1> <hr><br><br>
+         <h1>Consultar Unidades</h1> <hr><br><br>
+
 
          <form class="form" action="" method="get">
-           <strong>Filtrar por nome: </strong><input type="text" name="filtro" class="campo" requerid autofocus>
-           <button type="submit" value="Pesquisar" class="btn">Pesquisar</button>
+         <strong>Filtrar por nome: </strong><div id="divBusca">
+         	<img src="img/icon pesquisa.png" alt="Buscar..."/>
+         	<input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
+         	<button type="submit" id="btnBusca">Buscar</button>
+         </div>
+
+           <!-- <strong>Filtrar por nome: </strong><input type="text" name="filtro" class="campo" requerid autofocus>
+           <button type="submit" value="Pesquisar" class="btn btn-default">Pesquisar</button>
+           <button type="submit" value="reset" class="btn btn-default">Limpar Pesquisa</button> -->
          </form>
 
          <?php
 
+             if (!empty($_GET['filtro'])) {
 
 				 if ($registros > 0) {
 					 echo "<br>Resultado da pesquisa com a palavra <strong> $filtro. </strong><br><br><br>";
@@ -51,6 +60,8 @@ $registros = mysqli_num_rows($consulta); //mostrar quantos registros existem no 
            echo "$profissao<br><br>";
            echo "</article>";
          }
+
+                      }
 
          mysqli_close($conexao);
           ?>

@@ -19,7 +19,7 @@
 		<div class="container-fluid">
 
 			<div class="logo_admin">
-				<img src="img/logo.png">
+				<img src="img/logo.png" alt="Logo">
 			</div>
 
 			<div id="corpoAdm" class="corpoAdm" >
@@ -63,7 +63,7 @@
 												<label>UF:</label>
 			        					<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
 											</div>
-	        			
+
         				<div class="col-md-6 mb-3">
 							<label>*Municipio:</label>
 								<select required class="form-control" name="municipio" >

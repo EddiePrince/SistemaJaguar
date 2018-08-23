@@ -107,17 +107,18 @@ body {
 #divBusca{
   position: absolute;
   background-color:#fff;
-  border:solid 2px #222;
-  border-radius:10px;
+  border:solid 1px #222;
+  border-radius:5px;
   width:300px;
   height:35px;
-  top: 17%;
-  left: 60%;
+  top: 10%;
+  left: 70%;
 }
 
 #txtBusca{
   float:left;
   background-color:transparent;
+	color: blue;
   padding-left:5px;
   font-size:18px;
   border:none;
@@ -134,10 +135,10 @@ body {
   position: absolute;
   border:none;
   float:left;
-  border-radius:0 7px 7px 0;
+  border-radius:0 5px 5px 0;
   font-weight:bold;
-  background:#5F9EA0;
-  top: 1%;
+  background:#80bfff;
+  top: 2%;
   left: 77%;
 }
 
@@ -145,7 +146,7 @@ body {
   float:left;
   position: absolute;
   width: 20px;
-  top: 1%;
+  top: 155%;
   left: 1%;
   right: 10px;
 }
@@ -164,8 +165,10 @@ article{
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
-  background-color: #d6f3f4;
+  background: rgba(0,0,0,0.5);
+	border-radius: 3px;
   margin-bottom: 5px;
+	text-align: left;
 }
 /* FIm seção da exibição de pesquisas */
 
@@ -176,6 +179,7 @@ article{
 .logo_admin img {
 	width: 150px;
 	margin-top: -50px;
+	background: rgba(0,0,0,0.5);
 }
 
 .menu {
@@ -303,7 +307,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -320,7 +323,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -337,7 +339,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -355,7 +356,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -373,7 +373,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 .tab-pane{
@@ -412,7 +411,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -430,7 +428,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -448,7 +445,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -466,7 +462,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -495,7 +490,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -513,7 +507,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -531,7 +524,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -549,7 +541,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -567,7 +558,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -585,7 +575,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -603,7 +592,6 @@ label[for="bt_menu"] {
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -688,7 +676,6 @@ input[type="text1"]{
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
@@ -706,7 +693,6 @@ input[type="text1"]{
 	padding: 3em;
 	position: absolute;
 	right: 0;
-	text-align: center;
 	top: 0;
 }
 
