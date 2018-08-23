@@ -31,7 +31,7 @@
 
 
 
-          <br><h1>Bem Vindo Agente</h1>
+          <br><h1>Bem Vindo <?php echo $nome?></h1>
 
         </div>
         </div>

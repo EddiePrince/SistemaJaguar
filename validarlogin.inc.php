@@ -1,44 +1,38 @@
 <?php
 //Conecção com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
-?>
-
-      <!-- Inicio do codigo validação usuario -->
-  <?php
-
-    if (isset($_POST['entrar']) && $_POST['entrar'] == 'Login')
-    {
+    include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+   
+    if (isset($_POST['entrar']) && $_POST['entrar'] == 'Login'){
         $matricula = $_POST['matricula'];
         $senha = $_POST['senha'];
 
-      if (empty($matricula) || empty($senha)) {
-        echo "<br><p style='color:blue;'>Preencha todos os campos!<p>";
-        }else {
-          $query = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
-          $result = mysqli_query($conexao, $query); // trazer o resultado de query
-          $busca = mysqli_num_rows($result); // retornar se achou ou  nao true ou false
-          $linha = mysqli_fetch_assoc($result);
-
-          //buscar os dados do servidor e salvar na sessao
-      if ($busca > 0)  {
-        $_SESSION['Administrador'] = $linha['Administrador'];
-        $_SESSION['matricula'] = $linha['matricula'];
-        $_SESSION['senha'] = $linha['senha'];
-
-        if($linha['perfil'] == 'administrador'){
-          header('Location: areaadm.php');
-        }
-        else
-        {
-          header('Location: areaagente.php');
-        }
-
-
-      } else {
-      echo "<h4 style='color:red;'><br>Usuario ou Senha Inválido!</h4>";
-        }
+      if (empty($matricula) || empty($senha)){
+        header('Location: index.php');
       }
-  }
+      else{
+            $sql = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
+            $result = $conexao->query($sql);
+            if($result->num_rows > 0){
+              while($row = $result->fetch_assoc()){
+               $nome = $row['nome'];
+               $perfil = $row['perfil'];
+              }
+              if ($perfil == 'administrador') {
+                session_start();
+                $_SESSION['nome'] = $nome;
+                $_SESSION['perfil'] = $perfil;
+                header('Location: areaadm.php');
+                exit;
+              } else if ($perfil == 'agente'){
+                session_start();
+                $_SESSION['nome'] = $nome;
+                $_SESSION['perfil'] = $perfil;
+                header('Location: areaagente.php');
+                exit;
+              }
+            }
+          }
+    }
 
 
   ?>

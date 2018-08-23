@@ -15,7 +15,7 @@
 		    </div>
 				<!-- Menu -->
 				<!-- Erro de Validação W3C Identificado -->
-				<?php include 'menuAdm.php'; ?>
+				<?php include 'exibirMenu.inc.php'; ?>
 				<!-- Fim Menu -->
 
 					<div  class="corpoAdm" id="corpoAdm">

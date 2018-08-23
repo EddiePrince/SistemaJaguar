@@ -25,12 +25,12 @@
       <div class="corpoAdm">
         <!-- Menu -->
         <!-- Erro de Validação W3C Identificado -->
-        <?php include 'menuAdm.php'; ?>
+        <?php include 'exibirMenu.inc.php'; ?>
         <!-- Fim Menu -->
         <div class="container">
 
 
-           <h4>Bem vindo Administrador!</h4>
+           <h4>Bem vindo <?php echo $nome?>!</h4>
          </div>
 
           </div>
