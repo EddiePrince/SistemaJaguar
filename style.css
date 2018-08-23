@@ -82,7 +82,7 @@ body {
 
 .contact-form input[type="submit"] {
 	height: 40px;
-	color: blue;
+	color: red;
 	font-size: 25px;
 	font-family: Times;
 	font-weight: bold;
@@ -111,7 +111,7 @@ body {
   border-radius:5px;
   width:300px;
   height:35px;
-  top: 10%;
+  top: 9%;
   left: 70%;
 }
 
@@ -131,14 +131,14 @@ body {
 
 #btnBusca{
   width:70px;
-  height:31px;
+  height:35px;
   position: absolute;
   border:none;
   float:left;
   border-radius:0 5px 5px 0;
   font-weight:bold;
   background:#80bfff;
-  top: 2%;
+  top: 0%;
   left: 77%;
 }
 
@@ -146,10 +146,40 @@ body {
   float:left;
   position: absolute;
   width: 20px;
-  top: 155%;
+  top: 11%;
   left: 1%;
-  right: 10px;
+  right: 5px;
 }
+
+.panum{
+  color: red;
+  float:left;
+  position: absolute;
+  width: 20px;
+  top: 29%; /*ir para baixo*/
+  left: 21%; /*ir para frente*/
+  right: 5px;
+}
+
+.pandois{
+  color: red;
+  float:left;
+  position: absolute;
+  width: 20px;
+  top: 29%; /*ir para baixo*/
+  left: 15%; /*ir para frente*/
+  right: 5px;
+}
+
+.pantres{
+  color: red;
+  float:left;
+  position: absolute;
+  top: 18%; /*ir para baixo*/
+  left: 28%; /*ir para frente*/
+  right: 5px;
+}
+
 
 /* seção da exibição de pesquisas */
 section{
@@ -383,7 +413,6 @@ label[for="bt_menu"] {
 .titulo{
 	text-shadow: 1px 2px 1px #0000ff;
 }
-
 
 
 /* Exemplo do código CSS para criar um borda num texto */
@@ -722,4 +751,39 @@ input[type="text1"]{
   background-color: #222;
 	padding: 14px;
 	text-decoration: none;
+}
+
+/* Desktop maiores */
+@media (min-width: 1200px) { 
+
+}
+ 
+/* tables em formato porta retrato até os desktos no formato paisagem */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+ 
+/* dispositivo em paisagem até os tablets em formato porta-retrato */
+@media (max-width: 767px) {
+
+}
+ 
+/* dispositivo no formato paisagem e abaixos */
+@media (max-width: 480px) {
+
+}
+
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
 }

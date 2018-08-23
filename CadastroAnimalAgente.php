@@ -310,7 +310,7 @@
 										</div>
 									</div>
 									<hr>
-									<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
+									<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br><br>
 								</div>
 							</div>
 						</div>

@@ -8,7 +8,7 @@
 <html lang="pt-br">
 <head>
 		<meta charset="utf8mb4_unicode_ci">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Cadastro de Usuário</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
