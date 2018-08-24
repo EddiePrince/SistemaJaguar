@@ -1,12 +1,12 @@
 <?php
+  //Conecção com Banco
+  include 'conexao.inc.php';
 
-include 'conexao.inc.php';
+  $filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
 
-$filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
-
-$sql = "select * from unidades where nome like '%$filtro%' order by nome";
-$consulta = mysqli_query($conexao, $sql);
-$registros = mysqli_num_rows($consulta); //mostrar quantos registros existem no banco
+  $sql = "select * from unidades where nome like '%$filtro%' order by nome";
+  $consulta = mysqli_query($conexao, $sql);
+  $registros = mysqli_num_rows($consulta); //mostrar quantos registros existem no banco
 
  ?>
 

@@ -1,6 +1,6 @@
 <?php
-//Conecção com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  //Conecção com Banco
+  include 'conexao.inc.php';
   include 'verificausuario.inc.php';
 ?>
 
@@ -28,7 +28,7 @@
         <form class="corpoAdm" method="post" action="post_cadastro_usuario.php">
         <div>
           <!-- Menu -->
-          <?php include 'menuAdm.php'; ?>
+          <?php include 'exibirMenu.inc.php'; ?>
           <!-- Fim Menu -->
         </div>
 					<h3>Cadastro Usuario</h3><br>

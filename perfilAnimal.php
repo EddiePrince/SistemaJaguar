@@ -1,5 +1,6 @@
 <?php
-// Erro de Validação W3C Identificado
+	//Erro de Validação W3C Identificado
+  //Conexão com Banco	
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
@@ -24,7 +25,7 @@
 				<div class="corpoAdm">
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
-					<?php include 'menuAdm.php'; ?>
+          <?php include 'exibirMenu.inc.php'; ?>
 
 
         <h1>Perfil Do Animal</h1>

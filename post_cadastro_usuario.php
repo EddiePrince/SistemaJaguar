@@ -1,6 +1,6 @@
 <?php
 //Conecção com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'conexao.inc.php';
 
 
 $perfil = $_POST['perfil'];

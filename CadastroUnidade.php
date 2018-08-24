@@ -1,6 +1,6 @@
 <?php
   //Conexão com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'conexao.inc.php';
   include 'verificausuario.inc.php';
 ?>
 <!DOCTYPE html>
@@ -26,11 +26,11 @@
         <div>
 
 					<!-- Menu -->
-					<?php include 'menuAdm.php'; ?>
+          <?php include 'exibirMenu.inc.php'; ?>
 					<!-- Fim Menu -->
 
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
-				
+
           			<h3>Cadastro de Unidades</h3><br>
 
 	          		<div class="container">
@@ -73,7 +73,7 @@
 								<label>UF:</label>
 			        			<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
 							</div>
-	          				
+
 	        				<div class="col-md-15 mb-3">
 								<label>Municipio:</label>
 									<select required class="form-control" name="municipio" >
@@ -125,7 +125,7 @@
 										<option value="Xambioá">Xambioá</option>
 									</select>
 							</div>
-		        
+
 	          			</div>
 	          		</div>
 

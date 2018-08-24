@@ -1,8 +1,8 @@
 <?php
-// Erro de Validação W3C Identificado
+  //Erro de Validação W3C Identificado
   //Conexão com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
-  //include 'verificausuario.inc.php';
+  include 'conexao.inc.php';
+  include 'verificausuario.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
 
   				<!-- Menu -->
           <!-- Erro de Validação W3C Identificado -->
-  				<?php include 'menuAdm.php'; ?>
+          <?php include 'exibirMenu.inc.php'; ?>
   				<!-- Fim Menu -->
 
 

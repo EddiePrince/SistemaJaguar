@@ -1,5 +1,5 @@
 <?php
-//Erro de Validação W3C Identificado
+	//Erro de Validação W3C Identificado
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
@@ -21,13 +21,13 @@
 					<img src="img/logo.png" alt="Logo">
 				</div>
 
-				<div class="corpoAdm" id="corpoAdm">
-					<div>
 
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
-					<?php include 'menuAdm.php'; ?>
+          <?php include 'exibirMenu.inc.php'; ?>
 
+
+					<div class="corpoAdm" id="corpoAdm">
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container theme-showcase" role="main">
 
@@ -112,9 +112,9 @@
 
 									<div class="container">
 										<div class="row">
-											<div class="col-md-2 mb-3">			
+											<div class="col-md-2 mb-3">
 												<label>UF:</label>
-			        							<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">	
+			        							<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
 											</div>
 
 											<div class="col-md-2 mb-3">
@@ -305,7 +305,7 @@
 					</div>
 				</form>
 				</div>
-			 </div>
+
 			 <!-- Erro de Validação W3C Identificado -->
 			 <div class="footer">
 				 <?php include 'footer.php'; ?>

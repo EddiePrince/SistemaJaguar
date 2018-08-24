@@ -1,9 +1,9 @@
 <?php
 //Conexão com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'conexao.inc.php';
 
 //Pegar id do animal
- 
+
   	$getAnimalId = "SELECT MAX(idAnimal) FROM animais";
   	$getAnimalIdresult = mysqli_query($conexao, $getAnimalId);
 
@@ -12,10 +12,10 @@
 		$idAutomatico = $row[0]+1;
 	}
 
-	
+
 	if (isset($_POST['submit'])) {
-		
- 	
+
+
 		$dataRecebimento = $_POST['dataRecebimento'];
 		$agenteRecebedor = $_POST['nomeAgente'];
 		$tipoRecolhimento = $_POST['tipoEntrega'];
@@ -43,7 +43,7 @@
 		$localMarca = $_POST['localMarcacao'];
 
 
-		
+
 		$sql1 = "INSERT INTO animais (idAnimal, data, nomeAgente) VALUES ('$idAutomatico','$dataRecebimento' , '$agenteRecebedor')";
 
 		$sql2 = "INSERT INTO entregadores(nome, cpfcnpj, telefone, tipoEntrega) VALUES ('$nomeEntregador', '$cpfcnpj', '$telefone', '$tipoRecolhimento')";
@@ -77,7 +77,7 @@
 		{
 			$idEntregador = $row[0];
 		}
- 			
+
 
 		$sql5 = "UPDATE entregadores SET idEndereco='$idEndereco' WHERE idEntregador='$idEntregador'";
 		$salvar5 = mysqli_query($conexao, $sql5);
@@ -90,10 +90,10 @@
  		while($row =mysqli_fetch_row($getFileIdresult))
 		{
 			$idAnexo = $row[0];
-		}	
+		}
 
 		$sql6 = "UPDATE entregadores SET idAnexo='$idAnexo' WHERE idEntregador='$idEntregador'";
-		$salvar6 = mysqli_query($conexao, $sql6);	
+		$salvar6 = mysqli_query($conexao, $sql6);
 
 		//Pegar idAnimal
 
@@ -125,9 +125,8 @@
 
 		echo "Operação foi Realizada com Sucesso!";
 }
-	
- 
+
+
 
 ?>
 <!-- <br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a> -->
-

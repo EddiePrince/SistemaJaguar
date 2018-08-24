@@ -1,11 +1,11 @@
 <?php
 //Conexão com Banco
-  include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
+  include 'conexao.inc.php';
 
 
-	
+
 	if (isset($_POST['submit'])) {
-		
+
 		$nomeUnidade = $_POST['nomeUnidade'];
  		$tipoUnidade = $_POST['tipoUnidade'];
 		$telefone = $_POST['telefone'];
@@ -15,9 +15,9 @@
 		$bairro = $_POST['bairro'];
 		$lote = $_POST['lote'];
 		$complemento = $_POST['complemento'];
-		
 
-		
+
+
 		$sql1 = "INSERT INTO unidades(nome, tipoUnidade) VALUES ('$nomeUnidade', '$tipoUnidade')";
 
 		$sql2 = "INSERT INTO telefones(numero) VALUES ('$telefone')";
@@ -26,13 +26,13 @@
 
 		$sql4 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('Tocantins', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
 
-	
+
 		//executa e armazena o $sql
 		$salvar1 = mysqli_query($conexao, $sql1);
 		$salvar2 = mysqli_query($conexao, $sql2);
 		$salvar3 = mysqli_query($conexao, $sql3);
 		$salvar4 = mysqli_query($conexao, $sql4);
-		
+
 		//Pegar idUnidade
 		$pegarUnidade = "SELECT MAX(idUnidade) FROM unidades";
 		$resultUnidade = mysqli_query($conexao, $pegarUnidade);
@@ -68,8 +68,8 @@
 		{
 			$idEndereco = $row[0];
 		}
-  		
- 			
+
+
 
 		$sql5 = "UPDATE unidades SET idTelefone='$idTelefone' WHERE idUnidade='$idUnidade'";
 		$salvar5 = mysqli_query($conexao, $sql5);
@@ -82,9 +82,8 @@
 
 		header('location: listaUnidades.php');
 }
-	
- 
+
+
 
 ?>
 <!-- <br> <a href="CadastroAnimal.php"> <input type="button" name="btn" value="Cadastrar Outro Animal">  </a> -->
-
