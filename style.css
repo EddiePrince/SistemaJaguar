@@ -742,9 +742,16 @@ input[type="text1"]{
   }
 }
 
+
+
 /* Tabela lista de animais */
 .table{
 	border:1px;
+}
+
+/*Alerta para unidades não cadastradas*/
+#alerta{
+	display: none;
 }
 
 .footer{
