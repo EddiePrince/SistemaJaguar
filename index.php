@@ -26,7 +26,7 @@
 				<p>Senha</p>
 				<input type="password" name="senha" placeholder="Senha" required >
 			 	<input class="postlogin" type="submit" name="entrar" value="Login">
-        <a href="ajudaLogin.php" target="_blank"><img class="icon-img" alt="Ajuda" src="img/icon1.png"></a>
+        <!--<a href="ajudaLogin.php" target="_blank"><img class="icon-img" alt="Ajuda" src="img/icon1.png"></a>-->
 		</form>
 </div>
 
