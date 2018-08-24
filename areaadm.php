@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
     <title>Área Principal</title>
+
   </head>
 
 	<body>
@@ -28,11 +29,16 @@
         <?php include 'exibirMenu.inc.php'; ?>
         <!-- Fim Menu -->
         <div class="container">
-
-
-           <h4>Bem vindo <?php echo $nome?>!</h4>
+          <h4>Bem vindo <?php echo $nome?>!</h4>
          </div>
 
+        
+            
+              <div id="alerta">
+                Não há nenhuma unidade cadastrada. Por favor realize o cadastro.
+              <button id="botao" onclick="redirecionar();">Cadastrar</button>  
+              </div>
+            
           </div>
           <!-- Erro de Validação W3C Identificado -->
          <div class="footer">
@@ -40,7 +46,7 @@
          </div>
     	</div>
     	</div>
-
+  <?php include 'verificarUnidades.inc.php'; ?>
 
 	</body>
 
