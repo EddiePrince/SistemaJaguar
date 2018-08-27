@@ -1,4 +1,4 @@
-<?php
+	<?php
 	//Erro de Validação W3C Identificado
 	include 'post_cadastro_animais.php';
 	// include 'verificausuario.inc.php';
@@ -17,15 +17,15 @@
 	<body>
 		<div id="pageAnimall">
 			<div class="corpoAdmm" id="corpoAdm">
-			<!-- <div class="container-fluid"> -->
-				<!-- <div class="logo_admin">
+			<div class="container-fluid"> -->
+				 <div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">
-				</div> -->
+				</div>
 
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
           <?php
-					// include 'exibirMenu.inc.php';
+					include 'exibirMenu.inc.php';
 					 ?>
 
 				<form method="post" action="post_cadastro_animais.php">
