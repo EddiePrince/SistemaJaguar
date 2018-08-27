@@ -79,7 +79,7 @@ CREATE TABLE `areas` (
 -- Estrutura da tabela `cnpjs`
 --
 
-CREATE TABLE `cnpjs` (
+CREATE TABLE `cnpj` (
   `idCnpj` int(11) NOT NULL,
   `cnpj` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -90,7 +90,7 @@ CREATE TABLE `cnpjs` (
 -- Estrutura da tabela `cpfs`
 --
 
-CREATE TABLE `cpfs` (
+CREATE TABLE `cpf` (
   `idCpf` int(11) NOT NULL,
   `cpf` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -246,8 +246,8 @@ CREATE TABLE `usuarios` (
   `senha` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('1', NULL, NULL, '2444', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin');
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('2', NULL, NULL, '333311', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('1', NULL, NULL, 'admin', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin');
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('2', NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
 
 --
 -- Indexes for dumped tables
@@ -281,13 +281,13 @@ ALTER TABLE `areas`
 --
 -- Indexes for table `cnpjs`
 --
-ALTER TABLE `cnpjs`
+ALTER TABLE `cnpj`
   ADD PRIMARY KEY (`idCnpj`);
 
 --
 -- Indexes for table `cpfs`
 --
-ALTER TABLE `cpfs`
+ALTER TABLE `cpf`
   ADD PRIMARY KEY (`idCpf`);
 
 --
@@ -383,13 +383,13 @@ ALTER TABLE `areas`
 --
 -- AUTO_INCREMENT for table `cnpjs`
 --
-ALTER TABLE `cnpjs`
+ALTER TABLE `cnpj`
   MODIFY `idCnpj` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cpfs`
 --
-ALTER TABLE `cpfs`
+ALTER TABLE `cpf`
   MODIFY `idCpf` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -480,16 +480,16 @@ ALTER TABLE `entregadores`
   ADD CONSTRAINT `entregadores_ibfk_1` FOREIGN KEY (`idAnexo`) REFERENCES `anexos` (`idAnexo`),
   ADD CONSTRAINT `entregadores_ibfk_2` FOREIGN KEY (`idEndereco`) REFERENCES `enderecos` (`idEndereco`),
   ADD CONSTRAINT `entregadores_ibfk_3` FOREIGN KEY (`idTelefone`) REFERENCES `telefones` (`idTelefone`),
-  ADD CONSTRAINT `entregadores_ibfk_4` FOREIGN KEY (`idCpf`) REFERENCES `cpfs` (`idCpf`),
-  ADD CONSTRAINT `entregadores_ibfk_5` FOREIGN KEY (`idCnpj`) REFERENCES `cnpjs` (`idCnpj`);
+  ADD CONSTRAINT `entregadores_ibfk_4` FOREIGN KEY (`idCpf`) REFERENCES `cpf` (`idCpf`),
+  ADD CONSTRAINT `entregadores_ibfk_5` FOREIGN KEY (`idCnpj`) REFERENCES `cnpj` (`idCnpj`);
 
 --
 -- Limitadores para a tabela `proprietarios`
 --
 ALTER TABLE `proprietarios`
   ADD CONSTRAINT `proprietarios_ibfk_1` FOREIGN KEY (`idTelefone`) REFERENCES `telefones` (`idTelefone`),
-  ADD CONSTRAINT `proprietarios_ibfk_2` FOREIGN KEY (`idCpf`) REFERENCES `cpfs` (`idCpf`),
-  ADD CONSTRAINT `proprietarios_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpjs` (`idCnpj`);
+  ADD CONSTRAINT `proprietarios_ibfk_2` FOREIGN KEY (`idCpf`) REFERENCES `cpf` (`idCpf`),
+  ADD CONSTRAINT `proprietarios_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpj` (`idCnpj`);
 
 --
 -- Limitadores para a tabela `unidades`
@@ -497,7 +497,7 @@ ALTER TABLE `proprietarios`
 ALTER TABLE `unidades`
   ADD CONSTRAINT `unidades_ibfk_1` FOREIGN KEY (`idEndereco`) REFERENCES `enderecos` (`idEndereco`),
   ADD CONSTRAINT `unidades_ibfk_2` FOREIGN KEY (`idTelefone`) REFERENCES `telefones` (`idTelefone`),
-  ADD CONSTRAINT `unidades_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpjs` (`idCnpj`);
+  ADD CONSTRAINT `unidades_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpj` (`idCnpj`);
 
 --
 -- Limitadores para a tabela `usuarios`
