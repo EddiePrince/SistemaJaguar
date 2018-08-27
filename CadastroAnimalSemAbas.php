@@ -1,8 +1,10 @@
 	<?php
 	//Erro de Validação W3C Identificado
-	include 'post_cadastro_animais.php';
-	// include 'verificausuario.inc.php';
-?>
+	  //Conecção com Banco
+	  include 'conexao.inc.php';
+	  include 'verificausuario.inc.php';
+	  include 'blockAcesso.inc.php';
+	?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

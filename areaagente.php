@@ -20,7 +20,8 @@
     <div id="pageAgente">
       <div class="container-fluid">
         <div class="logo_admin">
-            <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a>
+            <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a> <a href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">
+  Logout<i class="fa fa-sign-out fa-lg"></i><img src="img/logout.png" alt="Logout"></a>
         </div>
         <div class="corpoAdm">
           <!-- Menu -->
@@ -28,7 +29,6 @@
           <?php include 'exibirMenu.inc.php'; ?>
           <!-- Fim Menu -->
         <div class="container">
-
 
 
           <br><h1>Bem Vindo <?php echo $nome?></h1>

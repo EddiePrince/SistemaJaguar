@@ -395,23 +395,6 @@ label[for="bt_menu"] {
     color: #FFF;
 }
 
-#pageAjudaAgente{
-  background-image: url("img/20.jpg");
-  background-color: white;
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-	bottom: 0;
-  font-size: 15px;
-	color: white;
-	left: 0;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
 #pageAdm{
   background-image: url("img/7.jpg");
   background-color: white;
@@ -431,23 +414,6 @@ label[for="bt_menu"] {
 
 #pageAgente{
   background-image: url("img/19.jpg");
-  background-color: white;
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-	bottom: 0;
-  font-size: 15px;
-	color: white;
-	left: 0;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-#pageListaAgente{
-  background-image: url("img/36.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -525,42 +491,8 @@ label[for="bt_menu"] {
 	top: 0;
 }
 
-#pageAnimalAgente {
-  background-image: url("img/16.jpg");
-  background-color: white;
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-	bottom: 0;
-  font-size: 15px;
-	color: white;
-	left: 0;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
 #pageListaAnimais {
   background-image: url("img/28.jpg");
-  background-color: white;
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-	bottom: 0;
-  font-size: 15px;
-	color: white;
-	left: 0;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-#pageListaAnimalAgente {
-  background-image: url("img/12.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
