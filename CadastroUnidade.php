@@ -162,7 +162,6 @@
         	  include 'verificarUnidades.inc.php';
         ?>
       </div>
-		</div>
 
 
 </body>

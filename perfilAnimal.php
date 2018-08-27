@@ -17,7 +17,6 @@
 
 	<body>
     <div id="pagePerfilAnimal">
-			<div class="container-fluid">
 				<div class="logo_admin">
 					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
@@ -81,7 +80,7 @@
 			</div>
 
 		</div>
-  </div>
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
