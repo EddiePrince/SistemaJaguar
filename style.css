@@ -727,7 +727,24 @@ input[type="text1"]{
 }
 
 /*Alerta para unidades não cadastradas*/
+
 #alerta{
+	position: absolute;
+	color: black;
+	top: 0;
+	opacity: 0;
+	left: 50%;
+	background-color: white;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	display: none;
+	transition: top 1s, opacity 1s;
+
+}
+
+#boxtop{
+	height: 20px;
+	background-color: red;
 	display: none;
 }
 

@@ -33,8 +33,9 @@
          </div>
             
               <div id="alerta">
-                Não há nenhuma unidade cadastrada. Por favor, cadastre  alguma unidade.
-              <button id="botao" onclick="redirecionar();">Cadastrar</button>  
+                <div id="boxtop"></div>
+                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+              <button id="botao" onclick="apagar();">OK</button>  
               </div>
             
           </div>

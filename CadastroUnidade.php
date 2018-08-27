@@ -2,6 +2,7 @@
   //Conexão com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="br-pt">
@@ -15,6 +16,7 @@
 </head>
 
 <body class="bg-light">
+
 	<div id="pageUnidadee">
 
 			<div class="logo_admin">
@@ -31,10 +33,12 @@
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
 
           <div class="container">
-      			<h3>Cadastro de Unidades</h3><br>
-        			<div class="row">
+          	  
+
+      		<h3>Cadastro de Unidades</h3><br>
+        		<div class="row">
           			<div class="col-md-5 mb-3">
-	                <label>Nome Da Unidade:</label>
+	               	<label>Nome Da Unidade:</label>
                   <input type="text" name="nomeUnidade" class="form-control" required>
             		</div>
 
@@ -147,10 +151,19 @@
 				</form>
 			</div>
       </div>
+
+      <div id="alerta">
+                <div id="boxtop"></div>
+                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+              	<button id="botao" onclick="apagar();">OK</button>  
+              </div>
       <div class="footer">
-        <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; 
+        	  include 'verificarUnidades.inc.php';
+        ?>
       </div>
 		</div>
+
 
 </body>
 
