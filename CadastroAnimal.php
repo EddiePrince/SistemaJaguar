@@ -1,8 +1,9 @@
-	<?php
+<?php
 	//Erro de Validação W3C Identificado
 	  //Conecção com Banco
 	  include 'conexao.inc.php';
 	  include 'verificausuario.inc.php';
+	  include 'post_cadastro_animais.php';
 	  include 'blockAcesso.inc.php';
 	?>
 <!DOCTYPE html>
@@ -37,7 +38,7 @@
 											<div class="col-md-2 mb-3">
 												<p>Número da Ficha:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico ?>">
+												<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico?>">
 											</div>
 											<div class="col-md-2 mb-3">
 												<p>Data:</p>
@@ -71,123 +72,13 @@
 												<p>Nome Entregador:</p>
 												<p><input class="form-control" type="text" name="nomeEntregador"></p>
 											</div>
-											<div class="col-md-3 mb-3">
-												<p>CPF/CNPJ:</p>
-												<p><input class="form-control" type="text" name="cpfEntregador"></p>
-											</div>
+											
 										</div>
 									</div>
 
-									<div class="container">
-										<div class="row">
-											<div class="col-md-3 mb-6">
-												<p>Telefone:</p>
-												<p><input class="form-control" type="text" name="telefoneEntregador"></p>
-											</div>
-											<div class="col-md-3 mb-6">
-												<label>UF:</label>
-			        						<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
-											</div>
-											<div class="col-md-3 mb-6">
-												<p>Municipio:</p>
-												<select class="form-control" name="municipio">
-													<option value="municipio Nao Selecionado">Selecione o Municipio</option>
-													<option value="Aguiarnópolis">Aguiarnópolis</option>
-													<option value="Almas">Almas</option>
-													<option value="Ananás">Ananás</option>
-													<option value="Araguacema">Araguacema</option>
-													<option value="Araguaína">Araguaína</option>
-													<option value="Araguanã">Araguanã</option>
-													<option value="Araguatins">Araguatins</option>
-													<option value="Arraias">Arraias</option>
-													<option value="Augustinópolis">Augustinópolis</option>
-													<option value="Aurora do Tocantins">Aurora do Tocantins</option>
-													<option value="Babaçulândia">Babaçulândia</option>
-													<option value="Brejinho de Nazaré">Brejinho de Nazaré</option>
-													<option value="Caseara">Caseara</option>
-													<option value="Darcinópolis">Darcinópolis</option>
-													<option value="Dianópolis">Dianópolis</option>
-													<option value="Esperantina">Esperantina</option>
-													<option value="Filadélfia">Filadélfia</option>
-													<option value="Formoso do Araguaia">Formoso do Araguaia</option>
-													<option value="Gurupi">Gurupi</option>
-													<option value="Ipueiras">Ipueiras</option>
-													<option value="Itaguatins">Itaguatins</option>
-													<option value="Lagoa da Confusão">Lagoa da Confusão</option>
-													<option value="Lajeado">Lajeado</option>
-													<option value="Mateiros">Mateiros</option>
-													<option value="Monte do Carmo">Monte do Carmo</option>
-													<option value="Natividade">Natividade</option>
-													<option value="Novo Acordo">Novo Acordo</option>
-													<option value="Palmas">Palmas</option>
-													<option value="Paraíso do Tocantins">Paraíso do Tocantins</option>
-													<option value="Paranã">Paranã</option>
-													<option value="Pau d'Arco">Pau d'Arco</option>
-													<option value="Peixe">Peixe</option>
-													<option value="Pium">Pium</option>
-													<option value="Ponte Alta do Tocantins">Ponte Alta do Tocantins</option>
-													<option value="Porto Nacional">Porto Nacional</option>
-													<option value="Praia Norte">Praia Norte</option>
-													<option value="Rio da Conceição">Rio da Conceição</option>
-													<option value="Sampaio">Sampaio</option>
-													<option value="São Bento do Tocantins">São Bento do Tocantins</option>
-													<option value="São Félix do Tocantins">São Félix do Tocantins</option>
-													<option value="São Sebastião do Tocantins">São Sebastião do Tocantins</option>
-													<option value="Taguatinga">Taguatinga</option>
-													<option value="Tocantinópolis">Tocantinópolis</option>
-													<option value="Wanderlândia">Wanderlândia</option>
-													<option value="Xambioá">Xambioá</option>
-												</select><br>
-											</div>
-											<div class="col-md-3 mb-6">
-												<p>CEP:</p>
-												<p><input class="form-control" type="text" name="cep"></p>
-											</div>
-										</div>
-									</div>
-
-									<div class="container">
-										<div class="row">
-											<div class="col-md-3 mb-3">
-													<p>Bairro:</p>
-													<p><input class="form-control" type="text" name="bairro"></p>
-											</div>
-											<div class="col-md-2 mb-3">
-													<p>Lote:</p>
-													<p><input class="form-control" type="text" name="lote"></p>
-											</div>
-											<div class="col-md-7 mb-3">
-													<p>Complemento:</p>
-													<p><input class="form-control" type="text" name="complemento"></p>
-											</div>
-										</div>
-									<!-- </div> -->
 
 
-										<div class="row">
-											<div class="col-md-3 mb-3">
-												<p>Tipo de Documento:</p>
-												<select class="form-control" name="tipoDocumento" size=1>
-													<option  value="Numero do Documento Nao Selecionado">Selecione</option>
-													<option>Auto de Infração</option>
-													<option>Termo de Apreensão/Depósito</option>
-													<option>Boletim de Ocorrência</option>
-												</select><br><br>
-											</div>
-
-											<div class="col-md-2 mb-3">
-												<p>N Documento:</p>
-												<p><input class="form-control" type="text" name="nDocumento"></p>
-											</div>
-											<div class="col-md-7 mb-3">
-												<p>Upload do Documento:</p>
-												<input class="form-control" type="file" name="uploadDocumento">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
+									
 								<!-- Dados da Unidade Acolhedora -->
 
 								<div class="form_div"><br>
@@ -199,70 +90,17 @@
 													<select class="form-control" name="nomeUnidade" size=1>
 													<?php include 'selectUnidades.inc.php'; ?>
 													</select><br><br>
+													<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
+
 												</div>
 											</div>
 										</div>
+
 								</div>
 								<hr>
+
 							</div>
 
-								<!-- Dados do Animal  -->
-
-									<div class="form_div"><br>
-										<div class="container">
-										<h4> Dados do Animal</h4>
-											<div class="row">
-		          					<div class="col-md-3 mb-3">
-													<p>Local de última procedência:</p>
-													<p><input class="form-control" type="text" name="procedencia"></p>
-												</div>
-												<div class="col-md-3 mb-3">
-													<p>Dieta:</p>
-													<p><input class="form-control" type="text" name="dieta"></p>
-												</div>
-
-												<div class="col-md-3 mb-3">
-													<p>Nome comum:</p>
-													<p><input class="form-control" type="text" name="nomeComum"></p>
-												</div>
-												<div class="col-md-3 mb-3">
-													<p>Nome científico:</p>
-													<p><input class="form-control" type="text" name="nomeCientifico"></p>
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="col-md-3 mb-3">
-													<p>Família:</p>
-													<p><input class="form-control" type="text" name="familia"></p>
-												</div>
-
-												<div class="col-md-3 mb-3">
-													<p>Ordem:</p>
-													<p><input class="form-control" type="text" name="ordem"></p>
-												</div>
-
-												<div class="col-md-2 mb-3">
-													<p>Cód. marcação:</p>
-													<p><input class="form-control" type="text" name="codMarcacao"></p>
-												</div>
-
-												<div class="col-md-2 mb-3">
-													<p>Tipo de marcação:</p>
-													<p><input class="form-control" type="text" name="tipoMarcacao"></p>
-												</div>
-												<div class="col-md-2 mb-3">
-													<p>Local da marcação:</p>
-													<p><input class="form-control" type="text" name="localMarcacao"></p>
-												</div>
-											</div>
-											<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</form>
 
 			 <!-- Erro de Validação W3C Identificado -->
