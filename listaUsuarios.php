@@ -18,7 +18,6 @@
 
   <body>
   	<div id="pageListaUsuario">
-  		<div class="container-fluid">
   			<div class="logo_admin">
   			 <img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
   			</div>
@@ -51,7 +50,6 @@
     <div class="footer">
       <?php include 'footer.php'; ?>
     </div>
-  </div>
   </div>
   </div>
 

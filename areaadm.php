@@ -18,7 +18,6 @@
 
 	<body>
       <div id="pageAdm">
-        <div class="container-fluid">
 
       <div class="logo_admin">
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
@@ -43,7 +42,6 @@
          <div class="footer">
            <?php include 'footer.php'; ?>
          </div>
-    	</div>
     	</div>
   <?php include 'verificarUnidades.inc.php'; ?>
 

@@ -18,7 +18,6 @@
 
 	<body>
     <div id="pageAdm">
-      <div class="container-fluid">
         <!-- <div id="header">
           <div class="container">
             <div class="row">
@@ -95,7 +94,6 @@
          <?php include 'footer.php'; ?>
       </div>
   	</div>
-  </div>
 
 
 	</body>

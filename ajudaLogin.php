@@ -9,7 +9,6 @@
 	</head>
 	<body>
 		<div id="ajudaLogin">
-      <div class="container-fluid">
 		    <div class="logo_admin">
 		       <img src="img/logo.png" alt="Logo">
 		    </div>
@@ -114,7 +113,6 @@
 							<div class="footer">
 								<?php include 'footer.php'; ?>
 							</div>
-						</div>
 						</div>
 
 

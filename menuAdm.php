@@ -8,10 +8,6 @@
 	<ul>
 		<li>
 			<li><a href="areaAdm.php">Home</a>
-			<ul>
-				<li><a href="ajuda.php">Ajuda</a></li>
-				<li><a href="logout.php">Logout </a></li>
-			</ul>
 		</li>
 		<li><a href="#">Usuários</a>
 			<ul>
@@ -31,6 +27,7 @@
 				<li><a href="CadastroUnidade.php">Cadastrar</a></li>
 			</ul>
 			<li><a href="consultas.php">Consultas </a></li>
+			<li><a href="ajuda.php">Ajuda</a></li>
 		</li>
 	</ul>
 </nav>

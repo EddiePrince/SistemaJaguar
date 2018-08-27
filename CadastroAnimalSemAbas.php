@@ -19,7 +19,6 @@
 	<body>
 		<div id="pageAnimall">
 			<div class="corpoAdmm" id="corpoAdm">
-			<div class="container-fluid"> -->
 				 <div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
@@ -265,7 +264,6 @@
 						</div>
 					</div>
 				</form>
-				</div>
 
 			 <!-- Erro de Validação W3C Identificado -->
 			 <div class="footer">
