@@ -18,7 +18,7 @@
 		<li><a href="">Animais</a>
 			<ul>
 				<li><a href="listaAnimais.php">Visualizar</a></li>
-				<li><a href="CadastroAnimalSemAbas.php">Cadastrar</a></li>
+				<li><a href="CadastroAnimal.php">Cadastrar</a></li>
 			</ul>
 		</li>
 		<li><a href="">Unidades</a>

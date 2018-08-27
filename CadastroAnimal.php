@@ -1,9 +1,10 @@
-<?php
+	<?php
 	//Erro de Validação W3C Identificado
-	include 'post_cadastro_animais.php';
-	include 'verificausuario.inc.php';
-	include 'blockAcesso.inc.php';
-?>
+	  //Conecção com Banco
+	  include 'conexao.inc.php';
+	  include 'verificausuario.inc.php';
+	  include 'blockAcesso.inc.php';
+	?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,41 +17,22 @@
 	</head>
 
 	<body>
-		<div id="pageAnimal">
-				<div class="logo_admin">
+		<div id="pageAnimall">
+			<div class="corpoAdmm" id="corpoAdm">
+				 <div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
 
-
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
+          <?php
+					include 'exibirMenu.inc.php';
+					 ?>
 
-
-					<div class="corpoAdm" id="corpoAdm">
 				<form method="post" action="post_cadastro_animais.php">
-					<div class="container theme-showcase" role="main">
-
+					<div class="container">
 						<br><br><h3>Cadastro de Animais</h3><br><br>
-						<div>
-							<!-- Abas de Navegação -->
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Dados da Ficha</a></li>
-								<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Dados do Entregador/Autuado</a></li>
-								<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Seleção da Unidade</a></li>
-								<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Dados do Animal</a></li>
-							</ul>
-
-							<!-- Conteúdo refente a cada aba de Navegação -->
-							<div class="tab-content" role="tablist">
-
-							<!-- Dados da Ficha -->
-							<div role="tabpanel" class="tab-pane active" id="home">
-								<div class="form_div">
-									<br>
 									<h4>Dados  da Ficha e do Animal</h4>
-									<br>
-									<div class="container">
 										<div class="row">
 											<div class="col-md-2 mb-3">
 												<p>Número da Ficha:</p>
@@ -62,27 +44,22 @@
 												<!-- Erro de Validação W3C Identificado -->
 												<input class="form-control" type="date" name="dataRecebimento">
 											</div>
-											<div class="col-md-5 mb-3">
+											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
 												<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
 											</div>
 										</div>
 									</div>
-									<hr>
 								</div>
 							</div>
 
 								<!-- Dados do Entregador/Autuado  -->
 
-							<div role="tabpanel" class="tab-pane" id="profile">
-								<div class="form_div">
-									<br>
-									<h4>Dados do Entregador</h4>
-									<br>
-
+								<div class="form_div"><br>
 									<div class="container">
+									<h4>Dados do Entregador</h4>
 										<div class="row">
-											<div class="col-md-3 mb-3">
+											<div class="col-md-2 mb-3">
 												<p>Tipo de Recolhimento:</p>
 												<select class="form-control" name="tipoEntrega" size=1>
 												<option>Apreensão</option>
@@ -90,34 +67,28 @@
 												<option>Entrega Voluntária</option>
 												</select><br><br>
 											</div>
-											<div class="col-md-5 mb-3">
+											<div class="col-md-7 mb-3">
 												<p>Nome Entregador:</p>
 												<p><input class="form-control" type="text" name="nomeEntregador"></p>
 											</div>
-										</div>
-									</div>
-
-									<div class="container">
-										<div class="row">
 											<div class="col-md-3 mb-3">
 												<p>CPF/CNPJ:</p>
 												<p><input class="form-control" type="text" name="cpfEntregador"></p>
 											</div>
-											<div class="col-md-3 mb-3">
-												<p>Telefone:</p>
-												<p><input class="form-control" type="text" name="telefoneEntregador"></p>
-											</div>
 										</div>
 									</div>
 
 									<div class="container">
 										<div class="row">
-											<div class="col-md-2 mb-3">
-												<label>UF:</label>
-			        							<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
+											<div class="col-md-3 mb-6">
+												<p>Telefone:</p>
+												<p><input class="form-control" type="text" name="telefoneEntregador"></p>
 											</div>
-
-											<div class="col-md-2 mb-3">
+											<div class="col-md-3 mb-6">
+												<label>UF:</label>
+			        						<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
+											</div>
+											<div class="col-md-3 mb-6">
 												<p>Municipio:</p>
 												<select class="form-control" name="municipio">
 													<option value="municipio Nao Selecionado">Selecione o Municipio</option>
@@ -168,16 +139,16 @@
 													<option value="Xambioá">Xambioá</option>
 												</select><br>
 											</div>
+											<div class="col-md-3 mb-6">
+												<p>CEP:</p>
+												<p><input class="form-control" type="text" name="cep"></p>
+											</div>
 										</div>
 									</div>
 
 									<div class="container">
 										<div class="row">
-											<div class="col-md-2 mb-3">
-													<p>CEP:</p>
-													<p><input class="form-control" type="text" name="cep"></p>
-											</div>
-											<div class="col-md-2 mb-3">
+											<div class="col-md-3 mb-3">
 													<p>Bairro:</p>
 													<p><input class="form-control" type="text" name="bairro"></p>
 											</div>
@@ -185,11 +156,14 @@
 													<p>Lote:</p>
 													<p><input class="form-control" type="text" name="lote"></p>
 											</div>
-											<div class="col-md-2 mb-3">
+											<div class="col-md-7 mb-3">
 													<p>Complemento:</p>
 													<p><input class="form-control" type="text" name="complemento"></p>
 											</div>
 										</div>
+									<!-- </div> -->
+
+
 										<div class="row">
 											<div class="col-md-3 mb-3">
 												<p>Tipo de Documento:</p>
@@ -200,33 +174,25 @@
 													<option>Boletim de Ocorrência</option>
 												</select><br><br>
 											</div>
-										</div>
-									</div>
 
-									<div class="container">
-										<div class="row">
-											<div class="col-md-4 mb-3">
-												<p>Número do Documento:</p>
+											<div class="col-md-2 mb-3">
+												<p>N Documento:</p>
 												<p><input class="form-control" type="text" name="nDocumento"></p>
 											</div>
-											<div class="col-md-2 mb-3">
+											<div class="col-md-7 mb-3">
 												<p>Upload do Documento:</p>
-												<input class="form-control" type="file" name="uploadDocumento"><br>
+												<input class="form-control" type="file" name="uploadDocumento">
 											</div>
 										</div>
 									</div>
 								</div>
-								<hr>
 							</div>
 
 								<!-- Dados da Unidade Acolhedora -->
 
-							<div role="tabpanel" class="tab-pane" id="messages">
-								<div class="form_div">
-									<br>
+								<div class="form_div"><br>
+									<div class="container">
 										<h4> Dados da Unidade Acolhedora</h4>
-									<br>
-										<div class="container">
 											<div class="row">
 			          							<div class="col-md-4 mb-3">
 													<p>Selecione a Unidade:</p>
@@ -242,29 +208,24 @@
 
 								<!-- Dados do Animal  -->
 
-								<div role="tabpanel" class="tab-pane" id="settings">
-									<div class="form_div">
-										<br>
-										<h4> Dados do Animal</h4>
-										<br>
+									<div class="form_div"><br>
 										<div class="container">
+										<h4> Dados do Animal</h4>
 											<div class="row">
-		          								<div class="col-md-4 mb-3">
+		          					<div class="col-md-3 mb-3">
 													<p>Local de última procedência:</p>
 													<p><input class="form-control" type="text" name="procedencia"></p>
 												</div>
-												<div class="col-md-4 mb-3">
+												<div class="col-md-3 mb-3">
 													<p>Dieta:</p>
 													<p><input class="form-control" type="text" name="dieta"></p>
 												</div>
-											</div>
 
-											<div class="row">
-												<div class="col-md-5 mb-3">
+												<div class="col-md-3 mb-3">
 													<p>Nome comum:</p>
 													<p><input class="form-control" type="text" name="nomeComum"></p>
 												</div>
-												<div class="col-md-5 mb-3">
+												<div class="col-md-3 mb-3">
 													<p>Nome científico:</p>
 													<p><input class="form-control" type="text" name="nomeCientifico"></p>
 												</div>
@@ -281,36 +242,34 @@
 													<p><input class="form-control" type="text" name="ordem"></p>
 												</div>
 
-												<div class="col-md-3 mb-3">
-													<p>Código de marcação:</p>
+												<div class="col-md-2 mb-3">
+													<p>Cód. marcação:</p>
 													<p><input class="form-control" type="text" name="codMarcacao"></p>
 												</div>
 
-												<div class="col-md-5 mb-3">
+												<div class="col-md-2 mb-3">
 													<p>Tipo de marcação:</p>
 													<p><input class="form-control" type="text" name="tipoMarcacao"></p>
 												</div>
-												<div class="col-md-5 mb-3">
+												<div class="col-md-2 mb-3">
 													<p>Local da marcação:</p>
 													<p><input class="form-control" type="text" name="localMarcacao"></p>
 												</div>
 											</div>
+											<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
 										</div>
 									</div>
-									<hr>
-									<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
 								</div>
 							</div>
 						</div>
 					</div>
 				</form>
-				</div>
 
 			 <!-- Erro de Validação W3C Identificado -->
 			 <div class="footer">
 				 <?php include 'footer.php'; ?>
 			 </div>
-			</div>
+
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
