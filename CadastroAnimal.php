@@ -21,14 +21,12 @@
 		<div id="pageAnimall">
 			<div class="corpoAdmm" id="corpoAdm">
 				 <div class="logo_admin">
-					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
+					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right"> Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
 
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
-          <?php
-					include 'exibirMenu.inc.php';
-					 ?>
+          <?php include 'exibirMenu.inc.php'; ?>
 
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container">
@@ -43,7 +41,7 @@
 											<div class="col-md-2 mb-3">
 												<p>Data:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input class="form-control" type="date" name="dataRecebimento">
+												<input id="inputdata" class="form-control"  name="dataRecebimento" disabled value="<?php echo $data?>">
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
@@ -111,6 +109,7 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/main.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 

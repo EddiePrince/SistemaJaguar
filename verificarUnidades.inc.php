@@ -8,7 +8,7 @@
    $sql = "SELECT * FROM unidades";
    $result = $conexao->query($sql);
    if ($result->num_rows == 0) {
-     echo "<script src='js/main.js'></script>";
+     echo "<script src='js/alert.js'></script>";
    } 
   } 
 

@@ -1,6 +1,9 @@
 <?php
 //Conexão com Banco
   include 'conexao.inc.php';
+  include 'validarlogin.inc.php'; //É onde o id do usuário é salvo na sessão
+  
+  $idUsuario = $_SESSION['idUsuario'];
 
 //Pegar id do animal
 
@@ -11,40 +14,19 @@
 	{
 		$idAutomatico = $row[0]+1;
 	}
+//Pegar data
+	$data = date("d/m/y");
 
 
 	if (isset($_POST['submit'])) {
 
 
-		$dataRecebimento = $_POST['dataRecebimento'];
 		$agenteRecebedor = $_POST['nomeAgente'];
 		$tipoRecolhimento = $_POST['tipoEntrega'];
 		$nomeEntregador = $_POST['nomeEntregador'];
-		$cpfcnpj = $_POST['cpfEntregador'];
-		$telefone = $_POST['telefoneEntregador'];
-		$uf = $_POST['uf'];
-		$municipio = $_POST['municipio'];
-		$cep = $_POST['cep'];
-		$bairro = $_POST['bairro'];
-		$lote = $_POST['lote'];
-		$complemento = $_POST['complemento'];
-		$tipoDocumento = $_POST['tipoDocumento'];
-		$nDocumento = $_POST['nDocumento'];
-		$arquivo = $_POST['uploadDocumento'];
 		$unidade = $_POST['nomeUnidade'];
-		$procedencia = $_POST['procedencia'];
-		$dieta = $_POST['dieta'];
-		$nomeComum = $_POST['nomeComum'];
-		$nomeCientifico = $_POST['nomeCientifico'];
-		$familia = $_POST['familia'];
-		$ordem = $_POST['ordem'];
-		$codMarca = $_POST['codMarcacao'];
-		$tipoMarca = $_POST['tipoMarcacao'];
-		$localMarca = $_POST['localMarcacao'];
-
-
-
-		$sql1 = "INSERT INTO animais (idAnimal, data, nomeAgente) VALUES ('$idAutomatico','$dataRecebimento' , '$agenteRecebedor')";
+		
+		$sql1 = "INSERT INTO animais (idAnimal, data, agente) VALUES ('$idAutomatico','$data' , '$agenteRecebedor')";
 
 		$sql2 = "INSERT INTO entregadores(nome, cpfcnpj, telefone, tipoEntrega) VALUES ('$nomeEntregador', '$cpfcnpj', '$telefone', '$tipoRecolhimento')";
 
