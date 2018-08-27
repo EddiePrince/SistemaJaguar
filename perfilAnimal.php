@@ -1,6 +1,6 @@
 <?php
 	//Erro de Validação W3C Identificado
-  //Conexão com Banco	
+  //Conexão com Banco
 	include 'post_cadastro_animais.php';
 	include 'verificausuario.inc.php';
 ?>
@@ -19,7 +19,7 @@
     <div id="pagePerfilAnimal">
 			<div class="container-fluid">
 				<div class="logo_admin">
-					<img src="img/logo.png" alt="Logo">
+					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
 
 				<div class="corpoAdm">

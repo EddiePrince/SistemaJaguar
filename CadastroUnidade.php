@@ -20,7 +20,7 @@
 	<div id="pageUnidadee">
 
 			<div class="logo_admin">
-				<img src="img/logo.png" alt="Logo">
+				<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 			</div>
 
 			<div id="corpoAdm" class="corpoAdm" >
@@ -33,7 +33,7 @@
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
 
           <div class="container">
-          	  
+
 
       		<h3>Cadastro de Unidades</h3><br>
         		<div class="row">
@@ -155,10 +155,10 @@
       <div id="alerta">
                 <div id="boxtop"></div>
                 Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-              	<button id="botao" onclick="apagar();">OK</button>  
+              	<button id="botao" onclick="apagar();">OK</button>
               </div>
       <div class="footer">
-        <?php include 'footer.php'; 
+        <?php include 'footer.php';
         	  include 'verificarUnidades.inc.php';
         ?>
       </div>

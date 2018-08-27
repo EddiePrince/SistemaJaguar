@@ -1,6 +1,6 @@
 <?php
 	//Erro de Validação W3C Identificado
-  //Conexão com Banco	
+  //Conexão com Banco
 	include 'verificausuario.inc.php';
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
     <div id="pagePerfilAnimal">
 			<div class="container-fluid">
 				<div class="logo_admin">
-					<img src="img/logo.png" alt="Logo">
+					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
 
 				<div class="corpoAdm">
@@ -46,7 +46,7 @@
       			<th>Complemento</th>
       		</tr>
 					<!-- Erro de Validação W3C Identificado -->
-          
+
           <?php include 'perfilUnidade.inc.php'; ?>
       	</table>
       </div>

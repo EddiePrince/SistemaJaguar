@@ -21,7 +21,7 @@
         <div class="container-fluid">
 
       <div class="logo_admin">
-        <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>
+        <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
       </div>
       <div class="corpoAdm">
         <!-- Menu -->
@@ -31,13 +31,13 @@
         <div class="container">
           <h4>Bem vindo <?php echo $nome?>!</h4>
          </div>
-            
+
               <div id="alerta">
                 <div id="boxtop"></div>
                 Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-              <button id="botao" onclick="apagar();">OK</button>  
+              <button id="botao" onclick="apagar();">OK</button>
               </div>
-            
+
           </div>
           <!-- Erro de Validação W3C Identificado -->
          <div class="footer">
