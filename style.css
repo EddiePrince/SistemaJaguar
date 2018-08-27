@@ -53,8 +53,10 @@ body {
 .contact-form p {
 	margin: 0;
 	padding: 0;
+	font-family: "lovelyFont";
+	src: url('bahnschrift.ttf')
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
 	color: #fff;
 }
 
@@ -82,16 +84,23 @@ body {
 
 .contact-form input[type="submit"] {
 	height: 40px;
-	color: red;
+	width: 80px;
+	color: green;
 	font-size: 25px;
-	font-family: Times;
+	font-family: "lovelyFont";
+	src: url('bahnschrift.ttf')
 	font-weight: bold;
-	background: #dce2e2;
+	background: #151515;
 	cursor: pointer;
 	border-radius: 8px;
 	border: none;
 	outline: none;
 	margin-top: 5%;
+}
+
+.contact-form input[type="submit"]:hover{
+	color: #fff;
+	background: green;
 }
 
 .contact-form a {
