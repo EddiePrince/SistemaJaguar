@@ -31,11 +31,9 @@
         <div class="container">
           <h4>Bem vindo <?php echo $nome?>!</h4>
          </div>
-
-        
             
               <div id="alerta">
-                Não há nenhuma unidade cadastrada. Por favor realize o cadastro.
+                Não há nenhuma unidade cadastrada. Por favor, cadastre  alguma unidade.
               <button id="botao" onclick="redirecionar();">Cadastrar</button>  
               </div>
             

@@ -2,6 +2,7 @@
   //Conecção com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
+  include 'blockAcesso.inc.php';
 ?>
 
 <!DOCTYPE html>
