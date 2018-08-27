@@ -15,8 +15,7 @@
 </head>
 
 <body class="bg-light">
-	<div id="pageUnidade">
-		<div class="container-fluid">
+	<div id="pageUnidadee">
 
 			<div class="logo_admin">
 				<img src="img/logo.png" alt="Logo">
@@ -31,51 +30,41 @@
 
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
 
-          			<h3>Cadastro de Unidades</h3><br>
+          <div class="container">
+      			<h3>Cadastro de Unidades</h3><br>
+        			<div class="row">
+          			<div class="col-md-5 mb-3">
+	                <label>Nome Da Unidade:</label>
+                  <input type="text" name="nomeUnidade" class="form-control" required>
+            		</div>
+
+            		<div class="col-md-3 mb-3">
+				          <p>Tipo da Unidade:</p>
+			             <select required class="form-control" name="tipoUnidade" >
+            					<option value="">Selecione</option>
+            					<option value="Central">Central</option>
+  	         		 			<option value="Regional">Regional</option>
+		        			</select>
+	        		</div>
+              <div class="col-md-4 mb-3">
+                <p>CNPJ:</p>
+                <input type="text" name="cnpj" class="form-control">
+              </div>
+      			</div>
+      		</div>
 
 	          		<div class="container">
 	          			<div class="row">
-
-		          			<div class="col-xs-5 mb-3">
-				                <label>Nome Da Unidade:</label><span class="panum">*</span>
-				                <input type="text" name="nomeUnidade" class="form-control" required>
-		              		</div>
-
-		              		<div class="col-md-7 mb-3">
-								<label>Tipo da Unidade:</label><span class="pandois">*</span>
-								<select required class="form-control" name="tipoUnidade" >
-			          					<option value=""></option>
-			          					<option value="Central">Central</option>
-			         		 			<option value="Regional">Regional</option>
-			        			</select>
-			        		</div>
-	          			</div>
-	          		</div>
-
-	          		<div class="container">
-	          			<div class="row">
-		              		<div class="col-md-3 mb-3">
-				                <label>CNPJ:</label><span class="pantres">*</span>
-				                <input type="text" name="cnpj" class="form-control">
-		              		</div>
-
-		              		<div class="col-md-3 mb-3">
-				                <label >Telefone:</label>
-				                <input type="text" name="telefone" class="form-control" >
-		              		</div>
-		              	</div>
-		            </div>
-
-
-		            <div class="container">
-	          			<div class="row">
-                      		<div class="col-md-3 mb-3">
-								<label>UF:</label>
-			        			<input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
-							</div>
-
-	        				<div class="col-md-15 mb-3">
-								<label>Municipio:</label>
+                    <div class="col-md-3 mb-3">
+                     <label >Telefone:</label>
+                      <input type="text" name="telefone" class="form-control" >
+                    </div>
+                    <div class="col-md-3 mb-3">
+								     <label>UF:</label>
+			        			 <input class="form-control" type="text" name="uf" value="Tocantins" disabled="true">
+							      </div>
+	        				  <div class="col-md-3 mb-3">
+								     <label>Municipio:</label>
 									<select required class="form-control" name="municipio" >
 										<option value="">Selecione o município</option>
 										<option value="Aguiarnópolis">Aguiarnópolis</option>
@@ -124,39 +113,34 @@
 										<option value="Wanderlândia">Wanderlândia</option>
 										<option value="Xambioá">Xambioá</option>
 									</select>
-							</div>
-
+							      </div>
+                    <div class="col-md-3 mb-3">
+                      <label for="cc-expiration">CEP:</label>
+                      <input type="text" name="cep" class="form-control" id="cc-expiration" >
+                    </div>
 	          			</div>
 	          		</div>
 
 		            <div class="container">
 	          			<div class="row">
+				            <div class="col-md-4 mb-3">
+			                <label for="cc-cvv">Bairro:</label>
+			                <input type="text" name="bairro" class="form-control" id="cc-cvv"  >
+				            </div>
 				            <div class="col-md-2 mb-3">
-				                <label for="cc-expiration">CEP:</label>
-				               	<input type="text" name="cep" class="form-control" id="cc-expiration" >
+			                <label for="cc-expiration">Lote:</label>
+			               	<input type="text" name="lote" class="form-control" id="cc-expiration">
 				            </div>
-
-				            <div class="col-md-2 mb-3">
-				                <label for="cc-cvv">BAIRRO:</label>
-				                <input type="text" name="bairro" class="form-control" id="cc-cvv"  >
+				            <div class="col-md-6 mb-3">
+			                <label for="cc-cvv">Complemento:</label>
+			                <input type="text"  name="complemento"class="form-control" id="cc-cvv" >
 				            </div>
-
-				            <div class="col-md-1 mb-3">
-				                <label for="cc-expiration">LOTE:</label>
-				               	<input type="text" name="lote" class="form-control" id="cc-expiration">
-				            </div>
-
-				            <div class="col-md-2 mb-3">
-				                <label for="cc-cvv">COMPLEMENTO:</label>
-				                <input type="text"  name="complemento"class="form-control" id="cc-cvv" >
-				            </div>
+                    <div class="col-md-3 mb-3">
+                      <input class="btn btn-default" name="submit" type="submit" value="Salvar">
+                    </div>
+				          </div>
 				        </div>
-				    </div>
-				    <div class="container">
-	          			<div class="row">
-				            <div class="col-md-2 mb-3">
-								<input class="btn btn-default" id="salva" name="submit" type="submit" value="Salvar">
-							</div>
+
 						</div>
 					</div>
 
@@ -167,7 +151,6 @@
         <?php include 'footer.php'; ?>
       </div>
 		</div>
-	</div>
 
 </body>
 
