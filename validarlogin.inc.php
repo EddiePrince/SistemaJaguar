@@ -22,14 +22,18 @@
               }
               if ($perfil == 'administrador') {
                 session_start();
+                $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
+                $_SESSION['senha'] = $senha;
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
                 session_start();
+                $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
+                $_SESSION['senha'] = $senha;
                 header('Location: areaagente.php');
                 exit;
               }

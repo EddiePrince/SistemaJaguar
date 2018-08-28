@@ -9,11 +9,10 @@
 
   $nome = $_SESSION['nome'];
   $perfil = $_SESSION['perfil'];
-  
-  
-  $usuario = $_SESSION['matricula'];
-  $senha = $_SESSION['senha'];
-  if (!isset($usuario) && !isset($senha)) {
+  $matricula = $_SESSION['matricula'];
+  $senha = $_SESSION['matricula'];
+
+  if (!isset($matricula) && !isset($senha)) {
     header('Location: index.php');
     exit;
   }
