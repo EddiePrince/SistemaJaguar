@@ -12,21 +12,28 @@
       else{
             $sql = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
             $result = $conexao->query($sql);
-            if($result->num_rows > 0){
+            if($result->num_rows == 0){
+            echo "Dados não encontrados";
+            } 
+            else if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
                $nome = $row['nome'];
                $perfil = $row['perfil'];
               }
               if ($perfil == 'administrador') {
                 session_start();
+                $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
+                $_SESSION['senha'] = $senha;
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
                 session_start();
+                $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
+                $_SESSION['senha'] = $senha;
                 header('Location: areaagente.php');
                 exit;
               }

@@ -140,9 +140,9 @@
                     <div class="col-md-3 mb-3">
                       <input class="btn btn-default" name="submit" type="submit" value="Salvar">
                     </div>
-				          </div>
+                    	<div id="msgField"></div>
+				         </div>
 				        </div>
-
 						</div>
 					</div>
 

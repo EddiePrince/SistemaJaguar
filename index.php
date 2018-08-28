@@ -3,7 +3,6 @@
   //Conecção com Banco
   include 'conexao.inc.php';
   session_start();   // Sessão validação usuario
-  include 'validarlogin.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +19,18 @@
 		<img src="img/logo.png" alt="Logo" class="avatar">
 		<!-- <h2>login</h2> --><br><br>
 		<form method="post">
-
 				<p>Usuario</p>
 				<input type="text" name="matricula"  id="usuario"  placeholder="Matricula" required autofocus>
 				<p>Senha</p>
 				<input type="password" name="senha" placeholder="Senha" required >
 			 	<input class="postlogin" type="submit" name="entrar" value="Login">
+        <?php include 'validarlogin.inc.php';?>
         <!--<a href="ajudaLogin.php" target="_blank"><img class="icon-img" alt="Ajuda" src="img/icon1.png"></a>-->
+
 		</form>
 </div>
 
+
 </body>
 </html>
+
