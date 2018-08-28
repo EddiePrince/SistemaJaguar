@@ -18,82 +18,68 @@
 
 	<body>
     <div id="pageAdm">
-        <!-- <div id="header">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="logo">
-                  <div class="logo_admin">
-                    <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div> -->
-
-      <div class="corpoAdm">
-
-
-          <div id="AreaPcp">
-            <div class="container">
-                  <h1 class="titulo"><strong>Menu</strong></h1><br><br>
-
-
-              <div class="row">
-
-                <div class="col-12 col-sm-6">
-                  <div class="promocoes">
-                    <div class="row">
-                      <div class="col-12 col-lg-12 col-xl-6">
-                        <div id="menu">
-                          <ul>
-                            <li class="foto"> <a href="listaUnidades.php"><img src="img/logo.png" alt="foto"></a> </li>
-                          </ul>
-                        </div>
-                      </div><br>
-
-                      <div class="col-12 col-lg-12 col-xl-6">
-                        <div id="menu">
-                          <ul>
-                            <li class="foto"> <a href="listaUnidades.php"><img src="img/logo.png" alt="foto"></a> </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><br>
-
-                <div class="col-12 col-sm-6">
-                  <div class="promocoes">
-                    <div class="row">
-                      <div class="col-12 col-lg-12 col-xl-6">
-                        <div id="menu">
-                          <ul>
-                            <li class="foto"> <a href="listaUnidades.php"><img src="img/logo.png" alt="foto"></a> </li>
-                          </ul>
-                        </div>
-                      </div><br>
-
-                      <div class="col-12 col-lg-12 col-xl-6">
-                        <div id="menu">
-                          <ul>
-                            <li class="foto"> <a href="listaUnidades.php"><img src="img/logo.png" alt="foto"></a> </li>
-                          </ul>
-                        </div>
-                      </div><br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="logo">
+        <div class="logo_admin">
+          <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
+        </div>
+        <div>
+          <!-- Menu -->
+          <!-- Erro de Validação W3C Identificado -->
+          <?php           include 'exibirMenu.inc.php';           ?>
+          <!-- Fim Menu -->
         </div>
       </div>
-        <!-- Erro de Validação W3C Identificado -->
-       <div class="footer">
-         <?php include 'footer.php'; ?>
+
+      <div class="corpoAdm">
+        <div class="container">
+          <h4>Bem vindo <?php echo $nome?>!</h4>
+         </div>
+
+         <div id="alerta">
+           <div id="boxtop"></div>
+           Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+         <button id="botao" onclick="apagar();">OK</button>
+         </div>
+
+        <div class="container">
+      		<div class="row">
+      			<div class="col-md-3 mb-3">
+              <a id="areaPcp" href="CadastroUnidade.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Unidade   </a>
+        		</div>
+        		<div class="col-md-3 mb-3">
+              <a id="areaPcp" href="cadastroUsuario.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Usuário </a>
+    		    </div>
+            <div class="col-md-3 mb-3">
+              <a id="areaPcp" href="CadastroAnimal.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Animal </a>
+            </div>
+            <div class="col-md-3 mb-3">
+              <a id="areaPcp" href="#.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Emitir Relatório </a>
+            </div>
+    			</div>
+          <div class="container">
+      		<div class="row">
+      			<div class="col-md-3 mb-3">
+              <a id="areaPcp" href="listaUnidades.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Unidade   </a>
+        		</div>
+        		<div class="col-md-3 mb-3">
+              <a id="areaPcp" href="listaUsuarios.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Usuário </a>
+    		    </div>
+            <div class="col-md-3 mb-3">
+              <a id="areaPcp" href="listaAnimais.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Animal </a>
+            </div>
+            <div class="col-md-3 mb-3">
+              <a id="areaPcp" href="#.php" type="button" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Msg Rec Senha </a>
+            </div>
+            </div>
+    			</div>
+    			</div>
+  			</div>
+      <!-- Erro de Validação W3C Identificado -->
+      <div class="footer">
+        <?php include 'footer.php'; ?>
       </div>
-  	</div>
+		</div>
+
 
 
 	</body>
