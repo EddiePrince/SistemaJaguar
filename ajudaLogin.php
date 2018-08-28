@@ -38,34 +38,34 @@
 									<!-- Conteúdo refente a cada aba de Navegação -->
 								<div class="tab-content">
 										<div role="tabpanel" class="tab-pane active" id="home"><br>
-											<p>
+											
 												<h3> <strong class="titulo">Sobre o Sistema: </strong></h3> É um software de gestão de animais silvestre. Tem a finalidade de auxiliar o gerenciamento integrado e centralizado das informações. Utiliza algumas tecnologias livres e conhecidas. Pode ser utilizado em ambiente Windows ou Linux, pois
 												necessita apenas de um navegador Web e um usuário e senha de acesso.
-											</p>
+											
 										</div>
 										<div role="tabpanel" class="tab-pane" id="profile"><br>
 											<p>
 												<h3><strong class="titulo">Conhecendo o Sistema: </strong></h3>  Nessa seção, iremos apresentar como acessar o sistema e como funcionam os botões, listas, filtros de busca e seleção das páginas do sistema. Para acessar o sistema basta abrir o navegador, acessar o endereço na internet onde o sistema
 												foi disponibilizado e então informar seu login e senha, fornecida pelo administrador do sistema. Existe também uma opção para recuperar senha, que enviará um e-mail com instruções para recuperá-la. Depois de efetuar o login serão exibidos o módulo
 												do sistema. Quando um cadastro é aberto uma listagem de registro é exibida, e ao clicar em um destes registros é aberta uma nova página com opções específicas para esse registro.
-											</p>
+										
 										</div>
 										<div role="tabpanel" class="tab-pane" id="messages"><br>
 											<p>
 											 <h3><strong class="titulo">Filtro de Busca: </strong></h3>	 Quando os cadastros são abertos, serão exibidos campos que podem ser usados para filtrar os registros da listagem. Com os filtros de busca é possível, por exemplo, buscar todos os animais silvestres com uma data de entrada no sistema.
 												Um componente que os filtros de busca podem exibir é a busca rápida. Nessa etapa o usuário pode digitar o nome, ou outra referência que esteja descrita no campo e o mesmo irá mostrar uma listagem que contém as informações que foram digitas.
-											</p>
+											
 										</div>
 										<div role="tabpanel" class="tab-pane" id="settings"><br>
 											<p>
 												<h3><strong class="titulo">Permissões: </strong></h3> Nessa seção iremos apresentar como são configurados os usuários que podem acessar o sistema e como ser atribuídas suas permissões, bloqueios e demais configurações de segurança.
-											</p>
+											
 										</div>
 										<div role="tabpanel" class="tab-pane" id="detalhes"><br>
 											<p>
 												<h3><strong class="titulo">Usuários e Tipos de Usuários: </strong></h3> O cadastro de tipo de usuário define as categorias de usuários existentes atualmente, as quais garantem um nível hierárquico de acesso a determinadas funcionalidade do sistema. O cadastro de usuários, propriamente dito, permite
 												o cadastro dos usuários que irão acessar o sistema, respeitando o seu tipo e as demais atribuições de acesso para a instituição, NATURATINS.
-											</p>
+											
 										 <h3><strong class="titulo">Cadastro do Sistema: </strong></h3>	Nesta seção iremos apresentar o módulo de endereçamento pessoas físicas e jurídicas. Módulo Endereçamento: Neste módulo devem ser inseridos os atributos das U.R (unidade Regionais, NATURATINS). Módulo Pessoa Física/Jurídica: Neste
 											módulo você pode inserir as informações das pessoas físicas e jurídicas que serão trabalhadas dentro do sistema. Unidade Regionais: Neste cadastro você poderá inserir as regionais responsáveis pela entrega do animal silvestre.
 

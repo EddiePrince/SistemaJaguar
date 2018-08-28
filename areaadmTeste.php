@@ -20,7 +20,7 @@
     <div id="pageAdm">
       <div class="logo">
         <div class="logo_admin">
-          <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
+          <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" >  Logout  <img src="img/logout.png" alt="Logout"></a>
         </div>
         <div>
           <!-- Menu -->
