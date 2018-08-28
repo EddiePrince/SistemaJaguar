@@ -12,7 +12,10 @@
       else{
             $sql = "SELECT * FROM usuarios WHERE matricula = '$matricula' AND senha = '$senha'";
             $result = $conexao->query($sql);
-            if($result->num_rows > 0){
+            if($result->num_rows == 0){
+            echo "Dados não encontrados";
+            } 
+            else if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
                $nome = $row['nome'];
                $perfil = $row['perfil'];
