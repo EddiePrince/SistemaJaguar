@@ -18,15 +18,17 @@
 
 	<body>
       <div id="pageAdm">
-
+        <div class="logo">
       <div class="logo_admin">
         <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a>  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
       </div>
+      <!-- Menu -->
+      <!-- Erro de Validação W3C Identificado -->
+      <?php include 'exibirMenu.inc.php'; ?>
+      <!-- Fim Menu -->
+      </div>
+      
       <div class="corpoAdm">
-        <!-- Menu -->
-        <!-- Erro de Validação W3C Identificado -->
-        <?php include 'exibirMenu.inc.php'; ?>
-        <!-- Fim Menu -->
         <div class="container">
           <h4>Bem vindo <?php echo $nome?>!</h4>
          </div>
