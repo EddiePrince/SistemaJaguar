@@ -1,6 +1,7 @@
 <?php
   //Conecção com Banco
   include 'conexao.inc.php';
+  include 'verificausuario.inc.php';
 
   $filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
 
@@ -18,19 +19,29 @@
      <link rel="stylesheet" href="style.css">
    </head>
    <body>
-     <div class="logo_admin">
-     <img src="img/logo.png">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-   </div>
-   
-   <!-- Menu -->
-    <!-- Erro de Validação W3C Identificado -->
-    <?php include 'exibirMenu.inc.php'; ?>
-     <div class="container">
 
+     <div id="pageAdm">
+       <div class="logo">
+         <div class="logo_admin">
+           <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
+         </div>
+         <div>
+           <!-- Menu -->
+           <!-- Erro de Validação W3C Identificado -->
+           <?php include 'exibirMenu.inc.php'; ?>
+           <!-- Fim Menu -->
+         </div>
+       </div>
+
+ 			<div class="corpoAdm">
+ 				<div class="container">
+          <div id="alerta">
+            <div id="boxtop"></div>
+            Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+            <button id="botao" onclick="apagar();">OK</button>
+          </div>
        <section>
          <h1>Consultar Unidades</h1> <hr><br><br>
-
-
          <form class="form" action="" method="get">
          <strong>Filtrar por nome: </strong><div id="divBusca">
          	<img src="img/icon pesquisa.png" alt="Buscar..."/>
@@ -73,6 +84,11 @@
           ?>
 
        </section>
+     </div>
+   </div>
+     <!-- Erro de Validação W3C Identificado -->
+     <div class="footer">
+       <?php include 'footer.php'; ?>
      </div>
 
    </body>

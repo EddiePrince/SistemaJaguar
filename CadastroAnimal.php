@@ -28,7 +28,12 @@
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'exibirMenu.inc.php'; ?>
-
+					
+					<div id="alerta">
+            <div id="boxtop"></div>
+            Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+            <button id="botao" onclick="apagar();">OK</button>
+          </div>
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container">
 						<br><br><h3>Cadastro de Animais</h3><br><br>
