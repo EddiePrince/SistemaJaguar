@@ -1,4 +1,3 @@
-
 /* Tela de Login */
 
 body {
@@ -7,7 +6,7 @@ body {
 	text-decoration: none;
 }
 
-.linkicon{
+.linkicon {
 	width: 20px;
 	height: 20px;
 }
@@ -31,12 +30,12 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 400px;
-  min-width: 260px;
+	min-width: 260px;
 	max-height: 500px;
 	padding: 80px 40px;
 	box-sizing: border-box;
 	background: rgba(0, 0, 0, .5);
-  border-radius: 8px;
+	border-radius: 8px;
 }
 
 /* logo da tela login */
@@ -55,8 +54,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf')
-	font-weight: bold;
+	src: url('bahnschrift.ttf') font-weight: bold;
 	font-size: 24px;
 	color: #fff;
 }
@@ -83,8 +81,7 @@ body {
 	color: green;
 	font-size: 25px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf')
-	font-weight: bold;
+	src: url('bahnschrift.ttf') font-weight: bold;
 	background: #151515;
 	cursor: pointer;
 	border-radius: 8px;
@@ -93,7 +90,7 @@ body {
 	margin-top: 5%;
 }
 
-.contact-form input[type="submit"]:hover{
+.contact-form input[type="submit"]:hover {
 	color: #fff;
 	background: green;
 }
@@ -104,116 +101,134 @@ body {
 	font-weight: bold;
 	text-decoration: none;
 }
+
 /* Fim Tela de Login */
 
 /*PESQUISA 1*/
-#divBusca{
-  position: absolute;
-  background-color:#fff;
-  border:solid 1px #222;
-  border-radius:5px;
-  width:300px;
-  height:35px;
-  top: 9%;
-  left: 70%;
+
+#divBusca {
+	position: absolute;
+	background-color: #fff;
+	border: solid 1px #222;
+	border-radius: 5px;
+	width: 300px;
+	height: 35px;
+	top: 9%;
+	left: 70%;
 }
 
-#txtBusca{
-  float:left;
-  background-color:transparent;
+#txtBusca {
+	float: left;
+	background-color: transparent;
 	color: blue;
-  padding-left:5px;
-  font-size:18px;
-  border:none;
-  height:32px;
-  width:191px;
-  position: absolute;
-  top: 1%;
-  left: 8%;
+	padding-left: 5px;
+	font-size: 18px;
+	border: none;
+	height: 32px;
+	width: 191px;
+	position: absolute;
+	top: 1%;
+	left: 8%;
 }
 
-#btnBusca{
-  width:70px;
-  height:35px;
-  position: absolute;
-  border:none;
-  float:left;
-  border-radius:0 5px 5px 0;
-  font-weight:bold;
-  background:#80bfff;
-  top: 0%;
-  left: 77%;
+#btnBusca {
+	width: 70px;
+	height: 35px;
+	position: absolute;
+	border: none;
+	float: left;
+	border-radius: 0 5px 5px 0;
+	font-weight: bold;
+	background: #80bfff;
+	top: 0%;
+	left: 77%;
 }
 
-#divBusca img{
-  float:left;
-  position: absolute;
-  width: 20px;
-  top: 11%;
-  left: 1%;
-  right: 5px;
+#divBusca img {
+	float: left;
+	position: absolute;
+	width: 20px;
+	top: 11%;
+	left: 1%;
+	right: 5px;
 }
 
 /* seção da exibição de pesquisas */
-section{
+
+section {
 	margin-left: 3%;
-	margin-right:3%;
+	margin-right: 3%;
 	background-color: #d6d5d5;
 }
-.form{
+
+.form {
 	background-color: silver;
-  padding: 10px;
+	padding: 10px;
 }
-article{
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  background: rgba(0,0,0,0.5);
+
+article {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.5);
 	border-radius: 3px;
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 	text-align: left;
 }
-/* FIm seção da exibição de pesquisas */
 
+/* FIm seção da exibição de pesquisas */
 
 /* Inicio Menu */
 
 /*Imagem da logo do Admin*/
+
 .logo_admin {
-  	background: rgba(155,155,155,0.5);
-		width: 100%;
-		height: 110px;
-		border-radius: 5px;
-		margin-top:-45px;
+	background: rgba(155, 155, 155, 0.5);
+	width: 100%;
+	height: 110px;
+	border-radius: 5px;
+	margin-top: -45px;
 }
+
 .logo_admin img {
 	width: 130px;
 	margin-left: 20px;
 }
 
 /* Botão logout */
-#logout{
+
+#logout {
 	padding: 5px;
-	margin-top:25px;
-	margin-right:20px;
+	margin-top: 25px;
+	margin-right: 20px;
 	max-width: 150px;
 	max-height: 50px;
 	font-size: 15px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf')
-	font-weight: bold;
+	src: url('bahnschrift.ttf') font-weight: bold;
 }
-#logout img{
+
+#logout img {
 	background-color: none;
 	margin-top: 0;
 	max-width: 23px;
 	max-height: 23px;
 }
 
+.home {
+	width: 40px;
+	height: 40px;
+}
+
+.consulta {
+	width: 20px;
+	height: 20px;
+}
+
 .menu {
 	width: 100%;
 	height: 50px;
-  background-color: #222;
+	background-color: #222;
 	font-family: 'arial';
 	margin-top: -20px;
 	align-items: center;
@@ -274,7 +289,6 @@ article{
 }
 
 @media (max-width: 1000px) {
-
 	.menu {
 		display: run-in;
 		width: 100%;
@@ -294,15 +308,17 @@ article{
 		max-height: 200px;
 	}
 }
+
 /* fim menu */
 
 /* Background Page Adm */
-#pageDesenvolvedor{
-  background-image: url("img/2.jpg");
+
+#pageDesenvolvedor {
+	background-image: url("img/2.jpg");
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -312,6 +328,7 @@ article{
 	right: 0;
 	top: 0;
 }
+
 /*
 #pageRecSenhaLogin{
   background-image: url("img/29.jpg");
@@ -329,12 +346,12 @@ article{
 	top: 0;
 } */
 
-#pageRecSenha{
-  background-image: url("img/10.jpg");
+#pageRecSenha {
+	background-image: url("img/10.jpg");
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -345,13 +362,13 @@ article{
 	top: 0;
 }
 
-#ajudaLogin{
-  background-image: url("img/32.jpg");
-  background-color: white;
+#ajudaLogin {
+	background-image: url("img/32.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -362,20 +379,19 @@ article{
 	top: 0;
 }
 
-.icon-img{
-max-width: 30px;
-max-height: 30px;
-margin-left: 10px;
+.icon-img {
+	max-width: 30px;
+	max-height: 30px;
+	margin-left: 10px;
 }
 
-
-#pageAjuda{
-  background-image: url("img/31.jpg");
-  background-color: white;
+#pageAjuda {
+	background-image: url("img/31.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -387,39 +403,44 @@ margin-left: 10px;
 }
 
 /* Texto area de ajuda */
-.titulo1{
+
+.titulo1 {
 	text-shadow: 1px 1px 1px #0000ff;
 	font-family: sans-serif;
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
 }
-.titulo{
+
+.titulo {
 	text-shadow: 1px 1px 1px orange;
 	font-family: sans-serif;
 	font-size: 30px;
 	font-weight: bold;
 }
-.paragrafo{
+
+.paragrafo {
 	text-shadow: 1px 1px 1px Black;
 	font-family: sans-serif;
 	font-size: 22px;
 }
+
 .subtitulo {
-    text-shadow: 1px 1px 1px black;
-  	font-family: sans-serif;
-    font-size: 22px;
-    color: #FFF;
+	text-shadow: 1px 1px 1px black;
+	font-family: sans-serif;
+	font-size: 22px;
+	color: #FFF;
 }
+
 /* Fim Texto area de ajuda */
 
-#pageAdm{
-  background-image: url("img/7.jpg");
-  background-color: white;
+#pageAdm {
+	background-image: url("img/7.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -430,13 +451,13 @@ margin-left: 10px;
 	top: 0;
 }
 
-#pageAgente{
-  background-image: url("img/19.jpg");
-  background-color: white;
+#pageAgente {
+	background-image: url("img/19.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -446,15 +467,14 @@ margin-left: 10px;
 	right: 0;
 	top: 0;
 }
-
 
 #pageUsuario {
-  background-image: url("img/12.jpg");
-  background-color: white;
+	background-image: url("img/12.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -466,12 +486,12 @@ margin-left: 10px;
 }
 
 #pageListaUsuario {
-  background-image: url("img/14.jpg");
-  background-color: white;
+	background-image: url("img/14.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -483,12 +503,12 @@ margin-left: 10px;
 }
 
 #pageAnimal {
-  background-image: url("img/27.jpg");
-  background-color: white;
+	background-image: url("img/27.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -500,12 +520,12 @@ margin-left: 10px;
 }
 
 #pageListaAnimais {
-  background-image: url("img/28.jpg");
-  background-color: white;
+	background-image: url("img/28.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -517,12 +537,12 @@ margin-left: 10px;
 }
 
 #pagePerfilAnimal {
-  background-image: url("img/10.jpg");
-  background-color: white;
+	background-image: url("img/10.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -550,56 +570,56 @@ margin-left: 10px;
 	top: 0;
 }
 
-#pageUnidade h3{
+#pageUnidade h3 {
 	text-align: center;
 }
 
-#pageUnidade input{
-width: 80%;
-margin: 20px;
+#pageUnidade input {
+	width: 80%;
+	margin: 20px;
 }
 
-#pageUnidade select{
-width: 18%;
-margin: 20px;
+#pageUnidade select {
+	width: 18%;
+	margin: 20px;
 }
 
-#pageUnidade label{
-width: 18%;
-margin: 20px;
+#pageUnidade label {
+	width: 18%;
+	margin: 20px;
 }
 
-#pageUnidade p{
-width: 18%;
-margin: 20px;
+#pageUnidade p {
+	width: 18%;
+	margin: 20px;
 }
 
-.endereco{
+.endereco {
 	width: 400px;
 }
 
-.endereco p{
-background-size: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
+.endereco p {
+	background-size: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
 }
 
-input[type="text1"]{
-  line-height: 32px;
-  display: inline-block;
-  vertical-align: middle;
-  width: 343px;
-  border: none;
+input[type="text1"] {
+	line-height: 32px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 343px;
+	border: none;
 }
 
 #pageListaUnidade {
-  background-image: url("img/21.jpg");
-  background-color: white;
+	background-image: url("img/21.jpg");
+	background-color: white;
 	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
+	background-position: top;
+	background-size: cover;
+	font-size: 15px;
 	color: white;
 	overflow: auto;
 	padding: 3em;
@@ -610,12 +630,11 @@ input[type="text1"]{
 	top: 0;
 }
 
-
-.corpoAdm{
-  	background: rgba(0,0,0,0.5);
-    max-width: 100%;
-		min-height: 550px;
-		/*overflow: auto;
+.corpoAdm {
+	background: rgba(0, 0, 0, 0.5);
+	max-width: 100%;
+	min-height: 550px;
+	/*overflow: auto;
 		 right: 0;
 		top: 0;
 		left: 0;
@@ -645,53 +664,54 @@ input[type="text1"]{
   }
 } */
 
-
-
 /* Tabela lista de animais */
-.table{
-	border:1px;
+
+.table {
+	border: 1px;
 }
 
 /*Alerta para unidades não cadastradas*/
 
-#alerta{
+#alerta {
 	position: absolute;
 	color: black;
 	top: 0;
 	opacity: 0;
 	left: 50%;
 	background-color: white;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	width: 400px;
 	display: none;
 	transition: top 1s, opacity 1s;
-
 }
 
-#boxtop{
+#boxtop {
 	height: 20px;
 	background-color: red;
 	display: none;
 }
 
 /* Rodapé */
-.footer{
-  background-color: #222;
+
+.footer {
+	background-color: #222;
 	padding: 14px;
 	text-decoration: none;
 }
 
 /* container cadastro animais, unidades e usuarios */
+
 @media (min-width: 400px) and (max-width: 1000px) {
-	.container{
+	.container {
 		display: block;
-		right:12%;
-		width:45%;
+		right: 12%;
+		width: 45%;
 	}
 }
 
 /* Preenchimento area princp. adm e agente */
-.container a{
+
+.container a {
 	padding: 3px;
 	margin-top: 110px;
 	width: 210px;
@@ -700,38 +720,41 @@ input[type="text1"]{
 	border-radius: 6px;
 	border: 2px solid silver;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf')
-	font-weight: bold;
+	src: url('bahnschrift.ttf') font-weight: bold;
 	color: white;
-	background: rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
 }
-.container a img{
+
+.container a img {
 	background-color: none;
 	padding: 5px;
 	width: 80px;
 	height: 70px;
 }
-.container a{
-	-webkit-transition;all:  .9s ease;
-	-moz-transition:all .9s ease;
-	-ms-transition:all .9s ease;
+
+.container a {
+	-webkit-transition;
+	all: .9s ease;
+	-moz-transition: all .9s ease;
+	-ms-transition: all .9s ease;
 	transition: all .9s ease;
 }
-.container a:hover{
-  background: #ff4500;
-  padding: 10px;
+
+.container a:hover {
+	background: #ff4500;
+	padding: 10px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf')
-	font-weight: bold;
+	src: url('bahnschrift.ttf') font-weight: bold;
 	font-size: 16spx;
 	color: yellow;
 	border: 2px white;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 1100px) {
-	#areaPcp{
+	#areaPcp {
 		display: block;
 		width: 100%;
 	}
 }
+
 /* Fim area princp. adm e agente */
