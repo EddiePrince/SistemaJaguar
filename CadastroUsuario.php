@@ -38,9 +38,9 @@
 		          <div class="col-md-3 mb-3">
   						  <label>Perfil: </label><br>
   						  <select class="form-control" name="perfil" required autofocus>
-    							<option>Selecione o Perfil do Usuário</option>
-    							<option value="Administrador">Administrador</option>
-    							<option value="Agente">Agente</option>
+    							
+    							<option value="administrador">Administrador</option>
+    							<option value="agente">Agente</option>
   						  </select><br><br>
 					    </div>
     					<div class="col-md-2 mb-3">
@@ -60,14 +60,10 @@
                   <input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
                 </div>
     		          <div class="col-md-3 mb-3">
-    					    <label>Telefone Residencial:</label><br>
-    					    <input class="form-control" type="text" name="telefone" required><br><br>
+    					    <label>Telefone:</label><br>
+    					    <input class="form-control" type="text" name="telefone"><br><br>
   					    </div>
 
-      					<div class="col-md-4 mb-3">
-    					    <label>Celular:</label><br>
-    					    <input class="form-control" type="text" name="celular" required><br><br>
-      					</div>
 				      </div>
 
       				<div class="row">
@@ -75,6 +71,13 @@
       						<label>Senha:</label><br>
       					  <input class="form-control" type="text" name="senha" required><br><br>
       					</div>
+                <div class="col-md-3 mb-3">
+                  <label>Selecione a Unidade:</label><br>
+                  <select class="form-control" name="nomeUnidade" size=1>
+                    <?php include 'selectUnidades.inc.php'; ?>
+                  </select>  
+                </div>
+                
       				</div>
 		        <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
       		</div>

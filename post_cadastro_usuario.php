@@ -1,30 +1,56 @@
 <?php
-//Conecção com Banco
-  include 'conexao.inc.php';
+//Conexão com Banco
+  	include 'conexao.inc.php';
 
 
-$perfil = $_POST['perfil'];
-$matricula = $_POST['matricula'];
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$celular = $_POST['celular'];
-$senha = $_POST['senha'];
+	$perfil = $_POST['perfil'];
+	$matricula = $_POST['matricula'];
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$telefone = $_POST['telefone'];
+	$senha = $_POST['senha'];
+	$unidade = $_POST['nomeUnidade'];
 
 
-$sql = "INSERT INTO usuarios (perfil, matricula, nome, email, telefone, celular, senha) VALUES ('$perfil', '$matricula', '$nome', '$email', '$telefone', '$celular', '$senha')"; //iserindo dados digitados do formulario para a tabela usuarios
-//executa e armazena o $sql
-$salvar = mysqli_query($conexao, $sql);
+	$sql1 = "INSERT INTO usuarios (perfil, matricula, nome, email, senha) VALUES ('$perfil', '$matricula', '$nome', '$email',  '$senha')"; 
+	$salvar1 = mysqli_query($conexao, $sql1);
 
-//$linhas = mysqli_affected_rows($conexao); //contagem da quantidade de linhas inseridas na tabela
+	$sql2 = "INSERT INTO telefones (numero) VALUES ('$telefone')"; 
+	$salvar2 = mysqli_query($conexao, $sql2);
 
-echo "<p style='color:green;'>Usuário cadastrado com Sucesso!</p>";
+	
+	$pegarTelefone = "SELECT MAX(idTelefone) FROM telefones";
+	$resultTelefone =  mysqli_query($conexao, $pegarTelefone);
 
-mysqli_close($conexao);
+	while($row = mysqli_fetch_row($resultTelefone))
+	{
+		$idTelefone = $row[0];
+		echo $idTelefone;
+	}
+	
+	$pegarUsuario = "SELECT MAX(idUsuario) FROM usuarios";
+	$resultUsuario =  mysqli_query($conexao, $pegarUsuario);
 
+	while($row = mysqli_fetch_row($resultUsuario))
+	{
+		$idUsuario = $row[0];
+		echo $idUsuario;
+	}
 
-//echo "Nome: ".$nome."<br>E-mail: ".$email."<br>Telefone: ".$tel."<br>Celular: ".$cel."<br>Usuário: ".$user."<br>Senha: ".$senha;
+	$pegarUnidade = "SELECT * FROM unidades WHERE nome = '$unidade'";
+	$resultUnidade =  mysqli_query($conexao, $pegarUnidade);
 
- ?>
-<br> <a href="CadastroUsuario.php"> <input type="button" name="btn" value="Cadastrar Outro Usuário">  </a><br>
-<br> <a href="areaadm.php"> <input type="button" name="btn" value="Página Principal">  </a>
+	while($row = mysqli_fetch_row($resultUnidade))
+	{
+		$idUnidade = $row[0];
+	}
+
+	$sql3 = "UPDATE usuarios SET idTelefone='$idTelefone' WHERE idUsuario='$idUsuario'";
+	$salvar3 = mysqli_query($conexao, $sql3);
+
+	$sql4 = "UPDATE usuarios SET idUnidade='$idUnidade' WHERE idUsuario='$idUsuario'";
+	$salvar4 = mysqli_query($conexao, $sql4);
+
+	header("Location:listaUsuarios.php");
+
+?>

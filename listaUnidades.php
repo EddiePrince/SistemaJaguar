@@ -46,6 +46,7 @@
       		<tr>
       			<th>Nome</th>
       			<th>Tipo de Unidade</th>
+            <th>Perfil</th>
           </tr>
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaUnidades.inc.php' ?>
