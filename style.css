@@ -44,7 +44,7 @@ body {
 .avatar {
 	position: absolute;
 	width: 155px;
-	height: 120px;
+	height: 110px;
 	border-radius: 50%;
 	overflow: hidden;
 	top: calc(-40px/8);
@@ -610,29 +610,13 @@ input[type="text1"]{
 	top: 0;
 }
 
-#pageListaUnidadeAgente {
-  background-image: url("img/6.jpg");
-  background-color: white;
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
 .corpoAdm{
   	background: rgba(0,0,0,0.5);
     max-width: 100%;
 		min-height: 550px;
-		overflow: auto;
-		/* right: 0;
+		/*overflow: auto;
+		 right: 0;
 		top: 0;
 		left: 0;
 		bottom: 0;

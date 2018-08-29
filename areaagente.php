@@ -19,26 +19,50 @@
   <body>
 
     <div id="pageAgente">
-        <div class="logo_admin">
-            <a href="areaagente.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-        </div>
+      <div class="logo">
+				<div class="logo_admin">
+					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
+				</div>
+				<div>
+					<!-- Menu -->
+					<!-- Erro de Validação W3C Identificado -->
+					<?php include 'exibirMenu.inc.php'; ?>
+					<!-- Fim Menu -->
+				</div>
+			</div>
+
         <div class="corpoAdm">
-          <!-- Menu -->
-          <!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
-          <!-- Fim Menu -->
-        <div class="container">
+          <div class="container">
+  					<h4>Bem vindo <?php echo $nome?>!</h4>
+  				</div>
+
+  				<div id="alerta">
+  					<div id="boxtop"></div>
+  					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+  					<button id="botao" onclick="apagar();">OK</button>
+  				</div>
+
+  				<div class="container">
+  					<div class="row">
+  						<div class="col-md-3 mb-3">
+  							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Animal </a>
+  						</div>
+
+  							<div class="col-md-3 mb-3">
+  								<a href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Unidade   </a>
+  							</div>
+
+              </div>
+  						</div>
+  					</div>
+            <!-- Erro de Validação W3C Identificado -->
+            <div class="footer">
+              <?php include 'footer.php'; ?>
+            </div>
+  				</div>
 
 
-          <br><h1>Bem Vindo <?php echo $nome?></h1>
 
-        </div>
-        </div>
-        <!-- Erro de Validação W3C Identificado -->
-        <div class="footer">
-          <?php include 'footer.php'; ?>
-        </div>
-    </div>
 
   </body>
 </html>

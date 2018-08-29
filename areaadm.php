@@ -26,7 +26,7 @@
 				<div>
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
-					<?php           include 'exibirMenu.inc.php';           ?>
+					<?php include 'exibirMenu.inc.php'; ?>
 					<!-- Fim Menu -->
 				</div>
 			</div>
