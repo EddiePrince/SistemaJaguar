@@ -11,6 +11,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+  <link rel="stylesheet" href="style/bootstrap.min.css">
   <title>Login Sistema Jaguar</title>
 </head>
 <body class="body">
@@ -25,7 +27,7 @@
 				<input type="password" name="senha" placeholder="Senha" required >
 			 	<input class="postlogin" type="submit" name="entrar" value="Login">
         <?php include 'validarlogin.inc.php';?>
-        <!--<a href="ajudaLogin.php" target="_blank"><img class="icon-img" alt="Ajuda" src="img/icon1.png"></a>-->
+        <a class="icon-img" href="ajudaLogin.php" target="_blank">precisa de ajuda<img class="icon-img" alt="Ajuda" src="img/help.png"></a>
 
 		</form>
 </div>
@@ -33,4 +35,3 @@
 
 </body>
 </html>
-

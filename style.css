@@ -312,7 +312,7 @@ article{
 	right: 0;
 	top: 0;
 }
-
+/*
 #pageRecSenhaLogin{
   background-image: url("img/29.jpg");
 	background-repeat: no-repeat;
@@ -327,7 +327,7 @@ article{
 	left: 0;
 	right: 0;
 	top: 0;
-}
+} */
 
 #pageRecSenha{
   background-image: url("img/10.jpg");
@@ -346,7 +346,7 @@ article{
 }
 
 #ajudaLogin{
-  background-image: url("img/34.jpg");
+  background-image: url("img/32.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -361,9 +361,16 @@ article{
 	right: 0;
 	top: 0;
 }
+
+.icon-img{
+max-width: 30px;
+max-height: 30px;
+margin-left: 10px;
+}
+
 
 #pageAjuda{
-  background-image: url("img/8.jpg");
+  background-image: url("img/31.jpg");
   background-color: white;
 	background-repeat: no-repeat;
   background-position: top;
@@ -378,26 +385,33 @@ article{
 	right: 0;
 	top: 0;
 }
-.tab-pane{
-	text-align: justify;
-	font-size: 18px;
-}
 
+/* Texto area de ajuda */
+.titulo1{
+	text-shadow: 1px 1px 1px #0000ff;
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
 .titulo{
-	text-shadow: 1px 2px 1px #0000ff;
+	text-shadow: 1px 1px 1px orange;
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
 }
-
-
-/* Exemplo do código CSS para criar um borda num texto */
+.paragrafo{
+	text-shadow: 1px 1px 1px Black;
+	font-family: sans-serif;
+	font-size: 22px;
+}
 .subtitulo {
-    text-shadow: 1px 0px 0px red,
-                 -1px 0px 0px red,
-                 0px 1px 0px red,
-                 0px -1px 0px red;
-    font-size: 100%;
-    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+  	font-family: sans-serif;
+    font-size: 22px;
     color: #FFF;
 }
+/* Fim Texto area de ajuda */
 
 #pageAdm{
   background-image: url("img/7.jpg");
@@ -693,7 +707,7 @@ input[type="text1"]{
 }
 
 /* Preenchimento area princp. adm e agente */
-.areaPcp{
+.container a{
 	padding: 3px;
 	margin-top: 110px;
 	width: 210px;
@@ -707,19 +721,19 @@ input[type="text1"]{
 	color: white;
 	background: rgba(0,0,0,0.6);
 }
-.areaPcp img{
+.container a img{
 	background-color: none;
 	padding: 5px;
 	width: 80px;
 	height: 70px;
 }
-.areaPcp{
+.container a{
 	-webkit-transition;all:  .9s ease;
 	-moz-transition:all .9s ease;
 	-ms-transition:all .9s ease;
 	transition: all .9s ease;
 }
-.areaPcp:hover{
+.container a:hover{
   background: #ff4500;
   padding: 10px;
 	font-family: "lovelyFont";
@@ -731,7 +745,7 @@ input[type="text1"]{
 }
 
 @media only screen and (min-width: 400px) and (max-width: 1100px) {
-	.areaPcp{
+	#areaPcp{
 		display: block;
 		width: 100%;
 	}

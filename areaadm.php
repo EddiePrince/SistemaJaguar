@@ -5,48 +5,84 @@
   include 'verificausuario.inc.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-		<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
-    <title>Área Principal</title>
+	<!DOCTYPE html>
+	<html lang="pt-br">
 
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+		<link rel="stylesheet" href="style/bootstrap.min.css">
+		<title>Área Principal</title>
+	</head>
 
 	<body>
-      <div id="pageAdm">
-        <div class="logo">
-      <div class="logo_admin">
-        <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"> </a>  <a id="logout" href="logout.php" >  Logout  <img src="img/logout.png" alt="Logout"> </a>
-      </div>
-      <!-- Menu -->
-      <!-- Erro de Validação W3C Identificado -->
-      <?php include 'exibirMenu.inc.php'; ?>
-      <!-- Fim Menu -->
-      </div>
-      
-      <div class="corpoAdm">
-        <div class="container">
-          <h4>Bem vindo <?php echo $nome?>!</h4>
-         </div>
+		<div id="pageAdm">
+			<div class="logo">
+				<div class="logo_admin">
+					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
+				</div>
+				<div>
+					<!-- Menu -->
+					<!-- Erro de Validação W3C Identificado -->
+					<?php           include 'exibirMenu.inc.php';           ?>
+					<!-- Fim Menu -->
+				</div>
+			</div>
 
-              <div id="alerta">
-                <div id="boxtop"></div>
-                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-              <button id="botao" onclick="apagar();">OK</button>
-              </div>
+			<div class="corpoAdm">
+				<div class="container">
+					<h4>Bem vindo <?php echo $nome?>!</h4>
+				</div>
 
-          </div>
-          <!-- Erro de Validação W3C Identificado -->
-         <div class="footer">
-           <?php include 'footer.php'; ?>
-         </div>
-    	</div>
-  <?php include 'verificarUnidades.inc.php'; ?>
+				<div id="alerta">
+					<div id="boxtop"></div>
+					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+					<button id="botao" onclick="apagar();">OK</button>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<a  href="CadastroUnidade.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Unidade   </a>
+						</div>
+						<div class="col-md-3 mb-3">
+							<a href="cadastroUsuario.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Usuário </a>
+						</div>
+						<div class="col-md-3 mb-3">
+							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Animal </a>
+						</div>
+						<div class="col-md-3 mb-3">
+							<a href="#.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Emitir Relatório </a>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 mb-3">
+								<a href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Unidade   </a>
+							</div>
+							<div class="col-md-3 mb-3">
+								<a href="listaUsuarios.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Usuário </a>
+							</div>
+							<div class="col-md-3 mb-3">
+								<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Animal </a>
+							</div>
+							<div class="col-md-3 mb-3">
+								<a href="#.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Msg Rec Senha </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Erro de Validação W3C Identificado -->
+			<div class="footer">
+				<?php include 'footer.php'; ?>
+			</div>
+		</div>
+
+
 
 	</body>
 
-</html>
+	</html>
