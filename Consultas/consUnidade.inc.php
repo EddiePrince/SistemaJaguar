@@ -11,7 +11,7 @@ include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
   if (!empty($_GET['filtro'])) {
 
   if ($registros > 0) {
-    echo "<br>Resultado da pesquisa com a palavra <strong> $filtro. </strong><br><br><br>";
+    echo "<br><h2>Resultado da pesquisa com a palavra <strong> $filtro. </strong></h2><br><br><br>";
     echo "<strong>$registros registro(s) encontrado(s).</strong><br><br>"; //exibição da quanidade de registros encontrados
   }else {
    echo "<br><br>Nenhum registro encontrado a palavra <strong> $filtro. </strong>";

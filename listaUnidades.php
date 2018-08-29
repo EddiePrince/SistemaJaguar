@@ -49,7 +49,7 @@
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaUnidades.inc.php' ?>
     	  </table>
-
+        
         <!-- Consultas -->
         <?php include 'consultas/consUnidade.inc.php'; ?>
 
