@@ -41,44 +41,26 @@
 					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
 					<button id="botao" onclick="apagar();">OK</button>
 				</div>
-
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3 mb-3">
-							<a  href="CadastroUnidade.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Unidade   </a>
+						<div class="col-md-4 mb-3">
+							<a  href="CadastroUnidade.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Unidade   </a>
 						</div>
-						<div class="col-md-3 mb-3">
-							<a href="cadastroUsuario.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Usuário </a>
+						<div class="col-md-4 mb-3">
+							<a href="cadastroUsuario.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Usuário </a>
 						</div>
-						<div class="col-md-3 mb-3">
-							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Cadastrar Animal </a>
-						</div>
-						<div class="col-md-3 mb-3">
-							<a href="#.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Emitir Relatório </a>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3 mb-3">
-								<a href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Unidade   </a>
-							</div>
-							<div class="col-md-3 mb-3">
-								<a href="listaUsuarios.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Usuário </a>
-							</div>
-							<div class="col-md-3 mb-3">
-								<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Visualizar Animal </a>
-							</div>
-							<div class="col-md-3 mb-3">
-								<a href="#.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Msg Rec Senha </a>
-							</div>
-						</div>
-					</div>
+						<div class="col-md-4 mb-3">
+							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Animal </a>
+
+
 				</div>
 			</div>
-			<!-- Erro de Validação W3C Identificado -->
-			<div class="footer">
-				<?php include 'footer.php'; ?>
-			</div>
+		</div>
+		</div>
+    <!-- Erro de Validação W3C Identificado -->
+    <div class="footer">
+      <?php include 'footer.php'; ?>
+    </div>
 		</div>
 
 
