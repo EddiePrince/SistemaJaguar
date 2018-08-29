@@ -7,7 +7,6 @@
 
   SESSION_START();
   $idUsuario = $_SESSION['idUsuario'];
-  echo $idUsuario;
   $nome = $_SESSION['nome'];
   $perfil = $_SESSION['perfil'];
   $matricula = $_SESSION['matricula'];

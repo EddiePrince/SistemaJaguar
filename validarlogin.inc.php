@@ -17,13 +17,13 @@
             } 
             else if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
-               $idUsuario = $row['nome'];
+               $idUsuario = $row['idUsuario'];
                $nome = $row['nome'];
                $perfil = $row['perfil'];
               }
               if ($perfil == 'administrador') {
-                session_start();
-                $idUsuario = $_SESSION['idUsuario'];
+                
+                $_SESSION['idUsuario'] = $idUsuario;
                 $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
@@ -31,7 +31,7 @@
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
-                session_start();
+                
                 $idUsuario = $_SESSION['idUsuario'];
                 $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;

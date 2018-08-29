@@ -1,10 +1,11 @@
 <?php
 //Conexão com Banco
+
   include 'conexao.inc.php';
   include 'validarlogin.inc.php'; //É onde o id do usuário é salvo na sessão
   
  // $idUsuario = $_SESSION['idUsuario'];
-
+  //echo $idUsuario;
 //Criar idAutomático
 
   	$getAnimalId = "SELECT MAX(idAnimal) FROM animais";
@@ -50,31 +51,38 @@
 		$pegarAnimal = "SELECT MAX(idAnimal) FROM animais";
   		$resultAnimal =  mysqli_query($conexao, $pegarAnimal);
 
- 		while($row =mysqli_fetch_row($resultAnimal))
+ 		while($row = mysqli_fetch_row($resultAnimal))
 		{
 			$idAnimal = $row[0];
 		}
 
-		//Pegar idUnidade
+		/*Pegar idUnidade
 
 		$pegarUnidade = "SELECT * FROM unidades WHERE nome = $unidade";
-  		$resultUnidade =  mysqli_query($conexao, $pegarAnimal);
+  		$resultUnidade =  mysqli_query($conexao, $pegarUnidade);
 
- 		while($row =mysqli_fetch_row($resultUnidade))
+  		echo
+ 		while($row = mysqli_fetch_row($resultUnidade))
 		{
 			$idUnidade = $row[0];
+			echo $idUnidade;
 		}
 
+		$sql4 = "UPDATE animais SET idUnidade = '$idUnidade' WHERE idAnimal='$idAnimal'";
+		$salvar4 = mysqli_query($conexao, $sql4);
+
+*/
 
 		$sql3 = "UPDATE animais SET idEntregador='$idEntregador' WHERE idAnimal='$idAnimal'";
 		$salvar3 = mysqli_query($conexao, $sql3);
+		
 
-		$sql4 = "UPDATE animais SET idUnidade='$idUnidade' WHERE idAnimal='$idAnimal'";
-		$salvar4 = mysqli_query($conexao, $sql4);
+		$sql5 = "UPDATE animais SET idUsuario='$idUsuario' WHERE idAnimal='$idAnimal'";
+		$salvar5 = mysqli_query($conexao, $sql5);
 
 
 
-
+		//header("Location:listaAnimais.php");
 
 
 		echo "Operação foi Realizada com Sucesso!";

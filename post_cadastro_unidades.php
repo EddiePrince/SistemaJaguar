@@ -80,7 +80,9 @@
 		$sql7 = "UPDATE unidades SET idEndereco='$idEndereco' WHERE idUnidade='$idUnidade'";
 		$salvar7 = mysqli_query($conexao, $sql7);
 
-		echo "<script src='js/main.js'></script>"; 
+		header("Location:listaUnidades.php");
+
+		
 		
 }
 
