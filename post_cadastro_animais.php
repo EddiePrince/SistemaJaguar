@@ -3,9 +3,9 @@
   include 'conexao.inc.php';
   include 'validarlogin.inc.php'; //É onde o id do usuário é salvo na sessão
   
-  $idUsuario = $_SESSION['idUsuario'];
+ // $idUsuario = $_SESSION['idUsuario'];
 
-//Pegar id do animal
+//Criar idAutomático
 
   	$getAnimalId = "SELECT MAX(idAnimal) FROM animais";
   	$getAnimalIdresult = mysqli_query($conexao, $getAnimalId);
@@ -14,42 +14,27 @@
 	{
 		$idAutomatico = $row[0]+1;
 	}
-//Pegar data
-	$data = date("d/m/y");
 
 
 	if (isset($_POST['submit'])) {
 
 
 		$agenteRecebedor = $_POST['nomeAgente'];
+		$data = $_POST['dataRecebimento'];
 		$tipoRecolhimento = $_POST['tipoEntrega'];
 		$nomeEntregador = $_POST['nomeEntregador'];
 		$unidade = $_POST['nomeUnidade'];
 		
 		$sql1 = "INSERT INTO animais (idAnimal, data, agente) VALUES ('$idAutomatico','$data' , '$agenteRecebedor')";
 
-		$sql2 = "INSERT INTO entregadores(nome, cpfcnpj, telefone, tipoEntrega) VALUES ('$nomeEntregador', '$cpfcnpj', '$telefone', '$tipoRecolhimento')";
+		$sql2 = "INSERT INTO entregadores(nome, tipoEntrega) VALUES ('$nomeEntregador', '$tipoRecolhimento')";
 
-		$sql3 = "INSERT INTO enderecos(uf, municipio, cep, bairro, lote, complemento) VALUES ('$uf', '$municipio', '$cep', '$bairro' , '$lote', '$complemento')";
-
-		$sql4 = "INSERT INTO anexos(tipoDocumento, nDocumento, arquivo) VALUES ('$tipoDocumento', '$nDocumento', '$arquivo')";
-
-		// ,'$procedencia', '$codMarca' , '$tipoMarca' , '$localMarca', '$nomeComum', '$nomeCientifico', '$familia', '$ordem'
+		
 
 		//executa e armazena o $sql
 		$salvar1 = mysqli_query($conexao, $sql1);
 		$salvar2 = mysqli_query($conexao, $sql2);
-		$salvar3 = mysqli_query($conexao, $sql3);
-		$salvar4 = mysqli_query($conexao, $sql4);
-
-		//Pegar id Endereço
-		$pegarEndereco = "SELECT MAX(idEndereco) FROM enderecos";
-  		$resultEndereco =  mysqli_query($conexao, $pegarEndereco);
-
-  		while($row = mysqli_fetch_row($resultEndereco))
-		{
-			$idEndereco = $row[0];
-		}
+		
 
   		//Pegar idEntregador
 		$pegarEntregador = "SELECT MAX(idEntregador) FROM entregadores";
@@ -59,23 +44,6 @@
 		{
 			$idEntregador = $row[0];
 		}
-
-
-		$sql5 = "UPDATE entregadores SET idEndereco='$idEndereco' WHERE idEntregador='$idEntregador'";
-		$salvar5 = mysqli_query($conexao, $sql5);
-
-
-		//Pegar id Anexo
-		$getFileId = "SELECT MAX(idAnexo) FROM anexos";
-  		$getFileIdresult =  mysqli_query($conexao, $getFileId);
-
- 		while($row =mysqli_fetch_row($getFileIdresult))
-		{
-			$idAnexo = $row[0];
-		}
-
-		$sql6 = "UPDATE entregadores SET idAnexo='$idAnexo' WHERE idEntregador='$idEntregador'";
-		$salvar6 = mysqli_query($conexao, $sql6);
 
 		//Pegar idAnimal
 
@@ -87,20 +55,24 @@
 			$idAnimal = $row[0];
 		}
 
+		//Pegar idUnidade
 
-		$sql7 = "UPDATE animais SET idEntregador='$idEntregador' WHERE idAnimal='$idAnimal'";
-		$salvar7 = mysqli_query($conexao, $sql7);
+		$pegarUnidade = "SELECT * FROM unidades WHERE nome = $unidade";
+  		$resultUnidade =  mysqli_query($conexao, $pegarAnimal);
 
-		//Pegar id unidade
-		$pegarUnidade="SELECT idUnidade FROM unidades WHERE nome='$unidade'";
-		$resultUnidade= mysqli_query($conexao, $pegarUnidade);
-
-		while ($row=mysqli_fetch_row($resultUnidade)) {
+ 		while($row =mysqli_fetch_row($resultUnidade))
+		{
 			$idUnidade = $row[0];
 		}
 
-		$sql8 = "UPDATE animais SET idUnidade='$idUnidade' WHERE idAnimal='$idAnimal'";
-		$salvar8 = mysqli_query($conexao, $sql8);
+
+		$sql3 = "UPDATE animais SET idEntregador='$idEntregador' WHERE idAnimal='$idAnimal'";
+		$salvar3 = mysqli_query($conexao, $sql3);
+
+		$sql4 = "UPDATE animais SET idUnidade='$idUnidade' WHERE idAnimal='$idAnimal'";
+		$salvar4 = mysqli_query($conexao, $sql4);
+
+
 
 
 

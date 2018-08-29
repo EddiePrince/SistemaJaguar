@@ -17,11 +17,13 @@
             } 
             else if($result->num_rows > 0){
               while($row = $result->fetch_assoc()){
+               $idUsuario = $row['nome'];
                $nome = $row['nome'];
                $perfil = $row['perfil'];
               }
               if ($perfil == 'administrador') {
                 session_start();
+                $idUsuario = $_SESSION['idUsuario'];
                 $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
@@ -30,6 +32,7 @@
                 exit;
               } else if ($perfil == 'agente'){
                 session_start();
+                $idUsuario = $_SESSION['idUsuario'];
                 $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;

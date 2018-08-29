@@ -42,7 +42,7 @@
 											<div class="col-md-2 mb-3">
 												<p>Data:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input id="inputdata" class="form-control"  name="dataRecebimento" disabled value="<?php echo $data?>">
+												<input id="inputdata" class="form-control"  name="dataRecebimento" type="date">
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
