@@ -10,9 +10,10 @@
 
   <head>
     <meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" type="text/css" href="style.css">
-  	<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+		<link rel="stylesheet" href="style/bootstrap.min.css">
   	<title>Unidades Cadastradas</title>
   </head>
 
@@ -49,7 +50,7 @@
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaUnidades.inc.php' ?>
     	  </table>
-        
+
         <!-- Consultas -->
         <?php include 'consultas/consUnidade.inc.php'; ?>
 
