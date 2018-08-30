@@ -19,7 +19,6 @@
 
 	<body>
 		<div id="pageAnimall">
-
 			<div class="corpoAdmm" id="corpoAdm">
 				 <div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right"> Logout  <img src="img/logout.png" alt="Logout"></a>
@@ -28,6 +27,7 @@
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'exibirMenu.inc.php'; ?>
+
 					<div id="alerta">
             <div id="boxtop"></div>
             Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
@@ -62,7 +62,7 @@
 									<div class="container">
 									<h4>Dados do Entregador</h4>
 										<div class="row">
-											<div class="col-md-3 mb-3">
+											<div class="col-md-2 mb-3">
 												<p>Tipo de Recolhimento:</p>
 												<select class="form-control" name="tipoEntrega" size=1>
 												<option>Apreensão</option>
@@ -70,7 +70,7 @@
 												<option>Entrega Voluntária</option>
 												</select><br><br>
 											</div>
-											<div class="col-md-9 mb-3">
+											<div class="col-md-7 mb-3">
 												<p>Nome Entregador:</p>
 												<p><input class="form-control" type="text" name="nomeEntregador"></p>
 											</div>
