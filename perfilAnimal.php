@@ -26,31 +26,10 @@
 
 
         <h1>Perfil Do Animal</h1>
-
-    		<div class="container">
-          <div class="tabs">
-            <button class="tablinks" onclick="changeTab()">Dados da Ficha</button>
-            <button class="tablinks">Dados do Entregador</button>
-            <button class="tablinks">Dados da Triagem</button>  
-          </div>
-
-          <!--Conteúdo da Ficha-->
-          <div id="ficha" class="tabcontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            </p>
-          </div>
-
-          <!--Conteúdo do Entregador-->
-          <div id="entregador" class="tabcontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            </p>
-          </div>
-          
-          <!--Conteúdo da Triagem-->
-          <div id="triagem" class="tabcontent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            </p>   
-          </div>
+        <table>
+        	<tr></tr>
+        </table>
+   
 
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'perfilAnimal.inc.php'; ?>
@@ -63,11 +42,6 @@
 			</div>
 
 		</div>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
 
 
 	</body>
