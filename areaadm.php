@@ -21,7 +21,7 @@
 		<div id="pageAdm">
 			<div class="logo">
 				<div class="logo_admin">
-					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
+					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
 				</div>
 				<div>
 					<!-- Menu -->
@@ -39,7 +39,7 @@
 			</div>
 
 
-				<div class="container">
+				<div class="container" id="container">
           <div class="row">
 						<div class="col-md-4 mb-3">
 							<a  href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Unidade   </a>

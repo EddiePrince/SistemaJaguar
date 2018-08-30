@@ -18,18 +18,25 @@
 
 <body>
 
-	<div id="pageUnidadee">
-
+	<div id="pageUnidade">
+    <div class="container">
+    <div class="logo">
 			<div class="logo_admin">
 				<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
 			</div>
-
+      <div>
+        <!-- Menu -->
+        <?php include 'exibirMenu.inc.php'; ?>
+        <!-- Fim Menu -->
+      </div>
+    </div>
 			<div id="corpoAdm" class="corpoAdm" >
-        <div>
 
-					<!-- Menu -->
-          <?php include 'exibirMenu.inc.php'; ?>
-					<!-- Fim Menu -->
+				<div id="alerta">
+					<div id="boxtop"></div>
+					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+            <button id="botao" onclick="apagar();">OK</button>
+				</div>
 
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
 
@@ -144,19 +151,14 @@
                     	<div id="msgField"></div>
 				         </div>
 				        </div>
-						</div>
-					</div>
-
 				</form>
-			</div>
       </div>
-
 
       <div class="footer">
-        <?php include 'footer.php';
-
-        ?>
+        <?php include 'footer.php'; ?>
       </div>
+      </div>
+    </div>
 
 
 </body>
