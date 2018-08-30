@@ -1,9 +1,19 @@
 /* Tela de Login */
-
 body {
 	margin: 0;
 	padding: 0;
-	text-decoration: none;
+}
+
+#header {
+	background: rgba(155, 155, 155, 0.5);
+	width: 100%;
+	height: 80px;
+	margin-top:0;
+}
+
+#logo {
+	width: 200px;
+	margin-left: 20px;
 }
 
 .linkicon {
@@ -181,19 +191,9 @@ article {
 
 /* Inicio Menu */
 
-/*Imagem da logo do Admin*/
 
-.logo_admin {
-	background: rgba(155, 155, 155, 0.5);
-	width: 100%;
-	height: 80px;
-	margin-top: -45px;
-}
 
-.logo_admin img {
-	width: 130px;
-	margin-left: 20px;
-}
+
 
 /* Botão logout */
 

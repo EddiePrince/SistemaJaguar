@@ -17,13 +17,13 @@
 <body>
 	<div id="pageAjuda">
 		
-		<div class="logo_admin">
-			<img src="img/logo.png" alt="Logo"> 
-			<a id="logout" href="logout.php" class="btn btn-default navbar-btn pull-right">Logout<img src="img/logout.png" alt="Logout"></a>
-		</div>
+		
 
 		<!--Incluir menu-->
-		<?php include 'exibirMenu.inc.php'; ?>
+		<?php
+		include 'header.inc.php';
+		include 'exibirMenu.inc.php'; 
+		?>
 		
 		<div  class="corpoAdm" id="corpoAdm">
 			<div class="container">
@@ -55,7 +55,7 @@
 		<div class="footer">
 			<?php include 'footer.php'; ?>
 		</div>
-		
+
 	</div>
 
 </body>
