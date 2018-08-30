@@ -18,7 +18,7 @@
 		 		$idUnidade = $row['idUnidade'];
 		 		
 		 		if ($idTelefone == NULL) { //Somente o telefone é opcional por isso pode ser nulo
-		 			echo "<td>Telefone não informado.</td>";
+		 			echo "<td>Telefone não informado</td>";
 		 		}
 		 		else if ($idTelefone != NULL) {
 			 		$sql2 = "SELECT * FROM telefones WHERE idTelefone = '$idTelefone'";
@@ -30,13 +30,18 @@
 		 				echo "<td>" . $numero . "</td>";
 		 			}
 		 		}
-		 				 		
-		 		$sql3 = "SELECT * FROM unidades WHERE idUnidade = '$idUnidade'";
-			 	$result3 = $conexao->query($sql3);
-		 		while($row = mysqli_fetch_row($result3))
-		 		{
-		 			$nomeUnidade = $row[1];
-		 			echo "<td>" . $nomeUnidade . "</td>";
+		 			
+		 		if ($idUnidade == NULL) { // Em caso de usuários teste sem unidade
+		 			echo "<td>Unidade não informada</td>";
+		 		}	 		
+		 		else if($idUnidade != NULL){
+			 		$sql3 = "SELECT * FROM unidades WHERE idUnidade = '$idUnidade'";
+				 	$result3 = $conexao->query($sql3);
+			 		while($row = mysqli_fetch_row($result3))
+			 		{
+			 			$nomeUnidade = $row[1];
+			 			echo "<td>" . $nomeUnidade . "</td>";
+			 		}
 		 		}
 
 		 		echo "</tr>";		

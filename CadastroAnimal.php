@@ -4,7 +4,6 @@
 	  include 'conexao.inc.php';
 	  include 'verificausuario.inc.php';
 	  include 'post_cadastro_animais.php';
-	  include 'blockAcesso.inc.php';
 	?>
 <!DOCTYPE html>
 <html lang="pt-br">
