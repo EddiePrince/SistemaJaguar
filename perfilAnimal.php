@@ -1,7 +1,5 @@
 <?php
-	//Erro de Validação W3C Identificado
-  //Conexão com Banco
-	include 'post_cadastro_animais.php';
+	include 'conexao.inc.php';
 	include 'verificausuario.inc.php';
 ?>
 <!DOCTYPE html>
@@ -31,45 +29,30 @@
         <h1>Perfil Do Animal</h1>
 
     		<div class="container">
+          <div class="tabs">
+            <button class="tablinks" onclick="changeTab()">Dados da Ficha</button>
+            <button class="tablinks">Dados do Entregador</button>
+            <button class="tablinks">Dados da Triagem</button>  
+          </div>
 
+          <!--Conteúdo da Ficha-->
+          <div id="ficha" class="tabcontent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            </p>
+          </div>
 
-      	<table>
-      		<tr>
-      			<th>Número da Ficha</th>
-      			<th>Data de Recebimento</th>
-      			<th>Agente</th>
-      			<th>Tipo de Recolhimento</th>
-      			<th>Nome do Entregador</th>
-      			<th>CPF/CNPJ</th>
-      			<th>Telefone</th>
-      			<th>UF</th>
-      			<th>Município</th>
-      			<th>CEP</th>
-            <th>Bairro</th>
-            <th>Lote</th>
-      			<th>Complemento</th>
-      			<th>Tipo Documento</th>
-      			<th>Numero Documento</th>
-      			<th>Upload</th>
-            <th>Última Procedência</th>
-            <th>Dieta</th>
-            <th>Nome Comum</th>
-            <th>Nome Científico</th>
-            <th>Família</th>
-            <th>Ordem</th>
-            <th>Código da Marcação</th>
-            <th>Tipo de Marcação</th>
-            <th>Local da Marcação</th>
-      			<th>Município de Procedência</th>
-      			<th>UF</th>
-      			<th>Período em Quarentena</th>
-      			<th>Tipo da Destinação</th>
-      			<th>Subtipo da Destinação</th>
-      			<th>Condição 1</th>
-      			<th>Condição 2</th>
-      			<th>Condição 3</th>
-      			<th>ID Área</th>
-      		</tr>
+          <!--Conteúdo do Entregador-->
+          <div id="entregador" class="tabcontent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            </p>
+          </div>
+          
+          <!--Conteúdo da Triagem-->
+          <div id="triagem" class="tabcontent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            </p>   
+          </div>
+
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'perfilAnimal.inc.php'; ?>
       	</table>

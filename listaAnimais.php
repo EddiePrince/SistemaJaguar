@@ -42,7 +42,7 @@
       			<th>Número da Ficha</th>
       			<th>Data de Recebimento</th>
       			<th>Agente</th>
-            <!-- <th>Perfil</th>-->
+            <th>Perfil Completo</th>
 
           </tr>
           <!-- Erro de Validação W3C Identificado -->
