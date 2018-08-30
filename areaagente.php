@@ -39,7 +39,7 @@
   				<div id="alerta">
   					<div id="boxtop"></div>
   					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-  					<button id="botao" onclick="apagar();">OK</button>
+  					<button class="btn btn-sucess" id="botao" onclick="apagar();">OK</button>
   				</div>
 
   				<div class="container">

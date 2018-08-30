@@ -15,16 +15,20 @@
  <html lang="pt-br">
    <head>
      <meta charset="utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" type="text/css" href="style.css">
+ 		<link rel="stylesheet" type="text/css" href="style/bootstrapv3.min.css">
+ 		<link rel="stylesheet" href="style/bootstrap.min.css">
      <title>Pesquisa</title>
-     <link rel="stylesheet" href="style.css">
    </head>
    <body>
 
      <div id="pageAdm">
        <div class="logo">
-         <div class="logo_admin">
-           <a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
-         </div>
+ 				<div class="logo_admin">
+ 					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
+ 				</div>
+ 				<div>
          <div>
            <!-- Menu -->
            <!-- Erro de Validação W3C Identificado -->
@@ -34,16 +38,18 @@
        </div>
 
  			<div class="corpoAdm">
- 				<div class="container">
+ 				<div class="container"><br><br>
+
           <div id="alerta">
             <div id="boxtop"></div>
             Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
             <button id="botao" onclick="apagar();">OK</button>
           </div>
+
        <section>
-         <h1>Consultar Unidades</h1> <hr><br><br>
+
          <form class="form" action="" method="get">
-         <strong>Filtrar por nome: </strong><div id="divBusca">
+         <div id="divBusca">
          	<img src="img/icon pesquisa.png" alt="Buscar..."/>
          	<input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
          	<button type="submit" id="btnBusca">Buscar</button>
@@ -59,28 +65,34 @@
              if (!empty($_GET['filtro'])) {
 
 				 if ($registros > 0) {
-					 echo "<br>Resultado da pesquisa com a palavra <strong> $filtro. </strong><br><br><br>";
-					 echo "<strong>$registros registro(s) encontrado(s).</strong><br><br>"; //exibição da quanidade de registros encontrados
+					 echo "<br><strong>Resultado da pesquisa com a palavra  $filtro. </strong><br><br>";
+					 echo "<strong>$registros </strong>registro(s) encontrado(s).<br><br>"; //exibição da quanidade de registros encontrados
+
 				 }else {
 				 	echo "<br><br>Nenhum registro encontrado a palavra <strong> $filtro. </strong>";
 				 }
          while ($exibirRegistros =mysqli_fetch_array($consulta)) {
-           $codigo = $exibirRegistros[0];
+           $idUnidade = $exibirRegistros[0];
            $nome = $exibirRegistros[1];
-           $email = $exibirRegistros[2];
-           $profissao = $exibirRegistros[3];
+           $tipoUnidade= $exibirRegistros[2];
+           $idTelefone= $exibirRegistros[3];
+           $idCnpj = $exibirRegistros[4];
+           $idEndereco = $exibirRegistros[5];
 
            echo "<article>";
-           echo "$codigo<br>";
-           echo "$nome<br>";
-           echo "$email<br>";
-           echo "$profissao<br><br>";
+           // echo "id Unidade: ". " $idUnidade<br>";
+           echo "Nome da Unidade: ". " $nome<br>";
+           echo "Tipo: ". " $tipoUnidade<br>";
+           echo "Telefone: ". " $idTelefone<br>";
+           echo "CNPJ: ". " $idCnpj<br>";
+           echo "Endereço: ". " $idEndereco<br>";
            echo "</article>";
          }
 
                       }
 
          mysqli_close($conexao);
+
           ?>
 
        </section>
