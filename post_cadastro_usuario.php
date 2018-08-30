@@ -19,6 +19,7 @@
 	$salvar2 = mysqli_query($conexao, $sql2);
 
 	
+	//Pegar idTelefone
 	$pegarTelefone = "SELECT MAX(idTelefone) FROM telefones";
 	$resultTelefone =  mysqli_query($conexao, $pegarTelefone);
 
@@ -28,6 +29,7 @@
 		echo $idTelefone;
 	}
 	
+	//Pegar idUsuario	
 	$pegarUsuario = "SELECT MAX(idUsuario) FROM usuarios";
 	$resultUsuario =  mysqli_query($conexao, $pegarUsuario);
 
@@ -37,6 +39,7 @@
 		echo $idUsuario;
 	}
 
+	//Pegar idUnidade
 	$pegarUnidade = "SELECT * FROM unidades WHERE nome = '$unidade'";
 	$resultUnidade =  mysqli_query($conexao, $pegarUnidade);
 

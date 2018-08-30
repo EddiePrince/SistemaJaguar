@@ -11,6 +11,7 @@
   $perfil = $_SESSION['perfil'];
   $matricula = $_SESSION['matricula'];
   $senha = $_SESSION['matricula'];
+  
 
   if (!isset($matricula) && !isset($senha)) {
     header('Location: index.php');

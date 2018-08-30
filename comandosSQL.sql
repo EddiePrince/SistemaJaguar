@@ -1,16 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Ago-2018 às 16:21
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.0.30
+-- Generation Time: 30-Ago-2018 às 01:39
+-- Versão do servidor: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 DROP DATABASE if EXISTS jaguar_sistem;
 CREATE DATABASE jaguar_sistem;
 USE jaguar_sistem;
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -24,7 +23,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sistemajaguar`
+-- Database: `jaguar_sistem`
 --
 
 -- --------------------------------------------------------
@@ -48,6 +47,8 @@ CREATE TABLE `anexos` (
 
 CREATE TABLE `animais` (
   `idAnimal` int(11) NOT NULL,
+  `data` varchar(10) NOT NULL,
+  `agente` varchar(60) NOT NULL,
   `idUsuario` int(11) DEFAULT NULL,
   `idEntregador` int(11) DEFAULT NULL,
   `idTriagem` int(11) DEFAULT NULL,
@@ -76,7 +77,7 @@ CREATE TABLE `areas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cnpjs`
+-- Estrutura da tabela `cnpj`
 --
 
 CREATE TABLE `cnpj` (
@@ -87,7 +88,7 @@ CREATE TABLE `cnpj` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cpfs`
+-- Estrutura da tabela `cpf`
 --
 
 CREATE TABLE `cpf` (
@@ -246,8 +247,13 @@ CREATE TABLE `usuarios` (
   `senha` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('1', NULL, NULL, 'admin', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin');
-INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES ('2', NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES
+(1, NULL, NULL, 'admin', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin'),
+(2, NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
 
 --
 -- Indexes for dumped tables
@@ -279,13 +285,13 @@ ALTER TABLE `areas`
   ADD KEY `idEndereco` (`idEndereco`);
 
 --
--- Indexes for table `cnpjs`
+-- Indexes for table `cnpj`
 --
 ALTER TABLE `cnpj`
   ADD PRIMARY KEY (`idCnpj`);
 
 --
--- Indexes for table `cpfs`
+-- Indexes for table `cpf`
 --
 ALTER TABLE `cpf`
   ADD PRIMARY KEY (`idCpf`);
@@ -381,13 +387,13 @@ ALTER TABLE `areas`
   MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cnpjs`
+-- AUTO_INCREMENT for table `cnpj`
 --
 ALTER TABLE `cnpj`
   MODIFY `idCnpj` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cpfs`
+-- AUTO_INCREMENT for table `cpf`
 --
 ALTER TABLE `cpf`
   MODIFY `idCpf` int(11) NOT NULL AUTO_INCREMENT;
@@ -414,13 +420,13 @@ ALTER TABLE `dadostriagem`
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `entregadores`
 --
 ALTER TABLE `entregadores`
-  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `recuperacaosenha`
@@ -432,19 +438,19 @@ ALTER TABLE `recuperacaosenha`
 -- AUTO_INCREMENT for table `telefones`
 --
 ALTER TABLE `telefones`
-  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `unidades`
 --
 ALTER TABLE `unidades`
-  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables

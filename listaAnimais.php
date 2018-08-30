@@ -40,9 +40,9 @@
       	<table class="table">
       		<tr>
       			<th>Número da Ficha</th>
-      			<th>Nome Comum</th>
       			<th>Data de Recebimento</th>
       			<th>Agente</th>
+            <!-- <th>Perfil</th>-->
 
           </tr>
           <!-- Erro de Validação W3C Identificado -->

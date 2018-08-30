@@ -1,7 +1,7 @@
 <?php
 //Conecção com Banco
     include 'conexao.inc.php';//inclusão do arquivo de conexão com o banco
-   
+    
     if (isset($_POST['entrar']) && $_POST['entrar'] == 'Login'){
         $matricula = $_POST['matricula'];
         $senha = $_POST['senha'];
@@ -31,8 +31,7 @@
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
-                
-                $idUsuario = $_SESSION['idUsuario'];
+                $_SESSION['idUsuario'] = $idUsuario;
                 $_SESSION['matricula'] = $matricula;
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
