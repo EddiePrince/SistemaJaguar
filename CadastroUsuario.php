@@ -23,7 +23,7 @@
         <img src="img/logo.png">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
       </div>
 
-
+			<div id="cadusuario">
 			<div class="corpoAdm">
         <form  method="post" action="post_cadastro_usuario.php">
         <div>
@@ -31,7 +31,7 @@
           <?php include 'exibirMenu.inc.php'; ?>
           <!-- Fim Menu -->
         </div>
-					<h3>Cadastro Usuario</h3><br>
+				<br>	<h3 class="titulo1">Cadastro Usuario</h3><br>
         	<div class="container">
 	          <div class="row">
 		          <div class="col-md-3 mb-3">
@@ -58,18 +58,17 @@
                   <label>E-mail:</label><br>
                   <input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
                 </div>
-    		          <div class="col-md-3 mb-3">
+    		          <div class="col-md-4 mb-3">
     					    <label>Telefone:</label><br>
     					    <input class="form-control" type="text" name="telefone"><br><br>
   					    </div>
 
-				      </div>
-
-      				<div class="row">
       		      <div class="col-md-3 mb-3">
       						<label>Senha:</label><br>
       					  <input class="form-control" type="text" name="senha" required><br><br>
       					</div>
+      					</div>
+                <div class="row">
                 <div class="col-md-3 mb-3">
                   <label>Selecione a Unidade:</label><br>
                   <select class="form-control" name="nomeUnidade" size=1>
@@ -80,6 +79,7 @@
       				</div>
 		        <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
       		</div>
+        </div>
 		   </form>
      </div>
 
@@ -94,8 +94,8 @@
             include 'verificarUnidades.inc.php';
         ?>
       </div>
+      </div>
 
-    </div>
 
 </body>
 </html>
