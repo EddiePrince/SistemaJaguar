@@ -32,6 +32,10 @@
           <?php include 'exibirMenu.inc.php'; ?>
   				<!-- Fim Menu -->
 
+        <br><div  id="Cadastrar"  >
+          <a id="Cadastrar" href="CadastroAnimal.php" >  Cadastrar Animal</a>
+          <!-- <img src="img/logout.png" alt="Cadastrar"> -->
+        </div>
 
   	    <div class="container">
 

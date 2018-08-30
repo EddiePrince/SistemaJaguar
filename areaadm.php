@@ -3,7 +3,6 @@
   //Conecção com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
-  include 'blockAcesso.inc.php';
 ?>
 
 	<!DOCTYPE html>
@@ -32,11 +31,11 @@
 			</div>
 
 			<div class="corpoAdm">
-			<div id="alerta">
-				<div id="boxtop"></div>
-				Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-          <button id="botao" onclick="apagar();">OK</button>
-			</div>
+  			<div id="alerta">
+  				<div id="boxtop"></div>
+  				Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+            <button id="botao" onclick="apagar();">OK</button>
+  			</div>
 
 
 				<div class="container" id="container">
