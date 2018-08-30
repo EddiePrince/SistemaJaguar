@@ -3,6 +3,7 @@
   //Conecção com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
+  include 'blockAcesso.inc.php';
 ?>
 
 	<!DOCTYPE html>
@@ -36,7 +37,7 @@
 					<h4>Bem vindo <?php echo $nome?>!</h4>
 				</div>
 
-				
+
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 mb-3">
@@ -55,8 +56,8 @@
 		</div>
     <!-- Erro de Validação W3C Identificado -->
     <div class="footer">
-      <?php include 'footer.php'; 
-      	
+      <?php include 'footer.php';
+
       ?>
     </div>
 		</div>

@@ -2,7 +2,7 @@
   //Conexão com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
-  
+
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 	<title>Cadastro de Unidades</title>
 </head>
 
-<body class="bg-light">
+<body>
 
 	<div id="pageUnidadee">
 
@@ -152,10 +152,10 @@
 			</div>
       </div>
 
-     
+
       <div class="footer">
         <?php include 'footer.php';
-        	
+
         ?>
       </div>
 

@@ -111,10 +111,10 @@ body {
 	background-color: #fff;
 	border: solid 1px #222;
 	border-radius: 5px;
-	width: 300px;
+	width: 700px;
 	height: 35px;
-	top: 9%;
-	left: 70%;
+	top: 20%;
+	left: 20%;
 }
 
 #txtBusca {
@@ -125,15 +125,15 @@ body {
 	font-size: 18px;
 	border: none;
 	height: 32px;
-	width: 191px;
+	width: 610px;
 	position: absolute;
 	top: 1%;
 	left: 8%;
 }
 
 #btnBusca {
-	width: 70px;
-	height: 35px;
+	width: 69px;
+	height: 33px;
 	position: absolute;
 	border: none;
 	float: left;
@@ -141,14 +141,14 @@ body {
 	font-weight: bold;
 	background: #80bfff;
 	top: 0%;
-	left: 77%;
+	left: 97%;
 }
 
 #divBusca img {
 	float: left;
 	position: absolute;
 	width: 20px;
-	top: 11%;
+	top: 13%;
 	left: 1%;
 	right: 5px;
 }
@@ -156,13 +156,14 @@ body {
 /* seção da exibição de pesquisas */
 
 section {
-	margin-left: 3%;
-	margin-right: 3%;
-	background-color: #d6d5d5;
+	margin-left: 19%;
+	margin-right: 25%;
+	color: white;
+	font-size: 17px;
+	font-family: sans-serif bold;
 }
 
 .form {
-	background-color: silver;
 	padding: 10px;
 }
 
@@ -214,6 +215,42 @@ article {
 	max-height: 23px;
 }
 
+/* Botão Cadastrar */
+
+#Cadastrar {
+	padding: 5px;
+	width: 150px;
+	height: 35px;
+	margin-left: 6%;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: left;
+	background-color: #F5F5F5;
+	border-radius: 5px;
+	font-family: "lovelyFont";
+	color: black;
+	src: url('bahnschrift.ttf') font-weight: bold;
+}
+
+#Cadastrar:hover {
+	-webkit-transition;
+	transition: all .9s ease;
+	background-color: #C8C8C8;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: "lovelyFont";
+	color: green;
+	font-size: 16px;
+	src: url('bahnschrift.ttf') font-weight: bold;
+}
+
+#Cadastrar img {
+	background-color: none;
+	margin-top: 0;
+	max-width: 23px;
+	max-height: 23px;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 1100px) {
 	.logo_admin {
 		min-width: 300px;
@@ -236,105 +273,18 @@ article {
 }
 
 .home {
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	margin-left: 30%;
 }
 
 .consulta {
-	width: 50px;
-	height: 50px;
+	width: 55px;
+	height: 55px;
 	margin-left: 20%;
 }
 
-/*
-.menu {
-	width: 100%;
-	height: 50px;
-	background-color: #222;
-	font-family: 'arial';
-	margin-top: -20px;
-	align-items: center;
-}
-
-.menu ul {
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-	list-style: none;
-	position: relative;
-}
-
-.menu ul li {
-	font-size: 14px;
-	font-family: sans-serif;
-	width: 180px;
-	float: left;
-	border-radius: 5px;
-	height: 50px;
-}
-
-.menu a {
-	padding: 15px;
-	display: block;
-	text-decoration: none;
-	text-align: center;
-	background-color: #222;
-	opacity: .9;
-	color: #fff;
-	border-radius: 5px;
-	scroll-behavior: auto;
-}
-
-.menu ul ul {
-	position: absolute;
-	visibility: hidden;
-}
-
-.menu ul li:hover ul {
-	visibility: visible;
-}
-
-.menu a:hover {
-	background-color: #f4f4f4;
-	color: #555;
-}
-
-.menu ul ul li {
-	font-size: 13px;
-	font-family: sans-serif;
-	float: none;
-	border-bottom: solid 1px #ccc;
-}
-
-.menu ul ul li a {
-	background-color: #069;
-}
-
-@media (max-width: 1000px) {
-	.menu {
-		display: run-in;
-		width: 100%;
-		transition: all .5s;
-	}
-	.menu ul li {
-		width: 100%;
-		margin-right: 25%;
-		float: none;
-	}
-	.menu ul ul {
-		overflow: hidden;
-		transition: all .4s;
-	}
-	.menu ul li:hover ul {
-		height: auto;
-		max-height: 200px;
-	}
-} */
-
-/* fim menu */
-
-/* Background Page Adm */
+/* Background Pages */
 
 #pageDesenvolvedor {
 	background-image: url("img/2.jpg");
@@ -351,23 +301,6 @@ article {
 	right: 0;
 	top: 0;
 }
-
-/*
-#pageRecSenhaLogin{
-  background-image: url("img/29.jpg");
-	background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-} */
 
 #pageRecSenha {
 	background-image: url("img/10.jpg");
@@ -442,18 +375,18 @@ article {
 	font-weight: bold;
 }
 
-.paragrafo {
-	text-shadow: 1px 1px 1px Black;
-	font-family: sans-serif;
-	font-size: 22px;
-	text-align: justify;
-}
-
 .subtitulo {
 	text-shadow: 1px 1px 1px black;
 	font-family: sans-serif;
 	font-size: 22px;
 	color: #FFF;
+}
+
+.paragrafo {
+	text-shadow: 1px 1px 1px Black;
+	font-family: sans-serif;
+	font-size: 22px;
+	text-align: justify;
 }
 
 /* Fim Texto area de ajuda */
@@ -510,7 +443,7 @@ article {
 }
 
 #pageListaUsuario {
-	background-image: url("img/14.jpg");
+	background-image: url("img/32.jpg");
 	background-color: white;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -524,6 +457,13 @@ article {
 	left: 0;
 	right: 0;
 	top: 0;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1100px) {
+	#pageListaUsuario {
+		min-width: 300px;
+		overflow: auto;
+	}
 }
 
 #pageAnimal {
@@ -594,7 +534,7 @@ article {
 	top: 0;
 }
 
-#pageUnidade h3 {
+pageUnidade h3 {
 	text-align: center;
 }
 
@@ -654,6 +594,28 @@ input[type="text1"] {
 	top: 0;
 }
 
+.listas h2 {
+	font-size: 30px;
+	font-family: sans-serif bold;
+	text-shadow: 1px 1px 1px #0000ff;
+	margin-top: 15px;
+	border: solid 1px #ccc;
+	text-align: center;
+}
+
+.listas table tr {
+	font-family: sans-serif bold;
+	font-size: 20px;
+	overflow: auto;
+	border: solid 3px #ccc;
+	text-align: center;
+}
+
+.listas table tr th {
+	overflow: auto;
+	border: solid 1px #ccc;
+}
+
 .corpoAdm {
 	background: rgba(0, 0, 0, 0.5);
 	max-width: 100%;
@@ -666,28 +628,6 @@ input[type="text1"] {
 	}
 }
 
-/* @media only screen and (max-width:1200px){
-  .corpoAdm {
-  position:relative;
-  display: inline-block;
-  padding: 10px;
-  vertical-align: middle;
-  right:12%;
-  width:45%;
-  }
-} */
-
-/* @media only screen and (min-width:400px)  and (max-width:900px){
-  .corpoAdm {
-  position:relative;
-  display: inline-block;
-  padding: 10px;
-  vertical-align: middle;
-  right:12%;
-  width:45%;
-  }
-} */
-
 /* Tabela lista de animais */
 
 .table {
@@ -696,9 +636,10 @@ input[type="text1"] {
 
 /*Alerta para unidades não cadastradas*/
 
-#alerta , #sucesso {
+#alerta, #sucesso {
 	position: absolute;
 	color: black;
+	font-size: 15px;
 	text-align: center;
 	top: 0;
 	padding: 10px;
@@ -716,6 +657,17 @@ input[type="text1"] {
 	height: 20px;
 	background-color: red;
 	display: none;
+	background-color: orange;
+	border-radius: 5px;
+}
+
+#botao {
+	color: red;
+	font-family: sans-serif bold;
+	width: 40px;
+	height: 26px;
+	border-radius: 5px;
+	background-color: silver;
 }
 
 /* Rodapé */
@@ -740,7 +692,7 @@ input[type="text1"] {
 
 .container a {
 	padding: 3px;
-	margin-top: 110px;
+	margin-top: 80px;
 	width: 200px;
 	height: 130px;
 	font-size: 18px;
@@ -777,10 +729,18 @@ input[type="text1"] {
 	border: 2px white;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 1100px) {
-	#areaPcp {
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+	.container, .container a {
 		display: block;
 		width: 100%;
+		-webkit-transition;
+		all: .9s ease;
+		-moz-transition: all .9s ease;
+		-ms-transition: all .9s ease;
+		transition: all .9s ease;
+	}
+	.footer {
+		min-width: 300px;
 	}
 }
 

@@ -20,6 +20,7 @@
 
 	<body>
 		<div id="pageAnimall">
+
 			<div class="corpoAdmm" id="corpoAdm">
 				 <div class="logo_admin">
 					<img src="img/logo.png" alt="Logo">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right"> Logout  <img src="img/logout.png" alt="Logout"></a>
@@ -28,8 +29,12 @@
 					<!-- Menu -->
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'exibirMenu.inc.php'; ?>
-					
-					
+					<div id="alerta">
+            <div id="boxtop"></div>
+            Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+            <button id="botao" onclick="apagar();">OK</button>
+          </div>
+	<div class="container">
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container">
 						<br><br><h3>Cadastro de Animais</h3><br><br>
@@ -51,16 +56,14 @@
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
+
 
 								<!-- Dados do Entregador/Autuado  -->
 
-								<div class="form_div"><br>
 									<div class="container">
 									<h4>Dados do Entregador</h4>
 										<div class="row">
-											<div class="col-md-2 mb-3">
+											<div class="col-md-3 mb-3">
 												<p>Tipo de Recolhimento:</p>
 												<select class="form-control" name="tipoEntrega" size=1>
 												<option>Apreensão</option>
@@ -68,7 +71,7 @@
 												<option>Entrega Voluntária</option>
 												</select><br><br>
 											</div>
-											<div class="col-md-7 mb-3">
+											<div class="col-md-9 mb-3">
 												<p>Nome Entregador:</p>
 												<p><input class="form-control" type="text" name="nomeEntregador"></p>
 											</div>
@@ -76,16 +79,13 @@
 										</div>
 									</div>
 
-
-
-
 								<!-- Dados da Unidade Acolhedora -->
 
-								<div class="form_div"><br>
+
 									<div class="container">
 										<h4> Dados da Unidade Acolhedora</h4>
 											<div class="row">
-			          							<div class="col-md-4 mb-3">
+			          					<div class="col-md-4 mb-3">
 													<p>Selecione a Unidade:</p>
 													<select class="form-control" name="nomeUnidade" size=1>
 													<?php include 'selectUnidades.inc.php'; ?>
@@ -97,29 +97,18 @@
 										</div>
 
 								</div>
-								<hr>
-
 							</div>
+						</div>
 
 				</form>
 
-				<div id="alerta">
-                <div id="boxtop"></div>
-                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-              	<button id="botao" onclick="apagar(); redirect();">OK</button>
-              </div>
+
       <div class="footer">
         <?php include 'footer.php';
         	  include 'verificarUnidades.inc.php';
         ?>
       </div>
 
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/main.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
 
 
 	</body>

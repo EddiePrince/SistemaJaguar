@@ -16,7 +16,7 @@
     <title>Cadastro de Usuário</title>
 </head>
 
-<body class="bg-light">
+<body>
 
 	<div id="pageUsuario">
 
@@ -25,8 +25,8 @@
       </div>
 
 
-			<div id="cadusuario">
-        <form class="corpoAdm" method="post" action="post_cadastro_usuario.php">
+			<div class="corpoAdm">
+        <form  method="post" action="post_cadastro_usuario.php">
         <div>
           <!-- Menu -->
           <?php include 'exibirMenu.inc.php'; ?>
@@ -38,7 +38,7 @@
 		          <div class="col-md-3 mb-3">
   						  <label>Perfil: </label><br>
   						  <select class="form-control" name="perfil" required autofocus>
-    							
+
     							<option value="administrador">Administrador</option>
     							<option value="agente">Agente</option>
   						  </select><br><br>
@@ -75,32 +75,28 @@
                   <label>Selecione a Unidade:</label><br>
                   <select class="form-control" name="nomeUnidade" size=1>
                     <?php include 'selectUnidades.inc.php'; ?>
-                  </select>  
+                  </select>
                 </div>
-                
+
       				</div>
 		        <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
       		</div>
-        </div>
 		   </form>
+     </div>
 
-    
-  </div>
-  <div id="alerta">
-                <div id="boxtop"></div>
-                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-                <button id="botao" onclick="apagar(); redirect();">OK</button>
-              </div>
+
+      <div id="alerta">
+        <div id="boxtop"></div>
+        Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+        <button id="botao" onclick="apagar(); redirect();">OK</button>
+      </div>
       <div class="footer">
         <?php include 'footer.php';
             include 'verificarUnidades.inc.php';
         ?>
       </div>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+    </div>
 
 </body>
 </html>
