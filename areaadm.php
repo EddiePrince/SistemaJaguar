@@ -32,9 +32,11 @@
 			</div>
 
 			<div class="corpoAdm">
-				<div class="container">
-					<h4>Bem vindo <?php echo $nome?>!</h4>
-				</div>
+			<div id="alerta">
+				<div id="boxtop"></div>
+				Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+          <button id="botao" onclick="apagar();">OK</button>
+			</div>
 
 
 				<div class="container">
@@ -47,8 +49,6 @@
 						</div>
 						<div class="col-md-4 mb-3">
 							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Animal </a>
-
-
 				</div>
 			</div>
 		</div>
