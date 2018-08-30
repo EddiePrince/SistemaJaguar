@@ -1,6 +1,5 @@
 <?php
   //Erro de Validação W3C Identificado
-  //Conecção com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
 ?>
