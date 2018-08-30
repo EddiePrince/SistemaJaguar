@@ -84,11 +84,18 @@
         </div>
 		   </form>
 
-    <div class="footer">
-      <?php include 'footer.php'; ?>
-    </div>
+    
   </div>
-
+  <div id="alerta">
+                <div id="boxtop"></div>
+                Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+                <button id="botao" onclick="apagar(); redirect();">OK</button>
+              </div>
+      <div class="footer">
+        <?php include 'footer.php';
+            include 'verificarUnidades.inc.php';
+        ?>
+      </div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

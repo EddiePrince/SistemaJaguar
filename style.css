@@ -696,7 +696,7 @@ input[type="text1"] {
 
 /*Alerta para unidades não cadastradas*/
 
-#alerta {
+#alerta , #sucesso {
 	position: absolute;
 	color: black;
 	text-align: center;

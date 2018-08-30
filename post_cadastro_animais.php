@@ -65,6 +65,7 @@
 		$salvar3 = mysqli_query($conexao, $sql3);
 
 		header("Location:listaAnimais.php");
+		
 	}
 
 
