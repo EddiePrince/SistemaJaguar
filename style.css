@@ -31,6 +31,11 @@ body {
 	width: 30px;
 }
 
+#fundoTransparente{
+	background: rgba(0, 0, 0, 0.5);
+	min-height: 780px;
+}
+
 
 /*Configuração para todas as imagens de fundo*/
 .backgroundimgs{
@@ -40,13 +45,72 @@ body {
 	color: white;
 }
 
-							/*Todas as imagens de fundo*/
+/*Todas as imagens de fundo*/
 #pageAjuda {
 	background-image: url("img/31.jpg");
-	
-	
+}
+
+#ajudaLogin {
+	background-image: url("img/32.jpg");
+}
+
+#pageAdm {
+	background-image: url("img/7.jpg");
+}
+
+#pageAgente {
+	background-image: url("img/19.jpg");
+}
+
+#pageAnimal {
+	background-image: url("img/27.jpg");
+}
+
+#pageListaAnimais {
+	background-image: url("img/28.jpg");
+}
+
+#pagePerfilAnimal {
+	background-image: url("img/10.jpg");
 
 }
+
+#pageUnidade {
+	background-image: url("img/7.jpg");
+	
+}
+
+#pageUsuario {
+	background-image: url("img/12.jpg");
+}
+
+#pageListaUsuario {
+	background-image: url("img/32.jpg");
+}
+
+#pageListaUnidade {
+	background-image: url("img/21.jpg");
+}
+
+#pageDesenvolvedor {
+	background-image: url("img/2.jpg");
+}
+
+
+/*Fim das imagens de fundo*/
+
+
+/* Rodapé */
+
+#footer {
+	background-color: #222;
+	padding: 14px;
+	text-decoration: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 
 .linkicon {
 	width: 20px;
@@ -300,21 +364,7 @@ article {
 
 /* Background Pages */
 
-#pageDesenvolvedor {
-	background-image: url("img/2.jpg");
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
+
 
 #pageRecSenha {
 	background-image: url("img/10.jpg");
@@ -332,22 +382,6 @@ article {
 	top: 0;
 }
 
-#ajudaLogin {
-	background-image: url("img/32.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
 .icon-img {
 	max-width: 30px;
@@ -389,73 +423,10 @@ article {
 
 /* Fim Texto area de ajuda */
 
-#pageAdm {
-	background-image: url("img/7.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
-#pageAgente {
-	background-image: url("img/19.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
-#pageUsuario {
-	background-image: url("img/12.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
-#pageListaUsuario {
-	background-image: url("img/32.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
+
 
 @media only screen and (min-width: 200px) and (max-width: 1100px) {
 	#pageListaUsuario {
@@ -464,77 +435,8 @@ article {
 	}
 }
 
-#pageAnimal {
-	background-image: url("img/27.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
-#pageListaAnimais {
-	background-image: url("img/28.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
 
-#pagePerfilAnimal {
-	background-image: url("img/10.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-
-#pageUnidade {
-	background-image: url("img/7.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	top: 0;
-}
-
-pageUnidade h3 {
-	text-align: center;
-}
 
 #pageUnidade input {
 	width: 80%;
@@ -575,22 +477,7 @@ input[type="text1"] {
 	border: none;
 }
 
-#pageListaUnidade {
-	background-image: url("img/21.jpg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	font-size: 15px;
-	color: white;
-	overflow: auto;
-	padding: 3em;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
-}
+
 
 .listas h2 {
 	font-size: 30px;
@@ -614,17 +501,8 @@ input[type="text1"] {
 	border: solid 1px #ccc;
 }
 
-.corpoAdm {
-	background: rgba(0, 0, 0, 0.5);
-	max-width: 100%;
-	min-height: 550px;
-}
 
-@media only screen and (min-width: 200px) and (max-width: 1100px) {
-	.corpoAdm {
-		min-width: 300px;
-	}
-}
+
 
 /* Tabela lista de animais */
 
@@ -668,13 +546,6 @@ input[type="text1"] {
 	background-color: silver;
 }
 
-/* Rodapé */
-
-.footer {
-	background-color: #222;
-	padding: 14px;
-	text-decoration: none;
-}
 
 /* container cadastro animais, unidades e usuarios */
 

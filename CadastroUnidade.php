@@ -18,18 +18,13 @@ include 'verificausuario.inc.php';
 
 	<body>
 
-		<div id="pageUnidade">
-			<div class="logo">
-				<div class="logo_admin">
-					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-				</div>
-			</div>
-			<div id="corpoAdm" class="corpoAdm">
-				<div>
-				<!-- Menu -->
-					<?php include 'exibirMenu.inc.php'; ?>
+		<?php
+		include 'header.inc.php';
+		include 'exibirMenu.inc.php'; 
+	?>
 
-
+		<div id="pageUnidade" class="backgroundimgs">
+			<div id="fundoTransparente">
 				<form class="needs-validation" method="post" action="post_cadastro_unidades.php">
 
 					<div class="container">
@@ -154,6 +149,10 @@ include 'verificausuario.inc.php';
 				Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
 				<button id="botao" onclick="apagar();">OK</button>
 			</div>
+			</div>
+
+
+				
 			<div class="footer">
 				<?php include 'footer.php'; ?>
 			</div>

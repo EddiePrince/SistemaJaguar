@@ -16,58 +16,51 @@
 </head>
 
 <body>
+  <?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
 
-	<div id="pageUsuario">
+	<div id="pageUsuario" class="backgroundimgs">
 
-	      <div class="logo_admin">
-        <img src="img/logo.png">  <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-      </div>
+    <div id="fundoTransparente">
+      <br>  <h3 class="titulo1">Cadastro Usuario</h3><br>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label>Perfil: </label><br>
+                <select class="form-control" name="perfil" required autofocus>
 
-			<div id="cadusuario">
-			<div class="corpoAdm">
-        <form  method="post" action="post_cadastro_usuario.php">
-        <div>
-          <!-- Menu -->
-          <?php include 'exibirMenu.inc.php'; ?>
-          <!-- Fim Menu -->
-        </div>
-				<br>	<h3 class="titulo1">Cadastro Usuario</h3><br>
-        	<div class="container">
-	          <div class="row">
-		          <div class="col-md-3 mb-3">
-  						  <label>Perfil: </label><br>
-  						  <select class="form-control" name="perfil" required autofocus>
-
-    							<option value="administrador">Administrador</option>
-    							<option value="agente">Agente</option>
-  						  </select><br><br>
-					    </div>
-    					<div class="col-md-2 mb-3">
-				      	<label>Matricula:</label><br>
-				      	<input class="form-control" type="text" name="matricula" required><br><br>
-  				    </div>
-    		        <div class="col-md-7 mb-3">
-    					    <label>Nome:</label><br>
-    					    <input class="form-control" type="text" name="nome" required><br><br>
-    					</div>
-    					</div>
+                  <option value="administrador">Administrador</option>
+                  <option value="agente">Agente</option>
+                </select><br><br>
+              </div>
+              <div class="col-md-2 mb-3">
+                <label>Matricula:</label><br>
+                <input class="form-control" type="text" name="matricula" required><br><br>
+              </div>
+                <div class="col-md-7 mb-3">
+                  <label>Nome:</label><br>
+                  <input class="form-control" type="text" name="nome" required><br><br>
+              </div>
+              </div>
 
 
-      				<div class="row">
+              <div class="row">
                 <div class="col-md-5 mb-3">
                   <label>E-mail:</label><br>
                   <input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100"  required><br><br>
                 </div>
-    		          <div class="col-md-4 mb-3">
-    					    <label>Telefone:</label><br>
-    					    <input class="form-control" type="text" name="telefone"><br><br>
-  					    </div>
+                  <div class="col-md-4 mb-3">
+                  <label>Telefone:</label><br>
+                  <input class="form-control" type="text" name="telefone"><br><br>
+                </div>
 
-      		      <div class="col-md-3 mb-3">
-      						<label>Senha:</label><br>
-      					  <input class="form-control" type="text" name="senha" required><br><br>
-      					</div>
-      					</div>
+                <div class="col-md-3 mb-3">
+                  <label>Senha:</label><br>
+                  <input class="form-control" type="text" name="senha" required><br><br>
+                </div>
+                </div>
                 <div class="row">
                 <div class="col-md-3 mb-3">
                   <label>Selecione a Unidade:</label><br>
@@ -76,11 +69,11 @@
                   </select>
                 </div>
 
-      				</div>
-		        <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
-      		</div>
+              </div>
+            <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
+          </div>
         </div>
-		   </form>
+       </form>
      </div>
 
 
@@ -95,6 +88,10 @@
         ?>
       </div>
       </div>
+    </div>
+
+	     
+				
 
 
 </body>

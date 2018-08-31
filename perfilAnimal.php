@@ -14,16 +14,14 @@
 	</head>
 
 	<body>
-    <div id="pagePerfilAnimal">
-				<div class="logo_admin">
-					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-				</div>
+		<?php
+		include 'header.inc.php';
+		include 'exibirMenu.inc.php'; 
+	?>
+    <div id="pagePerfilAnimal" class="backgroundimgs">
+				
 
-				<div class="corpoAdm">
-					<!-- Menu -->
-					<!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
-
+  <div id="fundoTransparente"> 
 
         <h1>Perfil Do Animal</h1>
         <table>
@@ -42,7 +40,7 @@
 			</div>
 
 		</div>
-
+	</div>
 
 	</body>
 

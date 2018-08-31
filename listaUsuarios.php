@@ -17,17 +17,13 @@
   </head>
 
   <body>
-  	<div id="pageListaUsuario">
-  			<div class="logo_admin">
-  			 <img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-  			</div>
-
-        <div>
-  			<div class="corpoAdm" id="corpoAdm" >
-  				<!-- Menu -->
-          <!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
-  				<!-- Fim Menu -->
+    <?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
+  	<div id="pageListaUsuario" class="backgroundimgs">
+  		
+  <div id="fundoTransparente"> 
 
           <br><div  id="Cadastrar"  >
             <a id="Cadastrar" href="CadastroUsuario.php" >  Cadastrar Usuario </a>
@@ -59,6 +55,6 @@
     </div>
   </div>
   </div>
-
+</div>
   </body>
 </html>

@@ -15,13 +15,13 @@
 </head>
 
 <body>	
-		<?php
+	<?php
 		include 'header.inc.php';
 		include 'exibirMenu.inc.php'; 
-		?>
+	?>
 
-		<div id="pageAjuda" class="backgroundimgs">
-		<div  class="corpoAdm" id="corpoAdm">
+	<div id="pageAjuda" class="backgroundimgs">
+		<div id="fundoTransparente">
 			<div class="container">
 
 				<h1>Instruções Básicas do Sistema</h1>

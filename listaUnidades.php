@@ -17,19 +17,13 @@
   </head>
 
   <body >
-  	<div id="pageListaUnidade">
+    <?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
+  	<div id="pageListaUnidade" class="backgroundimgs">
 
-  			<div class="logo_admin">
-  			 <img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-       </div>
-
-
-          <div class="corpoAdm" id="corpoAdm" >
-            <div>
-  				<!-- Menu -->
-          <!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
-  				<!-- Fim Menu -->
+  <div id="fundoTransparente"> 
 
           <br><div  id="Cadastrar"  >
             <a id="Cadastrar" href="CadastroUnidade.php" >  Cadastrar Unidade </a>
@@ -57,6 +51,6 @@
     <?php include 'footer.php'; ?>
   </div>
   </div>
-
+</div>
   </body>
 </html>

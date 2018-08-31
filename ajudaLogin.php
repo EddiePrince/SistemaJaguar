@@ -9,13 +9,12 @@
 </head>
 
 <body>
-	<div id="ajudaLogin">
-	    <div class="logo_admin">
-	       <img src="img/logo.png" alt="Logo">
-	       <a id="logout" href="index.php" class="btn btn-default navbar-btn pull-right">Voltar<img src="img/voltar.png" alt="Voltar"></a>
-	    </div>
+	<?php
+		include 'header.inc.php';
+	?>
 
-		<div  class="corpoAdm" id="corpoAdm">
+	<div id="ajudaLogin" class="backgroundimgs">
+		<div id="fundoTransparente">
 			<div class="container">
 		        <h1>Instruções Básicas do Sistema</h1>
 		        <h3> <strong class="titulo">Sobre o Sistema: </strong></h3>

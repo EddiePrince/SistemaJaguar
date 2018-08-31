@@ -15,15 +15,13 @@
 	</head>
 
 	<body>
-    <div id="pagePerfilAnimal">
-				<div class="logo_admin">
-					<img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-				</div>
-
-				<div class="corpoAdm">
-					<!-- Menu -->
-					<!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
+		<?php
+		include 'header.inc.php';
+		include 'exibirMenu.inc.php'; 
+	?>
+    <div id="pagePerfilAnimal" class="backgroundimgs">
+				
+  <div id="fundoTransparente"> 
 
 
         <h1>Dados da Unidade</h1>
@@ -56,7 +54,7 @@
 			</div>
 
 		</div>
-	
+		</div>
 
 
 	</body>

@@ -9,8 +9,12 @@
 		<title>Desenvolvedor</title>
 	</head>
 	<body>
+		<?php
+		include 'header.inc.php';
+		include 'exibirMenu.inc.php'; 
+	?>
 
-		<div id="pageDesenvolvedor">
+		<div id="pageDesenvolvedor" class="backgroundimgs">
 			<div class="container-fluid">
 
 				<div class="logo_admin">

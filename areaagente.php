@@ -17,20 +17,15 @@
   </head>
   <body>
 
-    <div id="pageAgente">
-      <div class="logo">
-				<div class="logo_admin">
-					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
-				</div>
-				<div>
-					<!-- Menu -->
-					<!-- Erro de Validação W3C Identificado -->
-					<?php include 'exibirMenu.inc.php'; ?>
-					<!-- Fim Menu -->
-				</div>
-			</div>
+    <?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
 
-        <div class="corpoAdm">
+    <div id="pageAgente" class="backgroundimgs">
+    
+
+        <div id="fundoTransparente">
           <div class="container">
   					<h4>Bem vindo <?php echo $nome?>!</h4>
   				</div>

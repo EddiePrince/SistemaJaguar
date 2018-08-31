@@ -17,41 +17,33 @@
   </head>
 
   <body>
-  	<div id="pageListaAnimais">
+    <?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
+  	<div id="pageListaAnimais" class="backgroundimgs">
 
-  			<div class="logo_admin">
-  			 <img src="img/logo.png" alt="Logo"> <a id="logout" href="logout.php" type="button" class="btn btn-default navbar-btn pull-right">  Logout  <img src="img/logout.png" alt="Logout"></a>
-  			</div>
-
-  			<div >
-  				<div class="corpoAdm" id="corpoAdm" >
-            <div>
-
-  				<!-- Menu -->
-          <!-- Erro de Validação W3C Identificado -->
-          <?php include 'exibirMenu.inc.php'; ?>
-  				<!-- Fim Menu -->
-
-        <br><div  id="Cadastrar"  >
+  <div id="fundoTransparente"> 
+      <br><div  id="Cadastrar"  >
           <a id="Cadastrar" href="CadastroAnimal.php" >  Cadastrar Animal</a>
           <!-- <img src="img/logout.png" alt="Cadastrar"> -->
         </div>
 
-  	    <div class="container">
+        <div class="container">
 
-    		<h2>Lista de Animais</h2><br>
-      	<table class="table">
-      		<tr>
-      			<th>Número da Ficha</th>
-      			<th>Data de Recebimento</th>
-      			<th>Agente</th>
+        <h2>Lista de Animais</h2><br>
+        <table class="table">
+          <tr>
+            <th>Número da Ficha</th>
+            <th>Data de Recebimento</th>
+            <th>Agente</th>
             <th>Perfil Completo</th>
 
           </tr>
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaAnimais.inc.php' ?>
 
-    	  </table>
+        </table>
       </div>
     </div>
   </div>
@@ -61,6 +53,9 @@
     <?php include 'footer.php'; ?>
   </div>
   </div>
+  </div>  			
+
+      
 
   </body>
 </html>

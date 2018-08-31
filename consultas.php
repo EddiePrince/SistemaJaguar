@@ -21,22 +21,14 @@
      <title>Pesquisa</title>
    </head>
    <body>
+<?php
+    include 'header.inc.php';
+    include 'exibirMenu.inc.php'; 
+  ?>
+     <div id="pageAdm" class="backgroundimgs">
+       
 
-     <div id="pageAdm">
-       <div class="logo">
- 				<div class="logo_admin">
- 					<a href="areaadm.php"> <img src="img/logo.png" alt="Logo"></a> <a id="logout" class="btn btn-default navbar-btn pull-right" href="logout.php">  Logout  <img src="img/logout.png" alt="Logout"></a>
- 				</div>
- 				<div>
-         <div>
-           <!-- Menu -->
-           <!-- Erro de Validação W3C Identificado -->
-           <?php include 'exibirMenu.inc.php'; ?>
-           <!-- Fim Menu -->
-         </div>
-       </div>
-
- 			<div class="corpoAdm">
+ 			<div id="fundoTransparente">
  				<div class="container"><br><br>
 
           <div id="alerta">
