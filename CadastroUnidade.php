@@ -25,7 +25,7 @@
 			<div id="fundoTransparente">
 
 	<div class="container">
-				<form method="post" action="post_cadastro_animais.php">
+				<form method="post" action="post_cadastro_unidades.php">
 					<div class="container">
 						<br><br><h3>Cadastro de Unidades</h3><br><br>
 										<div class="row">
