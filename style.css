@@ -365,13 +365,19 @@ article {
 	top: 0;
 }
 
+/* ajuda login */
+
 .icon-img {
 	font-family: "lovelyFont";
 	src: url('bahnschrift.ttf') font-weight: bold;
 	font-size: 10px;
-	max-width: 30px;
-	max-height: 30px;
 	margin-left: 10px;
+}
+
+@media only screen and (min-width: 50px) and (max-width: 1100px) {
+	.icon-img {
+		display: block;
+	}
 }
 
 /* Texto area de ajuda */

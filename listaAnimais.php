@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="style/bootstrap.min.css">
-  	<title>Cadastro de Unidades</title>
+  	<title>Lista de Animais</title>
   </head>
 
   <body>
@@ -22,7 +22,7 @@
   ?>
   	<div id="pageListaAnimais" class="backgroundimgs">
 
-  <div id="fundoTransparente"> 
+  <div id="fundoTransparente">
       <br><div  id="Cadastrar"  >
           <a id="Cadastrar" href="CadastroAnimal.php" >  Cadastrar Animal</a>
           <!-- <img src="img/logout.png" alt="Cadastrar"> -->
@@ -52,9 +52,9 @@
     <?php include 'footer.php'; ?>
   </div>
   </div>
-  </div>  			
+  </div>
 
-      
+
 
   </body>
 </html>

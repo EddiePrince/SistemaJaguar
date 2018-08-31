@@ -26,7 +26,7 @@
 				<input type="password" name="senha" placeholder="Senha" required >
 			 	<input class="postlogin" type="submit" name="entrar" value="Login">
         <?php include 'validarlogin.inc.php';?>
-        <a class="icon-img" href="ajudaLogin.php" target="_blank">precisa de ajuda<img class="icon-img" alt="Ajuda" src="img/help.png"></a>
+        <a class="icon-img" href="ajudaLogin.php" target="_blank">Precisa de ajuda?</a>
 
 		</form>
 </div>
