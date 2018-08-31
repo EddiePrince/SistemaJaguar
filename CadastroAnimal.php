@@ -20,16 +20,11 @@
 
 		<?php
 		include 'header.inc.php';
-		
+
 	?>
 		<div id="pageAnimal" class="backgroundimgs">
 			<div id="fundoTransparente">
-				 
-					<div id="alerta">
-            <div id="boxtop"></div>
-            Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-            <button id="botao" onclick="apagar();">OK</button>
-          </div>
+
 	<div class="container">
 				<form method="post" action="post_cadastro_animais.php">
 					<div class="container">
@@ -98,6 +93,11 @@
 
 				</form>
 
+			 <div id="alerta">
+				 <div id="boxtop"></div>
+				 Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+				 <button id="botao" onclick="apagar();">OK</button>
+			 </div>
 
       <div class="footer">
         <?php include 'footer.php';
