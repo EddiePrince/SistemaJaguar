@@ -15,10 +15,10 @@
 				<a id="logout" href="logout.php">Log out<img src="img/logout.png" alt="Logout"></a>
 				
           	
-      			<form  id="divBusca" class="form" action="" method="get">
+      			<!-- <form  id="divBusca" class="form" action="" method="get">
         			<input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
         			<button type="submit" id="btnBusca"><img src="img/icon pesquisa.png" alt="Buscar..."/></button>
-        		</form>
+        		</form> -->
           		
         
 			</div>
