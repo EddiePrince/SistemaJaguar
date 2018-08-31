@@ -22,12 +22,12 @@
   ?>
 
 	<div id="pageUsuario" class="backgroundimgs">
-
     <div id="fundoTransparente">
       <br>  <h3 class="titulo1">Cadastro Usuario</h3><br>
           <div class="container">
             <div class="row">
               <div class="col-md-3 mb-3">
+                <form method="post" action="post_cadastro_usuario.php">
                 <label>Perfil: </label><br>
                 <select class="form-control" name="perfil" required autofocus>
 
