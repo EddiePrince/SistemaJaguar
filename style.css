@@ -9,12 +9,20 @@ body {
 
 #header {
 	background-color: black;
+	min-width: 450px;
 	height: 130px;
 }
 
 #logo {
 	width: 200px;
 	margin-left: 20px;
+}
+
+/*Botão Home*/
+
+#home{
+	width: 60px;
+	margin-left: 15px; 
 }
 
 /* Botão logout */

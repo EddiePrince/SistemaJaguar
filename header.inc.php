@@ -2,6 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12">
+				<img id="logo" src="img/logo.png" alt="Logo">
 				<a href=
 				<?php 
 					if ($_SESSION['perfil'] == 'agente'){
@@ -11,7 +12,7 @@
 						echo "'areaAdm.php'";
 					}
 				?> 
-				><img id="logo" src="img/logo.png" alt="Logo"></a> 
+				><img id="home" src="img/home.png" alt="Logo"></a> 
 				<a id="logout" href="logout.php">Log out<img src="img/logout.png" alt="Logout"></a>
 				
           	
