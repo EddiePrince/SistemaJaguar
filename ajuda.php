@@ -14,17 +14,13 @@
 	<title>Ajuda</title>
 </head>
 
-<body>
-	<div id="pageAjuda">
-		
-		
-
-		<!--Incluir menu-->
+<body>	
 		<?php
 		include 'header.inc.php';
 		include 'exibirMenu.inc.php'; 
 		?>
-		
+
+		<div id="pageAjuda" class="backgroundimgs">
 		<div  class="corpoAdm" id="corpoAdm">
 			<div class="container">
 
