@@ -20,7 +20,7 @@
 
 		<?php
 		include 'header.inc.php';
-		include 'exibirMenu.inc.php'; 
+		
 	?>
 		<div id="pageAnimal" class="backgroundimgs">
 			<div id="fundoTransparente">

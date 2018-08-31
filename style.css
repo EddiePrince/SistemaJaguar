@@ -32,8 +32,8 @@ body {
 }
 
 #fundoTransparente{
-	background: rgba(0, 0, 0, 0.5);
-	min-height: 780px;
+	background: rgba(0, 0, 0, 0.3);
+	min-height: 860px;
 }
 
 

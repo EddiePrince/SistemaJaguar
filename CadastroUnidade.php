@@ -20,7 +20,7 @@ include 'verificausuario.inc.php';
 
 		<?php
 		include 'header.inc.php';
-		include 'exibirMenu.inc.php'; 
+		
 	?>
 
 		<div id="pageUnidade" class="backgroundimgs">

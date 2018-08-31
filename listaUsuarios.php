@@ -12,20 +12,18 @@
     <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" href="style/bootstrap.min.css">>
+		<link rel="stylesheet" href="style/bootstrap.min.css">
   	<title>Usuarios Cadastrados</title>
   </head>
 
   <body>
     <?php
     include 'header.inc.php';
-    include 'exibirMenu.inc.php'; 
   ?>
   	<div id="pageListaUsuario" class="backgroundimgs">
-  		
-  <div id="fundoTransparente"> 
+    <div id="fundoTransparente"> 
 
-          <br><div  id="Cadastrar"  >
+          <br><div  id="Cadastrar">
             <a id="Cadastrar" href="CadastroUsuario.php" >  Cadastrar Usuario </a>
             <!-- <img src="img/logout.png" alt="Cadastrar"> -->
           </div>
@@ -49,12 +47,9 @@
 
       </div>
     </div>
-    <!-- Erro de Validação W3C Identificado -->
-    <div class="footer">
+  </div>
+    
       <?php include 'footer.php'; ?>
-    </div>
-  </div>
-  </div>
-</div>
+    
   </body>
 </html>

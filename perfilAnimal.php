@@ -16,7 +16,7 @@
 	<body>
 		<?php
 		include 'header.inc.php';
-		include 'exibirMenu.inc.php'; 
+		 
 	?>
     <div id="pagePerfilAnimal" class="backgroundimgs">
 				
