@@ -82,11 +82,11 @@
         Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
         <button id="botao" onclick="apagar(); redirect();">OK</button>
       </div>
-      <div class="footer">
+   
         <?php include 'footer.php';
             include 'verificarUnidades.inc.php';
         ?>
-      </div>
+      
       </div>
     </div>
 

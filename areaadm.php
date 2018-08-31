@@ -20,31 +20,34 @@
 		include 'header.inc.php';
 	?>
 
+	<div id="alerta">
+		<div id="boxtop"></div>
+			Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+		<button id="botao" onclick="apagar();">OK</button>
+	</div>
+
 	<div id="pageAdm" class="backgroundimgs">
 		<div id="fundoTransparente">
-			<div id="alerta">
-			<div id="boxtop"></div>
-			Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-			<button id="botao" onclick="apagar();">OK</button>
-			</div>
+			<div class="container">
+				<div class="row">	
+				<div class="container" id="container">
+				<div class="row">
+				<div class="col-md-4 mb-3">
+				<a  href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Unidade   </a>
+				</div>
+				<div class="col-md-4 mb-3">
+				<a href="listaUsuarios.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Usuário </a>
+				</div>
+				<div class="col-md-4 mb-3">
+				<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Animal </a>
 
-
-			<div class="container" id="container">
-			<div class="row">
-			<div class="col-md-4 mb-3">
-			<a  href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Unidade   </a>
-			</div>
-			<div class="col-md-4 mb-3">
-			<a href="listaUsuarios.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Usuário </a>
-			</div>
-			<div class="col-md-4 mb-3">
-			<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Animal </a>
-
-			</div>
-			</div>
-			</div>
-		</div>	
-	</div>
+				</div>
+				</div>
+				</div>
+				</div>	<!-- Row -->	
+			</div> <!-- Container -->
+		</div> <!-- Fundo transparente -->
+	</div> <!-- Plano de fundo -->
 	
 	<?php include 'footer.php';
 	?>

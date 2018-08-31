@@ -22,11 +22,13 @@ function apagar(){
 	div.style.opacity = "0";
 }
 
-setTimeout(redirect(), 3000);
+
 
 
 function redirect(){
 	window.location = "cadastroUnidade.php";
 }
+
+setTimeout(redirect(), 2000);
 
 

@@ -93,11 +93,11 @@
 
 				</form>
 
-			 <div id="alerta">
-				 <div id="boxtop"></div>
-				 Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-				 <button id="botao" onclick="apagar();">OK</button>
-			 </div>
+			<div id="alerta">
+        <div id="boxtop"></div>
+        Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+        <button id="botao" onclick="apagar(); redirect();">OK</button>
+      </div>
 
       <div class="footer">
         <?php include 'footer.php';
