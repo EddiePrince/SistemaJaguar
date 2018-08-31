@@ -1,10 +1,12 @@
 /* Tela de Login */
+
 body {
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	/*Faz com que os elemento ocupem exatamente o tamanho especificado*/
 }
 
 /*Cabeçalho*/
+
 #header {
 	background-color: black;
 	height: 130px;
@@ -31,14 +33,14 @@ body {
 	width: 30px;
 }
 
-#fundoTransparente{
+#fundoTransparente {
 	background: rgba(0, 0, 0, 0.3);
 	min-height: 860px;
 }
 
-
 /*Configuração para todas as imagens de fundo*/
-.backgroundimgs{
+
+.backgroundimgs {
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
@@ -46,6 +48,7 @@ body {
 }
 
 /*Todas as imagens de fundo*/
+
 #pageAjuda {
 	background-image: url("img/31.jpg");
 }
@@ -72,12 +75,10 @@ body {
 
 #pagePerfilAnimal {
 	background-image: url("img/10.jpg");
-
 }
 
 #pageUnidade {
 	background-image: url("img/7.jpg");
-	
 }
 
 #pageUsuario {
@@ -96,9 +97,7 @@ body {
 	background-image: url("img/2.jpg");
 }
 
-
 /*Fim das imagens de fundo*/
-
 
 /* Rodapé */
 
@@ -110,7 +109,6 @@ body {
 	bottom: 0;
 	width: 100%;
 }
-
 
 .linkicon {
 	width: 20px;
@@ -183,22 +181,22 @@ body {
 
 .contact-form input[type="submit"] {
 	height: 40px;
-	width: 80px;
-	color: green;
+	width: 110px;
+	color: white;
 	font-size: 25px;
 	font-family: "lovelyFont";
 	src: url('bahnschrift.ttf') font-weight: bold;
-	background: #151515;
+	background: #003333;
 	cursor: pointer;
 	border-radius: 8px;
 	border: none;
 	outline: none;
-	margin-top: 5%;
+	margin-top: 15%;
 }
 
 .contact-form input[type="submit"]:hover {
-	color: #fff;
-	background: green;
+	color: #444422;
+	background: #e6ffe6;
 }
 
 .contact-form a {
@@ -223,7 +221,7 @@ body {
 	color: gray;
 }
 
-#txtBusca {	
+#txtBusca {
 	border: none;
 	height: 32px;
 	position: absolute;
@@ -247,11 +245,9 @@ body {
 }
 
 #divBusca img {
-	
 	position: absolute;
 	width: 20px;
 	left: 1%;
-	
 }
 
 /* seção da exibição de pesquisas */
@@ -281,12 +277,6 @@ article {
 /* FIm seção da exibição de pesquisas */
 
 /* Inicio Menu */
-
-
-
-
-
-
 
 /* Botão Cadastrar */
 
@@ -359,8 +349,6 @@ article {
 
 /* Background Pages */
 
-
-
 #pageRecSenha {
 	background-image: url("img/10.jpg");
 	background-repeat: no-repeat;
@@ -377,13 +365,14 @@ article {
 	top: 0;
 }
 
-
 .icon-img {
+	font-family: "lovelyFont";
+	src: url('bahnschrift.ttf') font-weight: bold;
+	font-size: 10px;
 	max-width: 30px;
 	max-height: 30px;
 	margin-left: 10px;
 }
-
 
 /* Texto area de ajuda */
 
@@ -418,20 +407,12 @@ article {
 
 /* Fim Texto area de ajuda */
 
-
-
-
-
-
 @media only screen and (min-width: 200px) and (max-width: 1100px) {
 	#pageListaUsuario {
 		min-width: 300px;
 		overflow: auto;
 	}
 }
-
-
-
 
 #pageUnidade input {
 	width: 80%;
@@ -472,8 +453,6 @@ input[type="text1"] {
 	border: none;
 }
 
-
-
 .listas h2 {
 	font-size: 30px;
 	font-family: sans-serif bold;
@@ -495,9 +474,6 @@ input[type="text1"] {
 	overflow: auto;
 	border: solid 1px #ccc;
 }
-
-
-
 
 /* Tabela lista de animais */
 
@@ -540,7 +516,6 @@ input[type="text1"] {
 	border-radius: 5px;
 	background-color: silver;
 }
-
 
 /* container cadastro animais, unidades e usuarios */
 
