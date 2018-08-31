@@ -29,7 +29,7 @@
         </div>
 
         <div class="container">
-
+        <div class="listas">
         <h2>Lista de Animais</h2><br>
         <table class="table">
           <tr>
@@ -51,10 +51,5 @@
   <div class="footer">
     <?php include 'footer.php'; ?>
   </div>
-  </div>
-  </div>
-
-
-
   </body>
 </html>

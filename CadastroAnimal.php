@@ -54,7 +54,7 @@
 									<div class="container">
 									<h4>Dados do Entregador</h4>
 										<div class="row">
-											<div class="col-md-2 mb-3">
+											<div class="col-md-4 mb-3">
 												<p>Tipo de Recolhimento:</p>
 												<select class="form-control" name="tipoEntrega" size=1>
 												<option>Apreensão</option>
@@ -62,7 +62,7 @@
 												<option>Entrega Voluntária</option>
 												</select><br><br>
 											</div>
-											<div class="col-md-7 mb-3">
+											<div class="col-md-8 mb-3">
 												<p>Nome Entregador:</p>
 												<p><input class="form-control" type="text" name="nomeEntregador"></p>
 											</div>
