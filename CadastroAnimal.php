@@ -33,16 +33,17 @@
 											<div class="col-md-2 mb-3">
 												<p>Número da Ficha:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico?>">
+												<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico?>"
+												required>
 											</div>
 											<div class="col-md-2 mb-3">
 												<p>Data:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input id="inputdata" class="form-control"  name="dataRecebimento" type="date">
+												<input id="inputdata" class="form-control"  name="dataRecebimento" type="date" required>
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
-												<p><input class="form-control" type="text" name="nomeAgente" autofocus></p>
+												<p><input class="form-control" type="text" name="nomeAgente" autofocus required></p>
 											</div>
 										</div>
 									</div>
@@ -55,7 +56,7 @@
 										<div class="row">
 											<div class="col-md-4 mb-3">
 												<p>Tipo de Recolhimento:</p>
-												<select class="form-control" name="tipoEntrega" size=1>
+												<select class="form-control" name="tipoEntrega" size=1 required>
 												<option>Apreensão</option>
 												<option>Resgate/Recolhimento</option>
 												<option>Entrega Voluntária</option>
@@ -63,7 +64,7 @@
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Nome Entregador:</p>
-												<p><input class="form-control" type="text" name="nomeEntregador"></p>
+												<p><input class="form-control" type="text" name="nomeEntregador" required></p>
 											</div>
 
 										</div>
@@ -77,7 +78,7 @@
 											<div class="row">
 			          					<div class="col-md-4 mb-3">
 													<p>Selecione a Unidade:</p>
-													<select class="form-control" name="nomeUnidade" size=1>
+													<select class="form-control" name="nomeUnidade" size=1 required>
 													<?php include 'selectUnidades.inc.php'; ?>
 													</select><br><br>
 													<input class="btn btn-default" name="submit" type="submit" value=" Salvar "><br>
