@@ -13,9 +13,14 @@
 				?> 
 				><img id="logo" src="img/logo.png" alt="Logo"></a> 
 				<a id="logout" href="logout.php">Log out<img src="img/logout.png" alt="Logout"></a>
-
-				<a href="consultas.php"> <img class="consulta" src="img/consulta.png" alt="consultas"> </a>
-
+				
+          	
+      			<form  id="divBusca" class="form" action="" method="get">
+        			<input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
+        			<button type="submit" id="btnBusca"><img src="img/icon pesquisa.png" alt="Buscar..."/></button>
+        		</form>
+          		
+        
 			</div>
 		</div>
 	</div>

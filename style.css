@@ -215,48 +215,43 @@ body {
 #divBusca {
 	position: absolute;
 	background-color: #fff;
-	border: solid 1px #222;
 	border-radius: 5px;
-	width: 700px;
+	width: 200px;
 	height: 35px;
-	top: 20%;
-	left: 20%;
+	top: 80px;
+	right: 100px;
+	color: gray;
 }
 
-#txtBusca {
-	float: left;
-	background-color: transparent;
-	color: blue;
-	padding-left: 5px;
-	font-size: 18px;
+#txtBusca {	
 	border: none;
 	height: 32px;
-	width: 610px;
 	position: absolute;
-	top: 1%;
-	left: 8%;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
 }
 
 #btnBusca {
-	width: 69px;
-	height: 33px;
+	text-align: center;
+	width: 40px;
+	height: 35px;
 	position: absolute;
 	border: none;
 	float: left;
 	border-radius: 0 5px 5px 0;
 	font-weight: bold;
-	background: #80bfff;
+	background: orange;
 	top: 0%;
-	left: 97%;
+	right: 0;
 }
 
 #divBusca img {
-	float: left;
+	
 	position: absolute;
 	width: 20px;
-	top: 13%;
 	left: 1%;
-	right: 5px;
+	
 }
 
 /* seção da exibição de pesquisas */

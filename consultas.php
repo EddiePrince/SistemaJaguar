@@ -39,17 +39,7 @@
 
        <section>
 
-         <form class="form" action="" method="get">
-         <div id="divBusca">
-         	<img src="img/icon pesquisa.png" alt="Buscar..."/>
-         	<input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
-         	<button type="submit" id="btnBusca">Buscar</button>
-         </div>
-
-           <!-- <strong>Filtrar por nome: </strong><input type="text" name="filtro" class="campo" requerid autofocus>
-           <button type="submit" value="Pesquisar" class="btn btn-default">Pesquisar</button>
-           <button type="submit" value="reset" class="btn btn-default">Limpar Pesquisa</button> -->
-         </form>
+      
 
          <?php
 
