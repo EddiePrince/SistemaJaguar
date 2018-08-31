@@ -17,46 +17,41 @@
   </head>
   <body>
 
-    <?php
-    include 'header.inc.php';
-    
-  ?>
+    	<?php
+    		include 'header.inc.php';
+    	?>
 
-    <div id="pageAgente" class="backgroundimgs">
-    
+    	<div id="alerta">
+    		<div id="boxtop"></div>
+    			Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
+    		<button id="botao" onclick="apagar();">OK</button>
+    	</div>
 
-        <div id="fundoTransparente">
-          <div class="container">
-  					<h4>Bem vindo <?php echo $nome?>!</h4>
-  				</div>
+    	<div id="pageAdm" class="backgroundimgs">
+    		<div id="fundoTransparente">
+    			<div class="container">
+    				<div class="row">
+    				<div class="container" id="container">
+    				<div class="row">
+    				<div class="col-md-4 mb-3">
+    				<a  href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Unidade   </a>
+    				</div>
+    				<div class="col-md-4 mb-3">
+    				<a href="listaUsuarios.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Usuário </a>
+    				</div>
+    				<div class="col-md-4 mb-3">
+    				<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br>  Animal </a>
 
-  				<div id="alerta">
-  					<div id="boxtop"></div>
-  					Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-  					<button class="btn btn-sucess" id="botao" onclick="apagar();">OK</button>
-  				</div>
+    				</div>
+    				</div>
+    				</div>
+    				</div>	<!-- Row -->
+    			</div> <!-- Container -->
+    		</div> <!-- Fundo transparente -->
+    	</div> <!-- Plano de fundo -->
 
-  				<div class="container">
-  					<div class="row">
-  						<div class="col-md-3 mb-3">
-  							<a href="CadastroAnimal.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Animal </a>
-  						</div>
-
-  							<div class="col-md-3 mb-3">
-  								<a href="listaUnidades.php" class="btn btn-default navbar-btn pull-right"> <img src="img/remove-user.png" alt="#"><br> Unidade   </a>
-  							</div>
-
-              </div>
-  						</div>
-  					</div>
-            <!-- Erro de Validação W3C Identificado -->
-            <div class="footer">
-              <?php include 'footer.php'; ?>
-            </div>
-  				</div>
-
-
-
-
+    	<?php include 'footer.php';
+    	?>
+    			
   </body>
 </html>
