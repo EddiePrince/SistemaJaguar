@@ -34,7 +34,7 @@ body {
 	color: white;
 	font-size: 15px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
+	font-weight: bold;
 }
 
 #logout img {
@@ -166,7 +166,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
 	font-size: 24px;
 	color: #fff;
 }
@@ -193,7 +192,6 @@ body {
 	color: white;
 	font-size: 25px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
 	background: #003333;
 	cursor: pointer;
 	border-radius: 8px;
@@ -300,11 +298,9 @@ article {
 	border-radius: 5px;
 	font-family: "lovelyFont";
 	color: black;
-	src: url('bahnschrift.ttf') font-weight: bold;
 }
 
 #Cadastrar:hover {
-	-webkit-transition;
 	transition: all .9s ease;
 	background-color: #C8C8C8;
 	border-radius: 5px;
@@ -312,11 +308,9 @@ article {
 	font-family: "lovelyFont";
 	color: green;
 	font-size: 16px;
-	src: url('bahnschrift.ttf') font-weight: bold;
 }
 
 #Cadastrar img {
-	background-color: none;
 	margin-top: 0;
 	max-width: 23px;
 	max-height: 23px;
@@ -377,7 +371,6 @@ article {
 
 .icon-img {
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
 	font-size: 10px;
 	margin-left: 10px;
 }
@@ -552,21 +545,17 @@ input[type="text1"] {
 	border-radius: 6px;
 	border: 2px solid silver;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
 	color: white;
 	background: rgba(0, 0, 0, 0.6);
 }
 
 #container a img {
-	background-color: none;
 	padding: 5px;
 	width: 80px;
 	height: 70px;
 }
 
 #container a {
-	-webkit-transition;
-	all: .9s ease;
 	-moz-transition: all .9s ease;
 	-ms-transition: all .9s ease;
 	transition: all .9s ease;
@@ -576,8 +565,7 @@ input[type="text1"] {
 	background: #ff4500;
 	padding: 10px;
 	font-family: "lovelyFont";
-	src: url('bahnschrift.ttf') font-weight: bold;
-	font-size: 16spx;
+	font-size: 16px;
 	color: yellow;
 	border: 2px white;
 }
@@ -586,8 +574,6 @@ input[type="text1"] {
 	#container, #container a {
 		display: block;
 		width: 100%;
-		-webkit-transition;
-		all: .9s ease;
 		-moz-transition: all .9s ease;
 		-ms-transition: all .9s ease;
 		transition: all .9s ease;
