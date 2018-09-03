@@ -56,7 +56,9 @@ body {
 }
 
 /*Todas as imagens de fundo*/
-
+#indexbckg{
+	background-image: url("img/2.jpg");
+}
 #pageAjuda {
 	background-image: url("img/31.jpg");
 }

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="style/bootstrap.min.css">
   <title>Login Sistema Jaguar</title>
 </head>
-<body class="body">
+<body id="indexbckg" class="backgroundimgs">
 
 <div class="contact-form">
 		<img src="img/logo.png" alt="Logo" class="avatar">
