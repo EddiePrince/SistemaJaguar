@@ -207,6 +207,19 @@ CREATE TABLE `recuperacaosenha` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `registros`
+--
+
+CREATE TABLE `registros` (
+  `idRegistro` int(11) NOT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `tipoRegistro` varchar(60) NOT NULL,
+  `dataRegistro` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `telefones`
 --
 
@@ -348,6 +361,13 @@ ALTER TABLE `recuperacaosenha`
   ADD PRIMARY KEY (`idSenha`);
 
 --
+-- Indexes for table `registros`
+--
+ALTER TABLE `registros`
+  ADD PRIMARY KEY (`idRegistro`),
+  ADD KEY `idUsuario` (`idUsuario`);
+
+--
 -- Indexes for table `telefones`
 --
 ALTER TABLE `telefones`
@@ -420,13 +440,13 @@ ALTER TABLE `dadostriagem`
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `entregadores`
 --
 ALTER TABLE `entregadores`
-  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `recuperacaosenha`
@@ -435,22 +455,28 @@ ALTER TABLE `recuperacaosenha`
   MODIFY `idSenha` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `registros`
+--
+ALTER TABLE `registros`
+  MODIFY `idRegistro` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `telefones`
 --
 ALTER TABLE `telefones`
-  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `unidades`
 --
 ALTER TABLE `unidades`
-  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -496,6 +522,12 @@ ALTER TABLE `proprietarios`
   ADD CONSTRAINT `proprietarios_ibfk_1` FOREIGN KEY (`idTelefone`) REFERENCES `telefones` (`idTelefone`),
   ADD CONSTRAINT `proprietarios_ibfk_2` FOREIGN KEY (`idCpf`) REFERENCES `cpf` (`idCpf`),
   ADD CONSTRAINT `proprietarios_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpj` (`idCnpj`);
+
+--
+-- Limitadores para a tabela `registros`
+--
+ALTER TABLE `registros`
+  ADD CONSTRAINT `registros_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
 
 --
 -- Limitadores para a tabela `unidades`

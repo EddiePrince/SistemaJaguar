@@ -14,10 +14,17 @@
 	</head>
 
 	<body>
+		<div id="releasebox">
+			<form>
+				<input type="checkbox" name="cond1">
+				O animal
+				<input type="checkbox" name="cond2">
+				<input type="checkbox" name="cond3">
+			</form>
+		</div>
 		<?php
 		include 'header.inc.php';
-		 
-	?>
+		?>
     <div id="pagePerfilAnimal" class="backgroundimgs">
 				
 
@@ -27,8 +34,7 @@
         <table>
         	<tr></tr>
         </table>
-   
-
+   		<button>Soltura</button>
 					<!-- Erro de Validação W3C Identificado -->
           <?php include 'perfilAnimal.inc.php'; ?>
       	</table>
