@@ -11,14 +11,23 @@
 	$senha = $_POST['senha'];
 	$unidade = $_POST['nomeUnidade'];
 
+    	// $senha = md5($senha*10);
 
-	$sql1 = "INSERT INTO usuarios (perfil, matricula, nome, email, senha) VALUES ('$perfil', '$matricula', '$nome', '$email',  '$senha')"; 
+    // if($unidade == 'Selecione a unidade')
+    // die("A unidade não foi escolhida!");
+
+// PROTEÇÃO CONTRA ATAQUE SQL INJECTION  COM addslashes()
+  foreach ($_POST as $indice => $value) {
+    $_POST[$indice] = addslashes($_POST[$indice]);
+  };
+
+	$sql1 = "INSERT INTO usuarios (perfil, matricula, nome, email, senha) VALUES ('$perfil', '$matricula', '$nome', '$email',  '$senha')";
 	$salvar1 = mysqli_query($conexao, $sql1);
 
-	$sql2 = "INSERT INTO telefones (numero) VALUES ('$telefone')"; 
+	$sql2 = "INSERT INTO telefones (numero) VALUES ('$telefone')";
 	$salvar2 = mysqli_query($conexao, $sql2);
 
-	
+
 	//Pegar idTelefone
 	$pegarTelefone = "SELECT MAX(idTelefone) FROM telefones";
 	$resultTelefone =  mysqli_query($conexao, $pegarTelefone);
@@ -28,8 +37,8 @@
 		$idTelefone = $row[0];
 		echo $idTelefone;
 	}
-	
-	//Pegar idUsuario	
+
+	//Pegar idUsuario
 	$pegarUsuario = "SELECT MAX(idUsuario) FROM usuarios";
 	$resultUsuario =  mysqli_query($conexao, $pegarUsuario);
 
