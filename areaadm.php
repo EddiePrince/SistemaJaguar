@@ -26,9 +26,22 @@
 		<button id="botao" onclick="apagar();">OK</button>
 	</div>
 
+
 	<div id="pageAdm" class="backgroundimgs">
 		<div id="fundoTransparente">
-			<div class="container">
+	<div class="container">
+		<!-- mensagem de Bem Vindo -->
+		
+		<div id="bemVindoAdm">
+		Colocar mensagem de Bem Vindo			
+		</div>	
+		<div id="bemVindoAdm">
+		<img src="img/Manual_do_Usuario_Adm.jpg" alt="Ajuda Adm">			
+		</div>	
+	</div>	
+
+
+<!-- 			<div class="container">
 				<div class="row">
 				<div class="container" id="container">
 				<div class="row">
@@ -47,7 +60,9 @@
 				</div>
 				</div>
 				</div>	<!-- Row -->
-			</div> <!-- Container -->
+			</div> --> <!-- Container -->
+
+
 		</div> <!-- Fundo transparente -->
 	</div> <!-- Plano de fundo -->
 
