@@ -7,7 +7,6 @@
 	div.style.opacity = "1";
 })();
 
-
 (function mostrarSucesso(){
 	var sucesso = document.getElementById("sucesso");
 	sucesso.style.display="block";
@@ -22,9 +21,6 @@ function apagar(){
 	div.style.opacity = "0";
 	div.style.remove();
 }
-
-
-
 
 function redirect(){
 	window.location = "cadastroUnidade.php";

@@ -1,6 +1,38 @@
 <?php
   //Conecção com Banco
   include 'conexao.inc.php';
+  include 'verificausuario.inc.php';
+
+ ?>
+
+ <!DOCTYPE html>
+ <html lang="pt-br">
+   <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+     <title>Pesquisa</title>
+   </head>
+   <body>
+<?php
+    include 'header.inc.php';
+
+  ?>
+     <div id="pageAdm" class="backgroundimgs">
+      <div id="fundoTransparente">
+        <div class="container">
+        <form  id="divBusca" class="form" action="consultas.inc.php" method="get">
+          <input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
+          <button type="submit" id="btnBusca"><img src="img/iconpesquisa.png" alt="Buscar..."/></button>
+        </form>      
+    
+
+
+
+<?php
+  //Conecção com Banco
+  include 'conexao.inc.php';
 
 
   $filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
@@ -18,20 +50,17 @@
   $registrosAnimal = mysqli_num_rows($consultaAnimal);
 
 
-
-             if (!empty($_GET['filtro'])) {
-
-				 if ($registrosUnidade > 0) {
+         if (empty($_GET['filtro'])) {
+           echo "Digite uma palavra para pesquisar!";
+         }elseif (!empty($_GET['filtro']) && $registrosUnidade || $registrosUsuario || $registrosAnimal > 0) {
 
 					 echo "<br><strong>Resultado da pesquisa com a palavra  $filtro. </strong><br><br>";
 
            echo "<strong>$registrosUnidade </strong>registro(s) de Unidades encontrado(s).<br><br>"; //exibição da quanidade de registros encontrados
            echo "<strong>$registrosUsuario </strong>registro(s) de Usuários encontrado(s).<br><br>"; //exibição da quanidade de registros encontrados
-           echo "<strong>$registrosAnimal </strong>registro(s) de Animal encontrado(s).<br><br>"; //exibição da quanidade de registros encontrados
+           echo "<strong>$registrosAnimal </strong>registro(s) de Animal(is) encontrado(s).<br><br>"; //exibição da quanidade de registros encontrados
 
-				 }else {
-				 	echo "<br><br>Nenhum registro encontrado a palavra <strong> $filtro. </strong>";
-				 }
+				 
 
          while ($exibirRegistros = mysqli_fetch_array($consultaUnidade)) {
            $idUnidade = $exibirRegistros[0];
@@ -41,9 +70,8 @@
            $idCnpj = $exibirRegistros[4];
            $idEndereco = $exibirRegistros[5];
 
-           echo "<h3>Unidade</h3>";
 
-           echo "<article>";
+           echo "<article class='busca_unidade'>";
            // echo "id Unidade: ". " $idUnidade<br>";
            echo "Nome da Unidade: ". " $nome<br>";
            echo "Tipo: ". " $tipoUnidade<br>";
@@ -61,9 +89,7 @@
            $nome = $exibirRegistros[4];
            $email = $exibirRegistros[5];
 
-           echo "<h3>Usuario</h3>";
-
-           echo "<article>";
+           echo "<article class='busca_usuario'>";
            echo "Nome do Usuário: ". " $nome<br>";
            echo "Telefone: ". " $idTelefone<br>";
            echo "Unidade: ". " $idUnidade<br>";
@@ -85,9 +111,8 @@
            $familia = $exibirRegistros[7];
            $ordem = $exibirRegistros[8];
            
-           echo "<h3>Animal</h3>";
 
-           echo "<article>";
+           echo "<article class='busca_animal'>";
            // echo "id Triagem: ". " $idTriagem<br>";
            echo "Codigo Marcação: ". " $codMarcacao<br>";
            echo "Ttipo  Marcação: ". " $tipoMarcacao<br>";
@@ -102,8 +127,21 @@
          }
 
 
-       }
+       }   else {
+           echo "<br><br>Nenhum registro encontrado a palavra <strong> $filtro. </strong>";
+         }
+
 
          mysqli_close($conexao);
 
           ?>
+        </div>
+        </div>
+
+       <div class="footer">
+         <?php include 'footer.php'; ?>
+       </div>
+     </div>
+
+   </body>
+ </html>

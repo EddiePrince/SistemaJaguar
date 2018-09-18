@@ -41,8 +41,10 @@
     				</div>
     				<div class="col-md-4 mb-3">
     				<a href="listaAnimais.php" class="btn btn-default navbar-btn pull-right"> <img src="img/animal.png" alt="#"><br>  Animal </a>
-
     				</div>
+                    <div class="col-md-4 mb-3">
+                    <a href="consultas.php" class="btn btn-default navbar-btn pull-right"> <img src="img/pesquisaPrincipal.png" alt="#"><br>  Consultas </a>
+                    </div>
     				</div>
     				</div>
     				</div>	<!-- Row -->

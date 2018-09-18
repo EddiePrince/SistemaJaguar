@@ -20,34 +20,21 @@
 
   ?>
      <div id="pageAdm" class="backgroundimgs">
-
  			<div id="fundoTransparente">
- 				<div class="container"><br><br>
 
-          <section>
-            
-          <form  id="divBusca" class="form" action="consultas.inc.php" method="get">
-            <input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
-            <button type="submit" id="btnBusca"><img src="img/icon pesquisa.png" alt="Buscar..."/></button>
-          </form>
+       <?php 'consultas.inc.php';  ?>  
+   
+        <form  id="divBusca" class="form" action="consultas.inc.php" method="get">
+          <input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
+          <button type="submit" id="btnBusca"><img src="img/iconpesquisa.png" alt="Buscar..."/></button>
+        </form>      
+    
+      </div>
 
-         <?php 'consultas.inc.php';  ?>
-
-       </section>
+       <div class="footer">
+         <?php include 'footer.php'; ?>
+       </div>
      </div>
-   </div>
-     <!-- Erro de Validação W3C Identificado -->
-
-     <div id="alerta">
-       <div id="boxtop"></div>
-       Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-       <button id="botao" onclick="apagar();">OK</button>
-     </div>
-
-     <div class="footer">
-       <?php include 'footer.php'; ?>
-     </div>
-   </div>
 
    </body>
  </html>
