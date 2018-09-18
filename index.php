@@ -16,21 +16,20 @@
 </head>
 <body id="indexbckg" class="backgroundimgs">
 
-<div class="contact-form">
-		<img src="img/logo.png" alt="Logo" class="avatar">
-		<!-- <h2>login</h2> --><br><br>
-		<form method="post">
-				<p>Usuario</p>
-				<input type="text" name="matricula"  id="usuario"  placeholder="Matricula" required autofocus>
-				<p>Senha</p>
-				<input type="password" name="senha" placeholder="Senha" required >
-			 	<input class="postlogin" type="submit" name="entrar" value="Login">
+<div id="logincontainer">
+  <div id="loginheader">
+    <img src="img/jaguaricon.png" alt="Logo" id="logo">
+    <span id="loginTitle">Login <span id="orangeTitle">Sistema Jaguar</span></span>
+  </div>
+  <form  id="loginform" method="post">
+    <p>Usuario</p>
+        <input type="text" name="matricula"  id="usuario"  placeholder="Matricula" required autofocus>
+        <p>Senha</p>
+        <input type="password" name="senha" placeholder="Senha" required >
+        <input class="postlogin" type="submit" name="entrar" value="Login">
         <a class="icon-img" href="ajudaLogin.php" target="_blank">Precisa de ajuda?</a>
         <?php include 'validarlogin.inc.php';?>
-
-		</form>
+  </form>
 </div>
-
-
 </body>
 </html>

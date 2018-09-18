@@ -1,6 +1,7 @@
 /* Tela de Login */
 
 body {
+
 	box-sizing: border-box;
 	/*Faz com que os elemento ocupem exatamente o tamanho especificado*/
 }
@@ -49,9 +50,9 @@ body {
 /*Configuração para todas as imagens de fundo*/
 
 .backgroundimgs {
-	background-repeat: no-repeat;
-	background-position: top;
+	background: fixed center center;
 	background-size: cover;
+	background-repeat: no-repeat;
 	color: white;
 }
 
@@ -119,6 +120,38 @@ body {
 	bottom: 0;
 	width: 100%;
 }
+/* Rodapé */
+
+/* Index */
+
+#logo {
+	width: 100px;
+}
+
+#loginTitle{
+	text-align:center;
+	font-size: 28px;
+}
+
+#logincontainer{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	width: 600px;
+	border-radius: 30px 0 0 0;
+}
+
+#loginheader{
+	background-color: black;
+}
+
+#orangeTitle{
+	color: orange;
+}
+
+/* Index */
 
 .linkicon {
 	width: 20px;
@@ -152,17 +185,9 @@ body {
 	border-radius: 8px;
 }
 
-/* logo da tela login */
 
-.avatar {
-	position: absolute;
-	width: 155px;
-	height: 110px;
-	border-radius: 50%;
-	overflow: hidden;
-	top: calc(-40px/8);
-	left: calc(41% - 40px);
-}
+
+
 
 .contact-form p {
 	margin: 0;
