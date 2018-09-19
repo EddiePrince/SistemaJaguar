@@ -1,15 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Ago-2018 às 01:39
--- Versão do servidor: 10.1.34-MariaDB
--- PHP Version: 7.2.7
-
-DROP DATABASE if EXISTS jaguar_sistem;
-CREATE DATABASE jaguar_sistem;
-USE jaguar_sistem;
+-- Generation Time: 19-Set-2018 às 03:13
+-- Versão do servidor: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -56,6 +52,10 @@ CREATE TABLE `animais` (
   `idDestinacao` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `animais`
+--
+
 -- --------------------------------------------------------
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `animais` (
 CREATE TABLE `areas` (
   `idArea` int(11) NOT NULL,
   `idProprietario` int(11) DEFAULT NULL,
-  `nome` varchar(60) NOT NULL,
+  `nomePropriedade` varchar(60) NOT NULL,
   `latitude` varchar(60) NOT NULL,
   `longitude` varchar(60) NOT NULL,
   `bioma` varchar(60) NOT NULL,
@@ -154,6 +154,8 @@ CREATE TABLE `enderecos` (
   `complemento` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+
 -- --------------------------------------------------------
 
 --
@@ -172,6 +174,8 @@ CREATE TABLE `entregadores` (
   `idEndereco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+
 -- --------------------------------------------------------
 
 --
@@ -180,7 +184,7 @@ CREATE TABLE `entregadores` (
 
 CREATE TABLE `proprietarios` (
   `idProprietario` int(11) NOT NULL,
-  `nome` varchar(60) NOT NULL,
+  `nomeProprietario` varchar(60) NOT NULL,
   `email` varchar(60) NOT NULL,
   `idTelefone` int(11) DEFAULT NULL,
   `tipoPessoa` varchar(60) NOT NULL,
@@ -207,19 +211,6 @@ CREATE TABLE `recuperacaosenha` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `registros`
---
-
-CREATE TABLE `registros` (
-  `idRegistro` int(11) NOT NULL,
-  `idUsuario` int(11) DEFAULT NULL,
-  `tipoRegistro` varchar(60) NOT NULL,
-  `dataRegistro` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `telefones`
 --
 
@@ -228,7 +219,8 @@ CREATE TABLE `telefones` (
   `numero` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+--
+----------------------------------------------------
 
 --
 -- Estrutura da tabela `unidades`
@@ -266,7 +258,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES
 (1, NULL, NULL, 'admin', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin'),
-(2, NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
+(2, NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente'),
+
 
 --
 -- Indexes for dumped tables
@@ -361,13 +354,6 @@ ALTER TABLE `recuperacaosenha`
   ADD PRIMARY KEY (`idSenha`);
 
 --
--- Indexes for table `registros`
---
-ALTER TABLE `registros`
-  ADD PRIMARY KEY (`idRegistro`),
-  ADD KEY `idUsuario` (`idUsuario`);
-
---
 -- Indexes for table `telefones`
 --
 ALTER TABLE `telefones`
@@ -404,7 +390,7 @@ ALTER TABLE `anexos`
 -- AUTO_INCREMENT for table `areas`
 --
 ALTER TABLE `areas`
-  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idArea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cnpj`
@@ -440,13 +426,13 @@ ALTER TABLE `dadostriagem`
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `entregadores`
 --
 ALTER TABLE `entregadores`
-  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idEntregador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `recuperacaosenha`
@@ -455,28 +441,22 @@ ALTER TABLE `recuperacaosenha`
   MODIFY `idSenha` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `registros`
---
-ALTER TABLE `registros`
-  MODIFY `idRegistro` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `telefones`
 --
 ALTER TABLE `telefones`
-  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idTelefone` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `unidades`
 --
 ALTER TABLE `unidades`
-  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idUnidade` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -522,12 +502,6 @@ ALTER TABLE `proprietarios`
   ADD CONSTRAINT `proprietarios_ibfk_1` FOREIGN KEY (`idTelefone`) REFERENCES `telefones` (`idTelefone`),
   ADD CONSTRAINT `proprietarios_ibfk_2` FOREIGN KEY (`idCpf`) REFERENCES `cpf` (`idCpf`),
   ADD CONSTRAINT `proprietarios_ibfk_3` FOREIGN KEY (`idCnpj`) REFERENCES `cnpj` (`idCnpj`);
-
---
--- Limitadores para a tabela `registros`
---
-ALTER TABLE `registros`
-  ADD CONSTRAINT `registros_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`);
 
 --
 -- Limitadores para a tabela `unidades`
