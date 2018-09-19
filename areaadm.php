@@ -29,19 +29,17 @@
 
 	<div id="pageAdm" class="backgroundimgs">
 		<div id="fundoTransparente">
-	<div class="container">
-		<!-- mensagem de Bem Vindo -->
-		
-		<div id="bemVindoAdm">
-		Colocar mensagem de Bem Vindo			
+		<div class="container">
+			<!-- mensagem de Bem Vindo -->
+			
+			<div id="bemVindoAdm">
+			 Bem Vindo <?php echo"$nome";?> !			
+			<img src="img/Manual_do_Usuario_Adm.jpg" alt="Manual do Usuário">			
+			</div>	
 		</div>	
-		<div id="bemVindoAdm">
-		<img src="img/Manual_do_Usuario_Adm.jpg" alt="Ajuda Adm">			
-		</div>	
-	</div>	
 
 
-<!-- 			<div class="container">
+		<!-- 	<div class="container">
 				<div class="row">
 				<div class="container" id="container">
 				<div class="row">
@@ -59,8 +57,8 @@
 				</div>
 				</div>
 				</div>
-				</div>	<!-- Row -->
-			</div> --> <!-- Container -->
+				</div>	--> <!-- Row -->
+			</div>  <!-- Container -->
 
 
 		</div> <!-- Fundo transparente -->
