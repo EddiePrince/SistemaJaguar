@@ -18,7 +18,7 @@
 <body>
   <?php
     include 'header.inc.php';
-   
+
   ?>
 
 	<div id="pageUsuario" class="backgroundimgs">
@@ -80,18 +80,18 @@
       <div id="alerta">
         <div id="boxtop"></div>
         Não há nenhuma unidade cadastrada. Por favor, cadastre uma unidade primeiro.
-        <button id="botao" onclick="apagar(); redirect();">OK</button>
+        <button id="botao" onclick="redirect(); apagar(); ">OK</button>
       </div>
-   
+
         <?php include 'footer.php';
             include 'verificarUnidades.inc.php';
         ?>
-      
+
       </div>
     </div>
 
-	     
-				
+
+
 
 
 </body>

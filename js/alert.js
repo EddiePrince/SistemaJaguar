@@ -14,18 +14,16 @@
 	sucesso.style.opacity = "1";
 })();
 
-function apagar(){
-	var div = document.getElementById("alerta");
-	 div.style.animation = "gotop 3s";
-	div.style.top = "0";	
-	div.style.opacity = "0";
-	div.style.remove();
-}
-
 function redirect(){
 	window.location = "cadastroUnidade.php";
 }
 
+function apagar(){
+	var div = document.getElementById("alerta");
+	 div.style.animation = "gotop 3s";
+	div.style.top = "0";
+	div.style.opacity = "0";
+	div.style.remove();
+}
+
 setTimeout(redirect(), 2000);
-
-
