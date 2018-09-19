@@ -22,13 +22,13 @@
     <span id="loginTitle">Login <span id="orangeTitle">Sistema Jaguar</span></span>
   </div>
   <form  id="loginform" method="post">
-    <p>Usuario</p>
-        <input type="text" name="matricula"  id="usuario"  placeholder="Matricula" required autofocus>
-        <p>Senha</p>
-        <input type="password" name="senha" placeholder="Senha" required >
-        <input class="postlogin" type="submit" name="entrar" value="Login">
-        <a class="icon-img" href="ajudaLogin.php" target="_blank">Precisa de ajuda?</a>
-        <?php include 'validarlogin.inc.php';?>
+    <input type="text" name="matricula"  id="usuario"  placeholder="Insira sua matrícula" required autofocus>
+
+    <input type="password" name="senha" placeholder="Insira a senha" required >
+    <input class="postlogin" type="submit" name="entrar" value="Login">
+    
+    <a class="icon-img" href="ajudaLogin.php" target="_blank">Precisa de ajuda?</a>
+    <?php include 'validarlogin.inc.php';?>
   </form>
 </div>
 </body>
