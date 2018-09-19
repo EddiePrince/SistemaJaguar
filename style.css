@@ -1,7 +1,6 @@
 /* Tela de Login */
 
 body {
-
 	box-sizing: border-box;
 	/*Faz com que os elemento ocupem exatamente o tamanho especificado*/
 }
@@ -57,9 +56,11 @@ body {
 }
 
 /*Todas as imagens de fundo*/
-#indexbckg{
+
+#indexbckg {
 	background-image: url("img/2.jpg");
 }
+
 #pageAjuda {
 	background-image: url("img/31.jpg");
 }
@@ -120,6 +121,7 @@ body {
 	bottom: 0;
 	width: 100%;
 }
+
 /* Rodapé */
 
 /* Index */
@@ -128,26 +130,26 @@ body {
 	width: 100px;
 }
 
-#loginTitle{
-	text-align:center;
+#loginTitle {
+	text-align: center;
 	font-size: 28px;
 }
 
-#logincontainer{
+#logincontainer {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	background-color: white;
 	width: 600px;
 	border-radius: 30px 0 0 0;
 }
 
-#loginheader{
+#loginheader {
 	background-color: black;
 }
 
-#orangeTitle{
+#orangeTitle {
 	color: orange;
 }
 
@@ -184,10 +186,6 @@ body {
 	background: rgba(0, 0, 0, .5);
 	border-radius: 8px;
 }
-
-
-
-
 
 .contact-form p {
 	margin: 0;
@@ -285,26 +283,41 @@ body {
 
 /* seção da exibição de pesquisas */
 
-section {
-	margin-left: 19%;
-	margin-right: 25%;
-	color: white;
-	font-size: 17px;
-	font-family: sans-serif bold;
+/*.form {
+	padding: 10px;
+}*/
+
+.resultado_pesquisa {
+	background: rgba(0, 0, 0, .4);
+	padding: 10px;
+	border-radius: 2px;
 }
 
-.form {
+.busca_unidade {
+	background: rgba(255, 255, 0, .5);
 	padding: 10px;
+	border-radius: 2px;
+	color: black;
 }
 
-article {
-	width: 100%;
-	box-sizing: border-box;
+.busca_usuario {
+	background: rgba(255, 165, 0, .5);
 	padding: 10px;
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 3px;
-	margin-bottom: 5px;
-	text-align: left;
+	border-radius: 2px;
+	color: black;
+}
+
+.busca_animal {
+	background: rgba(255, 69, 0, .5);
+	padding: 10px;
+	border-radius: 2px;
+	color: black;
+}
+
+.sem_registros {
+	background: rgba(0, 0, 0, .4);
+	padding: 10px;
+	border-radius: 2px;
 }
 
 /* FIm seção da exibição de pesquisas */
