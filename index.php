@@ -31,7 +31,7 @@
     <br>
     <input id="loginBtn" type="submit" name="entrar" value="Login">
     <br>
-    <a class="loginlink" href="ajudaLogin.php" target="_blank">Ajuda?</a>
+    <a class="loginlink" href="intro.php" target="_blank">Ajuda?</a>
     <?php include 'validarlogin.inc.php';?>
   </form>
 

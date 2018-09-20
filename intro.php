@@ -10,16 +10,14 @@
 
 <body>
 	<div id="header">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<a href="index.php"> 
-					<img id="logo" src="img/logo.png" alt="Logo">
-				</a>     
-			</div>
-		</div>
+		<a href="index.php"> 
+			<img src="img/jaguaricon.png" alt="Logo" id="headerIcon">
+		</a>  
+		<span id="headerTitle">Sistema <span id="orangeTitle">Jaguar</span></span>
+
+		<a id="indexLink" href="index.php">Login</a>
 	</div>
-</div>
+	
 
 	<div id="ajudaLogin" class="backgroundimgs">
 		<div id="fundoTransparente">
