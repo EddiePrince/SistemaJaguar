@@ -13,6 +13,48 @@ body {
 	height: 130px;
 }
 
+/*Menu Provisório */
+
+#menu {
+	border-radius: 5px 5px 0 0;
+	display: table;
+	width: 100%;
+	align-items: center;
+	margin-top: 45px;
+}
+
+#menu a {
+	display: table-cell;
+	padding: 10px 15px;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: Gill sans-serif;
+	font-size: large;
+}
+
+#menu a:hover {
+	background-color: #ff4500;
+	transition-duration: .5s;
+	scroll-behavior: auto;
+}
+
+@media (max-width:680px) {
+	#menu {
+		background-color: black;
+		width: 100%;
+		display: block;
+		clear: both;
+	}
+	#menu a {
+		display: block;
+	}
+}
+
+/* Fim do Menu Provisório */
+
 #logo {
 	width: 200px;
 	margin-left: 20px;
@@ -144,12 +186,12 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.6);
 	width: 500px;
 	border-radius: 30px 30px 0 0;
 }
 
-#logincontainer input{
+#logincontainer input {
 	float: left;
 	display: inline-block;
 }
@@ -158,14 +200,11 @@ body {
 	border-radius: 30px 30px 0 0;
 	background-color: black;
 	height: 85px;
-
 }
 
 #orangeTitle {
 	color: #ea700d;
 }
-
-
 
 /* Index */
 
@@ -637,16 +676,13 @@ input[type="text1"] {
 	}
 }
 
-
 @media only screen and (min-width: 350px) and (max-width: 2000px) {
-	
-	#bemVindoAdm{
+	#bemVindoAdm {
 		background-color: black;
 		font-size: 20px;
 		padding: 2px;
 	}
-
-	#bemVindoAdm img{
+	#bemVindoAdm img {
 		right: 100%;
 		width: 100%;
 		background-color: black;
