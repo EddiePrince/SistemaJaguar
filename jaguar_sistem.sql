@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
@@ -21,7 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `jaguar_sistem`
 --
-
+DROP DATABASE if EXISTS jaguar_sistem;
+CREATE DATABASE jaguar_sistem;
+USE jaguar_sistem;
 -- --------------------------------------------------------
 
 --
