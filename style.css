@@ -181,19 +181,8 @@ body {
 	font-size: 28px;
 }
 
-#logincontainer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 500px;
-	border-radius: 30px 30px 0 0;
-}
-
-#logincontainer input {
-	float: left;
-	display: inline-block;
+#orangeTitle {
+	color: #ea700d;
 }
 
 #loginheader {
@@ -202,11 +191,70 @@ body {
 	height: 85px;
 }
 
-#orangeTitle {
-	color: #ea700d;
+#logincontainer {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 480px;
+	border-radius: 30px;
 }
 
-/* Index */
+.loginFields {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid black;
+	position: relative;
+	margin-top: 30px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 80%;
+}
+
+#loginform input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+#loginform input::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+#loginform input:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+#loginform input:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+.loginlink{
+	float: right;
+	color: gray;
+	margin: 10px 50px;
+}
+
+.loginlink:hover{
+	color: white;
+	text-decoration-color: #ea700d;
+
+}
+
+#loginBtn{
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid black;
+	position: relative;
+	margin: 50px 0 50px 0;
+	left: 50%;
+	transform: translate(-50%);
+	color: white;
+	width: 25%;
+	height: 40px;
+	border-radius: 10px;
+}
+
+#loginBtn:hover{
+	background: rgba(234, 112, 13, 0.6);
+}
+
+	/* Index */
 
 .linkicon {
 	width: 20px;

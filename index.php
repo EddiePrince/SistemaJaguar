@@ -17,19 +17,25 @@
 <body id="indexbckg" class="backgroundimgs">
 
 <div id="logincontainer">
+
   <div id="loginheader">
     <img src="img/jaguaricon.png" alt="Logo" id="logo">
     <span id="loginTitle">Login <span id="orangeTitle">Sistema Jaguar</span></span>
   </div>
-  <form  id="loginform" method="post">
-    <input type="text" name="matricula"  id="usuario"  placeholder="Insira sua matrícula" required autofocus>
 
-    <input type="password" name="senha" placeholder="Insira a senha" required >
-    <input class="postlogin" type="submit" name="entrar" value="Login">
-    
-    <a class="icon-img" href="ajudaLogin.php" target="_blank">Precisa de ajuda?</a>
+  <form  id="loginform" method="post">
+    <input class="loginFields" type="text" name="matricula"  id="usuario"  placeholder="Insira sua matrícula" required autofocus>
+    <input class="loginFields" type="password" name="senha" placeholder="Insira a senha" required >
+    <br>
+    <a class="loginlink" href="#" onclick="popRecovery()">Esqueci minha senha</a>
+    <br>
+    <input id="loginBtn" type="submit" name="entrar" value="Login">
+    <br>
+    <a class="loginlink" href="ajudaLogin.php" target="_blank">Ajuda?</a>
     <?php include 'validarlogin.inc.php';?>
   </form>
+
 </div>
+
 </body>
 </html>
