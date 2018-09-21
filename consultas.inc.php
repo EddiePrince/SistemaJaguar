@@ -25,7 +25,7 @@
         <form  id="divBusca" class="form" action="consultas.inc.php" method="get">
           <input type="text" name="filtro" id="txtBusca" placeholder="Pesquisar..."/>
           <button type="submit" id="btnBusca"><img src="img/iconpesquisa.png" alt="Buscar..."/></button>
-        </form>   
+        </form>
 
           <?php
 
@@ -54,7 +54,7 @@
                echo "<p class='busca_usuario'><strong>$registrosUsuario </strong>registro(s) de Usuários encontrado(s).</p>"; //exibição da quanidade de registros encontrados
                echo "<p class='busca_animal'><strong>$registrosAnimal </strong>registro(s) de Animal(is) encontrado(s).</p>"; //exibição da quanidade de registros encontrados
 
-    				 
+
 
              while ($exibirRegistros = mysqli_fetch_array($consultaUnidade)) {
                $idUnidade = $exibirRegistros[0];
@@ -104,7 +104,7 @@
                $nomeCientifico = $exibirRegistros[6];
                $familia = $exibirRegistros[7];
                $ordem = $exibirRegistros[8];
-               
+
 
                echo "<article class='busca_animal'>";
                // echo "id Triagem: ". " $idTriagem<br>";
@@ -125,6 +125,7 @@
                echo "<br><p class='sem_registros'>Nenhum registro encontrado a palavra <strong> $filtro. </strong></p>";
              }
 
+             // header("Location:consultas.php");
 
              mysqli_close($conexao);
 

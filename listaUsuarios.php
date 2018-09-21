@@ -3,6 +3,7 @@
   //Conexão com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
     include 'header.inc.php';
   ?>
   	<div id="pageListaUsuario" class="backgroundimgs">
-    <div id="fundoTransparente"> 
+    <div id="fundoTransparente">
 
           <br><div  id="Cadastrar">
             <a id="Cadastrar" href="CadastroUsuario.php" >  Cadastrar Usuario </a>
@@ -32,6 +33,7 @@
               <h2>Lista de Usuarios</h2>
               <table class="table">
                 <tr>
+                  <th>Editar</th>
                   <th>Matricula</th>
                   <th>Nome</th>
                   <th>Perfil</th>
@@ -48,8 +50,8 @@
       </div>
     </div>
   </div>
-    
+
       <?php include 'footer.php'; ?>
-    
+
   </body>
 </html>

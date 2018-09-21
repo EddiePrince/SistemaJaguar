@@ -1,22 +1,37 @@
 
 <?php
+  include 'conexao.inc.php';
 
-	 $sql1 = "SELECT * FROM usuarios";
+
+	// receber o numero da páginas
+	// $paginaAtual = filter_input(INPUT_GET, 'pagina');
+	// $pagina = (!empty($paginaAtual)) ? $paginaAtuals : 1;
+	// // Setar a quantidade de itens listados por pagina
+	// $qtd_result_pg = 3;
+	// // Calcular o inicio da visualização
+	// $inicio = ($qtd_result_pg * $pagina) - $qtd_result_pg;
+	// //LIMIT $inicio, $qtd_result_pg (colocar esse codigo apos usuariosdosql 1)
+
+
+  // $idUsuario = filter_input(INPUT_GET, 'idUsuario'); //nao consegui pegar o idUsuario
+
+	 $sql1 = "SELECT * FROM usuarios ";
 	 $result1 = $conexao->query($sql1);
-	
+
 	 if($result1->num_rows > 0)
 	 {
 	 	while($row = $result1->fetch_assoc())
 		 {
-		
+
 		 		echo "<tr>";
+        echo "<td> <a href='editar.php?idUsuario=" . $row['idUsuario'] . "'>Editar</a> </td>";
 		 		echo "<td>" . $row['matricula'] . "</td>";
 		 		echo "<td>" . $row['nome'] . "</td>";
 		 		echo "<td>" . $row['perfil'] . "</td>";
 		 		echo "<td>" . $row['email'] . "</td>";
 		 		$idTelefone = $row['idTelefone'];
 		 		$idUnidade = $row['idUnidade'];
-		 		
+
 		 		if ($idTelefone == NULL) { //Somente o telefone é opcional por isso pode ser nulo
 		 			echo "<td>Telefone não informado</td>";
 		 		}
@@ -30,10 +45,10 @@
 		 				echo "<td>" . $numero . "</td>";
 		 			}
 		 		}
-		 			
+
 		 		if ($idUnidade == NULL) { // Em caso de usuários teste sem unidade
 		 			echo "<td>Unidade não informada</td>";
-		 		}	 		
+		 		}
 		 		else if($idUnidade != NULL){
 			 		$sql3 = "SELECT * FROM unidades WHERE idUnidade = '$idUnidade'";
 				 	$result3 = $conexao->query($sql3);
@@ -44,10 +59,13 @@
 			 		}
 		 		}
 
-		 		echo "</tr>";		
+		 		echo "</tr>";
 		   }
 	 }
-	 
-	 
+	 // Paginação
+	 // $result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
+	 // $resultado_pg = mysqli_query($conexao, $result_pg);
+	 // $row_pg = mysqli_fetch_assoc($resultado_pg);
+	 // echo $row_pg['num_result'];
 
 ?>
