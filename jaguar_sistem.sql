@@ -260,7 +260,7 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`idUsuario`, `idTelefone`, `idUnidade`, `matricula`, `nome`, `email`, `perfil`, `senha`) VALUES
 (1, NULL, NULL, 'admin', 'Administrador', 'administrador@naturatins.com', 'administrador', 'admin'),
-(2, NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente'),
+(2, NULL, NULL, 'agente', 'Agente', 'agente@naturatins.com', 'agente', 'agente');
 
 
 --
