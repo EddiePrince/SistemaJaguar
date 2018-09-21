@@ -258,6 +258,16 @@ body {
 	/* Index */
 
 	/*Intro ao sistema*/
+#bannercontainer{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-height: 400px;
+}
+
+#banner{
+	width: 100%;
+}
 
 #headerIcon{
 	width: 100px;
@@ -274,15 +284,42 @@ body {
 
 #indexLink{
 	color: black;
-	top: 5%;
+	top: 15%;
 	text-align: center;
 	position: relative;
-	right: 5%;
+	right: 2%;
 	height: 30px;
 	float: right;
-	background-color: gray;
+	background-color: white;
 	width: 5%;
 	border-radius: 5px;
+}
+
+#indexLink:hover{
+	text-decoration: none;
+	background-color: #ea700d;
+	color: white;
+}
+
+#textcontainer{
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	color: white;
+}
+
+#subtextcontainer{
+	font-size: 20px;
+	background-color: rgba(0,0,0, 0.8);
+}
+
+.introimg{
+	width: 200px;
+}
+
+#contentcontainer{
+	position: relative;
+	bottom: -450px;
 }
 
 	/*Intro ao sistema*/

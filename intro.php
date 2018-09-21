@@ -17,30 +17,50 @@
 
 		<a id="indexLink" href="index.php">Login</a>
 	</div>
-	
 
-	<div id="ajudaLogin" class="backgroundimgs">
-		<div id="fundoTransparente">
-			<div class="container">
-		        <h1>Instruções Básicas do Sistema</h1>
-		        <h3> <strong class="titulo">Sobre o Sistema: </strong></h3>
-		        <p class="paragrafo">É um software de gestão de animais silvestre. Tem a finalidade de auxiliar o gerenciamento integrado e centralizado das informações. Utiliza algumas tecnologias livres e conhecidas. Pode ser utilizado em qualquer ambiente como Windows, Linux e outros, pois necessita apenas de um navegador Web, um usuário e senha de acesso fornecida pelo Administrador do Sistema.</p>
-
-				<h3><strong class="titulo">Acesso ao Sistema: </strong></h3>  	
-				<p class="paragrafo"> Para acessar o sistema basta abrir o navegador, acessar o endereço na internet onde o sistema foi disponibilizado e então informar seu login e senha. Depois de efetuar o login será redirecionados para a Área de trabalho pincipal do sistema. Quando um cadastro é realizado uma listagem de registro é exibida em outra área referente a este cadastro.</p>
-
-				<h3><strong class="titulo">Usuários e Tipos de Usuários: </strong></h3> 
-				<p class="paragrafo">O cadastro de tipo de usuário define as categorias de usuários existentes atualmenteque são; Administrador e Agente, as quais garantem um nível hierárquico de acesso a determinadas funcionalidade do sistema. O cadastro de usuários, propriamente dito, permite o cadastro dos usuários que irão acessar o sistema, respeitando o seu tipo e as demais atribuições de acesso para a instituição, NATURATINS.</p>
-
-				<h3><strong class="titulo">Cadastro de Pessoa Física/Jurídica no Sistema: </strong></h3>	
-				<p class="paragrafo"> Neste	módulo você pode inserir as informações das pessoas físicas e jurídicas que serão trabalhadas dentro do sistema. Usuarios (pessoas físicas) e Unidades central e Regionais (pessoas jurídicas): Neste cadastro você poderá inserir as regionais responsáveis pela entrega do animal silvestre.</p>
-
-		    </div>
+	<div id="bannercontainer">	
+		<div id="textcontainer">
+			<h1>Bem vindo(a) ao SISTEMA <span id="orangeTitle">JAGUAR</span></h1> <br>
+			<div id="subtextcontainer">
+				<p>O Sistema Jaguar foi desenvolvido especialmente para o NATURATINS</p>
+				<p>Desfrute de uma nova forma de gerenciamento de animais</p>
+				<p>Verifique seu e-mail para as credenciais de acesso</p>	
+			</div>
 		</div>
+		<img id="banner" src="img/banner.jpg">
+	</div>
+
+	<div id="contentcontainer" class="container">
+		<div class="row">
+
+			<div class="col-3">
+				<img class="introimg" src="img/Arara.png">
+				<p>Intuitivo</p>
+				<p>O Sistema Jaguar foi criado de acordo com a realidade dos funcionários NATURATINS. Será fácil utilizar o sistema</p>
+			</div>
+
+			<div class="col-3">
+				<img class="introimg" src="img/Onça.png">
+				<p>Prático</p>
+				<p>O Sistema Jaguar vai direto ao ponto e fornce exatamente as funções que você precisa</p>
+			</div>
+
+			<div class="col-3">
+				<img class="introimg" src="img/Tamanduá.png">
+				<p>Moderno</p>
+				<p>Usamos as técnicas mais recentes para criar um sistema arrojado e moderno para os usuários</p>
+			</div>
+
+			<div class="col-3">
+				<img class="introimg" src="img/Lobo.png">
+				<p>Adaptável</p>
+				<p>Leve o Sistema Jaguar com você para onde precisar. Funciona em diversas plataformas</p>
+			</div>
+		</div>
+	</div>
 				
-		<div class="footer">
-			<?php include 'footer.php'; ?>
-		</div>
+	<div class="footer">
+		<?php include 'footer.php'; ?>
 	</div>
 </body>
 </html>
