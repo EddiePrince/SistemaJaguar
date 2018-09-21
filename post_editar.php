@@ -7,19 +7,19 @@
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
 
-    $idUsuario = filter_input(INPUT_POST, 'idUsuario');
+    $id_Usuario = filter_input(INPUT_POST, 'idUsuario');
 
 
-  $result_alteracao = "UPDATE usuarios SET nome = '$nome' WHERE idUsuario = '$idUsuario'";
+  $result_alteracao = "UPDATE usuarios SET nome = '$nome' WHERE idUsuario = '$id_Usuario'";
   $salva_alteracao = mysqli_query($conexao, $result_alteracao);
 
-  $result_alteracao2 = "UPDATE usuarios SET email = '$email' WHERE idUsuario = '$idUsuario'";
+  $result_alteracao2 = "UPDATE usuarios SET email = '$email' WHERE idUsuario = '$id_Usuario'";
   $salva_alteracao2 = mysqli_query($conexao, $result_alteracao2);
 
-  $result_alteracao3 = "UPDATE usuarios SET telefone = '$telefone' WHERE idUsuario = '$idUsuario'";
+  $result_alteracao3 = "UPDATE usuarios SET telefone = '$telefone' WHERE idUsuario = '$id_Usuario'";
   $salva_alteracao3 = mysqli_query($conexao, $result_alteracao3);
 
-  $result_alteracao4 = "UPDATE usuarios SET senha = '$senha' WHERE idUsuario = '$idUsuario'";
+  $result_alteracao4 = "UPDATE usuarios SET senha = '$senha' WHERE idUsuario = '$id_Usuario'";
   $salva_alteracao4 = mysqli_query($conexao, $result_alteracao4);
 
   header("Location:listaUsuarios.php");

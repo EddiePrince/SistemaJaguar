@@ -7,9 +7,9 @@
 	$matricula = $_POST['matricula'];
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
-	$telefone = $_POST['telefone'];
+	// $telefone = $_POST['telefone'];
 	$senha = $_POST['senha'];
-	$unidade = $_POST['nomeUnidade'];
+	// $nomeUnidade = $_POST['nomeUnidade'];
 
     	// $senha = md5($senha*10);
 
@@ -17,52 +17,58 @@
     // die("A unidade não foi escolhida!");
 
 // PROTEÇÃO CONTRA ATAQUE SQL INJECTION  COM addslashes()
-  foreach ($_POST as $indice => $value) {
-    $_POST[$indice] = addslashes($_POST[$indice]);
-  };
+  // foreach ($_POST as $indice => $value) {
+  //   $_POST[$indice] = addslashes($_POST[$indice]);
+  // };
 
-	$sql1 = "INSERT INTO usuarios (perfil, matricula, nome, email, senha) VALUES ('$perfil', '$matricula', '$nome', '$email',  '$senha')";
+	// $sql1 = "INSERT INTO usuarios (perfil, nome) VALUES ('$perfil', '$nome')";
+	// $salvar1 = mysqli_query($conexao, $sql1);
+
+	$sql1 = "INSERT INTO usuarios ( perfil,matricula,nome,email,senha) VALUES ('$perfil', '$matricula','$nome','$email','$senha')";
 	$salvar1 = mysqli_query($conexao, $sql1);
 
-	$sql2 = "INSERT INTO telefones (numero) VALUES ('$telefone')";
-	$salvar2 = mysqli_query($conexao, $sql2);
+	// $sql1 = "INSERT INTO usuarios (perfil, matricula, nome, email, senha) VALUES ('$perfil', '$matricula', '$nome', '$email',  '$senha')";
+	// $salvar1 = mysqli_query($conexao, $sql1);
+
+	// $sql2 = "INSERT INTO telefones (numero) VALUES ('$telefone')";
+	// $salvar2 = mysqli_query($conexao, $sql2);
 
 
-	//Pegar idTelefone
-	$pegarTelefone = "SELECT MAX(idTelefone) FROM telefones";
-	$resultTelefone =  mysqli_query($conexao, $pegarTelefone);
+	// //Pegar idTelefone
+	// $pegarTelefone = "SELECT MAX(idTelefone) FROM telefones";
+	// $resultTelefone =  mysqli_query($conexao, $pegarTelefone);
 
-	while($row = mysqli_fetch_row($resultTelefone))
-	{
-		$idTelefone = $row[0];
-		echo $idTelefone;
-	}
+	// while($row = mysqli_fetch_row($resultTelefone))
+	// {
+	// 	$idTelefone = $row[0];
+	// 	echo $idTelefone;
+	// }
 
-	//Pegar idUsuario
-	$pegarUsuario = "SELECT MAX(idUsuario) FROM usuarios";
-	$resultUsuario =  mysqli_query($conexao, $pegarUsuario);
+	// //Pegar idUsuario
+	// $pegarUsuario = "SELECT MAX(idUsuario) FROM usuarios";
+	// $resultUsuario =  mysqli_query($conexao, $pegarUsuario);
 
-	while($row = mysqli_fetch_row($resultUsuario))
-	{
-		$idUsuario = $row[0];
-		echo $idUsuario;
-	}
+	// while($row = mysqli_fetch_row($resultUsuario))
+	// {
+	// 	$idUsuario = $row[0];
+	// 	echo $idUsuario;
+	// }
 
-	//Pegar idUnidade
-	$pegarUnidade = "SELECT * FROM unidades WHERE nome = '$unidade'";
-	$resultUnidade =  mysqli_query($conexao, $pegarUnidade);
+	// //Pegar idUnidade
+	// $pegarUnidade = "SELECT * FROM unidades WHERE nomeUnidade = '$nomeUnidade'";
+	// $resultUnidade =  mysqli_query($conexao, $pegarUnidade);
 
-	while($row = mysqli_fetch_row($resultUnidade))
-	{
-		$idUnidade = $row[0];
-	}
+	// while($row = mysqli_fetch_row($resultUnidade))
+	// {
+	// 	$idUnidade = $row[0];
+	// }
 
-	$sql3 = "UPDATE usuarios SET idTelefone='$idTelefone' WHERE idUsuario='$idUsuario'";
-	$salvar3 = mysqli_query($conexao, $sql3);
+	// $sql3 = "UPDATE usuarios SET idTelefone='$idTelefone' WHERE idUsuario='$idUsuario'";
+	// $salvar3 = mysqli_query($conexao, $sql3);
 
-	$sql4 = "UPDATE usuarios SET idUnidade='$idUnidade' WHERE idUsuario='$idUsuario'";
-	$salvar4 = mysqli_query($conexao, $sql4);
+	// $sql4 = "UPDATE usuarios SET idUnidade='$idUnidade' WHERE idUsuario='$idUsuario'";
+	// $salvar4 = mysqli_query($conexao, $sql4);
 
-	header("Location:listaUsuarios.php");
+	 header("Location:listaUsuarios.php");
 
 ?>
