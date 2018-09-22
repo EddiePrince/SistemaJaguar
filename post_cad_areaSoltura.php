@@ -22,7 +22,7 @@
 
 	$sql1 = "INSERT INTO proprietarios (nomeProprietario, email) VALUES ('$nomeProprietario', '$email')";
 	$salvar1 = mysqli_query($conexao, $sql1);
-	
+
 	$sql2 = "INSERT INTO telefones (numero) VALUES ('$numero')";
 	$salvar2 = mysqli_query($conexao, $sql2);
 
@@ -33,21 +33,21 @@
 	$salvar4 = mysqli_query($conexao, $sql4);
 
 
-  
-	//Pegar IdProprietario
+
+	//Pegar IdArea
 	$pegarIdArea = "SELECT MAX(idArea) FROM areas";
-	$resultIdArea =  mysqli_query($conexao, $pegarIdArea); 
-    
+	$resultIdArea =  mysqli_query($conexao, $pegarIdArea);
+
 	while($row = mysqli_fetch_row($resultIdArea))
 	{
 		$idArea = $row[0];
 		echo $idArea;
-	}  
+	}
 
 	//Pegar IdProprietario
 	$pegarIdProprietario = "SELECT MAX(idProprietario) FROM proprietarios";
-	$resultIdProprietario =  mysqli_query($conexao, $pegarIdProprietario); 
-    
+	$resultIdProprietario =  mysqli_query($conexao, $pegarIdProprietario);
+
 	while($row = mysqli_fetch_row($resultIdProprietario))
 	{
 		$idProprietario = $row[0];
@@ -57,7 +57,7 @@
 	//Pegar idTelefone
 	$pegarIdTelefone = "SELECT MAX(idTelefone) FROM telefones";
 	$resultIdTelefone =  mysqli_query($conexao, $pegarIdTelefone);
-  
+
 	while($row = mysqli_fetch_row($resultIdTelefone))
 	{
 		$idTelefone = $row[0];
@@ -67,7 +67,7 @@
 	//Pegar idEndereco
 	$pegarIdEndereco = "SELECT MAX(idEndereco) FROM enderecos";
 	$resultIdEndereco =  mysqli_query($conexao, $pegarIdEndereco);
-  
+
 	while($row = mysqli_fetch_row($resultIdEndereco))
 	{
 		$idEndereco = $row[0];
@@ -76,15 +76,15 @@
 
 	$sql5 = "UPDATE areas SET idProprietario='$idProprietario' WHERE idArea='$idArea'";
 	$salvar5 = mysqli_query($conexao, $sql5);
-  
- 
+
+
 	$sql6 = "UPDATE areas SET idTelefone='$idTelefone' WHERE idArea='$idArea'";
 	$salvar6 = mysqli_query($conexao, $sql6);
-  
+
 
  	$sql7 = "UPDATE areas SET idEndereco='$idEndereco' WHERE idArea='$idArea'";
 	$salvar7 = mysqli_query($conexao, $sql7);
-  
+
 	header("Location:listaAreas.php");
 
 ?>

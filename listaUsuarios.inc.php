@@ -29,8 +29,8 @@
 		 		echo "<td>" . $row['nome'] . "</td>";
 		 		echo "<td>" . $row['perfil'] . "</td>";
 		 		echo "<td>" . $row['email'] . "</td>";
-		 		// $idTelefone = $row['idTelefone'];
-		 		// $idUnidade = $row['idUnidade'];
+		 		$idTelefone = $row['idTelefone'];
+		 		$idUnidade = $row['idUnidade'];
 
 		 		// if ($idTelefone == NULL) { //Somente o telefone é opcional por isso pode ser nulo
 		 		// 	echo "<td>Telefone não informado</td>";
