@@ -213,32 +213,38 @@ body {
 	width: 80%;
 }
 
-#loginform input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
-}
-#loginform input::-moz-placeholder { /* Firefox 19+ */
-  color: white;
-}
-#loginform input:-ms-input-placeholder { /* IE 10+ */
-  color: white;
-}
-#loginform input:-moz-placeholder { /* Firefox 18- */
-  color: white;
+#loginform input::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: white;
 }
 
-.loginlink{
+#loginform input::-moz-placeholder {
+	/* Firefox 19+ */
+	color: white;
+}
+
+#loginform input:-ms-input-placeholder {
+	/* IE 10+ */
+	color: white;
+}
+
+#loginform input:-moz-placeholder {
+	/* Firefox 18- */
+	color: white;
+}
+
+.loginlink {
 	float: right;
 	color: gray;
 	margin: 10px 50px;
 }
 
-.loginlink:hover{
+.loginlink:hover {
 	color: white;
 	text-decoration-color: #ea700d;
-
 }
 
-#loginBtn{
+#loginBtn {
 	background-color: rgba(0, 0, 0, 0.6);
 	border: 1px solid black;
 	position: relative;
@@ -251,30 +257,31 @@ body {
 	border-radius: 10px;
 }
 
-#loginBtn:hover{
+#loginBtn:hover {
 	background: rgba(234, 112, 13, 0.6);
 }
 
-	/* Index */
+/* Index */
 
-	/*Intro ao sistema*/
-#bannercontainer{
+/*Intro ao sistema*/
+
+#bannercontainer {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	max-height: 400px;
 }
 
-#banner{
+#banner {
 	width: 100%;
 }
 
-#headerIcon{
+#headerIcon {
 	width: 100px;
 	margin: 15px 0px 0px 15px;
 }
 
-#headerTitle{
+#headerTitle {
 	position: relative;
 	top: 10%;
 	margin: -15px;
@@ -282,7 +289,7 @@ body {
 	color: white;
 }
 
-#indexLink{
+#indexLink {
 	color: black;
 	top: 15%;
 	text-align: center;
@@ -295,34 +302,34 @@ body {
 	border-radius: 5px;
 }
 
-#indexLink:hover{
+#indexLink:hover {
 	text-decoration: none;
 	background-color: #ea700d;
 	color: white;
 }
 
-#textcontainer{
+#textcontainer {
 	position: absolute;
 	top: 25px;
 	left: 25px;
 	color: white;
 }
 
-#subtextcontainer{
+#subtextcontainer {
 	font-size: 20px;
-	background-color: rgba(0,0,0, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.introimg{
+.introimg {
 	width: 200px;
 }
 
-#contentcontainer{
+#contentcontainer {
 	position: relative;
 	bottom: -450px;
 }
 
-	/*Intro ao sistema*/
+/*Intro ao sistema*/
 
 .linkicon {
 	width: 20px;
@@ -807,3 +814,110 @@ input[type="text1"] {
 }
 
 /* Fim area princp. adm e agente */
+
+/* Perfil Animal */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.nav_tabs {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 600px;
+	/* margin-left: 200px; */
+	background-color: rgba(0, 0, 0, 0.6);
+	position: relative;
+	border: 1px;
+}
+
+.nav_tabs ul {
+	list-style: none;
+}
+
+.nav_tabs ul li {
+	float: left;
+}
+
+.tab_label {
+	display: block;
+	min-width: 277px;
+	background-color: #e54e43;
+	padding: 5px;
+	font-size: 15px;
+	cursor: pointer;
+	border: 5px;
+	text-align: center;
+}
+
+.nav_tabs .rd_tab {
+	display: none;
+	position: absolute;
+}
+
+.nav_tabs .rd_tab:checked~label {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tab-content {
+	border-top: solid 5px #e54e43;
+	display: none;
+	position: absolute;
+	min-width: 100%;
+	max-width: 100%;
+	left: 0;
+}
+
+.rd_tab:checked~.tab-content {
+	display: block;
+}
+
+.tab-content h2 {
+	margin-top: 20px;
+	padding: 10px;
+	color: #87d3b7;
+}
+
+.tab-content article {
+	padding: 10px;
+}
+
+/* Botão Cadastrar */
+
+#btnPerfil {
+	padding: 5px;
+	width: 150px;
+	height: 35px;
+	margin-left: 6%;
+	font-size: 15px;
+}
+
+#btnPerfil a {
+	padding: 5px;
+	width: 150px;
+	height: 35px;
+	margin-left: 6%;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: left;
+	background-color: #e54e43;
+	border-radius: 5px;
+	font-family: "lovelyFont";
+	color: white;
+}
+
+#btnPerfil:hover {
+	transition: all .9s ease;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: "lovelyFont";
+	color: green;
+	font-size: 16px;
+}
+
+#btnPerfil img {
+	margin-top: 0;
+	max-width: 23px;
+	max-height: 23px;
+}
