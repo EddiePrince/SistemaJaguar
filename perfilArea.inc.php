@@ -3,15 +3,17 @@
 
 
 
-	  $sql = "SELECT * FROM areas";
-	  $result = mysqli_query($conexao, $sql);
+	  $sql11 = "SELECT * FROM areas,proprietarios";
+	  $result11 = mysqli_query($conexao, $sql11);
 
-	  if($result->num_rows > 0){
-	    while($row = $result->fetch_assoc()){
+	  if($result11->num_rows > 0){
+	    while($row = $result11->fetch_assoc()){
 
 				$nomePropriedade = $row['nomePropriedade'];
+				$nomeProprietario	= $row['nomeProprietario'];
 		  	$bioma	= $row['bioma'];
 		  	$distancia	= $row['distancia'];
+		  	$observacoes	= $row['observacoes'];
 	    }
 	  }
 

@@ -10,10 +10,14 @@
   if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
 
-			$ultimaProcedencia = $row['ultimaProcedencia'];
+	  	$codMarcacao	= $row['codMarcacao'];
+	  	$tipoMarcacao	= $row['tipoMarcacao'];
+	  	$localMarcacao	= $row['localMarcacao'];
 	  	$nomeComum	= $row['nomeComum'];
+			$nomeCientifico = $row['nomeCientifico'];
 	  	$familia	= $row['familia'];
 	  	$ordem	= $row['ordem'];
+			$ultimaProcedencia = $row['ultimaProcedencia'];
 
     }
   }

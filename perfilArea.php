@@ -47,12 +47,14 @@
 										<article><br><br>
 											<?php include 'perfilArea.inc.php'; ?>
 											<label>Nome Propriedade:</label> <input type="text" disabled value=" <?php echo $nomePropriedade;	?>"><br><br>
+											<label>Nome Proprietário:</label> <input type="text" disabled value=" <?php echo $nomeProprietario;	?>"><br><br>
 											<label>Bioma: </label> <input type="text" disabled value=" <?php echo $bioma;	?>"> <br><br>
 											<label>Distancia:</label> <input type="text" disabled value=" <?php echo $distancia;	?>"><br><br>
+											<label>Observações:</label> <input type="text" disabled value=" <?php echo $observacoes;	?>"><br><br>
 										</article>
 
 									<div  id="btnEditar"  >
-										<?php  echo " <a href='editar.php?idArea=" . $row['idArea'] . "'>Editar</a> ";?>
+										<?php  echo " <a href='editarArea.php?idArea=" . $row['idArea'] . "'>Editar</a> ";?>
 									</div><br>
 									<div  id="btnExcluir"  >
 										<?php  echo " <a href='excluir.php?idArea=" . $row['idArea'] . "'>Excluir</a> ";?>

@@ -35,7 +35,8 @@
           <tr>
             <th>Número da Ficha</th>
             <th>Data de Recebimento</th>
-            <th>Agente</th>
+            <th>Nome Comum</th>
+            <th>Nome Científico</th>
             <th>Perfil Completo</th>
 
           </tr>

@@ -7,12 +7,12 @@
   // $result_usuario = "SELECT * FROM usuarios WHERE idUsuario = '$idUsuario'";
   // $resultado_usuario = mysqli_query($conexao, $result_usuario);
   // $row_usuario = mysqli_fetch_assoc($resultado_usuario);
-  $sql1 = "SELECT * FROM usuarios ";
-  $result1 = $conexao->query($sql1);
+  $sql22 = "SELECT * FROM unidades ";
+  $result22 = $conexao->query($sql22);
 
-  if($result1->num_rows > 0)
+  if($result22->num_rows > 0)
   {
-   $row = $result1->fetch_assoc();
+   $row = $result22->fetch_assoc();
     }
 
 ?>
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="style/bootstrap.min.css">
-    <title>Alterações</title>
+    <title>Editar Unidade</title>
 </head>
 
 <body>
@@ -35,29 +35,19 @@
 
 	<div id="pageUsuario" class="backgroundimgs">
     <div id="fundoTransparente">
-      <br>  <h3 class="titulo1">Alterações</h3><br>
+      <br>  <h3 class="titulo1">Dados da Unidade</h3><br>
       <div class="container">
 
-      <form method="post" action="post_editar.php">
+      <form method="post" action="post_editar_unidade.php">
         <div class="row">
           <div class="col-md-12 mb-3">
             <input type="hidden" name="idUsuario" value="<?php echo $row['idUsuario'];  ?>" >
-            <label>Nome:</label>
-            <input class="form-control" type="text" name="nome" value="<?php echo $row['nome'];  ?>" required>
+            <label>Nome da Unidade:</label>
+            <input class="form-control" type="text" name="nome" value="<?php echo $row['nome'];  ?>" >
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label>E-mail:</label>
-            <input class="form-control" class="usuario" type="text" name="email" size="35" maxlength="100" value="<?php echo $row['email'];  ?>" required>
-          </div>
-            <div class="col-md-3 mb-3">
-            <label>Telefone:</label><br>
-            <input class="form-control" type="text" name="telefone" value="<?php echo $row['idTelefone'];  ?>" ><br><br>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label>Senha:</label>
-            <input class="form-control" type="text" name="senha" value="<?php echo $row['senha'];  ?>" required>
+          <div class="col-md-7 mb-3">
+            <label>tipo da Unidade:</label>
+            <input class="form-control" type="text" name="tipoUnidade"  value="<?php echo $row['tipoUnidade'];  ?>" >
           </div>
       </div>
       <button class="btn btn-default" type="submit">Editar</button><br><br><br><br>
@@ -112,12 +102,6 @@
         <?php include 'footer.php';
             include 'verificarUnidades.inc.php';
         ?>
-
-      </div>
-    </div>
-
-
-
 
 
 </body>

@@ -39,7 +39,7 @@
 												</article>
 
 											<div  id="btnEditar"  >
-												<?php  echo " <a href='editar.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+												<?php  echo " <a href='editarUnidade.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
 											</div><br>
 											<div  id="btnExcluir"  >
 												<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>

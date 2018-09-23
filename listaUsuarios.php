@@ -33,15 +33,14 @@
               <h2>Lista de Usuarios</h2>
               <table class="table">
                 <tr>
-                  <th>Editar</th>
                   <th>Matricula</th>
                   <th>Nome</th>
                   <th>Perfil</th>
                   <th>E-mail</th>
-                  <th>Telefone</th>
-                  <th>Unidade</th>
+                  <!-- <th>Telefone</th>
+                  <th>Unidade</th> -->
                   <th>Perfil Completo</th>
-                  
+
                 </tr>
                 <!-- Erro de Validação W3C Identificado -->
                 <?php include 'listaUsuarios.inc.php' ?>

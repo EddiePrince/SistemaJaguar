@@ -39,10 +39,14 @@
 											<div class="container">
 												<article><br><br>
 													<?php include 'perfilAnimal.inc.php'; ?>
-													<label>Ultima Procedencia:</label> <input type="text" disabled value=" <?php echo $ultimaProcedencia;	?>"><br><br>
+													<label>Codigo de Marcação: </label> <input type="text" disabled value=" <?php echo $codMarcacao;	?>"> <br><br>
+													<label>Tipo de Marcação: </label> <input type="text" disabled value=" <?php echo $tipoMarcacao;	?>"> <br><br>
+													<label>Local de Marcação: </label> <input type="text" disabled value=" <?php echo $localMarcacao;	?>"> <br><br>
 													<label>Nome Comum: </label> <input type="text" disabled value=" <?php echo $nomeComum;	?>"> <br><br>
+													<label>Nome Científico: </label> <input type="text" disabled value=" <?php echo $nomeCientifico;	?>"> <br><br>
 													<label>Familia:</label> <input type="text" disabled value=" <?php echo $familia;	?>"><br><br>
 													<label>Ordem:</label> <input type="text" disabled value=" <?php echo $ordem;	?>"> <br><br>
+													<label>Ultima Procedencia:</label> <input type="text" disabled value=" <?php echo $ultimaProcedencia;	?>"><br><br>
 												</article>
 
 
@@ -54,10 +58,10 @@
 												<a class="btnDestinacao" href="#" > Destinação </a>
 											</div>
 											<div  id="btnEditar"  >
-												<?php  echo " <a href='editar.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+												<?php  echo " <a href='editarAnimal.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
 											</div><br>
 											<div  id="btnExcluir"  >
-												<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
+												<?php  echo " <a href='excluirAnimal.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
 											</div>
 										</div>
 										</div>

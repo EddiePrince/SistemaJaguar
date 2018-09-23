@@ -24,14 +24,14 @@
 		 {
 
 		 		echo "<tr>";
-        echo "<td> <a href='editar.php?idUsuario=" . $row['idUsuario'] . "'>Editar</a> </td>";
+
 		 		echo "<td>" . $row['matricula'] . "</td>";
 		 		echo "<td>" . $row['nome'] . "</td>";
 		 		echo "<td>" . $row['perfil'] . "</td>";
 		 		echo "<td>" . $row['email'] . "</td>";
-		 		$idTelefone = $row['idTelefone'];
-		 		$idUnidade = $row['idUnidade'];
-        echo "<td><a href='perfilUsuario.php?id=" . $row['idUsuario'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";        
+		 		// $idTelefone = $row['idTelefone'];
+		 		// $idUnidade = $row['idUnidade'];
+        echo "<td><a href='perfilUsuario.php?id=" . $row['idUsuario'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 
 		 		// if ($idTelefone == NULL) { //Somente o telefone é opcional por isso pode ser nulo
 		 		// 	echo "<td>Telefone não informado</td>";

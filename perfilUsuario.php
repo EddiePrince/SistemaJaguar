@@ -53,10 +53,10 @@
 										</article>
 
 									<div  id="btnEditar"  >
-										<?php  echo " <a href='editar.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+										<?php  echo " <a href='editarUsuario.php?idUsuario=" . $row['idUsuario'] . "'>Editar</a> ";?>
 									</div><br>
 									<div  id="btnExcluir"  >
-										<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
+										<?php  echo " <a href='deletar.php?idUsuario=" . $row['idUsuario'] . "'>Excluir</a> ";?>
 									</div>
 								</div>
 								</div>
