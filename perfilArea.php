@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="style/bootstrap.min.css">
-		<title>Perfil do Usuário</title>
+		<title>Perfil de Área</title>
 	</head>
 
 	<body>
@@ -27,7 +27,7 @@
   <div id="fundoTransparente">
 		<div class="container">
 
-        <h1>Perfil do Usuário</h1>
+        <h1>Perfil do Áreas</h1>
         <!-- <table>
         	<tr></tr>
         </table>
@@ -45,18 +45,17 @@
 								<div class="tab-content">
 									<div class="container">
 										<article><br><br>
-											<?php include 'perfilUsuario.inc.php'; ?>
-											<label>Matricula:</label> <input type="text" disabled value=" <?php echo $matricula;	?>"><br><br>
-											<label>Nome: </label> <input type="text" disabled value=" <?php echo $nome;	?>"> <br><br>
-											<label>Email:</label> <input type="text" disabled value=" <?php echo $email;	?>"><br><br>
-											<label>Perfil:</label> <input type="text" disabled value=" <?php echo $perfil;	?>"> <br><br>
+											<?php include 'perfilArea.inc.php'; ?>
+											<label>Nome Propriedade:</label> <input type="text" disabled value=" <?php echo $nomePropriedade;	?>"><br><br>
+											<label>Bioma: </label> <input type="text" disabled value=" <?php echo $bioma;	?>"> <br><br>
+											<label>Distancia:</label> <input type="text" disabled value=" <?php echo $distancia;	?>"><br><br>
 										</article>
 
 									<div  id="btnEditar"  >
-										<?php  echo " <a href='editar.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+										<?php  echo " <a href='editar.php?idArea=" . $row['idArea'] . "'>Editar</a> ";?>
 									</div><br>
 									<div  id="btnExcluir"  >
-										<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
+										<?php  echo " <a href='excluir.php?idArea=" . $row['idArea'] . "'>Excluir</a> ";?>
 									</div>
 								</div>
 								</div>
@@ -91,10 +90,6 @@
 				</div>
 
 
-
-
-					<!-- Erro de Validação W3C Identificado -->
-          <?php include 'perfilUsuario.inc.php'; ?>
       </div>
 			<!-- Erro de Validação W3C Identificado -->
 			<div class="footer">

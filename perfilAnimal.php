@@ -27,42 +27,42 @@
 	    <div id="pagePerfilAnimal" class="backgroundimgs">
 	  		<div id="fundoTransparente">
 					<div class="container">
-
-
-		        <h1>Perfil Do Animal</h1>
-
+		      <h1>Perfil Do Animal</h1>
 
 						<!-- Abas -->
 					<nav class="nav_tabs">
 								<ul>
 									<li>
 										<input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-										<label for="tab1" class="tab_label">Tab 1</label>
+										<label for="tab1" class="tab_label">Perfil</label>
 										<div class="tab-content">
 											<div class="container">
-												<article>
-													<h2>Perfil do Animal</h2>
+												<article><br><br>
 													<?php include 'perfilAnimal.inc.php'; ?>
-													<label>Ultima Procedencia: <?php echo $ultimaProcedencia;	?></label><br>
-													<label>Nome Comum: <?php	echo $nomeComum;	?></label><br>
-													<label>Familia: <?php	echo $familia;	?></label><br>
-													<label>Ordem: <?php	echo $ordem;	?></label><br>
+													<label>Ultima Procedencia:</label> <input type="text" disabled value=" <?php echo $ultimaProcedencia;	?>"><br><br>
+													<label>Nome Comum: </label> <input type="text" disabled value=" <?php echo $nomeComum;	?>"> <br><br>
+													<label>Familia:</label> <input type="text" disabled value=" <?php echo $familia;	?>"><br><br>
+													<label>Ordem:</label> <input type="text" disabled value=" <?php echo $ordem;	?>"> <br><br>
 												</article>
 
-											<br><div  id="btnPerfil"  >
-												<a class="btnSoltura" href="#" > Área de Soltura </a>
-											</div>
 
-											<br><div  id="btnPerfil"  >
+											<div  id="btnPerfil"  >
 												<a class="btnQuarentena" href="#" > Quarentena </a>
 											</div>
 
-											<br><div  id="btnPerfil"  >
+											<div  id="btnPerfil"  >
 												<a class="btnDestinacao" href="#" > Destinação </a>
+											</div>
+											<div  id="btnEditar"  >
+												<?php  echo " <a href='editar.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+											</div><br>
+											<div  id="btnExcluir"  >
+												<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
 											</div>
 										</div>
 										</div>
 									</li>
+
 									<li>
 										<input type="radio" name="tabs" class="rd_tab" id="tab2">
 										<label for="tab2" class="tab_label">Tab 2</label>
@@ -83,16 +83,7 @@
 											</article>
 										</div>
 									</li>
-									<li>
-										<input type="radio" name="tabs" class="rd_tab" id="tab4">
-										<label for="tab4" class="tab_label">Tab 4</label>
-										<div class="tab-content">
-											<h2>Title 4</h2>
-											<article>
-												Morbi condimentum, ligula in pretium feugiat, erat turpis egestas nisl, eu rutrum felis tortor eget tellus. Donec bibendum finibus sapien id vehicula. Nullam tempus, leo ut tristique pharetra, ligula sapien dictum nunc, eget lacinia mauris tellus sit amet ligula. Etiam posuere metus elementum sem feugiat laoreet. Curabitur efficitur tellus sed felis feugiat vehicula. Ut congue dui at ligula tempus accumsan. Sed ut lacus imperdiet erat aliquam pharetra. Phasellus ultricies nisi mauris, quis tincidunt tortor viverra id. Ut sit amet finibus mi, id fringilla ex. Fusce hendrerit purus nec ipsum volutpat, eu condimentum eros congue. Sed at leo tortor. In a ultrices sapien. Nulla posuere urna id urna semper aliquet.
-											</article>
-										</div>
-									</li>
+
 								</ul>
 							</nav>
 

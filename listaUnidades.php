@@ -19,11 +19,11 @@
   <body >
     <?php
     include 'header.inc.php';
-   
+
   ?>
   	<div id="pageListaUnidade" class="backgroundimgs">
 
-  <div id="fundoTransparente"> 
+  <div id="fundoTransparente">
 
           <br><div  id="Cadastrar"  >
             <a id="Cadastrar" href="CadastroUnidade.php" >  Cadastrar Unidade </a>
@@ -37,6 +37,7 @@
               <tr>
                 <th>Nome</th>
                 <th>Tipo de Unidade</th>
+                <th>Perfil Completo</th>
                 <!-- <th>Perfil</th> -->
               </tr>
               <!-- Erro de Validação W3C Identificado -->

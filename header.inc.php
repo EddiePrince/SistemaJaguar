@@ -19,7 +19,7 @@
 	              <a href="listaAnimais.php">Animais</a>
 	              <a href="listaUsuarios.php">Usuários</a>
 	            <a href="listaUnidades.php">Unidades</a>
-	            <a href="listaAreas.php">Áreas de Soltura</a>
+	            <a href="listaAreas.php">Áreas</a>
 	              <a href="ajuda.php">Ajuda</a>
 	            </div>
 	          </div>

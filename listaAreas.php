@@ -35,7 +35,7 @@
             <th>Municipio</th>
             <th>Nome da Propriedade</th>
             <th>Bioma</th>
-
+            <th>Perfil Completo</th>          
           </tr>
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaAreas.inc.php' ?>

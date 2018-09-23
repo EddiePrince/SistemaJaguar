@@ -40,6 +40,8 @@
                   <th>E-mail</th>
                   <th>Telefone</th>
                   <th>Unidade</th>
+                  <th>Perfil Completo</th>
+                  
                 </tr>
                 <!-- Erro de Validação W3C Identificado -->
                 <?php include 'listaUsuarios.inc.php' ?>

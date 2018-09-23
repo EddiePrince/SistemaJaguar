@@ -29,8 +29,6 @@ body {
 	padding: 10px 15px;
 	text-align: center;
 	color: #fff;
-	font-weight: 300;
-	text-transform: uppercase;
 	text-decoration: none;
 	font-family: Gill sans-serif;
 	font-size: large;
@@ -44,13 +42,12 @@ body {
 
 @media (max-width:680px) {
 	#menu {
-		background-color: black;
-		width: 100%;
-		display: block;
-		clear: both;
-	}
-	#menu a {
-		display: block;
+		border-radius: 5px 5px 0 0;
+		display: inline-table;
+		max-width: 100%;
+		margin: 15px;
+		align-items: center;
+		margin-top: 25px;
 	}
 }
 
@@ -826,7 +823,6 @@ input[type="text1"] {
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 600px;
-	/* margin-left: 200px; */
 	background-color: rgba(0, 0, 0, 0.6);
 	position: relative;
 	border: 1px;
@@ -842,9 +838,10 @@ input[type="text1"] {
 
 .tab_label {
 	display: block;
-	min-width: 277px;
+	min-width: 100px;
 	background-color: #e54e43;
 	padding: 5px;
+	margin-left: 10px;
 	font-size: 15px;
 	cursor: pointer;
 	border: 5px;
@@ -883,24 +880,22 @@ input[type="text1"] {
 	padding: 10px;
 }
 
-/* Botão Cadastrar */
+/* Botão Perfil */
 
 #btnPerfil {
-	padding: 5px;
-	width: 150px;
-	height: 35px;
+	padding: 25px;
 	margin-left: 6%;
 	font-size: 15px;
+	display: inline-grid;
 }
 
 #btnPerfil a {
 	padding: 5px;
 	width: 150px;
-	height: 35px;
-	margin-left: 6%;
-	font-size: 15px;
+	height: 85px;
+	font-size: 25px;
 	text-decoration: none;
-	text-align: left;
+	text-align: center;
 	background-color: #e54e43;
 	border-radius: 5px;
 	font-family: "lovelyFont";
@@ -916,8 +911,34 @@ input[type="text1"] {
 	font-size: 16px;
 }
 
-#btnPerfil img {
-	margin-top: 0;
-	max-width: 23px;
-	max-height: 23px;
+#btnEditar {
+	padding: 5px;
+	width: 80px;
+	height: 35px;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #e54e43;
+	border-radius: 5px;
+	font-family: "lovelyFont";
+	color: white;
+}
+
+#btnExcluir {
+	padding: 5px;
+	width: 80px;
+	height: 35px;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: center;
+	background-color: #e54e43;
+	border-radius: 5px;
+	font-family: "lovelyFont";
+	color: white;
+	display: inline-grid;
+}
+
+.container article label {
+	display: inline;
+	padding: 80px;
 }

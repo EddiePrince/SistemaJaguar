@@ -31,6 +31,7 @@
 		 		echo "<td>" . $row['email'] . "</td>";
 		 		$idTelefone = $row['idTelefone'];
 		 		$idUnidade = $row['idUnidade'];
+        echo "<td><a href='perfilUsuario.php?id=" . $row['idUsuario'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";        
 
 		 		// if ($idTelefone == NULL) { //Somente o telefone é opcional por isso pode ser nulo
 		 		// 	echo "<td>Telefone não informado</td>";

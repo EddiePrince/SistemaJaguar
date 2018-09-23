@@ -3,26 +3,21 @@
 
 
 
-  $sql = "SELECT * FROM usuarios";
-  $result = mysqli_query($conexao, $sql);
+	  $sql = "SELECT * FROM areas";
+	  $result = mysqli_query($conexao, $sql);
 
-  if($result->num_rows > 0){
-    while($row = $result->fetch_assoc()){
+	  if($result->num_rows > 0){
+	    while($row = $result->fetch_assoc()){
 
-			$matricula = $row['matricula'];
-			$nome = $row['nome'];
-			$email = $row['email'];
-	  	$perfil	= $row['perfil'];
-
-
-    }
-  }
-
-
+				$nomePropriedade = $row['nomePropriedade'];
+		  	$bioma	= $row['bioma'];
+		  	$distancia	= $row['distancia'];
+	    }
+	  }
 
 
 	//Pegar id unidade pelo metodo get
-  // $idUnidade = $_GET['idUnidade'];
+  // $idUnidade = $_GET['id'];
 	//
   // $sql = "SELECT * FROM unidades WHERE idUnidade=" . $idUnidade;
   // $result = mysqli_query($conexao, $sql);
@@ -36,8 +31,8 @@
   //     $idEndereco = $row['idEndereco']; // Pegar id endereco
   //   }
   // }
-	//
-  // //Exibir telefone
+
+  //Exibir telefone
   // if ($idTelefone != NULL) {
   // $sql2 = "SELECT * FROM telefones WHERE idTelefone=" . $idTelefone;
   // $result2 = mysqli_query($conexao, $sql2);
@@ -50,8 +45,8 @@
   // } else if ($idTelefone == NULL) {
   //  echo "<td>Telefone não informado</td>";
   // }
-	//
-  // //Exibir Cnpj
+
+  //Exibir Cnpj
   // if ($idCnpj != NULL) {
   // $sql3 = "SELECT * FROM cnpj WHERE idCnpj=" . $idCnpj;
   // $result3 = mysqli_query($conexao, $sql3);
@@ -64,8 +59,8 @@
   // } else if ($idCnpj == NULL) {
   //  echo "<td>CNPJ não informado</td>";
   // }
-	//
-  // //Exibir endereço
+
+  //Exibir endereço
   // if ($idEndereco != NULL) {
   // $sql4 = "SELECT * FROM enderecos WHERE idEndereco=" . $idEndereco;
   // $result4 = mysqli_query($conexao, $sql4);

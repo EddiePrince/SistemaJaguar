@@ -22,7 +22,7 @@
 	 		echo "<td>" . $row['municipio'] . "</td>";
 	 		echo "<td>" . $row['nomePropriedade'] . "</td>";
 	 		echo "<td>" . $row['bioma'] . "</td>";
-	 		// echo "<td><a href='perfilUnidade.php?id=" . $row['idUnidade'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
+	 		echo "<td><a href='perfilArea.php?id=" . $row['idArea'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 	 		echo "</tr>";
 	 	}
 	 }
