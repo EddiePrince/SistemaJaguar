@@ -20,7 +20,7 @@
 
   <div id="loginheader">
     <img src="img/jaguaricon.png" alt="Logo" id="logo">
-    <span id="loginTitle">Login <span id="orangeTitle">Sistema Jaguar</span></span>
+    <span id="loginTitle">Login <span class="orangeTitle">Sistema Jaguar</span></span>
   </div>
 
   <form  id="loginform" method="post">

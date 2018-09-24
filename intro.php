@@ -13,7 +13,7 @@
 		<a href="index.php"> 
 			<img src="img/jaguaricon.png" alt="Logo" id="headerIcon">
 		</a>  
-		<span id="headerTitle">Sistema <span id="orangeTitle">Jaguar</span></span>
+		<span id="headerTitle">Sistema <span class="orangeTitle">Jaguar</span></span>
 
 		<a id="indexLink" href="index.php">Login</a>
 	</div>

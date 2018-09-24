@@ -35,7 +35,7 @@
                 
                 <div id="bemVindoAdm">
                  Bem Vindo <?php echo"$nome";?> !           
-                <img src="img/Manual_do_Usuario_Adm.jpg" alt="Manual do Usuário">           
+                   
                 </div>  
             </div>  
                 
