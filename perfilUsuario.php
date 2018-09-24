@@ -1,6 +1,7 @@
 <?php
 	include 'conexao.inc.php';
 	include 'verificausuario.inc.php';
+	$idUsuario = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,24 +46,26 @@
 								<div class="tab-content">
 									<div class="container">
 										<article><br><br>
-											<?php include 'perfilUsuario.inc.php'; ?>
+											<?php 
+											include 'perfilUsuario.inc.php'; 
+											?>
 											<label>Matricula:</label> <input type="text" disabled value=" <?php echo $matricula;	?>"><br><br>
 											<label>Nome: </label> <input type="text" disabled value=" <?php echo $nome;	?>"> <br><br>
 											<label>Email:</label> <input type="text" disabled value=" <?php echo $email;	?>"><br><br>
 											<label>Perfil:</label> <input type="text" disabled value=" <?php echo $perfil;	?>"> <br><br>
 										</article>
 
-									<div  id="btnEditar"  >
-										<?php  echo " <a href='editarUsuario.php?idUsuario=" . $row['idUsuario'] . "'>Editar</a> ";?>
+									<!-- <div  id="btnEditar"  >
+										<?php  echo " <a href='editarUsuario.php?idUsuario=" . $_GET['id'] . "'>Editar</a> ";?>
 									</div><br>
 									<div  id="btnExcluir"  >
-										<?php  echo " <a href='deletar.php?idUsuario=" . $row['idUsuario'] . "'>Excluir</a> ";?>
-									</div>
+										<?php  echo " <a href='deletar.php?idUsuario=" . $_GET['id'] . "'>Excluir</a> ";?>
+									</div> -->
 								</div>
 								</div>
 							</li>
 
-							<li>
+							<!-- <li>
 								<input type="radio" name="tabs" class="rd_tab" id="tab2">
 								<label for="tab2" class="tab_label">Tab 2</label>
 								<div class="tab-content">
@@ -81,7 +84,7 @@
 										Integer at ligula eget turpis elementum ultrices eget quis tortor. Duis posuere lorem justo, ut malesuada tortor tempus a. Curabitur pellentesque ultricies consectetur. Maecenas diam lorem, hendrerit eget sem ut, tincidunt vulputate ipsum. In vel enim et erat sagittis eleifend vel eu nunc. In hac habitasse platea dictumst. Integer tincidunt, augue at posuere eleifend, lacus quam hendrerit risus, aliquam sollicitudin ligula tellus quis elit. Proin varius fringilla vehicula. Phasellus mollis sollicitudin orci, id fringilla magna volutpat non. Nullam sed luctus nisl.
 									</article>
 								</div>
-							</li>
+							</li> -->
 
 						</ul>
 					</nav>

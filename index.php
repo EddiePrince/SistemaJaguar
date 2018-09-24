@@ -27,11 +27,11 @@
     <input class="loginFields" type="text" name="matricula"  id="usuario"  placeholder="Insira sua matrícula" required autofocus>
     <input class="loginFields" type="password" name="senha" placeholder="Insira a senha" required >
     <br>
-    <a class="loginlink" href="#" onclick="popRecovery()">Esqueci minha senha</a>
+    <!-- <a class="loginlink" href="#" onclick="popRecovery()">Esqueci minha senha --></a>
     <br>
     <input id="loginBtn" type="submit" name="entrar" value="Login">
     <br>
-    <a class="loginlink" href="intro.php" target="_blank">Ajuda?</a>
+   <!--  <a class="loginlink" href="intro.php" target="_blank">Ajuda?</a> -->
     <?php include 'validarlogin.inc.php';?>
   </form>
 

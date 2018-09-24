@@ -2,8 +2,8 @@
 	include 'conexao.inc.php';
 
 
-
-	  $sql = "SELECT * FROM unidades";
+    $idUnidade = $_GET['id'];
+	  $sql = "SELECT * FROM unidades WHERE idUnidade = '$idUnidade'";
 	  $result = mysqli_query($conexao, $sql);
 
 	  if($result->num_rows > 0){

@@ -2,8 +2,7 @@
 	include 'conexao.inc.php';
 
 
-
-  $sql = "SELECT * FROM usuarios";
+  $sql = "SELECT * FROM usuarios WHERE idUsuario='$idUsuario'";
   $result = mysqli_query($conexao, $sql);
 
   if($result->num_rows > 0){
@@ -17,8 +16,6 @@
 
     }
   }
-
-
 
 
 	//Pegar id unidade pelo metodo get

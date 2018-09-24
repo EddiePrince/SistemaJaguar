@@ -1,6 +1,6 @@
 
 <?php
-	$sql = "SELECT * FROM animais,dadostriagem";
+	$sql = "SELECT * FROM animais";
 	$result = $conexao->query($sql);
 
 
@@ -10,9 +10,9 @@
 			echo "<tr>";
 			echo "<td>" . $row['idAnimal'] . "</td>";
 			echo "<td>" . $row['data'] . "</td>";
-			echo "<td>" . $row['nomeComum'] . "</td>";
-			echo "<td>" . $row['nomeCientifico'] . "</td>";
-			echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "/'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
+			echo "<td>" . $row['agente'] . "</td>";
+			// echo "<td>" . $row['nomeCientifico'] . "</td>";
+			// echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "/'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 			echo "</tr>";
 		}
 	}
