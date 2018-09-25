@@ -29,6 +29,7 @@
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
                 $_SESSION['senha'] = $senha;
+                $confsenha = $_SESSION['confsenha'];
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
@@ -37,6 +38,7 @@
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
                 $_SESSION['senha'] = $senha;
+                $confsenha = $_SESSION['confsenha'];                 
                 header('Location: areaagente.php');
                 exit;
               }

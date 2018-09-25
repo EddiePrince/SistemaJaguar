@@ -34,7 +34,7 @@
                   <option value="agente">Agente</option>
                 </select><br><br>
                 </div>
-            
+
                 <div class="col-md-2 mb-3">
                   <label>Matricula:</label><br>
                   <input class="form-control" type="text" name="matricula" required><br><br>
@@ -44,7 +44,7 @@
                     <input class="form-control" type="text" name="nome" required><br><br>
                   </div>
                 </div>
-              
+
                  <div class="row">
                   <div class="col-md-5 mb-3">
                     <label>E-mail:</label><br>
@@ -54,10 +54,20 @@
                   <label>Telefone:</label><br>
                   <input class="form-control" type="text" name="telefone"><br><br>
                 </div> -->
+                <?php
+                 SESSION_START();
+                   include 'validarlogin.inc.php';
+                  $confsenha = $_SESSION['confsenha'];
+                  include 'Conf_cad_senha.inc.php';
+                  ?>
 
                 <div class="col-md-3 mb-3">
                   <label>Senha:</label><br>
-                  <input class="form-control" type="text" name="senha" required><br><br>
+                  <input class="form-control" type="password" name="senha" required><br><br>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label>Confirmação de senha:</label><br>
+                  <input class="form-control" type="password" name="confsenha" required><br><br>
                 </div>
               </div>
 
@@ -65,14 +75,14 @@
                 <div class="col-md-3 mb-3">
                   <label>Selecione a Unidade:</label><br>
                   <select class="form-control" name="nomeUnidade" size=1>
-                    <?php 
-                   // include 'selectUnidades.inc.php'; 
+                    <?php
+                   // include 'selectUnidades.inc.php';
                     ?>
                   </select>
                 </div>
                 </div> -->
                 <button class="btn btn-default" type="submit">Cadastrar</button><br><br><br><br>
-              
+
 
                 </form>
                 </div>
