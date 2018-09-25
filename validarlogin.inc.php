@@ -21,6 +21,8 @@
                $idUsuario = $row['idUsuario'];
                $nome = $row['nome'];
                $perfil = $row['perfil'];
+               $senha = $row['senha'];
+               $confsenha = $row['confsenha'];
               }
               if ($perfil == 'administrador') {
 
@@ -29,7 +31,8 @@
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
                 $_SESSION['senha'] = $senha;
-                $confsenha = $_SESSION['confsenha'];
+                $_SESSION['confsenha'] = $confsenha;
+                // $_SESSION['confsenha'] = $confsenha
                 header('Location: areaadm.php');
                 exit;
               } else if ($perfil == 'agente'){
@@ -38,7 +41,8 @@
                 $_SESSION['nome'] = $nome;
                 $_SESSION['perfil'] = $perfil;
                 $_SESSION['senha'] = $senha;
-                $confsenha = $_SESSION['confsenha'];                 
+                $_SESSION['confsenha'] = $confsenha;
+                // $_SESSION['confsenha'] = $confsenha
                 header('Location: areaagente.php');
                 exit;
               }

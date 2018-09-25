@@ -54,12 +54,6 @@
                   <label>Telefone:</label><br>
                   <input class="form-control" type="text" name="telefone"><br><br>
                 </div> -->
-                <?php
-                 SESSION_START();
-                   include 'validarlogin.inc.php';
-                  $confsenha = $_SESSION['confsenha'];
-                  include 'Conf_cad_senha.inc.php';
-                  ?>
 
                 <div class="col-md-3 mb-3">
                   <label>Senha:</label><br>
