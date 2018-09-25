@@ -43,7 +43,7 @@
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
-												<p><input class="form-control" type="text" name="nomeAgente" autofocus required></p>
+												<p><input class="form-control" value="<?php echo "$nome"; ?>" type="text" name="nomeAgente" disabled></p>
 											</div>
 										</div>
 									</div>
