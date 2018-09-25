@@ -33,13 +33,12 @@
 											<div class="col-md-2 mb-3">
 												<p>Número da Ficha:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input class="form-control" type="number" disabled name="idAutomatico" value="<?php echo $idAutomatico?>"
-												required>
+												<input class="form-control" type="number" name="idAnimal" required>
 											</div>
 											<div class="col-md-2 mb-3">
 												<p>Data:</p>
 												<!-- Erro de Validação W3C Identificado -->
-												<input id="inputdata" class="form-control"  name="dataRecebimento" type="date" required>
+												<input id="inputdata" class="form-control"  name="data" type="date" required>
 											</div>
 											<div class="col-md-8 mb-3">
 												<p>Agente Recebedor:</p>
