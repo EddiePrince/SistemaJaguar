@@ -1,6 +1,8 @@
 <?php
 	include 'conexao.inc.php';
 	include 'verificausuario.inc.php';
+	$idAnimal = $_GET['id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,15 +39,15 @@
 										<label for="tab1" class="tab_label">Perfil</label>
 										<div class="tab-content">
 											<div class="container">
-												<article><br><br>
+												<article>
 													<?php include 'perfilAnimal.inc.php'; ?>
 													<label>Codigo de Marcação: </label> <input type="text" disabled value=" <?php echo $codMarcacao;	?>"> <br><br>
 													<label>Tipo de Marcação: </label> <input type="text" disabled value=" <?php echo $tipoMarcacao;	?>"> <br><br>
 													<label>Local de Marcação: </label> <input type="text" disabled value=" <?php echo $localMarcacao;	?>"> <br><br>
 													<label>Nome Comum: </label> <input type="text" disabled value=" <?php echo $nomeComum;	?>"> <br><br>
-													<label>Nome Científico: </label> <input type="text" disabled value=" <?php echo $nomeCientifico;	?>"> <br><br>
-													<label>Familia:</label> <input type="text" disabled value=" <?php echo $familia;	?>"><br><br>
-													<label>Ordem:</label> <input type="text" disabled value=" <?php echo $ordem;	?>"> <br><br>
+													<!-- <label>Nome Científico: </label> <input type="text" disabled value=" <?php echo $nomeCientifico;	?>"> <br><br> -->
+													<!-- <label>Familia:</label> <input type="text" disabled value=" <?php echo $familia;	?>"><br><br>
+													<label>Ordem:</label> <input type="text" disabled value=" <?php echo $ordem;	?>"> <br><br> -->
 													<label>Ultima Procedencia:</label> <input type="text" disabled value=" <?php echo $ultimaProcedencia;	?>"><br><br>
 												</article>
 
@@ -59,15 +61,17 @@
 											</div>
 											<div  id="btnEditar"  >
 												<?php  echo " <a href='editarAnimal.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
-											</div><br>
+											</div>
 											<div  id="btnExcluir"  >
-												<?php  echo " <a href='excluirAnimal.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
+												<?php	echo "<a href='deletarAnimal.php?id=" . $idAnimal . "'>Excluir</a> ";?>
+
+												<!-- <?php // echo " <a href='excluirAnimal.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?> -->
 											</div>
 										</div>
 										</div>
 									</li>
 
-									<li>
+									<!-- <li>
 										<input type="radio" name="tabs" class="rd_tab" id="tab2">
 										<label for="tab2" class="tab_label">Tab 2</label>
 										<div class="tab-content">
@@ -86,7 +90,7 @@
 												Integer at ligula eget turpis elementum ultrices eget quis tortor. Duis posuere lorem justo, ut malesuada tortor tempus a. Curabitur pellentesque ultricies consectetur. Maecenas diam lorem, hendrerit eget sem ut, tincidunt vulputate ipsum. In vel enim et erat sagittis eleifend vel eu nunc. In hac habitasse platea dictumst. Integer tincidunt, augue at posuere eleifend, lacus quam hendrerit risus, aliquam sollicitudin ligula tellus quis elit. Proin varius fringilla vehicula. Phasellus mollis sollicitudin orci, id fringilla magna volutpat non. Nullam sed luctus nisl.
 											</article>
 										</div>
-									</li>
+									</li> -->
 
 								</ul>
 							</nav>

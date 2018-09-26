@@ -37,7 +37,7 @@
             <th>Data de Recebimento</th>
             <th>Agente</th>
             <!-- <th>Nome Científico</th> -->
-           <!--  <th>Perfil Completo</th> -->
+            <th>Perfil Completo</th>
 
           </tr>
           <!-- Erro de Validação W3C Identificado -->

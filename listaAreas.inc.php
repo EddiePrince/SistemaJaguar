@@ -3,7 +3,7 @@
   	include 'conexao.inc.php';
 
 
-	$sql = "SELECT * FROM areas,proprietarios,enderecos";
+	$sql = "SELECT * FROM areas";
 	$result = $conexao->query($sql);
 
 	// $sql3 = "SELECT * FROM proprietarios";
@@ -18,10 +18,12 @@
 	 while($row = $result->fetch_assoc())
 	 {
 			echo "<tr>";
-	 		echo "<td>" . $row['nomeProprietario'] . "</td>";
-	 		echo "<td>" . $row['municipio'] . "</td>";
+	 		// echo "<td>" . $row['nomeProprietario'] . "</td>";
+	 		// echo "<td>" . $row['municipio'] . "</td>";
 	 		echo "<td>" . $row['nomePropriedade'] . "</td>";
 	 		echo "<td>" . $row['bioma'] . "</td>";
+      echo "<td>" . $row['bioma'] . "</td>";
+      echo "<td>" . $row['distancia'] . "</td>";
 	 		echo "<td><a href='perfilArea.php?id=" . $row['idArea'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 	 		echo "</tr>";
 	 	}

@@ -1,11 +1,5 @@
 
 <?php
-	//
-	// $query = mysqli_query("SELECT * FROM animais");
-	// $rowData = mysli_num_rows($query);
-	// $indice = mysqli_fetch_assoc($row);
-
-
 
 	$sql = "SELECT * FROM animais";
 	$result = $conexao->query($sql);
@@ -21,7 +15,7 @@
 			// echo "<td>" . echo "date(“d/m/Y”, strtotime($row['data']));";	 . "</td>";
 			echo "<td>" . $row['agente'] . "</td>";
 			// echo "<td>" . $row['nomeCientifico'] . "</td>";
-			// echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "/'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
+			echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 			echo "</tr>";
 		}
 	}

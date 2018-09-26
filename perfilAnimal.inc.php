@@ -14,9 +14,9 @@
 	  	$tipoMarcacao	= $row['tipoMarcacao'];
 	  	$localMarcacao	= $row['localMarcacao'];
 	  	$nomeComum	= $row['nomeComum'];
-			$nomeCientifico = $row['nomeCientifico'];
-	  	$familia	= $row['familia'];
-	  	$ordem	= $row['ordem'];
+			// $nomeCientifico = $row['nomeCientifico'];
+	  	// $familia	= $row['familia'];
+	  	// $ordem	= $row['ordem'];
 			$ultimaProcedencia = $row['ultimaProcedencia'];
 
     }
