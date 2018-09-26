@@ -46,8 +46,8 @@
 								<div class="tab-content">
 									<div class="container">
 										<article><br><br>
-											<?php 
-											include 'perfilUsuario.inc.php'; 
+											<?php
+											include 'perfilUsuario.inc.php';
 											?>
 											<label>Matricula:</label> <input type="text" disabled value=" <?php echo $matricula;	?>"><br><br>
 											<label>Nome: </label> <input type="text" disabled value=" <?php echo $nome;	?>"> <br><br>
@@ -56,11 +56,16 @@
 										</article>
 
 									<!-- <div  id="btnEditar"  >
-										<?php  echo " <a href='editarUsuario.php?idUsuario=" . $_GET['id'] . "'>Editar</a> ";?>
+										<?php // echo " <a href='editarUsuario.php?idUsuario=" . $_GET['id'] . "'>Editar</a> ";?>
+										<!-- echo " <a href='deletar.php?idUsuario=" . $_GET['id'] . "'>Excluir</a> "; -->
+
+
 									</div><br>
 									<div  id="btnExcluir"  >
-										<?php  echo " <a href='deletar.php?idUsuario=" . $_GET['id'] . "'>Excluir</a> ";?>
-									</div> -->
+									<?php	echo "<a href='deletarUsuario.php?id=" . $idUsuario . "'>Excluir</a> ";
+										?>
+
+									</div>
 								</div>
 								</div>
 							</li>

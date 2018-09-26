@@ -1,4 +1,5 @@
 <?php
+  session_start();
   //Conecção com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
