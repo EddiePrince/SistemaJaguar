@@ -2,6 +2,8 @@
 	//Erro de Validação W3C Identificado
   //Conexão com Banco
 	include 'verificausuario.inc.php';
+	$idUnidade = $_GET['id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,11 +41,11 @@
 												</article>
 
 											<!-- <div  id="btnEditar"  >
-												<?php  echo " <a href='editarUnidade.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
+												<?php  //echo " <a href='editarUnidade.php?idAnimal=" . $row['idAnimal'] . "'>Editar</a> ";?>
 											</div><br>
 											<div  id="btnExcluir"  >
-												<?php  echo " <a href='excluir.php?idAnimal=" . $row['idAnimal'] . "'>Excluir</a> ";?>
-											</div> -->
+												<?php  //echo "<a href='deletarUnidade.php?id=" . $idUnidade . "'>Excluir</a> ";?>
+											</div>-->
 										</div>
 										</div>
 									</li>

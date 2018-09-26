@@ -2,19 +2,6 @@
 <?php
   include 'conexao.inc.php';
 
-
-	// receber o numero da páginas
-	// $paginaAtual = filter_input(INPUT_GET, 'pagina');
-	// $pagina = (!empty($paginaAtual)) ? $paginaAtuals : 1;
-	// // Setar a quantidade de itens listados por pagina
-	// $qtd_result_pg = 3;
-	// // Calcular o inicio da visualização
-	// $inicio = ($qtd_result_pg * $pagina) - $qtd_result_pg;
-	// //LIMIT $inicio, $qtd_result_pg (colocar esse codigo apos usuariosdosql 1)
-
-
-  // $idUsuario = filter_input(INPUT_GET, 'idUsuario'); //nao consegui pegar o idUsuario
-
 	 $sql1 = "SELECT * FROM usuarios ";
 	 $result1 = $conexao->query($sql1);
 
@@ -63,10 +50,5 @@
 		 		echo "</tr>";
 		   }
 	 }
-	 // Paginação
-	 // $result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
-	 // $resultado_pg = mysqli_query($conexao, $result_pg);
-	 // $row_pg = mysqli_fetch_assoc($resultado_pg);
-	 // echo $row_pg['num_result'];
 
 ?>

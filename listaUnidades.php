@@ -3,7 +3,8 @@
   //Conexão com Banco
   include 'conexao.inc.php';
   include 'verificausuario.inc.php';
-   ?>
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,11 +20,9 @@
   <body >
     <?php
     include 'header.inc.php';
-
   ?>
   	<div id="pageListaUnidade" class="backgroundimgs">
-
-  <div id="fundoTransparente">
+      <div id="fundoTransparente">
 
           <br><div  id="Cadastrar"  >
             <a id="Cadastrar" href="CadastroUnidade.php" >  Cadastrar Unidade </a>

@@ -1,10 +1,13 @@
 
 <?php
-	$sql = "SELECT * FROM unidades";
-	$result = $conexao->query($sql);
+	include 'conexao.inc.php';
 
-	if($result->num_rows > 0){
-	 while($row = $result->fetch_assoc())
+	$sql55 = "SELECT * FROM unidades";
+	$result55 = $conexao->query($sql55);
+
+	if($result55->num_rows > 0)
+	{
+	 while($row = $result55->fetch_assoc())
 	 {
 			echo "<tr>";
 	 		echo "<td>" . $row['nome'] . "</td>";
