@@ -29,12 +29,12 @@
 					<div class="container">
 						<br><br><h3>Cadastro de Unidades</h3><br><br>
 										<div class="row">
-											<div class="col-md-2 mb-3">
+											<div class="col-md-5 mb-3">
 												<label>Nome Da Unidade:</label>
 												<input type="text" name="nomeUnidade" class="form-control" required>
 											</div>
 
-			          					<div class="col-md-4 mb-3">
+			          					<div class="col-md-3 mb-3">
 														<p>Tipo da Unidade:</p>
 														<select required class="form-control" name="tipoUnidade">
 															<option value="">Selecione</option>
@@ -43,7 +43,7 @@
 														</select>
 													</div>
 
-											<div class="col-md-6 mb-3">
+											<div class="col-md-4 mb-3">
 												<p>CNPJ:</p>
 												<input type="text" name="cnpj" class="form-control">
 											</div>
