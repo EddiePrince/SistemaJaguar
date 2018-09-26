@@ -6,14 +6,6 @@
 	$sql = "SELECT * FROM areas";
 	$result = $conexao->query($sql);
 
-	// $sql3 = "SELECT * FROM proprietarios";
-	// $result3 = $conexao->query($sql3);
-  //
-	// $sql2 = "SELECT * FROM enderecos";
-	// $result2 = $conexao->query($sql2);
-
-
-
 	if($result->num_rows > 0){
 	 while($row = $result->fetch_assoc())
 	 {
@@ -22,8 +14,8 @@
 	 		// echo "<td>" . $row['municipio'] . "</td>";
 	 		echo "<td>" . $row['nomePropriedade'] . "</td>";
 	 		echo "<td>" . $row['bioma'] . "</td>";
-      echo "<td>" . $row['bioma'] . "</td>";
       echo "<td>" . $row['distancia'] . "</td>";
+      echo "<td>" . $row['observacoes'] . "</td>";
 	 		echo "<td><a href='perfilArea.php?id=" . $row['idArea'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 	 		echo "</tr>";
 	 	}

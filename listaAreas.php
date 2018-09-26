@@ -31,11 +31,11 @@
         <h2>Lista de Áreas</h2><br>
         <table class="table">
           <tr>
-            <th>Nome do Proprietário</th>
-            <th>Municipio</th>
             <th>Nome da Propriedade</th>
             <th>Bioma</th>
-            <th>Perfil Completo</th>          
+            <th>Distância</th>
+            <th>Observações</th>
+            <th>Perfil Completo</th>
           </tr>
           <!-- Erro de Validação W3C Identificado -->
           <?php include 'listaAreas.inc.php' ?>

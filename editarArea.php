@@ -54,15 +54,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 mb-3">
+          <div class="col-md-4 mb-3">
             <label>Latitude:</label>
             <input class="form-control" class="usuario" type="text" name="latitude" size="35" maxlength="100" value="<?php echo $row['latitude'];  ?>" required>
           </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-4 mb-3">
             <label>Longitude:</label><br>
             <input class="form-control" type="text" name="longitude" value="<?php echo $row['longitude'];  ?>" >
           </div>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-4 mb-3">
             <label>Bioma:</label>
             <input class="form-control" type="text" name="bioma" value="<?php echo $row['bioma'];  ?>" required>
           </div>

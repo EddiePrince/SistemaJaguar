@@ -1,8 +1,6 @@
 <?php
 	include 'conexao.inc.php';
 
-
-
 	  $sql11 = "SELECT * FROM areas,proprietarios";
 	  $result11 = mysqli_query($conexao, $sql11);
 

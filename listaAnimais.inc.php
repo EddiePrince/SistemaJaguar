@@ -1,10 +1,10 @@
 
 <?php
+		//Conexão com Banco
+  	include 'conexao.inc.php';
 
 	$sql = "SELECT * FROM animais";
 	$result = $conexao->query($sql);
-
-	// date(“d/m/Y”, strtotime($row[data]));
 
 	if($result->num_rows > 0){
 		while($row = $result->fetch_assoc())

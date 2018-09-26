@@ -1,6 +1,8 @@
 <?php
 	include 'conexao.inc.php';
 	include 'verificausuario.inc.php';
+	$idArea = $_GET['id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,16 +56,16 @@
 										</article>
 
 									<div  id="btnEditar"  >
-										<?php  echo " <a href='editarArea.php?idArea=" . $row['idArea'] . "'>Editar</a> ";?>
+										<?php  echo " <a href='editarArea.php?idArea=" . $idArea . "'>Editar</a> ";?>
 									</div><br>
 									<div  id="btnExcluir"  >
-										<?php  echo " <a href='excluir.php?idArea=" . $row['idArea'] . "'>Excluir</a> ";?>
+										<?php  echo " <a href='deletarArea.php?idArea=" . $idArea . "'>Excluir</a> ";?>
 									</div>
 								</div>
 								</div>
 							</li>
 
-							<li>
+							<!-- <li>
 								<input type="radio" name="tabs" class="rd_tab" id="tab2">
 								<label for="tab2" class="tab_label">Tab 2</label>
 								<div class="tab-content">
@@ -82,7 +84,7 @@
 										Integer at ligula eget turpis elementum ultrices eget quis tortor. Duis posuere lorem justo, ut malesuada tortor tempus a. Curabitur pellentesque ultricies consectetur. Maecenas diam lorem, hendrerit eget sem ut, tincidunt vulputate ipsum. In vel enim et erat sagittis eleifend vel eu nunc. In hac habitasse platea dictumst. Integer tincidunt, augue at posuere eleifend, lacus quam hendrerit risus, aliquam sollicitudin ligula tellus quis elit. Proin varius fringilla vehicula. Phasellus mollis sollicitudin orci, id fringilla magna volutpat non. Nullam sed luctus nisl.
 									</article>
 								</div>
-							</li>
+							</li> -->
 
 						</ul>
 					</nav>
