@@ -13,9 +13,9 @@
 			echo "<td>" . $row['idAnimal'] . "</td>";
 			echo "<td>" . $row['data'] . "</td>";
 			// echo "<td>" . echo "date(“d/m/Y”, strtotime($row['data']));";	 . "</td>";
-			echo "<td>" . $row['agente'] . "</td>";
+			// echo "<td>" . $row['agente'] . "</td>";
 			// echo "<td>" . $row['nomeCientifico'] . "</td>";
-			echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
+			// echo "<td><a href='perfilAnimal.php?id=" . $row['idAnimal'] . "'>" ."<img class='linkicon' src='img/linkicon.png'></a></td>";
 			echo "</tr>";
 		}
 	}

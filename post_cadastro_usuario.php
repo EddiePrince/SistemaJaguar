@@ -1,7 +1,7 @@
 <?php
 //Conexão com Banco
   	include 'conexao.inc.php';
-    SESSION_START();
+    // SESSION_START();
 
 
 	$perfil = $_POST['perfil'];

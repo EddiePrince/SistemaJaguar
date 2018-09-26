@@ -18,7 +18,7 @@
 	if (isset($_POST['submit'])) {	//A variável $_SESSION não funciona dentro desse if
 
     $idAnimal = $_POST['idAnimal'];
-		$agenteRecebedor = $_POST['agente'];
+		$agenteRecebedor = $nome;
 		$data = $_POST['data'];
 		$tipoRecolhimento = $_POST['tipoEntrega'];
 		$nomeEntregador = $_POST['nomeEntregador'];
